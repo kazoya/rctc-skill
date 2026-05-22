@@ -21,6 +21,14 @@ All notable changes to RCTC Method will be documented here.
 
 ---
 
+## [1.0.1] — Documentation
+
+### Added
+- `examples/english-examples.md` — English RCTC walkthroughs (beginner → advanced)
+- `docs/configuration.md` — Full `config/config.yaml` reference and presets
+
+---
+
 ## [Planned — 1.1.0]
 
 - IDE integration guides (Cursor, VS Code, JetBrains)
