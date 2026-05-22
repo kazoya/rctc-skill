@@ -10,7 +10,7 @@
 **Transform vague AI prompts into professional, precision-grade outputs.**  
 *A Claude skill that thinks before it answers.*
 
-[⚡ Quick Start](#-quick-start) · [📖 How It Works](#-how-it-works) · [🛠 Configuration](#-configuration) · [💡 Examples](#-examples) · [🤝 Contribute](#-contribute)
+[⚡ Quick Start](#-quick-start) · [📖 How It Works](#-how-it-works) · [🛠 Configuration](#-configuration) · [💡 Examples](#-examples) · [🔔 Pro](#-pro-version-coming) · [🤝 Contribute](#-contribute)
 
 ---
 
@@ -296,6 +296,18 @@ rctc-skill/
 - [ ] Skill marketplace integration
 - [ ] Team/shared profiles
 - [ ] Analytics dashboard
+
+---
+
+## 🔔 Pro Version Coming
+
+**RCTC Pro** (planned): team profiles, shared learning, analytics, advanced prompt builder.
+
+**Want early access?** Leave a note in [GitHub Discussions](https://github.com/kazoya/rctc-skill/discussions/new?category=ideas&title=Pro%20early%20access&body=I%27m%20interested%20in%20RCTC%20Pro.%20My%20use%20case%3A%20) — one click, no form.
+
+Every question or suggestion in [Discussions](https://github.com/kazoya/rctc-skill/discussions) also shapes **v1.1** and the free skill.
+
+📋 **Launch copy ready to paste:** [docs/launch-kit.md](docs/launch-kit.md)
 
 ---
 

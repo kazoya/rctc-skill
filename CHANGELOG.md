@@ -24,8 +24,8 @@ All notable changes to RCTC Method will be documented here.
 ## [1.0.1] — Documentation
 
 ### Added
-- `examples/advanced-cases.md` — 10 edge cases (conflicts, overrides, learning from corrections)
-- `docs/learning-system.md` — adaptation philosophy, user profile, three learning phases
+- `docs/launch-kit.md` — copy-paste posts for LinkedIn, Reddit, WhatsApp/Telegram
+- README Pro section + GitHub Discussions early-access link
 
 ---
 
