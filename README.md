@@ -74,6 +74,8 @@ Load and follow all instructions from SKILL.md.
 
 Or paste the contents of `SKILL.md` directly into your system prompt.
 
+**Using Cursor?** This repo includes `.cursor/rules/rctc.mdc` — it loads automatically in every chat when you open this project. See [Getting Started → Cursor](docs/getting-started.md#option-c-cursor-recommended-for-this-repo).
+
 ### 3. Configure (optional)
 
 Copy and customize the config file:
@@ -261,6 +263,7 @@ rctc-skill/
 ├── 📋 SKILL.md                 ← Core skill logic (load this in Claude)
 ├── 📖 README.md                ← You're here
 ├── 📝 CHANGELOG.md             ← Version history
+├── 🎯 .cursor/rules/rctc.mdc ← Cursor rule (auto-loaded in this project)
 ├── ⚙️  config/
 │   └── config.yaml             ← User configuration
 ├── 🧠 src/
@@ -287,7 +290,8 @@ rctc-skill/
 - [x] Skill recommendation engine
 - [x] Arabic + English support
 - [x] Token optimization mode
-- [ ] VSCode extension (Claude Code / Cursor / Codex integration)
+- [x] Cursor rule (`.cursor/rules/rctc.mdc`)
+- [ ] VSCode extension (broader IDE integration)
 - [ ] Web UI for prompt builder
 - [ ] Skill marketplace integration
 - [ ] Team/shared profiles

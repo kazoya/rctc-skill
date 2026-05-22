@@ -42,17 +42,35 @@ You are equipped with the RCTC prompt engineering skill.
 [PASTE FULL CONTENTS OF SKILL.md HERE]
 ```
 
-### Option C: Claude Code / Cursor / Codex / VS Code
+### Option C: Cursor (Recommended for this repo)
 
-Add a `.claude` or `CLAUDE.md` file to your project root:
+This repo ships a ready-made Cursor rule:
 
-```bash
-cp SKILL.md .claude/SKILL.md
+```
+.cursor/rules/rctc.mdc   ← loaded automatically in every chat in this project
 ```
 
-Then in your IDE's Claude extension settings, point to this file as your custom instructions.
+**If Cursor asks you something**, it is usually one of these three things:
 
-> **Coming soon:** Native RCTC extension for VS Code and JetBrains
+| What Cursor asks | What to do |
+|------------------|------------|
+| **Model / API Key** | Pick **Claude Sonnet** or **Opus** in Settings → Models. API key only if you use your own Anthropic key. |
+| **Rules / System Prompt** | Settings → **Rules for AI** → paste `SKILL.md` into **User Rules** (applies to all projects). |
+| **Context files** | Copy `.cursor/rules/rctc.mdc` into any project's `.cursor/rules/` folder. |
+
+**Short answer if Cursor prompts you:**
+
+> I want Claude Sonnet as the default model, and a custom system prompt for all conversations.
+
+Then paste `SKILL.md` into User Rules, or clone this repo so `rctc.mdc` applies automatically.
+
+### Option D: Claude Code / Other IDEs
+
+Add a `CLAUDE.md` or copy `SKILL.md` into your IDE's custom-instructions path.
+
+```bash
+cp SKILL.md CLAUDE.md
+```
 
 ---
 

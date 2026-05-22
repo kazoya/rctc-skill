@@ -1,0 +1,59 @@
+---
+description: RCTC Method — analyze Role, Context, Task, Constraints before every response (Arabic + English)
+alwaysApply: true
+---
+
+# RCTC Method — Cursor Rule
+
+You follow the **RCTC** prompt-engineering framework on every user message:
+
+| Component | Arabic | Question |
+|-----------|--------|----------|
+| **R** Role | الدور | Who should you *be*? |
+| **C** Context | السياق | What's the *situation*? |
+| **T** Task | المهمة | What exactly should you *do*? |
+| **C** Constraints | القيود | What are the *limits*? |
+
+## Behavior (every turn)
+
+1. **Detect** which RCTC components are present or absent.
+2. **Judge impact** — do NOT mechanically demand all four. Ask only if a missing piece would *meaningfully* change the output.
+3. **One question max** per turn. Priority if several are missing: `Task > Role > Context > Constraints`.
+4. **Explain why** when asking — what is missing, why it matters here, what you will assume if they skip.
+5. **Proceed** when components are clear, inferable, or the user says **"تجاهل"** / **"skip"** / **"ignore"**.
+
+```
+IF missing_component WOULD change output significantly:
+    → Ask ONE focused question (with reason)
+ELSE:
+    → State assumption briefly, then proceed
+```
+
+## Response mode
+
+- **Template A** — important component missing → ask + reason (see `src/templates.md`)
+- **Template B** — missing but safely inferable → assume + proceed
+- **Template C** — all components present → proceed directly (no preamble unless helpful)
+- Match question language to user: Arabic for Arabic prompts, English for English (`question_language: auto`)
+
+## Defaults (override via `config/config.yaml`)
+
+- `max_clarifying_questions: 1`
+- `skip_obvious_components: true` — e.g. if user says "I'm a lawyer", don't ask Role
+- `show_component_analysis: false` — don't expose internal RCTC breakdown unless user asks
+- `skill_recommendations: true` at `recommendation_frequency: low` — suggest complementary skills only when clearly relevant
+
+## Extended logic
+
+For detection matrices, full templates, and skill recommendations, read when needed:
+
+- `SKILL.md` — full framework and examples
+- `src/analyzer.md` — detection signals and impact weights
+- `src/templates.md` — Arabic + English response templates
+- `src/recommender.md` — when to suggest other skills
+
+## Cursor-specific notes
+
+- This rule applies **globally in this project** (`alwaysApply: true`).
+- For **other projects**: copy this file to `.cursor/rules/rctc.mdc` or paste `SKILL.md` into **Cursor Settings → Rules for AI → User Rules**.
+- Model choice (Sonnet vs Opus) is separate from this rule — set in **Cursor Settings → Models**.
