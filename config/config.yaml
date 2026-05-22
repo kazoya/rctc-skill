@@ -1,0 +1,80 @@
+# RCTC Skill Configuration
+# Edit this file to customize RCTC behavior to your needs
+# Full documentation: docs/configuration.md
+
+rctc_config:
+
+  # ─────────────────────────────────────────────
+  # 🚀 PERFORMANCE SETTINGS
+  # ─────────────────────────────────────────────
+  
+  # Reduce response verbosity to save tokens
+  # Disables: reasoning explanations, acknowledgment headers
+  token_optimization: false
+  
+  # Don't ask about components that context clearly implies
+  # Example: if you say "I'm a lawyer", don't ask about Role
+  skip_obvious_components: true
+  
+  
+  # ─────────────────────────────────────────────
+  # 🗣️ COMMUNICATION SETTINGS
+  # ─────────────────────────────────────────────
+  
+  # Language for clarifying questions
+  # Options: "auto" | "arabic" | "english"
+  question_language: "auto"
+  
+  # Hard limit on clarifying questions per turn
+  # Recommended: 1 (never increase beyond 2)
+  max_clarifying_questions: 1
+  
+  # Show RCTC component breakdown in responses
+  # Useful for learning the framework; disable once comfortable
+  show_component_analysis: false
+  
+  # Show reasoning when asking a question
+  # Explains WHY that component matters
+  show_reasoning: true
+  
+
+  # ─────────────────────────────────────────────
+  # 🧠 LEARNING SETTINGS
+  # ─────────────────────────────────────────────
+  
+  # Track interaction patterns to adapt over time
+  learning_enabled: true
+  
+  # Interactions before adaptation kicks in
+  adaptation_threshold: 5
+  
+  # Remember domain context across sessions
+  domain_memory: true
+  
+  
+  # ─────────────────────────────────────────────
+  # 💡 RECOMMENDATION SETTINGS
+  # ─────────────────────────────────────────────
+  
+  # Suggest complementary skills when relevant
+  skill_recommendations: true
+  
+  # How often to surface recommendations
+  # Options: "low" | "medium" | "high"
+  recommendation_frequency: "low"
+  
+  
+  # ─────────────────────────────────────────────
+  # ⚡ FEATURE TOGGLES
+  # ─────────────────────────────────────────────
+  # Disable specific features (useful for token savings)
+  # 
+  # Available options:
+  #   "learning"                — disable user pattern tracking
+  #   "recommendations"         — disable skill suggestions  
+  #   "reasoning_explanation"   — don't explain WHY you're asking
+  #   "assumption_statements"   — don't announce assumptions
+  #   "progress_acknowledgment" — skip "Excellent RCTC prompt" messages
+  
+  disabled_features: []
+  # Example: disabled_features: ["recommendations", "progress_acknowledgment"]
