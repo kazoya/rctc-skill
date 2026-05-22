@@ -224,6 +224,7 @@ rctc_config:
 ## Related Docs
 
 - [Getting Started](getting-started.md)
+- [Learning system](learning-system.md)
 - [English examples](../examples/english-examples.md)
 - [Arabic examples](../examples/arabic-examples.md)
 - [Analyzer logic](../src/analyzer.md)
