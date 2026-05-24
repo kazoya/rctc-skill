@@ -56,6 +56,27 @@ https://github.com/kazoya/rctc-skill
 
 ## Reddit — r/ClaudeAI or r/PromptEngineering
 
+> ⚠️ **Avoid r/LanguageTechnology** for product launches — strict anti-spam: new accounts cannot post GitHub/YouTube/Medium links on first post. Use subreddits below instead.
+
+### If auto-mod removes your post
+
+| Bot message | Meaning | Fix |
+|-------------|---------|-----|
+| "No external links on first post" | Account karma/activity too low | Post **without link** first, or use r/ClaudeAI |
+| "Message moderators" | Manual review possible | Only worth it for academic/NLP posts — not skill launches |
+| Removed instantly | Wrong subreddit + link combo | Switch subreddit, don't fight the filter |
+
+### Target subreddits (best fit for RCTC)
+
+| Subreddit | Fit |
+|-----------|-----|
+| **r/ClaudeAI** | ✅ Primary — Claude users |
+| **r/PromptEngineering** | ✅ Prompt framework audience |
+| **r/LocalLLaMA** | ⚠️ Sometimes works, less strict |
+| **r/LanguageTechnology** | ❌ Academic NLP — anti-AI-spam filter |
+
+### Version A — with link (use on r/ClaudeAI after some karma, or if account is established)
+
 **Title:**
 
 ```
@@ -81,6 +102,29 @@ GitHub: https://github.com/kazoya/rctc-skill
 
 Would love feedback on where it asks too much or too little.
 ```
+
+### Version B — no link (new Reddit accounts / first post)
+
+**Title:**
+
+```
+I built a framework that makes Claude ask ONE smart question before answering — RCTC [free + open source]
+```
+
+**Body:**
+
+```
+Most prompt advice says "write better prompts."
+RCTC flips it: analyze Role, Context, Task, Constraints first — ask max 1 question when something important is missing.
+
+Works Arabic + English. Includes Cursor rule (.cursor/rules/rctc.mdc).
+
+Happy to share the GitHub link in comments if there's interest — didn't want to trigger spam filters on first post.
+
+Would love feedback on where a skill like this asks too much or too little.
+```
+
+**Then:** When someone comments "link?" → reply with `https://github.com/kazoya/rctc-skill`
 
 ---
 
