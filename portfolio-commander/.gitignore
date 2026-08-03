@@ -1,0 +1,6 @@
+# Local portfolio data — never publish
+projects-registry.xml
+dashboard/index.html
+dashboard/projects-data.json
+requests/*.xml
+!requests/inbox.example.xml

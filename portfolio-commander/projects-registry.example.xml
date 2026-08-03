@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- EXAMPLE ONLY — fake paths. Your real registry is local and never committed. -->
+<portfolio version="1.1" generated="example">
+  <project id="example-rctc-skill" path="C:\dev\rctc-skill" active="true" lifecycle="active" priority="1" revenue="unknown">
+    <displayName>RCTC Method</displayName>
+    <lastModified>2026-08-01T12:00:00+00:00</lastModified>
+    <status>فعال</status>
+    <gitCommits30d>5</gitCommits30d>
+    <engineeringMind>C:\dev\rctc-skill\SKILL.md</engineeringMind>
+  </project>
+  <project id="example-client-site" path="C:\dev\client-site" active="true" lifecycle="active" priority="2" revenue="yes">
+    <displayName>Client site — income</displayName>
+    <lastModified>2026-08-03T10:00:00+00:00</lastModified>
+    <status>فعال</status>
+    <gitCommits30d>12</gitCommits30d>
+    <engineeringMind>C:\dev\client-site\README.md</engineeringMind>
+  </project>
+  <project id="example-old-demo" path="C:\dev\old-demo" active="true" lifecycle="dormant" priority="0" revenue="no">
+    <displayName>Old demo</displayName>
+    <lastModified>2025-01-01T00:00:00+00:00</lastModified>
+    <status>سكون</status>
+    <gitCommits30d>0</gitCommits30d>
+  </project>
+</portfolio>

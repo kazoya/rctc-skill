@@ -341,4 +341,6 @@ MIT — use freely, credit appreciated.
 
 ⭐ Star this repo if RCTC improved your AI workflow
 
+**Made with love for the people of Gaza.**
+
 </div>

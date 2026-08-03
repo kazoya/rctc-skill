@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Commander — لوحة المشاريع</title>
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: #12182a;
+      --border: rgba(255,255,255,.08);
+      --gold: #c8ad73;
+      --muted: #9ca3af;
+      --active: #10b981;
+      --dormant: #6b7280;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: var(--bg);
+      color: #f3f4f6;
+      line-height: 1.5;
+    }
+    header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    h1 { margin: 0; font-size: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; }
+    main { padding: 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+    }
+    .stat strong { display: block; font-size: 1.4rem; color: var(--gold); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border-bottom: 1px solid var(--border);
+      padding: 0.65rem 0.5rem;
+      text-align: right;
+      vertical-align: top;
+    }
+    th { color: var(--muted); font-weight: 600; }
+  .badge {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+    .badge-active { background: rgba(16,185,129,.15); color: var(--active); }
+    .badge-dormant { background: rgba(107,114,128,.2); color: #d1d5db; }
+    .panel {
+      margin-top: 1.5rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    label { display: block; margin-bottom: 0.35rem; color: var(--muted); font-size: 0.85rem; }
+    select, textarea, button {
+      width: 100%;
+      font: inherit;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0a0e18;
+      color: #fff;
+      padding: 0.6rem 0.75rem;
+    }
+    button {
+      margin-top: 0.75rem;
+      cursor: pointer;
+      background: linear-gradient(135deg, #e5c07b, #c8ad73);
+      color: #111;
+      font-weight: 600;
+      border: none;
+    }
+    pre {
+      margin-top: 0.75rem;
+      white-space: pre-wrap;
+      background: #0a0e18;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      max-height: 200px;
+      overflow: auto;
+    }
+    code { font-size: 0.8rem; color: var(--gold); }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Portfolio Commander</h1>
+      <div class="meta" id="generated">—</div>
+    </div>
+    <div class="meta">
+      XML: <code>%USERPROFILE%\.cursor\portfolio\projects-registry.xml</code>
+    </div>
+  </header>
+  <main>
+    <div class="stats" id="stats"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>أولوية</th>
+          <th>دخل؟</th>
+          <th>المشروع</th>
+          <th>الحالة</th>
+          <th>آخر تعديل</th>
+          <th>commits (30d)</th>
+          <th>النشاط</th>
+          <th>العقل الهندسي</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <div class="panel">
+      <h2 style="margin-top:0;font-size:1rem;">طلب للوكيل (Cursor)</h2>
+      <p class="meta">انسخ النص الناتج والصقه في محادثة Cursor بعد فتح المشروع المطلوب. الطلبات في <code>requests\inbox.xml</code> يدوياً أو عبر السكربت.</p>
+      <label for="proj">المشروع</label>
+      <select id="proj"></select>
+      <label for="task">ماذا تريد؟</label>
+      <textarea id="task" rows="4" placeholder="مثال: حدّث README وأضف قسم النشر"></textarea>
+      <button type="button" id="gen">إنشاء طلب للوكيل</button>
+      <pre id="out" hidden></pre>
+    </div>
+  </main>
+  <script>
+    const DATA = __PORTFOLIO_JSON__;
+    const generated = document.getElementById('generated');
+    const stats = document.getElementById('stats');
+    const rows = document.getElementById('rows');
+    const proj = document.getElementById('proj');
+    const task = document.getElementById('task');
+    const out = document.getElementById('out');
+    const gen = document.getElementById('gen');
+
+    generated.textContent = 'آخر مسح: ' + (DATA.generated || '—');
+
+    const list = DATA.projects || [];
+    const active = list.filter(p => p.lifecycle === 'active');
+    const dormant = list.filter(p => p.lifecycle === 'dormant');
+    const top = [...list].sort((a,b) => b.activityScore - a.activityScore)[0];
+
+    stats.innerHTML = [
+      ['مشاريع', list.length],
+      ['فعّال', active.length],
+      ['سكون', dormant.length],
+      ['أعلى نشاط', top ? top.displayName : '—']
+    ].map(([k,v]) => `<div class="stat"><span>${k}</span><strong>${v}</strong></div>`).join('');
+
+    function fmtDate(iso) {
+      if (!iso) return '—';
+      try { return new Date(iso).toLocaleString('ar-JO'); } catch { return iso; }
+    }
+
+    rows.innerHTML = list.map(p => {
+      const badge = p.lifecycle === 'active'
+        ? '<span class="badge badge-active">فعال</span>'
+        : '<span class="badge badge-dormant">سكون — لا تطوير</span>';
+      const mind = p.engineeringMind
+        ? '<code style="word-break:break-all">' + p.engineeringMind.split(/[/\\]/).pop() + '</code>'
+        : (p.isFlutter ? '<span class="meta">Dart/Flutter — بدون عقل</span>' : '—');
+      const pr = p.priority > 0 ? p.priority : '—';
+      const rev = p.revenue === 'yes' ? 'نعم' : (p.revenue === 'no' ? 'لا' : '—');
+      return `<tr>
+        <td><strong>${pr}</strong></td>
+        <td>${rev}</td>
+        <td><strong>${p.displayName}</strong><br><span class="meta">${p.path}</span></td>
+        <td>${badge}</td>
+        <td>${fmtDate(p.lastModified)}</td>
+        <td>${p.gitCommits30d}</td>
+        <td>${p.activityScore}</td>
+        <td>${mind}</td>
+      </tr>`;
+    }).join('');
+
+    list.forEach(p => {
+      const o = document.createElement('option');
+      o.value = p.id;
+      o.textContent = p.displayName + (p.lifecycle === 'dormant' ? ' (سكون)' : '');
+      o.dataset.path = p.path;
+      o.dataset.lifecycle = p.lifecycle;
+      proj.appendChild(o);
+    });
+
+    gen.addEventListener('click', () => {
+      const opt = proj.selectedOptions[0];
+      const path = opt.dataset.path;
+      const life = opt.dataset.lifecycle;
+      const body = task.value.trim();
+      if (!body) { alert('اكتب الطلب'); return; }
+      if (life === 'dormant') {
+        if (!confirm('المشروع في وضع السكون. هل تريد المتابعة؟')) return;
+      }
+      const prompt = `Portfolio Commander — طلب مشروع
+
+المسار: ${path}
+المشروع: ${opt.textContent}
+
+المهمة:
+${body}
+
+التعليمات للوكيل:
+- افتح هذا المشروع (أو استخدم سياقه).
+- نفّذ المهمة فقط إذا lifecycle=active؛ وإلا اطلب تفعيل المشروع أولاً.
+- راجع engineeringMind إن وُجد (ليس لـ Flutter/Dart).`;
+      out.hidden = false;
+      out.textContent = prompt;
+      navigator.clipboard?.writeText(prompt);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Copy to %USERPROFILE%\.cursor\portfolio\config.yaml after install
+
+scan:
+  cursor_workspace_storage: "%APPDATA%\\Cursor\\User\\workspaceStorage"
+
+dormant:
+  days_without_activity: 45
+
+engineering_mind:
+  candidates:
+    - SKILL.md
+    - AGENTS.md
+    - CLAUDE.md
+    - README.md
