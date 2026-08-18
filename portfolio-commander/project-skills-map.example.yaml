@@ -1,0 +1,149 @@
+# Portfolio → Cursor Agent Skills map
+# Copy to: %USERPROFILE%\.cursor\portfolio\project-skills-map.yaml
+# Install: python portfolio-commander/scripts/install_project_skills.py
+
+schema_version: "1.0"
+
+# Local clones (adjust if your paths differ)
+sources:
+  rctc-skill: "C:\\rctc-skill"
+  user-skills: "%USERPROFILE%\\.cursor\\skills"
+
+# Skill folder names under sources (folder must contain SKILL.md)
+catalog:
+  portfolio-commander:
+    from: user-skills
+    dir: portfolio-commander
+  ai-portability-advisor:
+    from: rctc-skill
+    dir: ai-portability-advisor
+  bitter-truth-delivery-audit:
+    from: rctc-skill
+    dir: bitter-truth-delivery-audit
+  rctc-method:
+    from: rctc-skill
+    dir: .agents/skills/rctc-method
+  belt-apca-smarthelp-cx:
+    from: rctc-skill
+    dir: portfolio-commander/skills/belt-apca-smarthelp-cx
+  belt-gateway-php:
+    from: rctc-skill
+    dir: portfolio-commander/skills/belt-gateway-php
+  apca-marketing-site:
+    from: rctc-skill
+    dir: portfolio-commander/skills/apca-marketing-site
+  muqasa-maintenance:
+    from: rctc-skill
+    dir: portfolio-commander/skills/muqasa-maintenance
+  security-bounty-window:
+    from: rctc-skill
+    dir: portfolio-commander/skills/security-bounty-window
+  flutter-dart-app:
+    from: rctc-skill
+    dir: portfolio-commander/skills/flutter-dart-app
+  factory-sales-concept:
+    from: rctc-skill
+    dir: factory-sales-concept
+
+# One install target per product (avoid duplicating on c-belt + c-belt-apca-smarthelp)
+bundles:
+  belt-cx:
+    registry_ids:
+      - c-belt
+      - c-belt-apca-smarthelp
+    primary_path: "C:\\Belt"
+    skills:
+      - portfolio-commander
+      - bitter-truth-delivery-audit
+      - ai-portability-advisor
+      - belt-apca-smarthelp-cx
+    nested:
+      - path: "C:\\Belt\\APCA-SmartHelp"
+        skills:
+          - belt-apca-smarthelp-cx
+          - ai-portability-advisor
+      - path: "C:\\Belt\\flutter_sms_gateway"
+        skills:
+          - belt-gateway-php
+          - bitter-truth-delivery-audit
+
+  aipro-hub:
+    registry_ids:
+      - c-aipro
+    primary_path: "C:\\AIPRO"
+    skills:
+      - portfolio-commander
+      - ai-portability-advisor
+      - bitter-truth-delivery-audit
+
+  smart-branch:
+    registry_ids:
+      - c-atalkingqms
+    primary_path: "C:\\atalkingQMS"
+    skills:
+      - portfolio-commander
+      - ai-portability-advisor
+      - belt-apca-smarthelp-cx
+
+  apca-web:
+    registry_ids:
+      - c-apcasystems
+      - c-apccasystems-com
+    skills_by_path:
+      "C:\\apcasystems":
+        - apca-marketing-site
+        - portfolio-commander
+      "C:\\apccasystems.com":
+        - apca-marketing-site
+        - portfolio-commander
+
+  muqasa:
+    registry_ids:
+      - c-muqasa
+    primary_path: "C:\\muqasa"
+    skills:
+      - portfolio-commander
+      - muqasa-maintenance
+      - bitter-truth-delivery-audit
+
+  bounty:
+    registry_ids:
+      - c-gandalf
+    primary_path: "C:\\gandalf"
+    skills:
+      - portfolio-commander
+      - security-bounty-window
+
+  rctc-repo:
+    registry_ids:
+      - c-rctc-skill
+    primary_path: "C:\\rctc-skill"
+    skills:
+      - rctc-method
+      - portfolio-commander
+      - ai-portability-advisor
+
+  factories:
+    registry_ids:
+      - c-almajjarra
+      - c-noorplasticfactory
+    primary_path: "C:\\Factories"
+    skills:
+      - factory-sales-concept
+      - portfolio-commander
+    nested:
+      - path: "C:\\almajjarra"
+        skills:
+          - factory-sales-concept
+      - path: "C:\\Factories\\Banoon"
+        skills:
+          - factory-sales-concept
+      - path: "C:\\NoorPlasticFactory"
+        skills:
+          - factory-sales-concept
+
+# Only install bundles whose registry project is lifecycle=active (read from overrides + registry)
+install_policy:
+  skip_lifecycle: dormant
+  skip_role: backup
+  dry_run: false
