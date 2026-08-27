@@ -38,7 +38,8 @@ python "C:\rctc-skill\portfolio-commander\scripts\install_project_skills.py"
 | apca-web | apcasystems / apccasystems.com | marketing, portfolio |
 | muqasa | `C:\muqasa` | maintenance, bitter-truth |
 | bounty | `C:\gandalf` | security-bounty-window |
-| rctc-repo | `C:\rctc-skill` | rctc-method, portfolio, portability |
+| rctc-repo | `C:\rctc-skill` | rctc-method, portfolio, portability, focused3-agentic-phases |
+| omniagent | `C:\airealpro\chatbase` | `/focused3-agentic-phases` نظام THINK→EXECUTE→PROVE |
 | factories | `C:\Factories` + المجرة + بنون + نور | `/factory-sales-concept` تصور رقمي للمصنع ثم GitHub وVercel |
 
 المشاريع `lifecycle: dormant` أو `role: backup` **لا تُثبَّت** عليها حزمة (سياسة الخريطة).

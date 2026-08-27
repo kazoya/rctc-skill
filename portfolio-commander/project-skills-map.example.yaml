@@ -44,6 +44,9 @@ catalog:
   factory-sales-concept:
     from: rctc-skill
     dir: factory-sales-concept
+  focused3-agentic-phases:
+    from: rctc-skill
+    dir: focused3-agentic-phases
 
 # One install target per product (avoid duplicating on c-belt + c-belt-apca-smarthelp)
 bundles:
@@ -122,6 +125,15 @@ bundles:
       - rctc-method
       - portfolio-commander
       - ai-portability-advisor
+      - focused3-agentic-phases
+
+  omniagent:
+    registry_ids:
+      - c-airealpro-chatbase
+    primary_path: "C:\\airealpro\\chatbase"
+    skills:
+      - focused3-agentic-phases
+      - portfolio-commander
 
   factories:
     registry_ids:

@@ -143,6 +143,12 @@ def main() -> None:
         copy_skill(factory_src, factory_dest, dry_run)
         print(f"User skill: {factory_dest}")
 
+    f3_src = rctc / "focused3-agentic-phases"
+    if (f3_src / "SKILL.md").is_file():
+        f3_dest = USER_SKILLS / "focused3-agentic-phases"
+        copy_skill(f3_src, f3_dest, dry_run)
+        print(f"User skill: {f3_dest}")
+
     for bundle_name, bundle in cfg.get("bundles", {}).items():
         ids = bundle.get("registry_ids", [])
         if any(should_skip_project(pid, policy, lifecycle_map, ovr) for pid in ids):

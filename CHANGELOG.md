@@ -2,6 +2,11 @@
 
 All notable changes to RCTC Method will be documented here.
 
+## [Unreleased]
+
+### Added
+- `focused3-agentic-phases` — 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with agent cells, prompt factory, quality gates, and evidence rules. Source: `focused3-agentic-phases/`. Mapped to OmniAgent (`C:\airealpro\chatbase`) and installed as a user skill.
+
 ## [1.0.0] — Initial Release
 
 ### Added
