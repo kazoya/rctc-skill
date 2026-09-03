@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "note": "PUBLIC example seed (fake projects). `mb init --seed seed/example-projects.json`. Your real seed is seed/initial-projects.json (git-ignored).",
+  "sessions": [
+    { "id": "cse_example_1", "project": "website-relaunch", "verified": true },
+    { "id": "cse_example_2", "project": "misc-tasks", "verified": true }
+  ],
+  "projects": [
+    {
+      "id": "website-relaunch",
+      "name": { "ar": "إعادة إطلاق الموقع", "en": "Website relaunch" },
+      "description": { "ar": "تحديث الموقع الرئيسي وتحسين الأداء.", "en": "Refresh the main website and improve performance." },
+      "status": "active", "priority": 1, "revenue": "yes", "progress": 40, "tags": ["web", "nextjs"], "sessions": ["cse_example_1"],
+      "created": "2026-09-01T09:00:00+03:00",
+      "brain": { "sections": {
+        "done": [{ "text": "Design system chosen (ui-ux-pro-max)", "date": "2026-09-01", "by": "claude", "source": "import" }],
+        "findings": [{ "text": "Lighthouse score is 61 — images are the bottleneck", "date": "2026-09-02", "by": "sonnet", "source": "import" }],
+        "current": [{ "text": "Migrating pages to the new layout", "date": "2026-09-02", "by": "human", "source": "import" }],
+        "next": [{ "text": "Set up CI + preview deployments", "date": "2026-09-02", "by": "claude", "source": "import" }],
+        "improvements": [{ "text": "Image pipeline (AVIF) to reach 90+", "date": "2026-09-02", "by": "opus", "source": "import" }],
+        "suggestions": [{ "text": "Add an uptime monitor with weekly report", "date": "2026-09-02", "by": "fable", "source": "import", "status": "proposed" }],
+        "decisions": [{ "text": "Next.js stays; no framework change", "date": "2026-09-01", "by": "human", "source": "import" }],
+        "blockers": [], "constraints": [{ "text": "No paid services without approval", "date": "2026-09-01", "by": "human", "source": "import" }]
+      } },
+      "journal": [
+        { "date": "2026-09-01T10:00:00+03:00", "type": "milestone", "title": "Kickoff and design system", "progress": 20, "model": "claude", "source": "import", "body": "Chosen palette and typography." },
+        { "date": "2026-09-02T16:00:00+03:00", "type": "progress", "title": "Home + about pages migrated", "progress": 40, "model": "sonnet", "source": "import", "body": "Two of five pages done." }
+      ]
+    },
+    {
+      "id": "misc-tasks",
+      "name": { "ar": "متفرقات", "en": "Miscellaneous" },
+      "description": { "ar": "مهام صغيرة غير مترابطة.", "en": "Small unrelated tasks." },
+      "status": "active", "priority": 4, "revenue": "unknown", "progress": 10, "tags": ["misc"], "sessions": ["cse_example_2"],
+      "created": "2026-09-01T09:00:00+03:00",
+      "brain": { "sections": { "done": [], "findings": [], "current": [{ "text": "Renew domain", "date": "2026-09-02", "by": "human", "source": "import" }], "next": [], "improvements": [], "suggestions": [], "decisions": [], "blockers": [], "constraints": [] } },
+      "journal": [{ "date": "2026-09-02T12:00:00+03:00", "type": "note", "title": "Slot opened", "progress": 10, "model": "human", "source": "import", "body": "" }]
+    }
+  ],
+  "platformBrain": {
+    "learned": [{ "text": "Publish the tool, never the registry (portfolio-commander privacy model)", "by": "fable", "date": "2026-09-03" }],
+    "skills": [
+      { "name": "start-skill", "text": "Kickoff protocol for any portfolio", "source": "bundled", "status": "installed", "by": "fable", "date": "2026-09-03" },
+      { "name": "master-brain", "text": "Operate the platform from Claude", "source": "bundled", "status": "installed", "by": "fable", "date": "2026-09-03" },
+      { "name": "ui-ux-pro-max", "text": "Design intelligence", "source": "nextlevelbuilder/ui-ux-pro-max-skill", "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill", "status": "recommended", "by": "fable", "date": "2026-09-03", "install": "/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill" }
+    ],
+    "tools": [
+      { "name": "Node.js ≥ 18", "kind": "runtime", "text": "Only requirement", "status": "installed", "by": "fable", "date": "2026-09-03" },
+      { "name": "Claude Code", "kind": "cli", "text": "Connects via .mcp.json", "status": "available", "by": "fable", "date": "2026-09-03" },
+      { "name": "Claude Desktop", "kind": "app", "text": "Connects via claude_desktop_config.json", "status": "available", "by": "fable", "date": "2026-09-03" }
+    ],
+    "capabilities": [{ "text": "Period & progress reports in HTML/PDF/XLSX/MD/JSON", "by": "fable", "date": "2026-09-03" }],
+    "requests": []
+  }
+}

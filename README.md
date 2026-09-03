@@ -260,25 +260,30 @@ Proceeding with: Senior B2B sales rep | SaaS | Cold outreach...
 
 ```
 rctc-skill/
-├── 📋 SKILL.md                 ← Core skill logic (load this in Claude)
+├── 📋 SKILL.md                 ← Core RCTC skill logic (load this in Claude)
 ├── 📖 README.md                ← You're here
 ├── 📝 CHANGELOG.md             ← Version history
-├── 🎯 .cursor/rules/rctc.mdc ← Cursor rule (auto-loaded in this project)
+├── 🎯 .cursor/rules/rctc.mdc   ← Cursor rule (auto-loaded in this project)
+├── 🚀 start-skill/             ← مهارة البدء: sessions → tracked portfolio
+├── 🧠 master-brain/            ← Node.js reference platform (CLI + MCP + reports)
+├── 🧭 portfolio-commander/     ← Multi-project registry & focus rules
+├── 🔁 continuous-improving/    ← Autonomous optimization skill
+├── 🔬 focused3-agentic-phases/ ← THINK → EXECUTE → PROVE
 ├── ⚙️  config/
 │   └── config.yaml             ← User configuration
 ├── 🧠 src/
 │   ├── analyzer.md             ← Prompt analysis engine
 │   ├── templates.md            ← Response templates
-│   └── recommender.md         ← Skill recommendation logic
+│   └── recommender.md          ← Skill recommendation logic
 ├── 💡 examples/
-│   ├── arabic-examples.md      ← Arabic use cases
-│   ├── english-examples.md     ← English use cases
-│   └── advanced-cases.md       ← Edge cases & power user examples
 └── 📚 docs/
-    ├── getting-started.md      ← Step-by-step setup
-    ├── configuration.md        ← Full config reference
-    └── learning-system.md      ← How adaptation works
 ```
+
+### Sibling skills (this repo)
+
+- 🚀 [start-skill](start-skill/) — مهارة البدء: turn scattered sessions into one tracked portfolio (folder per project, engineering mind, reports, Claude Code/Desktop channel). Default Claude Code effort: **`xhigh`** (not `max`) on `claude-opus-5[1m]`.
+- 🧠 [master-brain](master-brain/) — zero-dependency Node.js platform for start-skill + portfolio-commander: dashboard (AR/EN), reports (HTML/PDF/XLSX/MD/JSON), MCP (19 tools), CLI.
+- 🧭 [portfolio-commander](portfolio-commander/) — scan/registry/dormant rules for multi-repo work.
 
 ---
 
