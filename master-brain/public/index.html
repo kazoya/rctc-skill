@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master Brain — ماستر برين</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0f1e; --bg2:#0f172b; --card:#131c33; --card2:#182342; --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
+    --gold:#c8ad73; --gold2:#e2cf9a; --ink:#eef2ff; --muted:#93a0bd; --muted2:#6b7794;
+    --ok:#10b981; --warn:#f59e0b; --bad:#ef4444; --info:#60a5fa;
+    --r:14px; --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cairo","Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;font-size:14.5px;line-height:1.6}
+  a{color:var(--gold2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code,.mono{font-family:"JetBrains Mono",Consolas,"Courier New",monospace;font-size:12.5px}
+  button,input,select,textarea{font:inherit;color:inherit}
+  h1,h2,h3,h4{margin:0;font-weight:700}
+  ::selection{background:rgba(200,173,115,.35)}
+
+  /* header */
+  header.top{position:sticky;top:0;z-index:20;background:rgba(10,15,30,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .top-in{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+  .brand .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#8a6d2f);display:grid;place-items:center;color:#0a0f1e;font-weight:900;box-shadow:var(--shadow)}
+  .brand small{display:block;font-size:11px;color:var(--muted);font-weight:600;line-height:1.1}
+  nav{display:flex;gap:4px;flex-wrap:wrap;margin-inline-start:auto}
+  nav a{padding:7px 12px;border-radius:10px;color:var(--muted);font-weight:600}
+  nav a.active,nav a:hover{background:var(--card2);color:var(--ink);text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line2);border-radius:10px;overflow:hidden}
+  .lang button{background:transparent;border:0;padding:6px 10px;cursor:pointer;color:var(--muted);font-weight:700}
+  .lang button.on{background:var(--gold);color:#0a0f1e}
+
+  main{max-width:1280px;margin:0 auto;padding:22px 20px 60px}
+  .page-h{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+  .page-h h1{font-size:22px}
+  .sub{color:var(--muted);font-size:13px}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:6px;background:var(--card2);border:1px solid var(--line2);border-radius:10px;padding:7px 12px;cursor:pointer;font-weight:600;white-space:nowrap;transition:.15s}
+  .btn:hover{border-color:var(--gold);color:var(--gold2)}
+  .btn.primary{background:var(--gold);color:#0a0f1e;border-color:var(--gold)}
+  .btn.primary:hover{background:var(--gold2);color:#0a0f1e}
+  .btn.sm{padding:3px 8px;font-size:12px;border-radius:8px}
+  .btn.danger:hover{border-color:var(--bad);color:var(--bad)}
+  .btn.ghost{background:transparent}
+
+  /* kpis */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+  .kpi{background:linear-gradient(160deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+  .kpi .v{font-size:26px;font-weight:800;color:var(--gold2)}
+  .kpi .k{color:var(--muted);font-size:12px}
+
+  /* cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;transition:.15s;position:relative}
+  .card.link{cursor:pointer}
+  .card.link:hover{border-color:rgba(200,173,115,.5);transform:translateY(-2px);box-shadow:var(--shadow)}
+  .card h3{font-size:16px;margin-bottom:2px}
+  .card .id{color:var(--muted2);font-size:12px}
+  .card .desc{color:var(--muted);font-size:13px;margin:8px 0 10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .between{justify-content:space-between}
+  .ring{width:58px;height:58px;flex:none}
+  .ring svg{transform:rotate(-90deg)}
+  .ring text{transform:rotate(90deg);transform-origin:center;fill:var(--ink);font-weight:800;font-size:13px}
+  .counts{display:flex;gap:10px;color:var(--muted);font-size:12px;margin-top:10px;flex-wrap:wrap}
+  .counts b{color:var(--ink)}
+
+  .badge{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 16%,transparent);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);white-space:nowrap}
+  .chip{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11.5px;background:var(--card2);color:var(--muted);border:1px solid var(--line)}
+  .bar{position:relative;height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;flex:1;min-width:100px}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:999px}
+
+  /* panels */
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+  .panel h2{font-size:16px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .panel h2 .n{color:var(--muted);font-weight:600;font-size:13px}
+  .two{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+  @media(max-width:900px){.two{grid-template-columns:1fr}}
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:14px;flex-wrap:wrap}
+  .tabs button{background:transparent;border:0;padding:8px 12px;cursor:pointer;color:var(--muted);font-weight:700;border-bottom:2px solid transparent;margin-bottom:-1px}
+  .tabs button.on{color:var(--gold2);border-color:var(--gold)}
+
+  /* lists */
+  .items{list-style:none;margin:0;padding:0}
+  .items li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line)}
+  .items li:last-child{border-bottom:0}
+  .items .tx{flex:1}
+  .items .meta{color:var(--muted2);font-size:11.5px;display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
+  .items .acts{display:flex;gap:4px;opacity:.35;transition:.15s;flex:none;align-items:flex-start}
+  .items .acts select{width:38px;padding:3px 2px;text-align:center}
+  .items li:hover .acts{opacity:1}
+  .sec{margin-bottom:14px}
+  .sec-h{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:4px}
+  .sec-h h4{font-size:14px}
+  .sec-h .n{color:var(--muted2);font-size:12px;font-weight:600}
+  .empty{color:var(--muted2);font-size:13px;padding:6px 0}
+
+  /* journal */
+  .tl{position:relative;padding-inline-start:18px}
+  .tl::before{content:"";position:absolute;inset-inline-start:5px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+  .ev{position:relative;padding:8px 0 12px}
+  .ev::before{content:"";position:absolute;inset-inline-start:-17px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .ev .t{font-weight:700}
+  .ev .b{color:var(--muted);white-space:pre-wrap;font-size:13px;margin-top:4px}
+  .ev .m{color:var(--muted2);font-size:11.5px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+  /* forms */
+  dialog{background:var(--card);color:var(--ink);border:1px solid var(--line2);border-radius:16px;padding:0;max-width:640px;width:min(96vw,640px);box-shadow:var(--shadow)}
+  dialog::backdrop{background:rgba(0,0,0,.55);backdrop-filter:blur(3px)}
+  .dlg-h{padding:14px 18px;border-bottom:1px solid var(--line);font-weight:800;font-size:16px;display:flex;justify-content:space-between;align-items:center}
+  .dlg-b{padding:16px 18px;max-height:70vh;overflow:auto}
+  .dlg-f{padding:12px 18px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:8px}
+  .f{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+  .f label{font-size:12.5px;color:var(--muted);font-weight:600}
+  .f input,.f select,.f textarea{background:var(--bg2);border:1px solid var(--line2);border-radius:10px;padding:8px 10px;outline:none;width:100%}
+  .f input:focus,.f select:focus,.f textarea:focus{border-color:var(--gold)}
+  .f textarea{min-height:90px;resize:vertical}
+  .f .hint{font-size:11.5px;color:var(--muted2)}
+  .fr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:600px){.fr{grid-template-columns:1fr}}
+  .inline-form{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}
+  .inline-form input,.inline-form select{background:var(--bg2);border:1px solid var(--line2);border-radius:10px;padding:6px 10px;outline:none}
+  .inline-form input{flex:1;min-width:200px}
+  select.small{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:3px 6px;font-size:12.5px}
+
+  table.tbl{width:100%;border-collapse:collapse;font-size:13px}
+  .tbl th,.tbl td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top}
+  .tbl th{color:var(--muted);font-weight:700;font-size:12px}
+  pre.code{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px;overflow:auto;font-family:"JetBrains Mono",Consolas,monospace;font-size:12px;direction:ltr;text-align:left;white-space:pre-wrap;word-break:break-word}
+  .toast{position:fixed;bottom:18px;inset-inline-start:18px;background:var(--card2);border:1px solid var(--gold);color:var(--ink);padding:10px 14px;border-radius:12px;box-shadow:var(--shadow);z-index:50;opacity:0;transform:translateY(10px);transition:.2s;max-width:420px}
+  .toast.show{opacity:1;transform:none}
+  .toast.err{border-color:var(--bad)}
+  .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+  .filters button{background:transparent;border:1px solid var(--line2);border-radius:999px;padding:4px 12px;cursor:pointer;color:var(--muted);font-weight:600;font-size:12.5px}
+  .filters button.on{border-color:var(--gold);color:var(--gold2);background:rgba(200,173,115,.1)}
+  .req{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;background:var(--bg2)}
+  .req .h{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+  .path{direction:ltr;text-align:left;display:inline-block}
+  .muted{color:var(--muted)}
+  .hidden{display:none!important}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="#/"><span class="logo">MB</span><span><span data-t="appName">ماستر برين</span><small data-t="tagline">منصة المتابعة والعقل الهندسي الواعي</small></span></a>
+  <nav id="nav">
+    <a href="#/" data-route="/" data-t="dashboard">اللوحة</a>
+    <a href="#/reports" data-route="/reports" data-t="reports">التقارير</a>
+    <a href="#/platform" data-route="/platform" data-t="brain">العقل العام</a>
+    <a href="#/claude" data-route="/claude" data-t="channel">قناة Claude</a>
+  </nav>
+  <div class="lang"><button id="lang-ar">عربي</button><button id="lang-en">EN</button></div>
+  <button class="btn ghost sm" id="btn-refresh" title="refresh">⟳</button>
+</div></header>
+<main id="app"></main>
+<div class="toast" id="toast"></div>
+<dialog id="dlg"><div class="dlg-h"><span id="dlg-title"></span><button class="btn sm ghost" id="dlg-x">✕</button></div><form method="dialog" id="dlg-form"><div class="dlg-b" id="dlg-body"></div><div class="dlg-f"><button type="button" class="btn" id="dlg-cancel" data-t="cancel">إلغاء</button><button type="submit" class="btn primary" id="dlg-ok" data-t="save">حفظ</button></div></form></dialog>
+
+<script>
+/* ============================== i18n ============================== */
+const T = {
+  ar: {
+    appName:'ماستر برين', tagline:'منصة المتابعة والعقل الهندسي الواعي', dashboard:'اللوحة', reports:'التقارير', brain:'العقل العام', channel:'قناة Claude',
+    projects:'المشاريع', newProject:'مشروع جديد', progress:'التقدّم', status:'الحالة', priority:'الأولوية', lastActivity:'آخر نشاط', journal:'سجل التقدّم',
+    period:'الفترة', from:'من', to:'إلى', generate:'إنشاء التقرير', format:'الصيغة', all:'الكل', save:'حفظ', cancel:'إلغاء', add:'إضافة', by:'بواسطة', date:'التاريخ',
+    avgProgress:'متوسط التقدّم', entries:'مدخلات السجل', suggestions:'مقترحات النماذج', pendingTasks:'مهام بانتظار Claude', toolRequests:'طلبات أدوات معلّقة',
+    revenue:'دخل', tags:'الوسوم', sessions:'الجلسات المرتبطة', path:'المجلد', copy:'نسخ', copied:'تم النسخ', open:'فتح', delete:'حذف', edit:'تعديل',
+    nameAr:'الاسم (عربي)', nameEn:'الاسم (إنجليزي)', descAr:'الوصف (عربي)', descEn:'الوصف (إنجليزي)', id:'المعرّف (لاتيني)', idHint:'حروف لاتينية وأرقام وشرطات — يصبح اسم المجلد',
+    engineeringMind:'العقل الهندسي', files:'الملفات', claudeTab:'Claude', addEntry:'إضافة مدخل', entryTitle:'العنوان', entryBody:'التفاصيل (Markdown)', entryType:'النوع', model:'النموذج', newProgress:'نسبة التقدّم الجديدة', leaveEmpty:'اتركه فارغاً إن لم تتغير',
+    addItem:'إضافة بند', itemText:'النص', moveTo:'نقل إلى', markDone:'✓ منجز', accept:'قبول', reject:'رفض', done:'تم', proposed:'مقترح', accepted:'مقبول', rejected:'مرفوض',
+    noEntries:'لا مدخلات بعد.', nothing:'لا شيء بعد.', noProjects:'لا مشاريع بعد — أنشئ أول مشروع.', noReports:'لا تقارير محفوظة بعد.',
+    reportBuilder:'منشئ التقارير', savedReports:'التقارير المحفوظة', group:'التجميع', byStatus:'حسب الحالة', byPriority:'حسب الأولوية', none:'بدون', lang:'اللغة', includePlatform:'تضمين العقل العام', onlyActive:'المشاريع النشطة في الفترة فقط',
+    types:'أنواع المدخلات', models:'النماذج', minProgress:'أدنى تقدّم', maxProgress:'أقصى تقدّم', title:'عنوان التقرير', reportDone:'تم إنشاء التقرير', download:'تنزيل',
+    learned:'ما تعلّمناه', skills:'المهارات المكتسبة', tools:'الأدوات والتكاملات', capabilities:'القدرات', requests:'طلبات الأدوات', name:'الاسم', source:'المصدر', url:'الرابط', install:'أمر التثبيت', notes:'ملاحظات', reason:'السبب',
+    approve:'موافقة', pending:'معلّق', approved:'موافَق عليه', installed:'مثبّت', available:'متاح', recommended:'موصى به', requested:'مطلوب', declined:'مرفوض',
+    inbox:'صندوق المهام (المالك → Claude)', addTask:'إضافة مهمة لـ Claude', task:'المهمة', project:'المشروع', markStart:'بدء', markDone2:'إنهاء', result:'النتيجة', in_progress:'قيد التنفيذ',
+    howToConnect:'كيف تتصل Claude بالمنصة', contextBlock:'كتلة سياق للّصق في Claude Desktop', pickProject:'اختر مشروعاً', cli:'أوامر الطرفية', mcpCode:'Claude Code — ملف .mcp.json (موجود في جذر المنصة، يعمل تلقائياً عند فتح المجلد)', mcpDesktop:'Claude Desktop — claude_desktop_config.json (يضيفه scripts\\install.ps1 تلقائياً)',
+    stats:'الإحصائيات', dormantHint:'لا نشاط منذ فترة — يُقترح وضعه في السكون', created:'أُنشئ', updated:'حُدِّث', confirmDelete:'حذف هذا البند؟', error:'خطأ', saved:'تم الحفظ', evidence:'الدليل / الرابط',
+    filterAll:'الكل', planning:'تخطيط', active:'نشط', paused:'متوقف', blocked:'معلّق', dormant:'سكون', doneS:'مكتمل',
+    quickLog:'تسجيل سريع', sectionsPrimary:'الأقسام الرئيسية', sectionsMore:'أقسام إضافية', platformNote:'كل ما تعلمته النماذج، وما اكتسبته من مهارات، وما لديها من أدوات وقدرات — وطلبات الأدوات التي تنتظر قرارك.',
+    claudeIntro:'ثلاث قنوات: MCP (الأفضل — أدوات مباشرة داخل Claude Code وClaude Desktop)، الطرفية (mb)، وكتلة السياق للّصق.', command:'الأمر', kindRuntime:'النوع',
+  },
+  en: {
+    appName:'Master Brain', tagline:'Portfolio tracker & conscious engineering mind', dashboard:'Dashboard', reports:'Reports', brain:'Platform brain', channel:'Claude channel',
+    projects:'Projects', newProject:'New project', progress:'Progress', status:'Status', priority:'Priority', lastActivity:'Last activity', journal:'Journal',
+    period:'Period', from:'From', to:'To', generate:'Generate report', format:'Format', all:'All', save:'Save', cancel:'Cancel', add:'Add', by:'By', date:'Date',
+    avgProgress:'Average progress', entries:'Journal entries', suggestions:'Model suggestions', pendingTasks:'Tasks waiting for Claude', toolRequests:'Pending tool requests',
+    revenue:'Revenue', tags:'Tags', sessions:'Related sessions', path:'Folder', copy:'Copy', copied:'Copied', open:'Open', delete:'Delete', edit:'Edit',
+    nameAr:'Name (Arabic)', nameEn:'Name (English)', descAr:'Description (Arabic)', descEn:'Description (English)', id:'ID (latin)', idHint:'Latin letters, digits, dashes — becomes the folder name',
+    engineeringMind:'Engineering mind', files:'Files', claudeTab:'Claude', addEntry:'Add entry', entryTitle:'Title', entryBody:'Details (Markdown)', entryType:'Type', model:'Model', newProgress:'New progress %', leaveEmpty:'Leave empty if unchanged',
+    addItem:'Add item', itemText:'Text', moveTo:'Move to', markDone:'✓ Done', accept:'Accept', reject:'Reject', done:'Done', proposed:'Proposed', accepted:'Accepted', rejected:'Rejected',
+    noEntries:'No entries yet.', nothing:'Nothing yet.', noProjects:'No projects yet — create the first one.', noReports:'No saved reports yet.',
+    reportBuilder:'Report builder', savedReports:'Saved reports', group:'Group by', byStatus:'Status', byPriority:'Priority', none:'None', lang:'Language', includePlatform:'Include platform brain', onlyActive:'Only projects active in period',
+    types:'Entry types', models:'Models', minProgress:'Min progress', maxProgress:'Max progress', title:'Report title', reportDone:'Report generated', download:'Download',
+    learned:'Lessons learned', skills:'Acquired skills', tools:'Tools & integrations', capabilities:'Capabilities', requests:'Tool requests', name:'Name', source:'Source', url:'URL', install:'Install command', notes:'Notes', reason:'Reason',
+    approve:'Approve', pending:'Pending', approved:'Approved', installed:'Installed', available:'Available', recommended:'Recommended', requested:'Requested', declined:'Declined',
+    inbox:'Task inbox (owner → Claude)', addTask:'Add a task for Claude', task:'Task', project:'Project', markStart:'Start', markDone2:'Finish', result:'Result', in_progress:'In progress',
+    howToConnect:'How Claude connects to the platform', contextBlock:'Context block to paste into Claude Desktop', pickProject:'Pick a project', cli:'CLI commands', mcpCode:'Claude Code — .mcp.json (at the platform root; loads automatically when the folder is opened)', mcpDesktop:'Claude Desktop — claude_desktop_config.json (added automatically by scripts\\install.ps1)',
+    stats:'Statistics', dormantHint:'No activity for a while — consider marking dormant', created:'Created', updated:'Updated', confirmDelete:'Delete this item?', error:'Error', saved:'Saved', evidence:'Evidence / link',
+    filterAll:'All', planning:'Planning', active:'Active', paused:'Paused', blocked:'Blocked', dormant:'Dormant', doneS:'Done',
+    quickLog:'Quick log', sectionsPrimary:'Primary sections', sectionsMore:'More sections', platformNote:'Everything the models learned, the skills they acquired, the tools and capabilities they have — and the tool requests awaiting your decision.',
+    claudeIntro:'Three channels: MCP (best — native tools inside Claude Code and Claude Desktop), the terminal (mb), and a paste-able context block.', command:'Command', kindRuntime:'Kind',
+  },
+};
+let lang = 'ar';
+try { lang = localStorage.getItem('mb.lang') || 'ar'; } catch {}
+const t = k => (T[lang] && T[lang][k]) || T.en[k] || k;
+const L = v => (v == null ? '' : typeof v === 'string' ? v : (v[lang] || v.ar || v.en || ''));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ============================== state / api ============================== */
+const S = { meta: null, projects: [], current: null, platform: null, requests: [], reports: [], filter: 'all', tab: 'brain', ptab: 'learned' };
+async function api(method, path, body) {
+  const r = await fetch(path, { method, headers: body ? { 'Content-Type': 'application/json' } : {}, body: body ? JSON.stringify(body) : undefined });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(j.error || r.statusText);
+  return j;
+}
+let toastTimer;
+function toast(msg, err) { const el = document.getElementById('toast'); el.textContent = msg; el.className = 'toast show' + (err ? ' err' : ''); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.className = 'toast', 2600); }
+async function safe(fn, okMsg) { try { const r = await fn(); if (okMsg) toast(okMsg); return r; } catch (e) { toast(`${t('error')}: ${e.message}`, true); throw e; } }
+function fmtDate(v, withTime = true) {
+  if (!v) return '';
+  const d = new Date(v); if (isNaN(d)) return String(v);
+  try {
+    const p = new Intl.DateTimeFormat('en-GB', { timeZone: S.meta?.timezone || 'Asia/Riyadh', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(d).reduce((a, x) => (a[x.type] = x.value, a), {});
+    return `${p.year}-${p.month}-${p.day}` + (withTime ? ` ${p.hour === '24' ? '00' : p.hour}:${p.minute}` : '');
+  } catch { return d.toISOString().slice(0, withTime ? 16 : 10).replace('T', ' '); }
+}
+const vocab = () => S.meta.vocab;
+const vl = (list, key) => { const f = list.find(x => String(x.key) === String(key)); return f ? (f[lang] || f.en) : String(key ?? ''); };
+const statusBadge = s => `<span class="badge" style="--c:${(vocab().statuses.find(x => x.key === s) || {}).color || '#9ca3af'}">${esc(vl(vocab().statuses, s))}</span>`;
+const modelBadge = m => `<span class="badge" style="--c:${(vocab().models.find(x => x.key === m) || {}).color || '#9ca3af'}">${esc(vl(vocab().models, m))}</span>`;
+const ring = p => { const r = 24, c = 2 * Math.PI * r, v = Math.max(0, Math.min(100, p || 0)); return `<div class="ring"><svg viewBox="0 0 58 58" width="58" height="58"><circle cx="29" cy="29" r="${r}" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="6"/><circle cx="29" cy="29" r="${r}" fill="none" stroke="#c8ad73" stroke-width="6" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c * (1 - v / 100)}"/><text x="29" y="33" text-anchor="middle">${v}%</text></svg></div>`; };
+const bar = p => `<div class="bar"><i style="width:${Math.max(0, Math.min(100, p || 0))}%"></i></div>`;
+const sel = (list, value, { allowEmpty = false, emptyLabel = '—', valueKey = 'key' } = {}) => (allowEmpty ? `<option value="">${esc(emptyLabel)}</option>` : '') + list.map(x => `<option value="${esc(x[valueKey])}" ${String(x[valueKey]) === String(value) ? 'selected' : ''}>${esc(x[lang] || x.en || x.label || x[valueKey])}</option>`).join('');
+
+/* ============================== dialog forms ============================== */
+function openForm({ title, fields, submit, okLabel }) {
+  const dlg = document.getElementById('dlg');
+  document.getElementById('dlg-title').textContent = title;
+  document.getElementById('dlg-ok').textContent = okLabel || t('save');
+  const body = document.getElementById('dlg-body');
+  body.innerHTML = fields.map(f => {
+    const id = 'f_' + f.name;
+    let input;
+    if (f.type === 'select') input = `<select id="${id}" name="${f.name}">${f.options}</select>`;
+    else if (f.type === 'textarea') input = `<textarea id="${id}" name="${f.name}" ${f.required ? 'required' : ''}>${esc(f.value || '')}</textarea>`;
+    else if (f.type === 'checkbox') input = `<label><input type="checkbox" id="${id}" name="${f.name}" ${f.value ? 'checked' : ''}> ${esc(f.label)}</label>`;
+    else input = `<input id="${id}" name="${f.name}" type="${f.type || 'text'}" value="${esc(f.value ?? '')}" ${f.required ? 'required' : ''} ${f.min != null ? `min="${f.min}"` : ''} ${f.max != null ? `max="${f.max}"` : ''} placeholder="${esc(f.placeholder || '')}">`;
+    return `<div class="f ${f.half ? 'half' : ''}">${f.type === 'checkbox' ? '' : `<label for="${id}">${esc(f.label)}</label>`}${input}${f.hint ? `<div class="hint">${esc(f.hint)}</div>` : ''}</div>`;
+  }).join('');
+  const form = document.getElementById('dlg-form');
+  form.onsubmit = async ev => {
+    ev.preventDefault();
+    const data = {};
+    for (const f of fields) { const el = document.getElementById('f_' + f.name); if (!el) continue; data[f.name] = f.type === 'checkbox' ? el.checked : el.value; }
+    try { await submit(data); dlg.close(); } catch (e) { toast(`${t('error')}: ${e.message}`, true); }
+  };
+  document.getElementById('dlg-cancel').onclick = () => dlg.close();
+  document.getElementById('dlg-x').onclick = () => dlg.close();
+  dlg.showModal();
+  const first = body.querySelector('input,select,textarea'); if (first) first.focus();
+}
+
+/* ============================== loading ============================== */
+async function loadMeta() { S.meta = await api('GET', '/api/meta'); }
+async function loadProjects() { S.projects = await api('GET', '/api/projects'); }
+async function loadProject(id) { S.current = await api('GET', '/api/projects/' + encodeURIComponent(id)); }
+async function loadPlatform() { S.platform = await api('GET', '/api/platform'); }
+async function loadRequests() { S.requests = await api('GET', '/api/requests'); }
+async function loadReports() { S.reports = await api('GET', '/api/reports'); }
+
+/* ============================== views ============================== */
+const app = document.getElementById('app');
+
+async function viewDashboard() {
+  await Promise.all([loadMeta(), loadProjects()]);
+  const st = S.meta.stats;
+  const list = S.projects.filter(p => S.filter === 'all' || p.status === S.filter);
+  app.innerHTML = `
+    <div class="page-h"><div><h1>${t('dashboard')}</h1><div class="sub">${esc(L(S.meta.platformName))} · v${esc(S.meta.version)} · <span class="mono path">${esc(S.meta.projectsRoot)}</span></div></div>
+      <div class="row"><button class="btn primary" id="btn-new">＋ ${t('newProject')}</button><a class="btn" href="#/reports">📄 ${t('reports')}</a></div></div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">${st.projects}</div><div class="k">${t('projects')}</div></div>
+      <div class="kpi"><div class="v">${st.avgProgress}%</div><div class="k">${t('avgProgress')}</div></div>
+      <div class="kpi"><div class="v">${st.journalEntries}</div><div class="k">${t('entries')}</div></div>
+      <div class="kpi"><div class="v">${st.suggestions}</div><div class="k">${t('suggestions')}</div></div>
+      <div class="kpi"><div class="v">${st.pendingRequests}</div><div class="k">${t('pendingTasks')}</div></div>
+      <div class="kpi"><div class="v">${st.toolRequestsPending}</div><div class="k">${t('toolRequests')}</div></div>
+    </div>
+    <div class="filters">${['all', ...vocab().statuses.map(s => s.key)].map(k => `<button data-f="${k}" class="${S.filter === k ? 'on' : ''}">${k === 'all' ? t('filterAll') : esc(vl(vocab().statuses, k))} ${k === 'all' ? `(${S.projects.length})` : `(${st.byStatus[k] || 0})`}</button>`).join('')}</div>
+    <div class="grid">${list.map(p => `
+      <div class="card link" data-open="${esc(p.id)}">
+        <div class="row between"><div><h3>${esc(L(p.name))}</h3><div class="id mono">${esc(p.id)}</div></div>${ring(p.progress)}</div>
+        <div class="desc">${esc(L(p.description)) || '&nbsp;'}</div>
+        <div class="row">${statusBadge(p.status)} <span class="chip">${t('priority')} ${p.priority || '—'}</span> ${p.revenue === 'yes' ? `<span class="chip">💰 ${t('revenue')}</span>` : ''} ${p.dormantSuggested && p.status !== 'dormant' && p.status !== 'done' ? `<span class="chip" title="${t('dormantHint')}">💤</span>` : ''}</div>
+        <div class="counts"><span>✅ <b>${p.brainCounts.done}</b></span><span>🔧 <b>${p.brainCounts.current}</b></span><span>⏭️ <b>${p.brainCounts.next}</b></span><span>💡 <b>${p.brainCounts.suggestions}</b></span><span>🗓️ <b>${p.journalCount}</b></span><span class="muted">${fmtDate(p.lastActivity, false)}</span></div>
+      </div>`).join('') || `<div class="empty">${t('noProjects')}</div>`}</div>`;
+  app.querySelectorAll('[data-open]').forEach(el => el.onclick = () => location.hash = '#/project/' + el.dataset.open);
+  app.querySelectorAll('[data-f]').forEach(el => el.onclick = () => { S.filter = el.dataset.f; viewDashboard(); });
+  document.getElementById('btn-new').onclick = newProjectForm;
+}
+
+function newProjectForm() {
+  openForm({ title: t('newProject'), fields: [
+    { name: 'id', label: t('id'), hint: t('idHint'), placeholder: 'my-project' },
+    { name: 'name_ar', label: t('nameAr'), required: true }, { name: 'name_en', label: t('nameEn'), required: true },
+    { name: 'desc_ar', label: t('descAr'), type: 'textarea' }, { name: 'desc_en', label: t('descEn'), type: 'textarea' },
+    { name: 'status', label: t('status'), type: 'select', options: sel(vocab().statuses, 'planning') },
+    { name: 'priority', label: t('priority'), type: 'select', options: sel(vocab().priorities, 0) },
+    { name: 'revenue', label: t('revenue'), type: 'select', options: sel([{ key: 'unknown', ar: 'غير محدد', en: 'Unknown' }, { key: 'yes', ar: 'نعم', en: 'Yes' }, { key: 'no', ar: 'لا', en: 'No' }], 'unknown') },
+    { name: 'tags', label: t('tags'), placeholder: 'a, b, c' }, { name: 'sessions', label: t('sessions'), placeholder: 'cse_…' },
+  ], submit: async d => { const p = await api('POST', '/api/projects', { ...d, id: d.id || undefined, priority: +d.priority, tags: d.tags ? d.tags.split(',').map(s => s.trim()).filter(Boolean) : [], sessions: d.sessions ? d.sessions.split(',').map(s => s.trim()).filter(Boolean) : [] }); toast(t('saved')); location.hash = '#/project/' + p.id; } });
+}
+
+async function viewProject(id) {
+  await Promise.all([loadMeta(), loadProject(id)]);
+  const p = S.current;
+  const primary = vocab().sections.filter(s => s.primary), more = vocab().sections.filter(s => !s.primary);
+  const secHtml = s => {
+    const items = p.brain.sections[s.key] || [];
+    return `<div class="sec"><div class="sec-h"><h4>${s.icon} ${esc(s[lang] || s.en)} <span class="n">(${items.length})</span></h4><button class="btn sm" data-add="${s.key}">＋ ${t('addItem')}</button></div>
+      ${items.length ? `<ul class="items">${items.map(it => `<li><div class="tx">${esc(it.text)}${it.evidence ? ` <a href="${esc(it.evidence)}" target="_blank" rel="noopener">🔗</a>` : ''}<div class="meta">${s.key === 'suggestions' || it.by !== 'human' ? modelBadge(it.by) : ''} ${s.key === 'suggestions' ? `<span class="chip">${esc(t(it.status || 'proposed'))}</span>` : ''} <span>${fmtDate(it.date, false)}</span><span class="mono">${esc(it.id)}</span></div></div>
+        <div class="acts">${s.key === 'suggestions' ? `<button class="btn sm" data-st="${s.key}|${it.id}|accepted" title="${t('accept')}">👍</button><button class="btn sm" data-st="${s.key}|${it.id}|done" title="${t('done')}">✓</button><button class="btn sm" data-st="${s.key}|${it.id}|rejected" title="${t('reject')}">👎</button>` : (s.key !== 'done' ? `<button class="btn sm" data-mv="${s.key}|${it.id}|done" title="${t('markDone')}">✓</button>` : '')}
+          <select class="small" data-mvsel="${s.key}|${it.id}" title="${t('moveTo')}"><option value="">↪</option>${vocab().sections.filter(x => x.key !== s.key).map(x => `<option value="${x.key}">${x.icon} ${esc(x[lang] || x.en)}</option>`).join('')}</select>
+          <button class="btn sm danger" data-rm="${s.key}|${it.id}" title="${t('delete')}">🗑</button></div></li>`).join('')}</ul>` : `<div class="empty">${t('nothing')}</div>`}</div>`;
+  };
+  app.innerHTML = `
+    <div class="page-h"><div><div class="sub"><a href="#/">${t('dashboard')}</a> / <span class="mono">${esc(p.id)}</span></div><h1>${esc(L(p.name))}</h1><div class="sub">${esc(p.name[lang === 'ar' ? 'en' : 'ar'] || '')}</div></div>
+      <div class="row">${ring(p.progress)}<button class="btn primary" id="btn-log">＋ ${t('addEntry')}</button><a class="btn" href="#/reports?project=${encodeURIComponent(p.id)}">📄 ${t('reports')}</a></div></div>
+    <div class="panel"><div class="row" style="gap:14px">
+      <label class="row">${t('status')} <select class="small" id="p-status">${sel(vocab().statuses, p.status)}</select></label>
+      <label class="row">${t('priority')} <select class="small" id="p-priority">${sel(vocab().priorities, p.priority)}</select></label>
+      <label class="row">${t('progress')} <input class="small" id="p-progress" type="number" min="0" max="100" value="${p.progress}" style="width:70px;background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:3px 6px"></label>
+      <label class="row">${t('revenue')} <select class="small" id="p-revenue">${sel([{ key: 'unknown', ar: 'غير محدد', en: 'Unknown' }, { key: 'yes', ar: 'نعم', en: 'Yes' }, { key: 'no', ar: 'لا', en: 'No' }], p.revenue)}</select></label>
+      <button class="btn sm primary" id="p-save">${t('save')}</button>
+      <span class="muted" style="margin-inline-start:auto">${t('path')}: <span class="mono path">${esc(p.path)}</span> <button class="btn sm ghost" data-copy="${esc(p.path)}">${t('copy')}</button></span>
+    </div>
+    ${L(p.description) ? `<p class="muted" style="margin:10px 0 0">${esc(L(p.description))}</p>` : ''}
+    <div class="row" style="margin-top:8px">${(p.tags || []).map(x => `<span class="chip">#${esc(x)}</span>`).join('')} ${(p.sessions || []).map(x => `<span class="chip mono">${esc(x)}</span>`).join('')} <span class="chip">${t('created')} ${fmtDate(p.created, false)}</span> <span class="chip">${t('updated')} ${fmtDate(p.updated)}</span></div></div>
+    <div class="tabs">${[['brain', `🧠 ${t('engineeringMind')}`], ['journal', `🗓️ ${t('journal')} (${p.journal.length})`], ['claude', `🤖 ${t('claudeTab')}`]].map(([k, l]) => `<button data-tab="${k}" class="${S.tab === k ? 'on' : ''}">${l}</button>`).join('')}</div>
+    <div id="tab-brain" class="${S.tab !== 'brain' ? 'hidden' : ''}"><div class="two"><div class="panel">${primary.slice(0, 3).map(secHtml).join('')}</div><div class="panel">${primary.slice(3).map(secHtml).join('')}</div></div>
+      <div class="panel"><h2>${t('sectionsMore')}</h2><div class="two">${more.map(secHtml).join('')}</div></div></div>
+    <div id="tab-journal" class="${S.tab !== 'journal' ? 'hidden' : ''}"><div class="panel">
+      <div class="inline-form"><input id="q-title" placeholder="${t('quickLog')}: ${t('entryTitle')}…"><select id="q-type" class="small">${sel(vocab().types, 'progress')}</select><select id="q-model" class="small">${sel(vocab().models, 'human')}</select><input id="q-progress" type="number" min="0" max="100" placeholder="%" style="width:70px;flex:none"><button class="btn primary sm" id="q-add">＋ ${t('add')}</button></div>
+      <div class="tl" style="margin-top:14px">${p.journal.length ? p.journal.map(e => { const ty = vocab().types.find(x => x.key === e.type) || {}; return `<div class="ev"><div class="t">${ty.icon || ''} ${esc(e.title)} ${e.progress != null ? `<span class="chip">${e.progress}%</span>` : ''}</div><div class="m"><span>${fmtDate(e.date)}</span>${modelBadge(e.model)}<span class="chip">${esc(vl(vocab().types, e.type))}</span><span class="mono">${esc(e.file)}</span></div>${e.body ? `<div class="b">${esc(e.body)}</div>` : ''}</div>`; }).join('') : `<div class="empty">${t('noEntries')}</div>`}</div></div></div>
+    <div id="tab-claude" class="${S.tab !== 'claude' ? 'hidden' : ''}"><div class="panel"><h2>${t('contextBlock')}</h2><button class="btn sm" id="ctx-copy">${t('copy')}</button><pre class="code" id="ctx" style="direction:${lang === 'ar' ? 'rtl' : 'ltr'};text-align:start;margin-top:8px;font-family:inherit;font-size:13px">…</pre></div>
+      <div class="panel"><h2>${t('cli')}</h2><pre class="code">mb show ${esc(p.id)}
+mb log ${esc(p.id)} --title "…" --type progress --progress ${p.progress} --model fable
+mb brain ${esc(p.id)} add done "…"
+mb suggest ${esc(p.id)} "…" --by opus
+mb report --project ${esc(p.id)} --from 2026-09-01 --format all</pre></div></div>`;
+  // handlers
+  app.querySelectorAll('[data-tab]').forEach(b => b.onclick = () => { S.tab = b.dataset.tab; viewProject(id); });
+  document.getElementById('p-save').onclick = () => safe(async () => { await api('PATCH', '/api/projects/' + encodeURIComponent(id), { status: document.getElementById('p-status').value, priority: +document.getElementById('p-priority').value, progress: +document.getElementById('p-progress').value, revenue: document.getElementById('p-revenue').value }); viewProject(id); }, t('saved'));
+  app.querySelectorAll('[data-copy]').forEach(b => b.onclick = () => navigator.clipboard.writeText(b.dataset.copy).then(() => toast(t('copied'))));
+  app.querySelectorAll('[data-add]').forEach(b => b.onclick = () => addItemForm(id, b.dataset.add));
+  app.querySelectorAll('[data-mv]').forEach(b => b.onclick = () => { const [sec, item, to] = b.dataset.mv.split('|'); safe(async () => { await api('PATCH', `/api/projects/${encodeURIComponent(id)}/brain/${sec}/${item}`, { moveTo: to }); viewProject(id); }, t('saved')); });
+  app.querySelectorAll('[data-mvsel]').forEach(s => s.onchange = () => { if (!s.value) return; const [sec, item] = s.dataset.mvsel.split('|'); safe(async () => { await api('PATCH', `/api/projects/${encodeURIComponent(id)}/brain/${sec}/${item}`, { moveTo: s.value }); viewProject(id); }, t('saved')); });
+  app.querySelectorAll('[data-st]').forEach(b => b.onclick = () => { const [sec, item, st] = b.dataset.st.split('|'); safe(async () => { await api('PATCH', `/api/projects/${encodeURIComponent(id)}/brain/${sec}/${item}`, { status: st }); viewProject(id); }, t('saved')); });
+  app.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { if (!confirm(t('confirmDelete'))) return; const [sec, item] = b.dataset.rm.split('|'); safe(async () => { await api('DELETE', `/api/projects/${encodeURIComponent(id)}/brain/${sec}/${item}`); viewProject(id); }, t('saved')); });
+  document.getElementById('btn-log').onclick = () => addEntryForm(id);
+  document.getElementById('q-add').onclick = () => { const title = document.getElementById('q-title').value.trim(); if (!title) return; safe(async () => { await api('POST', `/api/projects/${encodeURIComponent(id)}/journal`, { title, type: document.getElementById('q-type').value, model: document.getElementById('q-model').value, progress: document.getElementById('q-progress').value || undefined, source: 'dashboard' }); S.tab = 'journal'; viewProject(id); }, t('saved')); };
+  if (S.tab === 'claude') { api('GET', `/api/context?id=${encodeURIComponent(id)}&lang=${lang}`).then(r => { document.getElementById('ctx').textContent = r.context; document.getElementById('ctx-copy').onclick = () => navigator.clipboard.writeText(r.context).then(() => toast(t('copied'))); }); }
+}
+function addItemForm(id, section) {
+  const s = vocab().sections.find(x => x.key === section);
+  openForm({ title: `${s.icon} ${s[lang] || s.en} — ${t('addItem')}`, fields: [
+    { name: 'text', label: t('itemText'), type: 'textarea', required: true },
+    { name: 'by', label: t('by'), type: 'select', options: sel(vocab().models, section === 'suggestions' ? 'claude' : 'human') },
+    { name: 'evidence', label: t('evidence') },
+  ], submit: async d => { await api('POST', `/api/projects/${encodeURIComponent(id)}/brain/${section}`, d); toast(t('saved')); viewProject(id); } });
+}
+function addEntryForm(id) {
+  openForm({ title: t('addEntry'), fields: [
+    { name: 'title', label: t('entryTitle'), required: true },
+    { name: 'type', label: t('entryType'), type: 'select', options: sel(vocab().types, 'progress') },
+    { name: 'model', label: t('model'), type: 'select', options: sel(vocab().models, 'human') },
+    { name: 'progress', label: t('newProgress'), type: 'number', min: 0, max: 100, hint: t('leaveEmpty') },
+    { name: 'status', label: t('status'), type: 'select', options: sel(vocab().statuses, '', { allowEmpty: true, emptyLabel: t('leaveEmpty') }) },
+    { name: 'body', label: t('entryBody'), type: 'textarea' },
+    { name: 'tags', label: t('tags'), placeholder: 'a, b' },
+  ], submit: async d => { await api('POST', `/api/projects/${encodeURIComponent(id)}/journal`, { ...d, progress: d.progress === '' ? undefined : +d.progress, status: d.status || undefined, tags: d.tags, source: 'dashboard' }); toast(t('saved')); S.tab = 'journal'; viewProject(id); } });
+}
+
+async function viewReports(query) {
+  await Promise.all([loadMeta(), loadProjects(), loadReports()]);
+  const q = new URLSearchParams(query || '');
+  const today = new Date(); const weekAgo = new Date(Date.now() - 6 * 86400000);
+  const iso = d => d.toISOString().slice(0, 10);
+  const multi = (list, name, selected = []) => `<div class="row" style="gap:6px">${list.map(x => `<label class="chip" style="cursor:pointer"><input type="checkbox" name="${name}" value="${esc(x.key)}" ${selected.includes(String(x.key)) ? 'checked' : ''}> ${esc(x.icon ? x.icon + ' ' : '')}${esc(x[lang] || x.en)}</label>`).join('')}</div>`;
+  app.innerHTML = `
+    <div class="page-h"><h1>${t('reports')}</h1></div>
+    <div class="two"><div class="panel"><h2>📄 ${t('reportBuilder')}</h2>
+      <div class="fr"><div class="f"><label>${t('from')}</label><input type="date" id="r-from" value="${iso(weekAgo)}"></div><div class="f"><label>${t('to')}</label><input type="date" id="r-to" value="${iso(today)}"></div></div>
+      <div class="f"><label>${t('projects')}</label>${multi(S.projects.map(p => ({ key: p.id, ar: L(p.name), en: L(p.name) })), 'projects', q.get('project') ? [q.get('project')] : [])}</div>
+      <div class="f"><label>${t('status')}</label>${multi(vocab().statuses, 'statuses')}</div>
+      <div class="f"><label>${t('types')}</label>${multi(vocab().types, 'types')}</div>
+      <div class="f"><label>${t('models')}</label>${multi(vocab().models, 'models')}</div>
+      <div class="fr"><div class="f"><label>${t('minProgress')}</label><input type="number" id="r-min" min="0" max="100" placeholder="0"></div><div class="f"><label>${t('maxProgress')}</label><input type="number" id="r-max" min="0" max="100" placeholder="100"></div></div>
+      <div class="fr"><div class="f"><label>${t('group')}</label><select id="r-group"><option value="none">${t('none')}</option><option value="status">${t('byStatus')}</option><option value="priority">${t('byPriority')}</option></select></div>
+        <div class="f"><label>${t('format')}</label><select id="r-format"><option value="all">${t('all')} (HTML + PDF + Excel + Markdown + JSON)</option><option value="html">HTML</option><option value="pdf">PDF</option><option value="xlsx">Excel</option><option value="md">Markdown</option><option value="json">JSON</option></select></div></div>
+      <div class="fr"><div class="f"><label>${t('lang')}</label><select id="r-lang"><option value="ar" ${lang === 'ar' ? 'selected' : ''}>عربي</option><option value="en" ${lang === 'en' ? 'selected' : ''}>English</option></select></div><div class="f"><label>${t('title')}</label><input id="r-title"></div></div>
+      <div class="row"><label><input type="checkbox" id="r-platform"> ${t('includePlatform')}</label><label><input type="checkbox" id="r-only"> ${t('onlyActive')}</label></div>
+      <div style="margin-top:12px"><button class="btn primary" id="r-go">📄 ${t('generate')}</button> <span id="r-out" class="muted"></span></div>
+      <div id="r-files" style="margin-top:10px"></div>
+    </div>
+    <div class="panel"><h2>🗂️ ${t('savedReports')} <span class="n">(${S.reports.length})</span></h2>
+      ${S.reports.length ? `<table class="tbl"><thead><tr><th>${t('name')}</th><th>${t('date')}</th><th></th></tr></thead><tbody>${S.reports.map(r => `<tr><td class="mono" style="direction:ltr;text-align:left;word-break:break-all">${esc(r.file)}</td><td class="mono">${fmtDate(r.modified)}</td><td><a class="btn sm" href="${r.url}" target="_blank">${t('open')}</a> <a class="btn sm" href="${r.url}?download=1">⬇</a></td></tr>`).join('')}</tbody></table>` : `<div class="empty">${t('noReports')}</div>`}</div></div>`;
+  const checked = name => [...app.querySelectorAll(`input[name="${name}"]:checked`)].map(i => i.value);
+  document.getElementById('r-go').onclick = () => safe(async () => {
+    document.getElementById('r-out').textContent = '…';
+    const res = await api('POST', '/api/report', {
+      from: document.getElementById('r-from').value || undefined, to: document.getElementById('r-to').value || undefined,
+      projects: checked('projects'), statuses: checked('statuses'), types: checked('types'), models: checked('models'),
+      min_progress: document.getElementById('r-min').value || undefined, max_progress: document.getElementById('r-max').value || undefined,
+      group: document.getElementById('r-group').value, format: document.getElementById('r-format').value, lang: document.getElementById('r-lang').value, title: document.getElementById('r-title').value || undefined,
+      include_platform: document.getElementById('r-platform').checked, only_active_in_period: document.getElementById('r-only').checked,
+    });
+    document.getElementById('r-out').textContent = `${t('reportDone')}: ${res.summary.projects} ${t('projects')} · ${res.summary.entries} ${t('entries')}` + (res.pdf && res.pdf.error ? ` · PDF: ${res.pdf.error}` : '');
+    document.getElementById('r-files').innerHTML = res.files.map(f => `<a class="btn sm" href="/reports/${encodeURIComponent(f.file)}" target="_blank">${f.format.toUpperCase()} — ${t('open')}</a> `).join('');
+    loadReports().then(() => viewReports(query));
+  });
+}
+
+async function viewPlatform() {
+  await Promise.all([loadMeta(), loadPlatform()]);
+  const kinds = vocab().kinds;
+  const k = S.ptab;
+  const items = S.platform[k] || [];
+  const statusOpts = [{ key: 'installed', ar: t('installed'), en: t('installed') }, { key: 'available', ar: t('available'), en: t('available') }, { key: 'recommended', ar: t('recommended'), en: t('recommended') }, { key: 'requested', ar: t('requested'), en: t('requested') }, { key: 'declined', ar: t('declined'), en: t('declined') }];
+  app.innerHTML = `
+    <div class="page-h"><div><h1>🧠 ${t('brain')}</h1><div class="sub">${t('platformNote')}</div></div><button class="btn primary" id="pb-add">＋ ${t('add')}</button></div>
+    <div class="tabs">${kinds.map(x => `<button data-k="${x.key}" class="${k === x.key ? 'on' : ''}">${esc(x[lang] || x.en)} (${(S.platform[x.key] || []).length})</button>`).join('')}</div>
+    <div class="panel">${items.length ? `<ul class="items">${items.map(it => `<li><div class="tx"><b>${esc(it.name || '')}</b>${it.name ? ' — ' : ''}${esc(it.text)}
+      <div class="meta">${modelBadge(it.by)} ${it.status ? `<span class="chip">${esc(t(it.status) || it.status)}</span>` : ''} ${it.source ? `<span>${esc(it.source)}</span>` : ''} ${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.url)}</a>` : ''} ${it.install ? `<code>${esc(it.install)}</code>` : ''} ${it.command ? `<code>${esc(it.command)}</code>` : ''} ${it.project ? `<a href="#/project/${esc(it.project)}">#${esc(it.project)}</a>` : ''} <span>${fmtDate(it.date, false)}</span>${it.decision ? `<span>· ${esc(it.decision)}</span>` : ''}</div></div>
+      <div class="acts">${k === 'requests' && it.status === 'pending' ? `<button class="btn sm" data-dec="${it.id}|approved">👍 ${t('approve')}</button><button class="btn sm danger" data-dec="${it.id}|rejected">👎 ${t('reject')}</button>` : ''}${(k === 'skills' || k === 'tools') ? `<select class="small" data-stat="${it.id}"><option value="">${t('status')}…</option>${sel(statusOpts, '')}</select>` : ''}<button class="btn sm danger" data-del="${it.id}">🗑</button></div></li>`).join('')}</ul>` : `<div class="empty">${t('nothing')}</div>`}</div>`;
+  app.querySelectorAll('[data-k]').forEach(b => b.onclick = () => { S.ptab = b.dataset.k; viewPlatform(); });
+  app.querySelectorAll('[data-dec]').forEach(b => b.onclick = () => { const [id, st] = b.dataset.dec.split('|'); safe(async () => { await api('PATCH', `/api/platform/requests/${id}`, { status: st }); viewPlatform(); }, t('saved')); });
+  app.querySelectorAll('[data-stat]').forEach(s => s.onchange = () => { if (!s.value) return; safe(async () => { await api('PATCH', `/api/platform/${k}/${s.dataset.stat}`, { status: s.value }); viewPlatform(); }, t('saved')); });
+  app.querySelectorAll('[data-del]').forEach(b => b.onclick = () => { if (!confirm(t('confirmDelete'))) return; safe(async () => { await api('DELETE', `/api/platform/${k}/${b.dataset.del}`); viewPlatform(); }, t('saved')); });
+  document.getElementById('pb-add').onclick = () => {
+    const fields = [{ name: 'text', label: k === 'requests' ? t('reason') : t('itemText'), type: 'textarea', required: true }];
+    if (k !== 'learned' && k !== 'capabilities') fields.unshift({ name: 'name', label: t('name'), required: true });
+    if (k === 'skills' || k === 'tools') fields.push({ name: 'source', label: t('source') }, { name: 'url', label: t('url') }, { name: 'install', label: t('install') }, { name: 'status', label: t('status'), type: 'select', options: sel(statusOpts, 'available') });
+    if (k === 'requests') fields.push({ name: 'command', label: t('command') }, { name: 'url', label: t('url') });
+    fields.push({ name: 'by', label: t('by'), type: 'select', options: sel(vocab().models, 'human') }, { name: 'project', label: t('project'), type: 'select', options: sel(S.projects.map(p => ({ key: p.id, ar: L(p.name), en: L(p.name) })), '', { allowEmpty: true }) });
+    openForm({ title: `${vl(kinds, k)} — ${t('add')}`, fields, submit: async d => { await api('POST', `/api/platform/${k}`, d); toast(t('saved')); viewPlatform(); } });
+  };
+  if (!S.projects.length) loadProjects();
+}
+
+async function viewClaude() {
+  await Promise.all([loadMeta(), loadProjects(), loadRequests()]);
+  const m = S.meta.mcp;
+  const mcpJson = JSON.stringify({ mcpServers: { 'master-brain': { command: m.command, args: m.args } } }, null, 2);
+  app.innerHTML = `
+    <div class="page-h"><div><h1>🤖 ${t('channel')}</h1><div class="sub">${t('claudeIntro')}</div></div></div>
+    <div class="two"><div>
+      <div class="panel"><h2>📥 ${t('inbox')} <span class="n">(${S.requests.filter(r => r.status === 'pending').length} ${t('pending')})</span></h2>
+        <div class="inline-form"><input id="tk-text" placeholder="${t('task')}…"><select id="tk-project" class="small">${sel(S.projects.map(p => ({ key: p.id, ar: L(p.name), en: L(p.name) })), '', { allowEmpty: true, emptyLabel: t('project') })}</select><select id="tk-prio" class="small">${[1, 2, 3, 4, 5].map(n => `<option ${n === 3 ? 'selected' : ''}>${n}</option>`).join('')}</select><button class="btn primary sm" id="tk-add">＋ ${t('addTask')}</button></div>
+        <div style="margin-top:12px">${S.requests.length ? S.requests.map(r => `<div class="req"><div class="h"><div><b>${esc(r.task)}</b> ${r.project ? `<a href="#/project/${esc(r.project)}">#${esc(r.project)}</a>` : ''}</div><div class="row"><span class="chip">P${r.priority}</span><span class="badge" style="--c:${{ pending: '#f59e0b', in_progress: '#60a5fa', done: '#10b981', rejected: '#ef4444' }[r.status] || '#9ca3af'}">${esc(t(r.status) || r.status)}</span></div></div>
+          <div class="meta muted" style="font-size:12px">${fmtDate(r.date)} · ${esc(r.from)} · <span class="mono">${esc(r.id)}</span>${r.result ? ` · ${t('result')}: ${esc(r.result)}` : ''}</div>
+          ${r.status === 'pending' || r.status === 'in_progress' ? `<div class="row" style="margin-top:6px">${r.status === 'pending' ? `<button class="btn sm" data-tk="${r.id}|in_progress">▶ ${t('markStart')}</button>` : ''}<button class="btn sm" data-tk="${r.id}|done">✓ ${t('markDone2')}</button><button class="btn sm danger" data-tk="${r.id}|rejected">✕</button></div>` : ''}</div>`).join('') : `<div class="empty">${t('nothing')}</div>`}</div></div>
+      <div class="panel"><h2>📋 ${t('contextBlock')}</h2><div class="inline-form"><select id="ctx-id" class="small"><option value="all">${t('all')}</option>${S.projects.map(p => `<option value="${esc(p.id)}">${esc(L(p.name))}</option>`).join('')}</select><button class="btn sm" id="ctx-load">${t('open')}</button><button class="btn sm" id="ctx-copy">${t('copy')}</button></div><pre class="code" id="ctx" style="direction:${lang === 'ar' ? 'rtl' : 'ltr'};text-align:start;margin-top:8px;max-height:420px;overflow:auto;font-family:inherit;font-size:13px"></pre></div>
+    </div><div>
+      <div class="panel"><h2>🔌 ${t('howToConnect')}</h2>
+        <p class="muted" style="margin:0 0 6px">${t('mcpCode')}</p><pre class="code">${esc(mcpJson)}</pre>
+        <p class="muted" style="margin:10px 0 6px">${t('mcpDesktop')}</p><pre class="code">%APPDATA%\\Claude\\claude_desktop_config.json
+→ mcpServers.master-brain = { "command": "node", "args": ["${esc(m.args[0]).replace(/\\/g, '\\\\')}"] }</pre>
+        <p class="muted" style="margin:10px 0 6px">${t('cli')}</p><pre class="code">mb list
+mb show &lt;id&gt;
+mb log &lt;id&gt; --title "…" --type progress --progress 40 --model opus
+mb suggest &lt;id&gt; "…" --by fable
+mb report --from 2026-09-01 --to 2026-09-30 --format all --group status
+mb context all            # paste into Claude Desktop
+mb tasks --status pending # tasks you queued for Claude
+mb doctor</pre>
+      </div>
+      <div class="panel"><h2>🧩 MCP tools (${S.meta.ops.length})</h2><div class="row">${S.meta.ops.map(o => `<span class="chip mono">${esc(o)}</span>`).join('')}</div></div>
+    </div></div>`;
+  document.getElementById('tk-add').onclick = () => { const task = document.getElementById('tk-text').value.trim(); if (!task) return; safe(async () => { await api('POST', '/api/requests', { task, project: document.getElementById('tk-project').value, priority: +document.getElementById('tk-prio').value, from: 'dashboard' }); viewClaude(); }, t('saved')); };
+  app.querySelectorAll('[data-tk]').forEach(b => b.onclick = () => { const [id, st] = b.dataset.tk.split('|'); const result = st === 'done' ? (prompt(t('result')) || '') : ''; safe(async () => { await api('PATCH', '/api/requests/' + id, { status: st, result }); viewClaude(); }, t('saved')); });
+  const loadCtx = () => api('GET', `/api/context?id=${encodeURIComponent(document.getElementById('ctx-id').value)}&lang=${lang}`).then(r => document.getElementById('ctx').textContent = r.context);
+  document.getElementById('ctx-load').onclick = loadCtx;
+  document.getElementById('ctx-copy').onclick = () => navigator.clipboard.writeText(document.getElementById('ctx').textContent).then(() => toast(t('copied')));
+  loadCtx();
+}
+
+/* ============================== router / lang ============================== */
+function applyLang() {
+  document.documentElement.lang = lang; document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-t]').forEach(el => el.textContent = t(el.dataset.t));
+  document.getElementById('lang-ar').classList.toggle('on', lang === 'ar');
+  document.getElementById('lang-en').classList.toggle('on', lang === 'en');
+  document.title = `${t('appName')} — Master Brain`;
+}
+function setLang(l) { lang = l; try { localStorage.setItem('mb.lang', l); } catch {} applyLang(); route(); }
+document.getElementById('lang-ar').onclick = () => setLang('ar');
+document.getElementById('lang-en').onclick = () => setLang('en');
+document.getElementById('btn-refresh').onclick = () => route();
+async function route() {
+  const hash = location.hash.replace(/^#/, '') || '/';
+  const [pathPart, query] = hash.split('?');
+  document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.route === (pathPart.startsWith('/project/') ? '/' : pathPart)));
+  try {
+    if (pathPart.startsWith('/project/')) await viewProject(decodeURIComponent(pathPart.slice(9)));
+    else if (pathPart === '/reports') await viewReports(query);
+    else if (pathPart === '/platform') await viewPlatform();
+    else if (pathPart === '/claude') await viewClaude();
+    else await viewDashboard();
+  } catch (e) { app.innerHTML = `<div class="panel"><h2>${t('error')}</h2><p>${esc(e.message)}</p><p class="muted">node bin/mb.js init</p></div>`; }
+}
+window.addEventListener('hashchange', route);
+applyLang(); route();
+</script>
+</body>
+</html>

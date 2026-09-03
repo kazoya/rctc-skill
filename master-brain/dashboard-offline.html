@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ماستر برين</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f6f5f1; --surface:#ffffff; --surface-2:#f0efe9; --line:#e3e1d8; --line-strong:#cfccc0;
+  --ink:#141a29; --ink-2:#3d4658; --muted:#6b7386; --muted-2:#8b91a1;
+  --accent:#9c7c33; --accent-ink:#7d621f; --accent-soft:#f2ebd9;
+  --navy:#16233f;
+  --ok:#2f855a; --warn:#b26a12; --bad:#b3392f; --info:#2f5fc0; --violet:#6b4fc4;
+  --shadow:0 1px 2px rgba(20,26,41,.06), 0 8px 24px -12px rgba(20,26,41,.18);
+  --radius:10px;
+  --display:"Rubik","IBM Plex Sans Arabic",system-ui,sans-serif;
+  --body:"IBM Plex Sans Arabic","Rubik",system-ui,-apple-system,Segoe UI,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1020; --surface:#131a2c; --surface-2:#182137; --line:rgba(255,255,255,.09); --line-strong:rgba(255,255,255,.18);
+    --ink:#eef1f8; --ink-2:#c6cde0; --muted:#93a0bd; --muted-2:#6f7c99;
+    --accent:#d3b978; --accent-ink:#e6d3a1; --accent-soft:rgba(211,185,120,.14);
+    --navy:#0f1830;
+    --ok:#43b581; --warn:#e0a63e; --bad:#e8695e; --info:#6f9bf0; --violet:#a48af0;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 30px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1020; --surface:#131a2c; --surface-2:#182137; --line:rgba(255,255,255,.09); --line-strong:rgba(255,255,255,.18);
+  --ink:#eef1f8; --ink-2:#c6cde0; --muted:#93a0bd; --muted-2:#6f7c99;
+  --accent:#d3b978; --accent-ink:#e6d3a1; --accent-soft:rgba(211,185,120,.14);
+  --navy:#0f1830;
+  --ok:#43b581; --warn:#e0a63e; --bad:#e8695e; --info:#6f9bf0; --violet:#a48af0;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 30px -14px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;font-feature-settings:"kern";text-rendering:optimizeLegibility}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+a{color:var(--accent-ink);text-decoration:none}
+a:hover{text-decoration:underline}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+.mono{font-family:var(--mono);font-size:.82em;letter-spacing:-.02em}
+
+/* ── shell ─────────────────────────────────────────── */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1340px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.mark{width:34px;height:34px;flex:none;border-radius:9px;background:linear-gradient(145deg,var(--navy),#2b3c63);color:var(--accent);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:-.04em;box-shadow:var(--shadow)}
+.brand b{font-family:var(--display);font-size:17px;font-weight:700;display:block;line-height:1.2}
+.brand span{font-size:11.5px;color:var(--muted);letter-spacing:.02em}
+.tabs{display:flex;gap:2px;margin-inline-start:auto;background:var(--surface-2);padding:3px;border-radius:9px;border:1px solid var(--line)}
+.tabs button{background:none;border:0;padding:6px 13px;border-radius:7px;cursor:pointer;font-weight:600;font-size:13.5px;color:var(--muted)}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.tools{display:flex;gap:6px;align-items:center}
+.icon-btn{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:5px 10px;cursor:pointer;font-size:12.5px;font-weight:600;color:var(--muted)}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent-ink)}
+.icon-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+main{max-width:1340px;margin:0 auto;padding:20px 22px 64px}
+
+/* ── snapshot notice ───────────────────────────────── */
+.notice{display:flex;gap:10px;align-items:flex-start;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);border-radius:var(--radius);padding:10px 14px;margin-bottom:18px;font-size:13px;color:var(--ink-2)}
+.notice b{color:var(--ink)}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);margin-top:8px;flex:none}
+
+/* ── instrument strip ──────────────────────────────── */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden;margin-bottom:20px}
+.cell{padding:11px 15px;border-inline-end:1px solid var(--line)}
+.cell:last-child{border-inline-end:0}
+.cell .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted-2);font-weight:600}
+.cell .v{font-family:var(--display);font-size:22px;font-weight:700;line-height:1.25;margin-top:1px}
+.cell .sub{font-size:11.5px;color:var(--muted)}
+.meterline{height:3px;border-radius:2px;background:var(--surface-2);margin-top:7px;overflow:hidden}
+.meterline i{display:block;height:100%;background:var(--accent)}
+
+/* ── layout ────────────────────────────────────────── */
+.split{display:grid;grid-template-columns:308px minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:940px){.split{grid-template-columns:1fr}}
+.rail{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden;position:sticky;top:74px}
+@media (max-width:940px){.rail{position:static}}
+.rail-h{padding:9px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--surface-2)}
+.rail-h span{font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted-2);font-weight:700}
+.filters{display:flex;gap:4px;padding:9px 10px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.filters button{background:none;border:1px solid var(--line);border-radius:99px;padding:2px 10px;font-size:11.5px;font-weight:600;color:var(--muted);cursor:pointer}
+.filters button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent-ink);background:var(--accent-soft)}
+.plist{list-style:none;margin:0;padding:0}
+.plist li{border-bottom:1px solid var(--line)}
+.plist li:last-child{border-bottom:0}
+.prow{width:100%;text-align:start;background:none;border:0;padding:11px 14px;cursor:pointer;display:block;border-inline-start:3px solid transparent}
+.prow:hover{background:var(--surface-2)}
+.prow[aria-current="true"]{background:var(--surface-2);border-inline-start-color:var(--accent)}
+.prow .pn{font-weight:600;font-size:14px;line-height:1.35;display:block}
+.prow .pm{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:5px;font-size:11px;color:var(--muted)}
+.prow .bar{height:4px;border-radius:2px;background:var(--surface-2);margin-top:7px;overflow:hidden}
+:root[data-theme="dark"] .prow .bar{background:rgba(255,255,255,.08)}
+.prow .bar i{display:block;height:100%;background:var(--accent)}
+
+/* ── project head ──────────────────────────────────── */
+.phead{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:18px 20px;margin-bottom:18px;box-shadow:var(--shadow)}
+.phead h2{font-size:23px;font-weight:700;line-height:1.25}
+.phead .alt{color:var(--muted);font-size:13.5px;margin-top:2px}
+.phead p{color:var(--ink-2);margin:11px 0 0;max-width:66ch;font-size:14px}
+.tagrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:13px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:2px 10px;border-radius:99px;font-size:11.5px;font-weight:600;white-space:nowrap;border:1px solid}
+.pill.tag{border-color:var(--line);color:var(--muted);background:var(--surface-2)}
+.st{--c:var(--muted)}
+.st.active{--c:var(--ok)} .st.planning{--c:var(--info)} .st.paused{--c:var(--warn)} .st.blocked{--c:var(--bad)} .st.done{--c:var(--accent)} .st.dormant{--c:var(--muted-2)}
+.pill.status{color:var(--c);border-color:color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.pill.model{color:var(--c);border-color:color-mix(in srgb,var(--c) 40%,transparent);background:color-mix(in srgb,var(--c) 10%,transparent);font-size:11px}
+.gauge{display:flex;align-items:center;gap:10px;margin-top:14px}
+.gauge .bar{flex:1;height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden;max-width:340px}
+:root[data-theme="dark"] .gauge .bar{background:rgba(255,255,255,.08)}
+.gauge .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 55%,#fff))}
+.gauge b{font-family:var(--display);font-size:19px;font-weight:700}
+
+/* ── brain columns ─────────────────────────────────── */
+.brain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+@media (max-width:1100px){.brain{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.brain{grid-template-columns:1fr}}
+.colhead{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--muted-2);padding:0 2px 7px;border-bottom:1px solid var(--line);margin-bottom:12px;display:flex;justify-content:space-between}
+.sec{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);margin-bottom:12px;overflow:hidden;border-inline-start:3px solid var(--c,var(--line-strong))}
+.sec-h{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 13px;background:var(--surface-2)}
+.sec-h h4{font-size:13px;font-weight:700;display:flex;gap:6px;align-items:center}
+.sec-h .n{font-size:11px;color:var(--muted);font-weight:600}
+.sec ul{list-style:none;margin:0;padding:4px 13px 10px}
+.sec li{padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px;line-height:1.55;color:var(--ink-2)}
+.sec li:last-child{border-bottom:0}
+.sec .im{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-top:4px;font-size:10.5px;color:var(--muted-2)}
+.sec.empty .body{padding:10px 13px;color:var(--muted-2);font-size:12.5px}
+
+/* ── journal ───────────────────────────────────────── */
+.jwrap{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:16px 20px;margin-top:20px}
+.jwrap h3{font-size:15px;margin-bottom:14px;display:flex;gap:8px;align-items:center}
+.tl{position:relative;padding-inline-start:20px}
+.tl::before{content:"";position:absolute;inset-inline-start:4px;top:6px;bottom:10px;width:1px;background:var(--line-strong)}
+.ev{position:relative;padding-bottom:16px}
+.ev::before{content:"";position:absolute;inset-inline-start:-20px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--surface);border:2px solid var(--c,var(--accent))}
+.ev .t{font-weight:600;font-size:14px}
+.ev .m{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:11px;color:var(--muted);margin-top:3px}
+.ev .b{color:var(--ink-2);font-size:13px;margin-top:6px;white-space:pre-wrap;max-width:70ch;border-inline-start:2px solid var(--line);padding-inline-start:10px}
+
+/* ── platform brain / tables ───────────────────────── */
+.panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);margin-bottom:16px;overflow:hidden}
+.panel > h3{font-size:14px;padding:11px 16px;border-bottom:1px solid var(--line);background:var(--surface-2);display:flex;justify-content:space-between;align-items:center}
+.panel .pb{padding:6px 16px 14px}
+.kv{list-style:none;margin:0;padding:0}
+.kv li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:13.5px;color:var(--ink-2)}
+.kv li:last-child{border-bottom:0}
+.kv b{color:var(--ink)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
+th,td{padding:8px 12px;text-align:start;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted-2);font-weight:700;background:var(--surface-2)}
+tbody tr:last-child td{border-bottom:0}
+
+/* ── report ────────────────────────────────────────── */
+.rgrid{display:grid;grid-template-columns:290px minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:940px){.rgrid{grid-template-columns:1fr}}
+.form{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:16px;position:sticky;top:74px}
+@media (max-width:940px){.form{position:static}}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted-2);font-weight:700;margin-bottom:4px}
+.field input,.field select{width:100%;background:var(--bg);border:1px solid var(--line-strong);border-radius:8px;padding:7px 9px;font-size:13.5px}
+.chk{display:flex;gap:7px;align-items:center;font-size:13px;padding:3px 0;color:var(--ink-2)}
+.chk input{accent-color:var(--accent)}
+.go{width:100%;background:var(--navy);color:#fff;border:0;border-radius:8px;padding:10px;font-weight:700;cursor:pointer;font-family:var(--display);font-size:14px}
+.go:hover{background:#233457}
+:root[data-theme="dark"] .go{background:var(--accent);color:#10162a}
+.report{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:26px 30px;box-shadow:var(--shadow)}
+.rep-h{border-bottom:2px solid var(--accent);padding-bottom:14px;margin-bottom:20px}
+.rep-h .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-ink);font-weight:700}
+.rep-h h2{font-size:25px;margin-top:4px}
+.rep-h .meta{color:var(--muted);font-size:12.5px;margin-top:6px;display:flex;gap:14px;flex-wrap:wrap}
+.rsum{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:22px}
+.rsum div{background:var(--surface);padding:10px 13px}
+.rsum .v{font-family:var(--display);font-size:20px;font-weight:700}
+.rsum .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted-2);font-weight:600}
+.rproj{padding:16px 0;border-top:1px solid var(--line)}
+.rproj h3{font-size:16px;display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
+.rgroup{font-family:var(--display);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent-ink);margin:22px 0 2px}
+.rsec{margin-top:10px}
+.rsec h5{font-size:12px;font-weight:700;color:var(--ink-2);margin:0 0 3px}
+.rsec ul{margin:0;padding-inline-start:18px;font-size:13px;color:var(--ink-2)}
+.rsec li{margin:2px 0}
+.hint{font-size:12.5px;color:var(--muted);margin-top:10px}
+.printbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+
+@media print{
+  @page{size:A4;margin:14mm}
+  .top,.rail,.form,.printbar,.notice,.tabs,.tools,.filters{display:none!important}
+  body{background:#fff;color:#000;font-size:11px}
+  main{padding:0;max-width:none}
+  .rgrid{grid-template-columns:1fr}
+  .report{border:0;box-shadow:none;padding:0}
+  .rproj{break-inside:avoid}
+  a{color:#000}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <div class="mark">MB</div>
+      <div><b id="bn">ماستر برين</b><span id="bt">منصة المتابعة والعقل الهندسي</span></div>
+    </div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="tools">
+      <button class="icon-btn" id="lang-btn">EN</button>
+      <button class="icon-btn" id="theme-btn" title="theme">◐</button>
+    </div>
+  </div>
+</header>
+<main id="app"></main>
+
+<script id="mb-data" type="application/json">{"generated":"2026-09-03T17:20:10.763Z","version":"1.0.0","platformName":{"ar":"ماستر برين — منصة المتابعة والعقل الهندسي","en":"Master Brain — Portfolio Tracker & Engineering Mind"},"timezone":"Asia/Riyadh","vocab":{"sections":[{"key":"done","icon":"✅","ar":"ما تم إنجازه","en":"Done","primary":true},{"key":"findings","icon":"🔎","ar":"ما توصلنا إليه","en":"Findings & conclusions","primary":true},{"key":"current","icon":"🔧","ar":"ما نعمل عليه حالياً","en":"In progress now","primary":true},{"key":"next","icon":"⏭️","ar":"الخطوات التالية","en":"Next steps","primary":true},{"key":"improvements","icon":"🚀","ar":"ما نتطلع إلى تحسينه","en":"Improvements we aim for","primary":true},{"key":"suggestions","icon":"💡","ar":"مقترحات النماذج (Claude / Opus / Fable…)","en":"Model suggestions (Claude / Opus / Fable…)","primary":true},{"key":"decisions","icon":"📌","ar":"القرارات المعتمدة","en":"Decisions","primary":false},{"key":"blockers","icon":"⛔","ar":"العوائق","en":"Blockers","primary":false},{"key":"constraints","icon":"📏","ar":"القيود والقواعد","en":"Constraints & rules","primary":false}],"statuses":[{"key":"planning","ar":"تخطيط","en":"Planning","color":"#8b9cf5"},{"key":"active","ar":"نشط","en":"Active","color":"#10b981"},{"key":"paused","ar":"متوقف مؤقتاً","en":"Paused","color":"#f59e0b"},{"key":"blocked","ar":"معلّق بعائق","en":"Blocked","color":"#ef4444"},{"key":"done","ar":"مكتمل","en":"Done","color":"#c8ad73"},{"key":"dormant","ar":"سكون","en":"Dormant","color":"#6b7280"}],"types":[{"key":"progress","ar":"تقدّم","en":"Progress","icon":"📈"},{"key":"milestone","ar":"إنجاز رئيسي","en":"Milestone","icon":"🏁"},{"key":"decision","ar":"قرار","en":"Decision","icon":"📌"},{"key":"blocker","ar":"عائق","en":"Blocker","icon":"⛔"},{"key":"suggestion","ar":"مقترح","en":"Suggestion","icon":"💡"},{"key":"note","ar":"ملاحظة","en":"Note","icon":"📝"},{"key":"report","ar":"تقرير","en":"Report","icon":"📄"}],"models":[{"key":"claude","ar":"كلود (عام)","en":"Claude (generic)","color":"#d97757"},{"key":"opus","ar":"كلود أوبوس","en":"Claude Opus","color":"#a78bfa"},{"key":"sonnet","ar":"كلود سونيت","en":"Claude Sonnet","color":"#60a5fa"},{"key":"haiku","ar":"كلود هايكو","en":"Claude Haiku","color":"#34d399"},{"key":"fable","ar":"كلود فابل","en":"Claude Fable","color":"#c8ad73"},{"key":"human","ar":"المالك (بشري)","en":"Owner (human)","color":"#f472b6"},{"key":"other","ar":"أخرى","en":"Other","color":"#9ca3af"}],"priorities":[{"key":0,"ar":"تلقائي","en":"Auto"},{"key":1,"ar":"قصوى","en":"Critical"},{"key":2,"ar":"عالية","en":"High"},{"key":3,"ar":"متوسطة","en":"Medium"},{"key":4,"ar":"منخفضة","en":"Low"},{"key":5,"ar":"لاحقاً","en":"Someday"}],"kinds":[{"key":"learned","ar":"ما تعلّمناه (دروس)","en":"Lessons learned"},{"key":"skills","ar":"المهارات المكتسبة","en":"Acquired skills"},{"key":"tools","ar":"الأدوات والتكاملات","en":"Tools & integrations"},{"key":"capabilities","ar":"القدرات المتاحة","en":"Capabilities"},{"key":"requests","ar":"طلبات تثبيت أدوات","en":"Tool requests"}]},"stats":{"projects":6,"byStatus":{"planning":1,"active":5,"paused":0,"blocked":0,"done":0,"dormant":0},"avgProgress":35,"journalEntries":15,"suggestions":13,"suggestionsByModel":{"fable":12,"claude":1},"pendingRequests":0,"learned":6,"skills":10,"tools":12,"capabilities":5,"toolRequestsPending":1},"projects":[{"id":"master-brain-platform","name":{"ar":"منصة ماستر برين (هذه المنصة)","en":"Master Brain platform (this platform)"},"description":{"ar":"المنصة نفسها: التطوير، التكاملات مع Claude Code / Claude Desktop، التقارير، والمهارات.","en":"The platform itself: development, Claude Code / Claude Desktop integrations, reports and skills."},"status":"active","priority":1,"revenue":"no","progress":70,"tags":["platform","nodejs","mcp","skills"],"sessions":[],"links":[],"owner":"","created":"2026-09-03T12:30:00+03:00","updated":"2026-09-03T17:20:10.576Z","brain":{"done":[{"id":"b-1367b550","text":"النواة Node.js بلا اعتماديات: مخزن ملفات (project.json / brain.json / journal)، CLI، خادم HTTP + لوحة عربي/إنجليزي، مولّد تقارير HTML/PDF/Excel/Markdown/JSON، خادم MCP لـ Claude Code وClaude Desktop","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-4f3b299f","text":"مهارة البدء (start-skill) ومهارة تشغيل المنصة (master-brain) وكتالوج مهارات GitHub ونسخ مرجعية من kazoya/rctc-skill","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-5eb7f718","text":"تهيئة المشاريع الخمسة الأولى بالعقل الهندسي وسجل التقدّم من الجلسات السابقة","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"}],"findings":[{"id":"b-1c20914f","text":"Crystal/RDLC تقنيات .NET ولا تعمل في Node.js — البديل المعتمد: HTML قابل للطباعة PDF (Edge/Chrome headless) + Excel + Markdown","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-68f03dcb","text":"portfolio-commander (kazoya/rctc-skill) يقدّم نموذج السجل والسكون/الأولوية/الدخل والعقل الهندسي — طُبّقت مفاهيمه هنا بصيغة JSON مع لوحة وقناة MCP","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"}],"current":[{"id":"b-743fc329","text":"التثبيت على E:\\master وربط Claude Desktop عبر scripts/install.ps1","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"}],"next":[{"id":"b-78416a08","text":"تشغيل scripts/install.ps1 ثم mb doctor للتأكد من تسجيل خادم MCP في Claude Desktop وClaude Code","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-54b19b2d","text":"رفع start-skill بجانب portfolio-commander في مستودع kazoya/rctc-skill","date":"2026-09-03T00:00:00.000Z","by":"human","source":"cowork"}],"improvements":[{"id":"b-ae865d46","text":"إشعارات (بريد/تيليجرام) عند تعثّر مشروع أو غياب النشاط أكثر من N يوماً","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-43947acd","text":"رسوم بيانية لتطور التقدّم عبر الزمن داخل اللوحة والتقارير","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-f2b547dc","text":"مزامنة اختيارية مع Notion عبر MCP","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"}],"suggestions":[{"id":"b-b96425a1","text":"أمر mb weekly يولّد تقرير الأسبوع بصيغة all ويضيف مهمة مراجعة في صندوق الطلبات","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"},{"id":"b-e6040c84","text":"تثبيت n8n محلياً (بموافقة المالك) لجدولة التقارير والتنبيهات وربطها بواتساب/بريد","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"}],"decisions":[{"id":"b-12b1d5a9","text":"المنصة في E:\\master والمشاريع في D:\\projects","date":"2026-09-03T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-3e5cc46e","text":"التقارير: HTML قابل للطباعة PDF + Excel + Markdown؛ الواجهة عربي/إنجليزي بمفتاح تبديل","date":"2026-09-03T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-dc27af10","text":"بلا اعتماديات npm: كل شيء بمكتبات Node المدمجة لتبقى الحزمة portable","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"}],"blockers":[],"constraints":[{"id":"b-466f6b47","text":"لا تعديل يدوي على BRAIN.md — يُولَّد من brain.json وjournal/","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-799a115c","text":"أي أداة خارجية تُطلب عبر request_tool وتنتظر موافقة المالك","date":"2026-09-03T00:00:00.000Z","by":"human","source":"cowork"}]},"journal":[{"id":"j-202609031540-0522dbb8","file":"20260903-1540-بناء-المنصة-v1-0-0-النواة،-اللوحة،-التقا-dbb8.md","date":"2026-09-03T12:40:00.000Z","type":"milestone","title":"بناء المنصة v1.0.0: النواة، اللوحة، التقارير، MCP، المهارات","progress":70,"model":"fable","source":"cowork","tags":[],"body":"بُنيت في جلسة Cowork واحدة بعد بحث مهارات GitHub (kazoya/rctc-skill، ui-ux-pro-max، n8n-skills، anthropics/skills). اختبارات: CLI، تقارير (HTML/MD/XLSX/JSON)، HTTP API، MCP stdio."}],"journalCount":1,"lastActivity":"2026-09-03T12:40:00.000Z"},{"id":"cv-job-search","name":{"ar":"السيرة الذاتية والتقديم الوظيفي","en":"CV & Job Applications"},"description":{"ar":"تحسين السيرة الذاتية وبروفايل LinkedIn والتقديم على الوظائف المناسبة في جدة، والعمل القانوني عن بُعد داخل السعودية.","en":"CV and LinkedIn optimisation plus applications to suitable roles in Jeddah and remote legal work inside Saudi Arabia."},"status":"active","priority":1,"revenue":"unknown","progress":60,"tags":["career","cv","linkedin","applications"],"sessions":["cse_014EPbEa3wnUqYmTSRHx1g1S"],"links":[],"owner":"","created":"2026-09-02T08:00:00+03:00","updated":"2026-09-03T17:20:10.513Z","brain":{"done":[{"id":"b-432b8c58","text":"إعادة بناء السيرة الذاتية بصيغة ATS (صفحة واحدة، PDF + DOCX) ببريد العمل وتصحيح رابط LinkedIn","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-470a59e3","text":"تحديث بروفايل LinkedIn بالكامل: الاسم، العنوان الوظيفي، نبذة ثنائية اللغة، الترخيص، الخدمات، وتفضيلات Open-to-Work (جدة/الرياض/الدمام)","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-591fbaba","text":"إرسال 13 طلب توظيف مخصص لمكاتب محاماة في جدة عبر البريد","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-2e23692d","text":"23 طلب توظيف عبر LinkedIn Easy Apply خلال 2–3 سبتمبر (قانوني، علاقات حكومية، عطاءات، عمل قانوني عن بُعد)","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-41083dbb","text":"مستندات العمل: بروفايل LinkedIn الاحترافي، خطة التوظيف في جدة (35 وظيفة + 14 مكتب محاماة)، خطابات التقديم للفرص الست الأقوى، خريطة التوظيف القانوني، قنوات العمل عن بُعد","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-93bf179a","text":"تصميم بانر LinkedIn (1584×396) — بانتظار رفعه يدوياً","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-ca1e12b4","text":"تصحيح وصف PMP إلى «دورة تحضيرية 35 ساعة» في كل المواد (ليست شهادة PMI)","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"}],"findings":[{"id":"b-8a48af8c","text":"سوق التوظيف القانوني داخل جدة ضعيف حالياً؛ معظم الفرص الحية في الرياض أو عن بُعد أو تطلب 10–20 سنة خبرة","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-cab3ae48","text":"أقصر طريق للمحامي متوسط الخبرة: شركات التوظيف القانوني المتخصصة (Cooper Fitch, SSQ, Hays ME, Aventus, Eram Talent, Alpha Leadership) ومراسلة ناشري الوظائف مباشرة","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-a74c9ef3","text":"أفضل قناة للعمل عن بُعد: Mercor (مشاريع قانون عربي) + SME Careers + Alignerr — التسجيل يحتاج المالك بنفسه","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-20938f76","text":"أتمتة Easy Apply تعمل عبر رابط apply/?openSDUIApplyFlow=true مع محاكاة شاشة 1280×900","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-61592090","text":"بعض نماذج LinkedIn تفرض رقماً في خانة الراتب — يلزم قرار المالك (قاعدته: بدون تخمين أرقام)","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-d5b584cc","text":"البوابات الخارجية (GulfTalent, Sabbar, Foundit) تتطلب حساباً وOTP — لا يمكن لكلود التسجيل نيابة عن المالك","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"}],"current":[{"id":"b-b46b7bfb","text":"متابعة الردود على الطلبات المرسلة (36 طلباً إجمالاً بين البريد وLinkedIn)","date":"2026-09-03T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-427ea249","text":"طلب eham Facility Solutions محفوظ كمسودة بانتظار إجابات المالك عن خبرة العطاءات","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"}],"next":[{"id":"b-c6ceaa06","text":"رفع البانر وإضافة قسم Featured وصورة شخصية وتوصيات على LinkedIn","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-db5c0ec5","text":"حل سقف 50 مهارة على LinkedIn (حذف مهارات قديمة لإضافة Contract Review وGovernment Relations)","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-1b246f59","text":"تصحيح مدخل الدورة «PMP — 11111» في LinkedIn إلى اسم الدورة التحضيرية","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-cd6e90f1","text":"توحيد تاريخ نهاية Zad Pro Media بين السيرة (مارس 2026) وLinkedIn (مايو 2026)","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-47c782ee","text":"التسجيل يدوياً في Mercor وSME Careers وAlignerr وبوابات GulfTalent / Sabbar / Foundit","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-094c62eb","text":"إضافة sa@risha360.com إلى بريد حساب LinkedIn ليظهر في Easy Apply","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"}],"improvements":[{"id":"b-c0b8b21a","text":"تحديث السيرة الذاتية بالأرقام القوية بعد تأكيدها (80+ عقد، 4M+ ريال تحصيل، امتثال 736+ موظف…)","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-b70f051e","text":"متتبّع للطلبات (تاريخ، جهة، حالة، متابعة) داخل هذا المشروع بدل الاعتماد على الذاكرة","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-1cb46d7c","text":"قاعدة واضحة للراتب المتوقع (رقم أو نطاق) للنماذج التي تفرض رقماً","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"}],"suggestions":[{"id":"b-3e54d4fe","text":"إنشاء files/applications-tracker.xlsx يُحدَّث من سجل التقدّم ويُضمَّن في التقرير الأسبوعي","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"},{"id":"b-9b6781f4","text":"مراجعة أسبوعية (كل أحد) لفرز الوظائف الجديدة في جدة/عن بُعد وتقديم قائمة مختصرة للموافقة قبل التقديم","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"},{"id":"b-75d29fa6","text":"التركيز على مراسلة شركات التوظيف القانوني المتخصصة برسالة موحّدة مع السيرة بدل الإعلانات المفتوحة","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork","status":"proposed"}],"decisions":[{"id":"b-6333d959","text":"إزالة أي صفة «مؤسس/شريك مؤسس» لريشة 360 من السيرة وLinkedIn","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-0a7fb2df","text":"خانات الراتب المتوقع تُترك فارغة أو «قابل للتفاوض»؛ إن فرض النموذج رقماً يُسأل المالك","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-1c6be4d4","text":"Open-to-Work: Legal Counsel, Government Relations Manager, Legal Advisor, PR Manager, Event Manager — الظهور للمسؤولين فقط","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"blockers":[{"id":"b-fd2767e8","text":"صفحات تفاصيل LinkedIn (المهارات/الدورات) توقفت عن التحميل بعد تعديلات اليوم — مؤجّل","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-7b7148de","text":"بريد info@almashhori.com ميت (550) — التواصل هاتفياً أو عبر نموذج الموقع","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"}],"constraints":[{"id":"b-6a5e5555","text":"لا يوصف المالك أبداً كحاصل على شهادة PMP — هي دورة تحضيرية 35 ساعة (TVTC)","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-b6ec7f21","text":"لا اختلاق لتاريخ مهني أو أرقام؛ الأسئلة الشخصية في النماذج تُحال للمالك","date":"2026-09-03T00:00:00.000Z","by":"human","source":"cowork"}]},"journal":[{"id":"j-202609031000-db99509d","file":"20260903-1000-طلب-eham-facility-solutions-محفوظ-كمسودة-509d.md","date":"2026-09-03T07:00:00.000Z","type":"blocker","title":"طلب eham Facility Solutions محفوظ كمسودة","progress":null,"model":"claude","source":"cowork","tags":[],"body":"النموذج يسأل 9 أسئلة عن التاريخ الشخصي في العطاءات + حقول رقمية (Oracle Procurement، Etimad…) — تحتاج إجابات المالك."},{"id":"j-202609030930-7b6668e7","file":"20260903-0930-قنوات-العمل-القانوني-عن-بُعد-mercor-sme--68e7.md","date":"2026-09-03T06:30:00.000Z","type":"decision","title":"قنوات العمل القانوني عن بُعد: Mercor / SME Careers / Alignerr","progress":null,"model":"claude","source":"cowork","tags":[],"body":"العمل القانوني عن بُعد لمختبرات الذكاء الاصطناعي دخل مواز مرن بالدولار — لا يعوّض دوراً في جدة. التسجيل يحتاج المالك بنفسه."},{"id":"j-202609030800-cd3f64f3","file":"20260903-0800-جولات-easy-apply-3-5-الإجمالي-23-طلباً-ع-64f3.md","date":"2026-09-03T05:00:00.000Z","type":"progress","title":"جولات Easy Apply 3–5: الإجمالي 23 طلباً عبر LinkedIn","progress":60,"model":"claude","source":"cowork","tags":[],"body":"أدوار قانونية وعلاقات حكومية وعطاءات في جدة والرياض، وأدوار قانونية عن بُعد (Moritz، Crossing Hurdles، Jobgether، Katch). تم تجاوز الأدوار الأعلى بكثير من مستوى الخبرة عمداً."},{"id":"j-202609021730-ef971b0e","file":"20260902-1730-إرسال-13-طلب-توظيف-بالبريد-أول-3-طلبات-e-1b0e.md","date":"2026-09-02T14:30:00.000Z","type":"milestone","title":"إرسال 13 طلب توظيف بالبريد + أول 3 طلبات Easy Apply","progress":45,"model":"claude","source":"cowork","tags":[],"body":"13 رسالة مخصصة لمكاتب محاماة في جدة من بريد العمل (ارتداد واحد: almashhori). Easy Apply: Petromin (Legal Counsel)، Jeddah Transport (Tendering & Contract Mgmt)، Binladin (Governance Manager)."},{"id":"j-202609021430-1c2cb7d1","file":"20260902-1430-إعادة-بناء-السيرة-الذاتية-وتحديث-linkedi-b7d1.md","date":"2026-09-02T11:30:00.000Z","type":"milestone","title":"إعادة بناء السيرة الذاتية وتحديث LinkedIn","progress":35,"model":"claude","source":"cowork","tags":[],"body":"سيرة ATS بصفحة واحدة (PDF + DOCX)، بروفايل LinkedIn محدّث بالكامل بالعربية والإنجليزية، خطة التوظيف في جدة (35 وظيفة + 14 مكتب محاماة). الوقت تقريبي."}],"journalCount":5,"lastActivity":"2026-09-03T07:00:00.000Z"},{"id":"risha360-contacts-db","name":{"ar":"قاعدة جهات اتصال المنشآت السعودية — 500 ألف","en":"Saudi Establishments Contacts Database (500k)"},"description":{"ar":"توسيع ملف Risha360_Contacts_Master_500000_v1.xlsx حتى 500,000 سجل (بريد أو جوال/واتساب) من مصادر مجانية، وحملة بريد B2B لمكتبة وطن.","en":"Grow Risha360_Contacts_Master_500000_v1.xlsx to 500,000 records (email or mobile/WhatsApp) from free sources, and run the Watan Library B2B email campaign."},"status":"active","priority":2,"revenue":"yes","progress":17,"tags":["data","leads","email","python"],"sessions":["cse_01JGR9PdQ8f47X8ffqd9HfS8"],"links":[],"owner":"","created":"2026-09-02T08:00:00+03:00","updated":"2026-09-03T17:20:10.551Z","brain":{"done":[{"id":"b-659d527d","text":"الملف الرئيسي يحوي 85,390 سجلاً (خط الأساس 2 سبتمبر 2026)","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-d32aa6fd","text":"تعريف السجل المحتسب: بريد إلكتروني أو جوال/واتساب — ليس البريد وحده","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-f125de73","text":"عرض اليوم الوطني 96 جاهز: 20,400 ريال شامل الضريبة بدلاً من 30,000 مع 4 صور إعلانية","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"findings":[{"id":"b-11c93dfd","text":"صناديق البريد على Google Workspace (وليس Microsoft 365) — الإرسال المباشر من الصناديق الرئيسية يعرّض سمعة النطاق","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-c3e69ce2","text":"المصادر المجانية تكفي للبداية، لكن الوصول إلى 500 ألف يحتاج خط أنابيب آلي متعدد المصادر مع إزالة التكرار والتحقق","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"}],"current":[{"id":"b-333cc2df","text":"عمليات الجمع تُشغَّل على جهاز المالك عبر ربط مجلد (لا في السحابة)","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"next":[{"id":"b-9019bb0b","text":"خط أنابيب Python: جمع → تنظيف → إزالة تكرار → تصنيف Tier → تحقق البريد → تصدير Excel","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-a9ff00ad","text":"إعداد النطاق الفرعي للإرسال (SPF/DKIM/DMARC) ومزود البريد التسويقي","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-eb48ea5b","text":"تشغيل الدفعة الأولى Tier 1 بعرض اليوم الوطني (20 رسالة/صندوق/يوم كمسودات تُراجع)","date":"2026-09-03T00:00:00.000Z","by":"human","source":"cowork"}],"improvements":[{"id":"b-eabcefc3","text":"لوحة مؤشرات للحملة: مرسَل/فتح/رد/ارتداد لكل دفعة","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-8e15fc34","text":"قوائم منع (opt-out) وسجل موافقة لضمان الامتثال وسمعة الإرسال","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"}],"suggestions":[{"id":"b-983af79a","text":"استخدام n8n (بعد موافقة المالك) لأتمتة الجمع والتحقق وتوليد المسودات بجدول يومي بدل السكربتات اليدوية","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"},{"id":"b-e21cc9d7","text":"تسجيل عدد السجلات في كل مدخل سجل (progress = السجلات ÷ 500,000) ليظهر منحنى النمو في التقارير تلقائياً","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"}],"decisions":[{"id":"b-e78d23d8","text":"مصادر مجانية فقط — بلا ميزانية لمصادر مدفوعة","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-3d31e197","text":"مزود بريد تسويقي + نطاق فرعي بدل الإرسال المباشر؛ المرحلة الأولى Tier 1 فقط (نطاق شركة + بريد وظيفي)؛ المشروع بلغة Python","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-f83dfb5b","text":"لا تحايل على مرشّحات السبام — الهدف سمعة إرسال سليمة","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"blockers":[],"constraints":[{"id":"b-d85280d7","text":"السجل يُحتسب فقط إن كان فيه بريد أو جوال/واتساب","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}]},"journal":[{"id":"j-202609030900-cf826ec7","file":"20260903-0900-الصناديق-على-google-workspace-تعديل-خطة--6ec7.md","date":"2026-09-03T06:00:00.000Z","type":"note","title":"الصناديق على Google Workspace — تعديل خطة الإرسال","progress":null,"model":"claude","source":"cowork","tags":[],"body":"ليست Microsoft 365؛ يُعاد ضبط إعدادات المصادقة والنطاق الفرعي وفقاً لذلك."},{"id":"j-202609021600-c759973d","file":"20260902-1600-قرارات-حملة-مكتبة-وطن-973d.md","date":"2026-09-02T13:00:00.000Z","type":"decision","title":"قرارات حملة مكتبة وطن","progress":null,"model":"claude","source":"cowork","tags":[],"body":"مزود بريد تسويقي + نطاق فرعي، Tier 1 أولاً، Python، 20 رسالة لكل صندوق يومياً كمسودات تُراجع وتُرسل يدوياً."},{"id":"j-202609021130-a4f18870","file":"20260902-1130-خط-الأساس-85-390-سجلاً-في-الملف-الرئيسي-8870.md","date":"2026-09-02T08:30:00.000Z","type":"milestone","title":"خط الأساس: 85,390 سجلاً في الملف الرئيسي","progress":17,"model":"claude","source":"cowork","tags":[],"body":"الهدف 500,000. التقدّم = السجلات ÷ الهدف."}],"journalCount":3,"lastActivity":"2026-09-03T06:00:00.000Z"},{"id":"risha360-legal-content","name":{"ar":"محتوى ريشة 360 القانونية (الحسابات اليومية)","en":"Risha 360 Legal — Daily Content Engine"},"description":{"ar":"نظام المحتوى اليومي لعلامة ريشة 360 القانونية على X وInstagram وTikTok وSnapchat وFacebook — محتوى قانوني سعودي أصيل بجودة Premium.","en":"Daily content system for the Risha 360 Legal brand across X, Instagram, TikTok, Snapchat and Facebook — premium, Saudi-native legal content."},"status":"active","priority":2,"revenue":"yes","progress":25,"tags":["content","social","brand","risha360"],"sessions":["cse_01VJnbPrtx1Ca8Shpstv9R7R"],"links":[{"label":"@risha360legal","url":"https://x.com/risha360legal"}],"owner":"","created":"2026-09-02T08:00:00+03:00","updated":"2026-09-03T17:20:10.535Z","brain":{"done":[{"id":"b-134eabd7","text":"تثبيت الهوية: @risha360legal موحّد على كل المنصات، الشعار Master لا يُعدّل، التاغلاين «إحدى قطاعات غابة الأعمال»","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-ac85a03a","text":"بناء نظام محتوى يومي بقواعد الجودة: QUALITY → RELEVANCE → SHAREABILITY → CONSISTENCY → QUANTITY","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-873629fa","text":"أول منشور فعلي على X (استفتاء عن مدة الدعوى العمالية)","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-b24c7d8c","text":"مجلد المشروع D:\\media\\sa.risha360 مع بنية Brand/Fonts","date":"2026-09-02T00:00:00.000Z","by":"claude","source":"cowork"}],"findings":[{"id":"b-bef650b9","text":"تطبيقات إنستقرام/فيسبوك/تيك توك من متجر مايكروسوفت تعمل داخل Edge ولا يمكن التحكم بها آلياً","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-7c35f585","text":"القناة الآلية الكاملة الوحيدة للنشر: إضافة Claude in Chrome على بروفايل sa@risha360.com؛ X وحده يعمل عبر متصفح Claude الداخلي (نصوص بلا صور)","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-9306642c","text":"الجمهور السعودي يستجيب للهجة سعودية طبيعية وثقافة محلية لا للفصحى المتقعّرة","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"current":[{"id":"b-9fa5de73","text":"خطة التوزيع المعتمدة: منشور واحد قوي يومياً + ساعة تفاعل خلال الأسبوع الأول","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-1be137cf","text":"النشر عبر المتصفح بعد مراجعة المالك","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"next":[{"id":"b-79904bb8","text":"نسخ خط عربي إلى D:\\media\\sa.risha360\\Brand\\Fonts لتفعيل توليد PNG تلقائياً","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-8a7224d3","text":"سلسلة «تحديث نظامي» لشرح تحديثات الأنظمة السعودية بشكل مبسّط","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-77ac790b","text":"ريلز وقصص مع صوت/ترند، وتوثيق الحسابات تجارياً حيث يتاح","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"improvements":[{"id":"b-085df58d","text":"تقويم محتوى أسبوعي (7 أفكار مسبقة بثلاثة أنماط: تفاعلي/تثقيفي/فيروسي) مع مصدر رسمي لكل مادة نظامية","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"},{"id":"b-685d8839","text":"قالب تصميم Premium واحد للعلامة بدل القوالب الجاهزة والرموز المكررة (المطرقة/الميزان)","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"suggestions":[{"id":"b-3555442a","text":"ربط المنشورات بمكتبة وطن: كل منشور تثقيفي ينتهي بدعوة لوثيقة/عقد جاهز من المكتبة (تحويل الوعي إلى مبيعات)","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"},{"id":"b-756ef7d7","text":"أرشفة كل منشور في files/published/ مع الرابط وتاريخ النشر ومقاييس التفاعل ليدخل في التقرير الشهري","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"},{"id":"b-f9b0eab9","text":"استخدام مهارة ui-ux-pro-max لبناء نظام تصميم موحّد للمنشورات (ألوان/خطوط/شبكة) يمنع الشكل «الآلي»","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"}],"decisions":[{"id":"b-c8fcd2d2","text":"النشر يتم عبر المتصفح بعد المراجعة","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-0b5489d3","text":"البدء بمنشور واحد يومياً بدل ثلاثة حتى تستقر الجودة","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"blockers":[],"constraints":[{"id":"b-ef8db8a5","text":"لا تجاوز CAPTCHA أو أنظمة الحماية؛ التوقف عند Login/OTP/2FA وطلب تدخل المالك","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-fa92c463","text":"التحقق من المصادر الرسمية قبل أي مادة نظامية أو مدة أو غرامة؛ لا تحويل المنشور العام إلى استشارة فردية","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-cba9d9bb","text":"الشعار Master ثابت: لا تعديل ألوان أو نسب أو إعادة تصميم","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}]},"journal":[{"id":"j-202609030900-3821efb2","file":"20260903-0900-الخطة-منشور-واحد-قوي-يومياً-ساعة-تفاعل-ا-efb2.md","date":"2026-09-03T06:00:00.000Z","type":"note","title":"الخطة: منشور واحد قوي يومياً + ساعة تفاعل (الأسبوع الأول)","progress":null,"model":"claude","source":"cowork","tags":[],"body":"بدل 3 منشورات يومياً — حتى تستقر الجودة والتفاعل."},{"id":"j-202609021800-d15851e1","file":"20260902-1800-أول-منشور-على-x-استفتاء-مدة-الدعوى-العما-51e1.md","date":"2026-09-02T15:00:00.000Z","type":"milestone","title":"أول منشور على X: استفتاء مدة الدعوى العمالية","progress":25,"model":"claude","source":"cowork","tags":[],"body":"أول منشور فعلي للعلامة. الوقت تقريبي."},{"id":"j-202609021100-43b94ee2","file":"20260902-1100-اعتماد-الهوية-وقواعد-المحتوى-والنشر-عبر--4ee2.md","date":"2026-09-02T08:00:00.000Z","type":"decision","title":"اعتماد الهوية وقواعد المحتوى والنشر عبر المتصفح بعد المراجعة","progress":15,"model":"claude","source":"cowork","tags":[],"body":"اليوزرنيم الموحّد، أولوية الجودة، اللهجة السعودية، رفض القوالب الجاهزة، وقاعدة التوقف عند أنظمة الحماية."}],"journalCount":3,"lastActivity":"2026-09-03T06:00:00.000Z"},{"id":"risha360-legal-platform","name":{"ar":"منصة المحاماة law.risha360.com","en":"Risha 360 Legal Platform (law.risha360.com)"},"description":{"ar":"القسم القانوني لمنصة risha360.com على نطاق فرعي مستقل: مكتبة وطن (عقود ووثائق)، طلب استشارة، محتوى ومقالات، حسابات عملاء ولوحة تحكم.","en":"The legal section of risha360.com on its own subdomain: Watan Library (contracts & documents), consultation requests, articles, client accounts and dashboard."},"status":"planning","priority":2,"revenue":"yes","progress":10,"tags":["platform","nextjs","laravel","forge"],"sessions":["cse_01S7tZGhLRiooxqbrsfme8PE"],"links":[],"owner":"","created":"2026-09-02T08:00:00+03:00","updated":"2026-09-03T17:20:10.562Z","brain":{"done":[{"id":"b-f5733bef","text":"خريطة الإنتاج: الواجهة risha360.com (Next.js + PM2) من Resha-Frontend، وAPI/لوحة الإدارة admin.risha360.com من Resha-Backend (Laravel)، قاعدة MySQL باسم risha، استضافة Laravel Forge","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-a859c2d7","text":"تحديد نطاق النسخة الأولى: مكتبة وطن + طلب استشارة + محتوى ومقالات + حسابات عملاء ولوحة تحكم","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"findings":[{"id":"b-db5a9528","text":"مسار النشر الرسمي: push إلى GitHub ثم Forge يسحب release — التعديل اليدوي على السيرفر لا يُعتبر نشراً","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-1039b3c5","text":"النسخة المحلية mainFiles/Resha-Frontend-staging بلا .git مربوط ويُفترض مواءمتها مع commit 17e5e1c","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"current":[{"id":"b-4f88ef9e","text":"بانتظار صلاحية Collaborator على Resha-Frontend وResha-Backend","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"next":[{"id":"b-01a7b040","text":"بعد الصلاحية: إعداد النطاق الفرعي وبنية الصفحات الأولى للقسم القانوني","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-ae726e37","text":"تصميم نموذج بيانات مكتبة وطن (تصنيفات، وثائق، أسعار، تنزيلات)","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"}],"improvements":[{"id":"b-9130678b","text":"إبراز الارتباط بالمصادر الحكومية السعودية الرسمية (الأنظمة والفتاوى) داخل القسم","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"suggestions":[{"id":"b-5bbeab14","text":"قبل الصلاحية: بناء النموذج الأولي لـ law.risha360.com محلياً في files/prototype (Next.js) ليكون جاهزاً للدمج فور فتح الصلاحيات","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"},{"id":"b-927105c5","text":"توليد نظام تصميم للقسم القانوني بمهارة ui-ux-pro-max بما يطابق هوية ريشة 360","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"}],"decisions":[{"id":"b-16a40895","text":"القرار النهائي 2 سبتمبر 2026: القسم القانوني على نطاق فرعي مستقل law.risha360.com وليس مساراً داخل الموقع الرئيسي","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"},{"id":"b-dbae0b15","text":"مجلد risha360-platform (Next + Supabase + Vercel) مسار منفصل ودمجه مؤجّل عمداً خارج خطة الـ 42 يوماً","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"blockers":[{"id":"b-50b842bf","text":"لا صلاحية Collaborator بعد على مستودعي Resha-Frontend وResha-Backend — عقبة أمام أي نشر","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}],"constraints":[{"id":"b-c701a58f","text":"SSH إلى السيرفر للصيانة والطوارئ فقط","date":"2026-09-02T00:00:00.000Z","by":"human","source":"cowork"}]},"journal":[{"id":"j-202609022145-6ea59ed1","file":"20260902-2145-بانتظار-صلاحية-collaborator-على-المستودع-9ed1.md","date":"2026-09-02T18:45:00.000Z","type":"blocker","title":"بانتظار صلاحية Collaborator على المستودعين","progress":null,"model":"claude","source":"cowork","tags":[],"body":"لا يمكن النشر عبر Forge قبل منح الصلاحية على Resha-Frontend وResha-Backend."},{"id":"j-202609021200-d10f3887","file":"20260902-1200-القسم-القانوني-على-نطاق-فرعي-مستقل-law-r-3887.md","date":"2026-09-02T09:00:00.000Z","type":"decision","title":"القسم القانوني على نطاق فرعي مستقل law.risha360.com","progress":10,"model":"claude","source":"cowork","tags":[],"body":"تعديل القرار الأول (مسار داخل الموقع) إلى نطاق فرعي مستقل. النطاق: مكتبة وطن + استشارة + محتوى + حسابات."}],"journalCount":2,"lastActivity":"2026-09-02T18:45:00.000Z"},{"id":"misc-tasks","name":{"ar":"متفرقات — مهام غير مترابطة","en":"Miscellaneous tasks"},"description":{"ar":"خانة للمهام الفرعية المتفرقة التي لا تنتمي لمشروع بعينه (أدوات، إعدادات، مستندات صغيرة).","en":"Slot for unrelated side tasks that do not belong to a specific project (tools, settings, small documents)."},"status":"active","priority":4,"revenue":"unknown","progress":30,"tags":["misc"],"sessions":["cse_01EZMwmLbNdgFCBJkfPdhdqN"],"links":[],"owner":"","created":"2026-09-02T08:00:00+03:00","updated":"2026-09-03T17:20:10.570Z","brain":{"done":[{"id":"b-c28db361","text":"قائمة التحقق قبل التعاقد (Pre-Contract Checklist) لمشروع المكتبة القانونية للإنشاءات السعودية (SCLL) — الحالة: مسودة للمراجعة القانونية","date":"2026-09-02T00:00:00.000Z","by":"human","source":"import"}],"findings":[{"id":"b-4e58c3c7","text":"المالك يستخدم محرر Cursor ويريد ربطه بمفتاح Anthropic API لتسريع الإنجاز","date":"2026-09-02T00:00:00.000Z","by":"human","source":"import"}],"current":[{"id":"b-815a557e","text":"لا مهمة نشطة حالياً — الخانة مفتوحة لاستقبال المهام","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"}],"next":[{"id":"b-c1ffff50","text":"إكمال مراجعة قائمة التحقق قبل التعاقد (SCLL) واعتمادها","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"},{"id":"b-e7344d36","text":"ربط Cursor بمفتاح Anthropic API","date":"2026-09-03T00:00:00.000Z","by":"claude","source":"cowork"}],"improvements":[{"id":"b-8ee9a410","text":"أي مهمة تتكرر أكثر من مرتين هنا تتحوّل إلى مشروع مستقل في المنصة","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork"}],"suggestions":[{"id":"b-7e184574","text":"تحويل SCLL إلى مشروع مستقل عندما يبدأ العمل الفعلي على المكتبة (له اسم ونطاق واضح)","date":"2026-09-03T00:00:00.000Z","by":"fable","source":"cowork","status":"proposed"}],"decisions":[],"blockers":[],"constraints":[]},"journal":[{"id":"j-202609021138-6811fd0a","file":"20260902-1138-استيراد-scll-قائمة-التحقق-قبل-التعاقد-مس-fd0a.md","date":"2026-09-02T08:38:00.000Z","type":"note","title":"استيراد SCLL: قائمة التحقق قبل التعاقد — مسودة للمراجعة القانونية","progress":30,"model":"claude","source":"import","tags":[],"body":"تغطي: بيانات النشاط، الطرف الآخر، السجل التجاري، المفوّض بالتوقيع، النطاق، الميزانية، العروض، المخاطر، الأنظمة السعودية المنطبقة، الموافقات المطلوبة."}],"journalCount":1,"lastActivity":"2026-09-02T08:38:00.000Z"}],"platform":{"version":1,"updated":"2026-09-03T17:20:10.605Z","learned":[{"id":"le-08093150","text":"ملف xlsx يُبنى يدوياً (ZIP + SpreadsheetML مع inlineStr) بلا مكتبات — يكفي zlib المدمج في Node","date":"2026-09-03T00:00:00.000Z","by":"fable","project":"master-brain-platform"},{"id":"le-a5237bf7","text":"خادم MCP عبر stdio = JSON-RPC مفصول بأسطر (initialize / tools/list / tools/call / resources) — stdout للبروتوكول فقط والسجلات إلى stderr","date":"2026-09-03T00:00:00.000Z","by":"fable","project":"master-brain-platform"},{"id":"le-fba836c7","text":"Crystal/RDLC لا تعمل مع Node.js — HTML→PDF عبر Edge headless بديل مجاني موجود على كل Windows","date":"2026-09-03T00:00:00.000Z","by":"fable","project":"master-brain-platform"},{"id":"le-aae43ab3","text":"أتمتة LinkedIn Easy Apply تنجح عبر رابط apply/?openSDUIApplyFlow=true مع محاكاة شاشة 1280×900","date":"2026-09-02T00:00:00.000Z","by":"claude","project":"cv-job-search"},{"id":"le-8b743d51","text":"تطبيقات متجر مايكروسوفت لإنستقرام/فيسبوك/تيك توك لا يمكن التحكم بها؛ إضافة Claude in Chrome هي القناة الكاملة الوحيدة للنشر","date":"2026-09-03T00:00:00.000Z","by":"claude","project":"risha360-legal-content"},{"id":"le-4ca4515c","text":"portfolio-commander يفصل بين الأداة (عامة على GitHub) والبيانات (محلية خاصة) — نفس المبدأ طُبّق هنا: seed خاص + example عام","date":"2026-09-03T00:00:00.000Z","by":"fable","project":"master-brain-platform"}],"skills":[{"id":"sk-2cbbac2a","text":"مهارة البدء — تعليمات تأسيس منصة متابعة لأي محفظة مشاريع (النسخة المعمَّمة من طلب المالك)","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"start-skill","source":"bundled skills/start-skill","install":"scripts/install.ps1 → %USERPROFILE%\\.claude\\skills\\start-skill","status":"installed"},{"id":"sk-f3aaa72f","text":"تشغيل المنصة من Claude Code/Desktop: اقرأ العقل قبل العمل، سجّل بعده، انسب المقترحات","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"master-brain","source":"bundled skills/master-brain","install":"scripts/install.ps1 → %USERPROFILE%\\.claude\\skills\\master-brain","status":"installed"},{"id":"sk-6090e7c5","text":"Role → Context → Task → Constraints: تحليل الطلب وسؤال واحد مركّز قبل التنفيذ","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"rctc-method","source":"kazoya/rctc-skill (MIT)","url":"https://github.com/kazoya/rctc-skill","install":"vendored: skills/vendor/rctc-method","status":"installed"},{"id":"sk-35c3a7a9","text":"سجل مشاريع + سكون/أولوية/دخل + عقل هندسي + لوحة — الأصل الذي بُنيت عليه فكرة المنصة","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"portfolio-commander","source":"kazoya/rctc-skill/portfolio-commander (MIT)","url":"https://github.com/kazoya/rctc-skill/tree/master/portfolio-commander","install":"vendored: skills/vendor/portfolio-commander","status":"installed"},{"id":"sk-1f3925fe","text":"THINK → EXECUTE → PROVE: لا إنجاز بلا دليل؛ DONE = IMPLEMENTATION × TEST × VERIFICATION × EVIDENCE","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"focused3-agentic-phases","source":"kazoya/rctc-skill (MIT)","url":"https://github.com/kazoya/rctc-skill/tree/master/focused3-agentic-phases","install":"vendored: skills/vendor/focused3-agentic-phases","status":"installed"},{"id":"sk-b4a94381","text":"ذكاء تصميم: 79 نمط واجهة، 192 لوحة ألوان، 74 زوج خطوط، 119 قاعدة UX، 22 تقنية","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"ui-ux-pro-max","source":"nextlevelbuilder/ui-ux-pro-max-skill (MIT)","url":"https://github.com/nextlevelbuilder/ui-ux-pro-max-skill","install":"/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill  →  /plugin install ui-ux-pro-max@ui-ux-pro-max-skill","status":"recommended"},{"id":"sk-92bf224f","text":"14 مهارة لبناء تدفقات n8n صحيحة (تعبيرات، تحقق، معالجة أخطاء، وكلاء) — تحتاج خادم n8n-mcp","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"n8n-skills","source":"czlonkowski/n8n-skills","url":"https://github.com/czlonkowski/n8n-skills","install":"/plugin marketplace add czlonkowski/n8n-skills  →  /plugin install","status":"recommended"},{"id":"sk-779cc6da","text":"مهارات المستندات الرسمية: docx / xlsx / pptx / pdf + webapp-testing (Playwright)","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"anthropic-document-skills","source":"anthropics/skills","url":"https://github.com/anthropics/skills","install":"/plugin marketplace add anthropics/skills  →  /plugin install document-skills@anthropic-agent-skills","status":"recommended"},{"id":"sk-3b3f55a1","text":"كتالوج 1000+ مهارة (Claude Code / Codex / Gemini CLI / Cursor) — للبحث عند الحاجة لمهارة جديدة","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"awesome-agent-skills","source":"VoltAgent/awesome-agent-skills","url":"https://github.com/VoltAgent/awesome-agent-skills","status":"available"},{"id":"sk-cef25ec0","text":"قائمة منسّقة لمهارات Claude وأدواتها","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"awesome-claude-skills","source":"ComposioHQ/awesome-claude-skills","url":"https://github.com/ComposioHQ/awesome-claude-skills","status":"available"}],"tools":[{"id":"to-5c131169","text":"التشغيل الوحيد المطلوب للمنصة (بلا npm install)","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"Node.js ≥ 18","status":"installed","kind":"runtime"},{"id":"to-58b4dd1f","text":"يتصل بالمنصة عبر .mcp.json في E:\\master (أدوات + موارد + prompts) ويقرأ CLAUDE.md","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"Claude Code","url":"https://docs.claude.com/en/docs/claude-code","status":"available","kind":"cli"},{"id":"to-fc735376","text":"يتصل عبر claude_desktop_config.json (يضيفه install.ps1) أو عبر لصق mb context","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"Claude Desktop","status":"available","kind":"app"},{"id":"to-bd1989bb","text":"الجلسات السحابية المرتبطة بمجلد E:\\master — بُنيت المنصة من هنا","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"Claude Cowork","status":"installed","kind":"app"},{"id":"to-f46540ae","text":"القناة الكاملة لنشر المحتوى على المنصات الاجتماعية من بروفايل العمل","date":"2026-09-03T00:00:00.000Z","by":"claude","name":"Claude in Chrome","status":"available","kind":"extension"},{"id":"to-1ba04b64","text":"تحويل تقارير HTML إلى PDF تلقائياً (mb report --format pdf)","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"Microsoft Edge (headless)","status":"available","kind":"app"},{"id":"to-ea018fbd","text":"مطلوب لرفع start-skill والمنصة إلى GitHub","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"Git","status":"available","kind":"cli"},{"id":"to-15dc005f","text":"لخط أنابيب قاعدة جهات الاتصال (قرار المالك: Python)","date":"2026-09-02T00:00:00.000Z","by":"claude","name":"Python 3","status":"available","kind":"runtime"},{"id":"to-24cb0e55","text":"أتمتة الجداول والتنبيهات وخطوط البيانات — بانتظار موافقة المالك","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"n8n","url":"https://n8n.io","status":"requested","kind":"service"},{"id":"to-cae69ea3","text":"متاح في Cowork — مزامنة اختيارية للعقل الهندسي إلى صفحات Notion","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"Notion (MCP)","status":"available","kind":"mcp"},{"id":"to-49003d35","text":"فقط إن احتاج العمل المحلي على Laravel/MySQL للمنصة القانونية","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"XAMPP","status":"available","kind":"app"},{"id":"to-7ee9a04d","text":"محرر المالك — يمكن تحميل المهارات نفسها فيه (.cursor/skills)","date":"2026-09-02T00:00:00.000Z","by":"claude","name":"Cursor","status":"installed","kind":"app"}],"capabilities":[{"id":"ca-5034dabf","text":"تتبع كل مشروع بمجلد مستقل وعقل هندسي مُنظَّم (9 أقسام) يقرؤه Claude قبل العمل ويحدّثه بعده","date":"2026-09-03T00:00:00.000Z","by":"fable"},{"id":"ca-7ba0e2df","text":"تقارير بفترة زمنية وفرز حسب الحالة/طبيعة التقدّم/النموذج/نسبة الإنجاز بصيغ HTML، PDF، Excel، Markdown، JSON","date":"2026-09-03T00:00:00.000Z","by":"fable"},{"id":"ca-1012a5d9","text":"قناة MCP موحّدة لـ Claude Code وClaude Desktop (17 أداة + موارد + prompts) + CLI + REST API + كتلة سياق للّصق","date":"2026-09-03T00:00:00.000Z","by":"fable"},{"id":"ca-3b1bfe2e","text":"صندوق مهام من المالك إلى Claude، وطلبات أدوات من Claude إلى المالك مع موافقة/رفض","date":"2026-09-03T00:00:00.000Z","by":"fable"},{"id":"ca-801c52f9","text":"نسب كل مقترح تحسين إلى النموذج الذي قدّمه (Claude / Opus / Sonnet / Haiku / Fable) وإحصاؤه في التقارير","date":"2026-09-03T00:00:00.000Z","by":"fable"}],"requests":[{"id":"re-32c29a66","text":"جدولة التقارير الأسبوعية والتنبيهات، وأتمتة خط أنابيب قاعدة جهات الاتصال (جمع/تحقق/مسودات) بدل السكربتات اليدوية","date":"2026-09-03T00:00:00.000Z","by":"fable","name":"n8n","url":"https://n8n.io","status":"pending","project":"risha360-contacts-db","command":"npm install -g n8n  (أو Docker: docker run -p 5678:5678 n8nio/n8n)"}]}}</script>
+<script>
+(function(){
+"use strict";
+const DATA = JSON.parse(document.getElementById('mb-data').textContent);
+const V = DATA.vocab;
+
+/* ── strings ─────────────────────────────────────── */
+const S = {
+ ar:{portfolio:"المحفظة",project:"المشروع",platform:"العقل العام",report:"تقرير",
+   snapshot:"لقطة حيّة",snapNote:"نسخة للقراءة من بيانات المنصة المثبّتة في E:\\master. للتعديل والتسجيل استخدم اللوحة المحلية أو أدوات Claude.",
+   generated:"صدرت",projects:"مشاريع",avgProgress:"متوسط الإنجاز",entries:"مدخلات السجل",suggestions:"مقترحات النماذج",pending:"طلبات معلّقة",
+   all:"الكل",priority:"أولوية",lastActivity:"آخر نشاط",progress:"الإنجاز",revenue:"دخل",
+   now:"الحالة الآن",settled:"ما استقرّ",improve:"التحسين",journal:"سجل التقدّم",entriesN:"مدخلة",nothing:"لا شيء بعد",
+   sessions:"جلسات مرتبطة",created:"أُنشئ",updated:"حُدِّث",
+   reportTitle:"تقرير متابعة المشاريع",period:"الفترة",allTime:"كل الفترات",from:"من",to:"إلى",group:"التجميع",none:"بدون",byStatus:"حسب الحالة",byPriority:"حسب الأولوية",
+   include:"يشمل",incBrain:"العقل الهندسي",incJournal:"سجل الفترة",incPlatform:"العقل العام",build:"إنشاء التقرير",print:"طباعة / حفظ PDF",
+   selectProjects:"المشاريع",noEntries:"لا مدخلات في هذه الفترة.",inPeriod:"في الفترة",
+   learned:"دروس",skills:"مهارات",tools:"أدوات",capabilities:"قدرات",requests:"طلبات أدوات",
+   status:"الحالة",name:"الاسم",note:"ملاحظة",source:"المصدر",by:"بواسطة",date:"التاريخ",kind:"النوع"},
+ en:{portfolio:"Portfolio",project:"Project",platform:"Platform brain",report:"Report",
+   snapshot:"Live snapshot",snapNote:"Read-only copy of the platform data installed at E:\\master. Edit and log through the local dashboard or Claude's tools.",
+   generated:"Generated",projects:"Projects",avgProgress:"Avg progress",entries:"Journal entries",suggestions:"Model suggestions",pending:"Pending requests",
+   all:"All",priority:"Priority",lastActivity:"Last activity",progress:"Progress",revenue:"Revenue",
+   now:"State now",settled:"Settled",improve:"Improve",journal:"Progress journal",entriesN:"entries",nothing:"Nothing yet",
+   sessions:"Linked sessions",created:"Created",updated:"Updated",
+   reportTitle:"Portfolio progress report",period:"Period",allTime:"All time",from:"From",to:"To",group:"Group by",none:"None",byStatus:"Status",byPriority:"Priority",
+   include:"Include",incBrain:"Engineering mind",incJournal:"Journal in period",incPlatform:"Platform brain",build:"Build report",print:"Print / Save PDF",
+   selectProjects:"Projects",noEntries:"No entries in this period.",inPeriod:"in period",
+   learned:"Lessons",skills:"Skills",tools:"Tools",capabilities:"Capabilities",requests:"Tool requests",
+   status:"Status",name:"Name",note:"Note",source:"Source",by:"By",date:"Date",kind:"Kind"}
+};
+let lang = 'ar';
+try{ lang = localStorage.getItem('mb.lang') || 'ar'; }catch(e){}
+const t = k => (S[lang][k] !== undefined ? S[lang][k] : (S.en[k] || k));
+const L = v => v == null ? '' : (typeof v === 'string' ? v : (v[lang] || v.ar || v.en || ''));
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const vl = (list,key) => { const f = list.find(x => String(x.key) === String(key)); return f ? (f[lang] || f.en) : String(key == null ? '' : key); };
+const vget = (list,key) => list.find(x => String(x.key) === String(key)) || {};
+
+function fmt(v, withTime){
+  if(!v) return '';
+  const d = new Date(v); if(isNaN(d)) return String(v);
+  try{
+    const p = new Intl.DateTimeFormat('en-GB',{timeZone:DATA.timezone||'Asia/Riyadh',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false})
+      .formatToParts(d).reduce(function(a,x){a[x.type]=x.value;return a;},{});
+    return p.year+'-'+p.month+'-'+p.day + (withTime ? ' '+(p.hour==='24'?'00':p.hour)+':'+p.minute : '');
+  }catch(e){ return d.toISOString().slice(0, withTime?16:10).replace('T',' '); }
+}
+const MODEL_C = {claude:'var(--warn)',opus:'var(--violet)',sonnet:'var(--info)',haiku:'var(--ok)',fable:'var(--accent)',human:'var(--muted)',other:'var(--muted-2)'};
+const modelPill = m => '<span class="pill model" style="--c:'+(MODEL_C[m]||'var(--muted)')+'">'+esc(vl(V.models,m))+'</span>';
+const statusPill = s => '<span class="pill status st '+esc(s)+'">'+esc(vl(V.statuses,s))+'</span>';
+
+/* ── state ───────────────────────────────────────── */
+const st = { view:'portfolio', pid:DATA.projects[0] && DATA.projects[0].id, filter:'all', report:null };
+try{ const sv = localStorage.getItem('mb.pid'); if(sv && DATA.projects.some(p=>p.id===sv)) st.pid = sv; }catch(e){}
+
+const SECTION_GROUPS = [
+  {key:'now', keys:['current','next','blockers'], colors:{current:'var(--info)',next:'var(--accent)',blockers:'var(--bad)'}},
+  {key:'settled', keys:['done','findings','decisions'], colors:{done:'var(--ok)',findings:'var(--info)',decisions:'var(--violet)'}},
+  {key:'improve', keys:['improvements','suggestions','constraints'], colors:{improvements:'var(--accent)',suggestions:'var(--violet)',constraints:'var(--muted)'}}
+];
+const TYPE_C = {progress:'var(--info)',milestone:'var(--ok)',decision:'var(--violet)',blocker:'var(--bad)',suggestion:'var(--accent)',note:'var(--muted)',report:'var(--muted-2)'};
+
+/* ── views ───────────────────────────────────────── */
+function strip(){
+  const s = DATA.stats;
+  const cells = [
+    {k:t('projects'), v:s.projects, sub:Object.keys(s.byStatus).filter(k=>s.byStatus[k]).map(k=>s.byStatus[k]+' '+vl(V.statuses,k)).join(' · ')},
+    {k:t('avgProgress'), v:s.avgProgress+'%', meter:s.avgProgress},
+    {k:t('entries'), v:s.journalEntries},
+    {k:t('suggestions'), v:s.suggestions, sub:Object.keys(s.suggestionsByModel||{}).map(m=>vl(V.models,m)+' '+s.suggestionsByModel[m]).join(' · ')},
+    {k:t('pending'), v:(s.toolRequestsPending||0)+(s.pendingRequests||0)},
+    {k:t('generated'), v:'<span style="font-size:14px">'+fmt(DATA.generated,false)+'</span>', sub:'v'+DATA.version}
+  ];
+  return '<div class="strip">'+cells.map(c=>'<div class="cell"><div class="k">'+esc(c.k)+'</div><div class="v num">'+c.v+'</div>'+
+    (c.meter!=null?'<div class="meterline"><i style="width:'+c.meter+'%"></i></div>':'')+
+    (c.sub?'<div class="sub">'+esc(c.sub)+'</div>':'')+'</div>').join('')+'</div>';
+}
+function rail(){
+  const counts = {all:DATA.projects.length};
+  DATA.projects.forEach(p=>{counts[p.status]=(counts[p.status]||0)+1;});
+  const keys = ['all'].concat(V.statuses.map(s=>s.key).filter(k=>counts[k]));
+  const list = DATA.projects.filter(p=> st.filter==='all' || p.status===st.filter);
+  return '<aside class="rail"><div class="rail-h"><span>'+esc(t('projects'))+'</span><span class="mono num">'+list.length+'/'+DATA.projects.length+'</span></div>'+
+   '<div class="filters">'+keys.map(k=>'<button data-f="'+k+'" aria-pressed="'+(st.filter===k)+'">'+esc(k==='all'?t('all'):vl(V.statuses,k))+' '+(counts[k]||0)+'</button>').join('')+'</div>'+
+   '<ul class="plist">'+list.map(p=>'<li><button class="prow" data-p="'+esc(p.id)+'" aria-current="'+(p.id===st.pid&&st.view==='project')+'">'+
+     '<span class="pn">'+esc(L(p.name))+'</span>'+
+     '<span class="pm"><span>'+statusPill(p.status)+' <span class="mono">P'+(p.priority||'-')+'</span></span><span class="mono num">'+p.progress+'%</span></span>'+
+     '<span class="bar"><i style="width:'+p.progress+'%"></i></span>'+
+     '<span class="pm"><span class="mono">'+esc(p.id)+'</span><span class="mono num">'+fmt(p.lastActivity,false)+'</span></span>'+
+     '</button></li>').join('')+'</ul></aside>';
+}
+function projectView(p){
+  const alt = lang==='ar' ? (p.name.en||'') : (p.name.ar||'');
+  let h = '<div class="phead"><h2>'+esc(L(p.name))+'</h2>'+(alt?'<div class="alt">'+esc(alt)+'</div>':'')+
+    (L(p.description)?'<p>'+esc(L(p.description))+'</p>':'')+
+    '<div class="gauge"><b class="num">'+p.progress+'%</b><span class="bar"><i style="width:'+p.progress+'%"></i></span>'+statusPill(p.status)+
+      '<span class="pill tag">'+esc(t('priority'))+' '+(p.priority||'—')+'</span>'+
+      (p.revenue==='yes'?'<span class="pill tag">'+esc(t('revenue'))+'</span>':'')+'</div>'+
+    '<div class="tagrow"><span class="pill tag mono">'+esc(p.id)+'</span>'+
+      (p.tags||[]).map(x=>'<span class="pill tag">#'+esc(x)+'</span>').join('')+
+      (p.sessions||[]).map(x=>'<span class="pill tag mono">'+esc(x)+'</span>').join('')+
+      '<span class="pill tag">'+esc(t('created'))+' '+fmt(p.created,false)+'</span>'+
+      '<span class="pill tag">'+esc(t('lastActivity'))+' '+fmt(p.lastActivity,false)+'</span></div></div>';
+
+  h += '<div class="brain">'+SECTION_GROUPS.map(function(g){
+    const total = g.keys.reduce(function(a,k){return a+((p.brain[k]||[]).length);},0);
+    return '<div><div class="colhead"><span>'+esc(t(g.key))+'</span><span class="num">'+total+'</span></div>'+
+      g.keys.map(function(k){
+        const meta = vget(V.sections,k), items = p.brain[k]||[];
+        const head = '<div class="sec-h"><h4>'+esc(meta.icon||'')+' '+esc(lang==='ar'?meta.ar:meta.en)+'</h4><span class="n num">'+items.length+'</span></div>';
+        if(!items.length) return '<section class="sec empty" style="--c:'+g.colors[k]+'">'+head+'<div class="body">'+esc(t('nothing'))+'</div></section>';
+        return '<section class="sec" style="--c:'+g.colors[k]+'">'+head+'<ul>'+items.map(function(it){
+          return '<li>'+esc(it.text)+'<div class="im">'+
+            ((k==='suggestions'||it.by!=='human')?modelPill(it.by):'')+
+            (k==='suggestions'&&it.status?'<span class="pill tag">'+esc(it.status)+'</span>':'')+
+            '<span class="mono num">'+fmt(it.date,false)+'</span></div></li>';
+        }).join('')+'</ul></section>';
+      }).join('')+'</div>';
+  }).join('')+'</div>';
+
+  h += '<div class="jwrap"><h3>🗓️ '+esc(t('journal'))+' <span class="n mono num" style="color:var(--muted);font-weight:400">'+p.journal.length+' '+esc(t('entriesN'))+'</span></h3><div class="tl">'+
+    (p.journal.length? p.journal.map(function(e){
+      const ty = vget(V.types,e.type);
+      return '<div class="ev" style="--c:'+(TYPE_C[e.type]||'var(--accent)')+'"><div class="t">'+esc(ty.icon||'')+' '+esc(e.title)+'</div>'+
+       '<div class="m"><span class="mono num">'+fmt(e.date,true)+'</span><span class="pill tag">'+esc(vl(V.types,e.type))+'</span>'+modelPill(e.model)+
+       (e.progress!=null?'<span class="pill tag num">'+e.progress+'%</span>':'')+'</div>'+
+       (e.body?'<div class="b">'+esc(e.body)+'</div>':'')+'</div>';
+    }).join('') : '<div class="hint">'+esc(t('nothing'))+'</div>')+'</div></div>';
+  return h;
+}
+function platformView(){
+  const pb = DATA.platform;
+  const blocks = V.kinds.map(function(k){
+    const items = pb[k.key]||[];
+    return '<section class="panel"><h3>'+esc(lang==='ar'?k.ar:k.en)+'<span class="mono num" style="color:var(--muted)">'+items.length+'</span></h3><div class="pb">'+
+      (items.length?'<ul class="kv">'+items.map(function(it){
+        return '<li>'+(it.name?'<b>'+esc(it.name)+'</b> — ':'')+esc(it.text)+
+          '<div class="im" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:5px;font-size:11px;color:var(--muted-2)">'+
+          modelPill(it.by)+(it.status?'<span class="pill tag">'+esc(it.status)+'</span>':'')+
+          (it.url?'<a href="'+esc(it.url)+'" target="_blank" rel="noopener" class="mono">'+esc(it.url.replace(/^https?:\/\//,''))+'</a>':'')+
+          (it.install?'<code class="mono">'+esc(it.install)+'</code>':'')+
+          (it.command?'<code class="mono">'+esc(it.command)+'</code>':'')+
+          '<span class="mono num">'+fmt(it.date,false)+'</span></div></li>';
+      }).join('')+'</ul>':'<div class="hint">'+esc(t('nothing'))+'</div>')+'</div></section>';
+  });
+  return '<div class="two">'+blocks.join('')+'</div>';
+}
+
+/* ── report ──────────────────────────────────────── */
+function reportForm(){
+  const today = new Date(), ago = new Date(Date.now()-29*864e5);
+  const iso = d => d.toISOString().slice(0,10);
+  return '<aside class="form">'+
+   '<div class="field"><label>'+esc(t('from'))+'</label><input type="date" id="r-from" value="'+iso(ago)+'"></div>'+
+   '<div class="field"><label>'+esc(t('to'))+'</label><input type="date" id="r-to" value="'+iso(today)+'"></div>'+
+   '<div class="field"><label>'+esc(t('selectProjects'))+'</label>'+DATA.projects.map(function(p){
+     return '<label class="chk"><input type="checkbox" name="rp" value="'+esc(p.id)+'" checked> '+esc(L(p.name))+'</label>';}).join('')+'</div>'+
+   '<div class="field"><label>'+esc(t('group'))+'</label><select id="r-group"><option value="none">'+esc(t('none'))+'</option><option value="status">'+esc(t('byStatus'))+'</option><option value="priority">'+esc(t('byPriority'))+'</option></select></div>'+
+   '<div class="field"><label>'+esc(t('include'))+'</label>'+
+     '<label class="chk"><input type="checkbox" id="r-brain" checked> '+esc(t('incBrain'))+'</label>'+
+     '<label class="chk"><input type="checkbox" id="r-journal" checked> '+esc(t('incJournal'))+'</label>'+
+     '<label class="chk"><input type="checkbox" id="r-platform"> '+esc(t('incPlatform'))+'</label></div>'+
+   '<button class="go" id="r-go">'+esc(t('build'))+'</button></aside>';
+}
+function buildReport(){
+  const from = document.getElementById('r-from').value, to = document.getElementById('r-to').value;
+  const ids = Array.prototype.slice.call(document.querySelectorAll('input[name="rp"]:checked')).map(i=>i.value);
+  const group = document.getElementById('r-group').value;
+  const inc = {brain:document.getElementById('r-brain').checked, journal:document.getElementById('r-journal').checked, platform:document.getElementById('r-platform').checked};
+  const f = from? new Date(from+'T00:00:00') : null, tt = to? new Date(to+'T23:59:59') : null;
+  const inRange = d => { const x = new Date(d); if(isNaN(x)) return false; if(f && x<f) return false; if(tt && x>tt) return false; return true; };
+  const rows = DATA.projects.filter(p=>ids.indexOf(p.id)>-1).map(function(p){
+    const entries = p.journal.filter(e=>inRange(e.date));
+    const brain = {}; Object.keys(p.brain).forEach(k=>{brain[k]=p.brain[k];});
+    return {p:p, entries:entries, brain:brain};
+  });
+  st.report = {from:from,to:to,group:group,inc:inc,rows:rows};
+  render();
+  const el = document.getElementById('report-out'); if(el) el.scrollIntoView({block:'start',behavior:'smooth'});
+}
+function reportOut(){
+  const r = st.report;
+  if(!r) return '<div class="report"><div class="rep-h"><div class="eyebrow">'+esc(t('report'))+'</div><h2>'+esc(t('reportTitle'))+'</h2></div><p class="hint">'+esc(t('build'))+' ←</p></div>';
+  const entries = r.rows.reduce((a,x)=>a+x.entries.length,0);
+  const sugg = r.rows.reduce((a,x)=>a+(x.brain.suggestions||[]).length,0);
+  const avg = r.rows.length? Math.round(r.rows.reduce((a,x)=>a+x.p.progress,0)/r.rows.length):0;
+  const period = (r.from||r.to) ? (r.from||'…')+' → '+(r.to||'…') : t('allTime');
+  let groups;
+  if(r.group==='status') groups = V.statuses.map(s=>({label:(lang==='ar'?s.ar:s.en), rows:r.rows.filter(x=>x.p.status===s.key)})).filter(g=>g.rows.length);
+  else if(r.group==='priority') groups = V.priorities.map(p=>({label:(lang==='ar'?p.ar:p.en), rows:r.rows.filter(x=>(x.p.priority||0)===p.key)})).filter(g=>g.rows.length);
+  else groups = [{label:null, rows:r.rows}];
+
+  let h = '<div class="printbar"><span class="hint">'+esc(period)+' · '+r.rows.length+' '+esc(t('projects'))+'</span><button class="icon-btn" id="r-print">🖨 '+esc(t('print'))+'</button></div>';
+  h += '<article class="report" id="report-out"><div class="rep-h"><div class="eyebrow">'+esc(L(DATA.platformName))+'</div><h2>'+esc(t('reportTitle'))+'</h2>'+
+    '<div class="meta"><span>'+esc(t('period'))+': <b>'+esc(period)+'</b></span><span>'+esc(t('generated'))+': '+fmt(new Date().toISOString(),true)+'</span></div></div>';
+  h += '<div class="rsum">'+[[t('projects'),r.rows.length],[t('avgProgress'),avg+'%'],[t('entries')+' ('+t('inPeriod')+')',entries],[t('suggestions'),sugg]]
+    .map(x=>'<div><div class="v num">'+esc(x[1])+'</div><div class="k">'+esc(x[0])+'</div></div>').join('')+'</div>';
+  h += '<div class="scroll"><table><thead><tr><th>'+esc(t('projects'))+'</th><th>'+esc(t('status'))+'</th><th>'+esc(t('priority'))+'</th><th>'+esc(t('progress'))+'</th><th>'+esc(t('entries'))+'</th><th>'+esc(t('lastActivity'))+'</th></tr></thead><tbody>'+
+    r.rows.map(x=>'<tr><td><b>'+esc(L(x.p.name))+'</b><br><span class="mono" style="color:var(--muted)">'+esc(x.p.id)+'</span></td><td>'+statusPill(x.p.status)+'</td><td class="num">'+(x.p.priority||'—')+'</td><td class="num">'+x.p.progress+'%</td><td class="num">'+x.entries.length+'</td><td class="mono num">'+fmt(x.p.lastActivity,false)+'</td></tr>').join('')+
+    '</tbody></table></div>';
+  groups.forEach(function(g){
+    if(g.label) h += '<div class="rgroup">'+esc(g.label)+' · '+g.rows.length+'</div>';
+    g.rows.forEach(function(x){
+      h += '<section class="rproj"><h3>'+esc(L(x.p.name))+' <span class="mono" style="color:var(--muted);font-weight:400">'+esc(x.p.id)+'</span> '+statusPill(x.p.status)+' <span class="num" style="color:var(--muted)">'+x.p.progress+'%</span></h3>';
+      if(r.inc.brain){
+        V.sections.forEach(function(s){
+          const items = x.brain[s.key]||[]; if(!items.length) return;
+          h += '<div class="rsec"><h5>'+esc(s.icon||'')+' '+esc(lang==='ar'?s.ar:s.en)+'</h5><ul>'+items.map(function(it){
+            return '<li>'+esc(it.text)+(s.key==='suggestions'?' <span style="color:var(--muted)">— '+esc(vl(V.models,it.by))+(it.status?' ('+esc(it.status)+')':'')+'</span>':'')+'</li>';}).join('')+'</ul></div>';
+        });
+      }
+      if(r.inc.journal){
+        h += '<div class="rsec"><h5>🗓️ '+esc(t('journal'))+'</h5>'+ (x.entries.length? '<ul>'+x.entries.map(function(e){
+          return '<li><span class="mono num">'+fmt(e.date,false)+'</span> — '+esc(e.title)+(e.progress!=null?' <b class="num">('+e.progress+'%)</b>':'')+' <span style="color:var(--muted)">'+esc(vl(V.models,e.model))+'</span>'+(e.body?'<br><span style="color:var(--muted)">'+esc(e.body)+'</span>':'')+'</li>';
+        }).join('')+'</ul>' : '<p class="hint">'+esc(t('noEntries'))+'</p>')+'</div>';
+      }
+      h += '</section>';
+    });
+  });
+  if(r.inc.platform){
+    h += '<div class="rgroup">'+esc(t('platform'))+'</div>';
+    V.kinds.forEach(function(k){
+      const items = DATA.platform[k.key]||[]; if(!items.length) return;
+      h += '<div class="rsec"><h5>'+esc(lang==='ar'?k.ar:k.en)+'</h5><ul>'+items.map(it=>'<li>'+(it.name?'<b>'+esc(it.name)+'</b> — ':'')+esc(it.text)+(it.status?' ['+esc(it.status)+']':'')+'</li>').join('')+'</ul></div>';
+    });
+  }
+  h += '</article>';
+  return h;
+}
+
+/* ── render ──────────────────────────────────────── */
+function render(){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang==='ar' ? 'rtl' : 'ltr';
+  document.getElementById('bn').textContent = lang==='ar' ? 'ماستر برين' : 'Master Brain';
+  document.getElementById('bt').textContent = lang==='ar' ? 'منصة المتابعة والعقل الهندسي' : 'Portfolio tracker & engineering mind';
+  document.getElementById('lang-btn').textContent = lang==='ar' ? 'EN' : 'ع';
+  const views = ['portfolio','project','platform','report'];
+  document.getElementById('tabs').innerHTML = views.map(v=>'<button role="tab" data-v="'+v+'" aria-selected="'+(st.view===v)+'">'+esc(t(v))+'</button>').join('');
+
+  const notice = '<div class="notice"><span class="dot"></span><div><b>'+esc(t('snapshot'))+'</b> · '+esc(t('generated'))+' '+fmt(DATA.generated,true)+' — '+esc(t('snapNote'))+'</div></div>';
+  const app = document.getElementById('app');
+  const p = DATA.projects.filter(x=>x.id===st.pid)[0] || DATA.projects[0];
+
+  if(st.view==='portfolio'){
+    app.innerHTML = notice + strip() + '<div class="split">'+rail()+'<div>'+projectView(p)+'</div></div>';
+  } else if(st.view==='project'){
+    app.innerHTML = notice + '<div class="split">'+rail()+'<div>'+projectView(p)+'</div></div>';
+  } else if(st.view==='platform'){
+    app.innerHTML = notice + strip() + platformView();
+  } else {
+    app.innerHTML = notice + '<div class="rgrid">'+reportForm()+'<div>'+reportOut()+'</div></div>';
+    const go = document.getElementById('r-go'); if(go) go.onclick = buildReport;
+    const pr = document.getElementById('r-print'); if(pr) pr.onclick = function(){ window.print(); };
+  }
+  bind();
+}
+function bind(){
+  document.querySelectorAll('[data-v]').forEach(function(b){ b.onclick = function(){ st.view = b.dataset.v; render(); window.scrollTo({top:0}); }; });
+  document.querySelectorAll('[data-p]').forEach(function(b){ b.onclick = function(){ st.pid = b.dataset.p; st.view='project'; try{localStorage.setItem('mb.pid',st.pid);}catch(e){} render(); }; });
+  document.querySelectorAll('[data-f]').forEach(function(b){ b.onclick = function(){ st.filter = b.dataset.f; render(); }; });
+}
+document.getElementById('lang-btn').onclick = function(){ lang = lang==='ar' ? 'en' : 'ar'; try{localStorage.setItem('mb.lang',lang);}catch(e){} st.report=null; render(); };
+document.getElementById('theme-btn').onclick = function(){
+  const cur = document.documentElement.getAttribute('data-theme');
+  const dark = cur ? cur==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+  try{ localStorage.setItem('mb.theme', dark?'light':'dark'); }catch(e){}
+};
+try{ const th = localStorage.getItem('mb.theme'); if(th) document.documentElement.setAttribute('data-theme', th); }catch(e){}
+render();
+})();
+</script>
+
+</body>
+</html>

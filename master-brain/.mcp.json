@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "master-brain": {
+      "command": "node",
+      "args": ["E:\\master\\bin\\mcp.js"]
+    }
+  }
+}

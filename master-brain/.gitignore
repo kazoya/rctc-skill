@@ -1,0 +1,18 @@
+# Private data — never publish (paths, brains, reports)
+config.json
+data/registry.json
+data/platform-brain.json
+data/requests.json
+data/reports/
+seed/initial-projects.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+*.log
+
+# portable node fetched by scripts/bootstrap-node.ps1
+.node/

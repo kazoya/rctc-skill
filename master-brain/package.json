@@ -1,0 +1,22 @@
+{
+  "name": "master-brain",
+  "version": "1.0.0",
+  "description": "Master Brain — portfolio tracker & conscious engineering mind for Claude Code / Claude Desktop (zero-dependency Node.js). منصة المتابعة والعقل الهندسي الواعي.",
+  "license": "MIT",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "bin": { "mb": "bin/mb.js" },
+  "main": "src/store.js",
+  "scripts": {
+    "init": "node bin/mb.js init",
+    "start": "node bin/mb.js serve --open",
+    "serve": "node bin/mb.js serve",
+    "mcp": "node bin/mcp.js",
+    "doctor": "node bin/mb.js doctor",
+    "report": "node bin/mb.js report --format all",
+    "test": "node test/util.test.js && node test/smoke.test.js"
+  },
+  "keywords": ["claude", "claude-code", "mcp", "portfolio", "project-tracking", "engineering-mind", "reports", "arabic"],
+  "author": "Built with Claude (Cowork) for the owner of risha360.com",
+  "repository": { "type": "git", "url": "https://github.com/kazoya/rctc-skill" }
+}

@@ -1,0 +1,13 @@
+{
+  "platformName": { "ar": "ماستر برين — منصة المتابعة والعقل الهندسي", "en": "Master Brain — Portfolio Tracker & Engineering Mind" },
+  "owner": { "name": "", "email": "" },
+  "projectsRoot": "D:\\projects",
+  "host": "127.0.0.1",
+  "port": 4545,
+  "defaultLang": "ar",
+  "timezone": "Asia/Riyadh",
+  "dormantAfterDays": 45,
+  "reportsDir": "data/reports",
+  "openBrowserOnServe": false,
+  "defaultModel": "claude"
+}
