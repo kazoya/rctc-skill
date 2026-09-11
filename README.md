@@ -16,6 +16,18 @@
 
 </div>
 
+## ✍️ Original authorship
+
+**Start Skill / مهارة البدء is an original workflow conceived and authored by [Suhaib Asrawi (@kazoya)](https://github.com/kazoya).**
+
+It is designed to govern complex, high-fidelity AI and software projects through persistent project memory, attributable decisions, controlled agent collaboration, and proof-based completion. AI tools may assist with implementation and documentation; the originating concept and workflow authorship remain explicitly attributed to Suhaib Asrawi.
+
+- [Authorship and provenance](AUTHORS.md)
+- [High-fidelity project positioning](docs/START-SKILL-AUTHORSHIP.md)
+- [Machine-readable citation](CITATION.cff)
+
+---
+
 ## 🌟 Why RCTC Exists
 
 Most people talk to AI like this:
