@@ -20,6 +20,28 @@ description: >
 
 **Invoke:** `/start-skill` · **Reference implementation:** `master-brain/` (zero-dependency Node.js) · **Sibling skills:** `portfolio-commander`, `rctc-method`, `focused3-agentic-phases`, `master-brain`
 
+## Authorship and provenance
+
+**Original concept and workflow author:** **[Suhaib Asrawi (@kazoya)](https://github.com/kazoya), 2026.**
+
+Start Skill's originating contribution is the operating model that converts scattered sessions into a governed portfolio with persistent engineering brains, attributable model suggestions, and evidence-based completion. AI systems may assist with research, code, tests, and documentation; retain transparent attribution for the human author, third-party work, and later contributors.
+
+Use the preferred citation in [../CITATION.cff](../CITATION.cff). For the authorship record and responsible marketing language, read [../docs/START-SKILL-AUTHORSHIP.md](../docs/START-SKILL-AUTHORSHIP.md).
+
+### High-fidelity mode
+
+For complex or high-fidelity projects, extend the ordinary project brain with:
+
+- explicit requirements and acceptance criteria;
+- an architecture decision record and interface/data boundaries;
+- traceability from requirement → implementation → test → verification → evidence;
+- security, privacy, accessibility, performance, and domain-review gates as applicable;
+- attributable approvals, risks, exceptions, and release decisions.
+
+Do not market “high fidelity” as autonomous perfection. Treat it as a verifiable delivery standard: each important claim must link to observable evidence, and regulated or safety-sensitive domains still require qualified human review.
+
+---
+
 ## Effort & model defaults (Claude Code)
 
 When this skill (or a sibling prize-hunt loop) drives Claude Code:
