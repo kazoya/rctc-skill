@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use Start Skill, please cite it using this metadata."
+title: "Start Skill: Evidence-Driven Portfolio Orchestration for Complex AI Projects"
+type: software
+authors:
+  - family-names: "Asrawi"
+    given-names: "Suhaib"
+    alias: "kazoya"
+version: "1.0.0"
+date-released: "2026-09-11"
+repository-code: "https://github.com/kazoya/rctc-skill"
+url: "https://github.com/kazoya/rctc-skill/tree/master/start-skill"
+license: "MIT"
+abstract: >-
+  Start Skill turns scattered AI chats, sessions, and side projects into one
+  tracked portfolio with a governed folder per project, a persistent engineering
+  brain, model-attributed suggestions, professional reporting, and Claude-facing
+  CLI and MCP interfaces. It is intended for traceable, high-fidelity,
+  multi-project engineering workflows.
+keywords:
+  - agentic engineering
+  - portfolio orchestration
+  - project governance
+  - AI agents
+  - traceability
+  - high-fidelity systems
