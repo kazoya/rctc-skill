@@ -1,0 +1,4 @@
+interface:
+  display_name: "Safe Forward Execution"
+  short_description: "Move safely from planning into verified execution"
+  default_prompt: "Use $safe-forward-execution to carry this task beyond planning while respecting scope and stop conditions."
