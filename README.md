@@ -281,6 +281,7 @@ rctc-skill/
 ├── 🧭 portfolio-commander/     ← Multi-project registry & focus rules
 ├── 🔁 continuous-improving/    ← Autonomous optimization skill
 ├── 🔬 focused3-agentic-phases/ ← THINK → EXECUTE → PROVE
+├── 🛡️ safe-forward-execution/ ← plan → execute safely → verify
 ├── ⚙️  config/
 │   └── config.yaml             ← User configuration
 ├── 🧠 src/
@@ -296,6 +297,7 @@ rctc-skill/
 - 🚀 [start-skill](start-skill/) — مهارة البدء: turn scattered sessions into one tracked portfolio (folder per project, engineering mind, reports, Claude Code/Desktop channel). Default Claude Code effort: **`xhigh`** (not `max`) on `claude-opus-5[1m]`.
 - 🧠 [master-brain](master-brain/) — zero-dependency Node.js platform for start-skill + portfolio-commander: dashboard (AR/EN), reports (HTML/PDF/XLSX/MD/JSON), MCP (19 tools), CLI.
 - 🧭 [portfolio-commander](portfolio-commander/) — scan/registry/dormant rules for multi-repo work.
+- 🛡️ [safe-forward-execution](safe-forward-execution/) — continue beyond planning through authorized, safe, reversible, and verified execution. Co-designed and forward-tested with GPT-5.6 Sol Medium.
 
 ---
 
