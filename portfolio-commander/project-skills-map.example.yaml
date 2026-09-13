@@ -20,6 +20,9 @@ catalog:
   bitter-truth-delivery-audit:
     from: rctc-skill
     dir: bitter-truth-delivery-audit
+  logged-in-browser:
+    from: rctc-skill
+    dir: logged-in-browser
   rctc-method:
     from: rctc-skill
     dir: .agents/skills/rctc-method
@@ -44,6 +47,9 @@ catalog:
   factory-sales-concept:
     from: rctc-skill
     dir: factory-sales-concept
+  web-marketing-and-personal-builder-super-skill:
+    from: rctc-skill
+    dir: web_marketing_and_personal-builder-super-skill
   focused3-agentic-phases:
     from: rctc-skill
     dir: focused3-agentic-phases
@@ -123,9 +129,12 @@ bundles:
     primary_path: "C:\\rctc-skill"
     skills:
       - rctc-method
+      - logged-in-browser
       - portfolio-commander
       - ai-portability-advisor
       - focused3-agentic-phases
+      - web-marketing-and-personal-builder-super-skill
+      - factory-sales-concept
 
   omniagent:
     registry_ids:
@@ -141,17 +150,21 @@ bundles:
       - c-noorplasticfactory
     primary_path: "C:\\Factories"
     skills:
+      - web-marketing-and-personal-builder-super-skill
       - factory-sales-concept
       - portfolio-commander
     nested:
       - path: "C:\\almajjarra"
         skills:
+          - web-marketing-and-personal-builder-super-skill
           - factory-sales-concept
       - path: "C:\\Factories\\Banoon"
         skills:
+          - web-marketing-and-personal-builder-super-skill
           - factory-sales-concept
       - path: "C:\\NoorPlasticFactory"
         skills:
+          - web-marketing-and-personal-builder-super-skill
           - factory-sales-concept
 
 # Only install bundles whose registry project is lifecycle=active (read from overrides + registry)

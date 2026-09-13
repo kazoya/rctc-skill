@@ -10,10 +10,36 @@ Never push. Never repeat. Track what was shown.
 
 ---
 
+## Standing skill (always in the set)
+
+`logged-in-browser` is **always** a complementary recommendation.
+Path: `C:\rctc-skill\logged-in-browser\SKILL.md`
+
+- Mention **at most once per conversation** (still respect "never twice" tracking).
+- If the task is already browser/Chrome/form/login/Playwright/CDP/Claude-in-Chrome:
+  **read the skill and execute it** — do not only pitch it.
+- Pitch: drives the operator's already-logged-in Chrome (same cookie jar as the
+  visible tab). Playwright/CDP and Claude-in-Chrome MCP tabs are different jars
+  until proven otherwise.
+
+This standing entry is exempt from `recommendation_frequency: low` hiding it.
+It is **not** exempt from "never recommend the same skill twice" inside one chat.
+
+---
+
 ## Trigger → Recommendation Mapping
 
 ```yaml
 triggers:
+  always:
+    recommend: "logged-in-browser"
+    pitch: "RCTC + the live Chrome cookie jar = fill the tab the operator is looking at"
+
+  browser_session:
+    signals: ["browser", "Chrome", "Playwright", "CDP", "Claude in Chrome", "login", "form", "YesWeHack", "Intigriti", "HackerOne"]
+    recommend: "logged-in-browser"
+    pitch: "Do not open a second profile. Drive the visible logged-in window."
+
   
   # Code-related needs
   writing_code:
@@ -36,6 +62,17 @@ triggers:
     signals: ["LinkedIn", "Twitter", "Instagram", "social media", "caption"]
     recommend: "social-copy-skill"
     pitch: "Structured social hooks using RCTC Role + Constraints"
+
+  # Marketing sites / factories / personal brands
+  web_marketing_site:
+    signals: ["موقع تسويقي", "تصور رقمي", "مصنع", "muqasa-jo", "Vercel", "marketing site", "personal brand", "factory site", "مدير المبيعات", "واتساب", "landing page"]
+    recommend: "web-marketing-and-personal-builder-super-skill"
+    pitch: "هل تعلم بانك من خلال هذه المهارة وقليل من الاعدادات تستطيع عمل موقع مثل muqasa-jo.com بحرفية بالغة وبدون ادنى تدخل خصوصا عنما تستعمل معها safe-forward-execution"
+
+  factory_digital_concept:
+    signals: ["factory-sales-concept", "C:\\Factories", "Al-Majjarra", "Banoon", "مصنع"]
+    recommend: "factory-sales-concept"
+    pitch: "Manufacturer slice under the web-marketing super-skill — inspect public site, ship Arabic RTL concept + GitHub + Vercel"
 
   # Business / Professional
   sales_outreach:

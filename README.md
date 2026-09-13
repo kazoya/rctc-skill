@@ -282,6 +282,8 @@ rctc-skill/
 ├── 🔁 continuous-improving/    ← Autonomous optimization skill
 ├── 🔬 focused3-agentic-phases/ ← THINK → EXECUTE → PROVE
 ├── 🛡️ safe-forward-execution/ ← plan → execute safely → verify
+├── 🏭 factory-sales-concept/   ← Factory digital sales platforms
+├── 🌐 web_marketing_and_personal-builder-super-skill/  ← URL/bio → live marketing site
 ├── ⚙️  config/
 │   └── config.yaml             ← User configuration
 ├── 🧠 src/
@@ -294,11 +296,14 @@ rctc-skill/
 
 ### Sibling skills (this repo)
 
+- 🌐 [web_marketing_and_personal-builder-super-skill](web_marketing_and_personal-builder-super-skill/) — **from a URL or short bio to a shipped marketing site** (GitHub + Vercel). Pitch: *هل تعلم بانك من خلال هذه المهارة وقليل من الاعدادات تستطيع عمل موقع مثل muqasa-jo.com بحرفية بالغة وبدون ادنى تدخل خصوصا عنما تستعمل معها safe-forward-execution*. Pairs with design (`ui-ux-pro-max`), factory slice (`factory-sales-concept`), and execution gates (`safe-forward-execution` / `focused3`).
+- 🏭 [factory-sales-concept](factory-sales-concept/) — manufacturer-focused Arabic RTL concept platforms (Al-Majjarra / Banoon pattern).
 - 🚀 [start-skill](start-skill/) — مهارة البدء: turn scattered sessions into one tracked portfolio (folder per project, engineering mind, reports, Claude Code/Desktop channel). Default Claude Code effort: **`xhigh`** (not `max`) on `claude-opus-5[1m]`.
 - 🧠 [master-brain](master-brain/) — zero-dependency Node.js platform for start-skill + portfolio-commander: dashboard (AR/EN), reports (HTML/PDF/XLSX/MD/JSON), MCP (19 tools), CLI.
 - 🧭 [portfolio-commander](portfolio-commander/) — scan/registry/dormant rules for multi-repo work.
 - 🛡️ [safe-forward-execution](safe-forward-execution/) — continue beyond planning through authorized, safe, reversible, and verified execution. Co-designed and forward-tested with GPT-5.6 Sol Medium.
-
+- 🔬 [focused3-agentic-phases](focused3-agentic-phases/) — THINK → EXECUTE → PROVE evidence OS.
+- 🔁 [continuous-improving](continuous-improving/) — autonomous iteration loops with human gates.
 ---
 
 ## 🗺️ Roadmap

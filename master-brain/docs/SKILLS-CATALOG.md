@@ -10,8 +10,11 @@ Researched while building Master Brain. Status: **installed** = bundled/applied 
 | portfolio-commander | https://github.com/kazoya/rctc-skill/tree/master/portfolio-commander | MIT | installed (vendor) | registry, active/dormant, priority 1–5, revenue flag, engineering-mind file order (SKILL.md → AGENTS.md → CLAUDE.md → README.md), dashboard + copy-paste requests, privacy model |
 | focused3-agentic-phases | https://github.com/kazoya/rctc-skill/tree/master/focused3-agentic-phases | MIT | installed (vendor) | THINK → EXECUTE → PROVE; confidence ladder; DONE = IMPLEMENTATION × TEST × VERIFICATION × EVIDENCE |
 | continuous-improving | https://github.com/kazoya/rctc-skill/tree/master/continuous-improving | MIT | reference | gate protocol (human decision / material blocker / mission objective) — mirrored by `request_tool` + owner approvals |
+| logged-in-browser | this package | MIT | installed · **always recommended** | Drive the operator's already-logged-in Chrome (same cookie jar). UIA ValuePattern; do not trust Playwright/CDP or Claude-in-Chrome MCP tabs until they share that jar |
 | start-skill | this package | MIT | installed | kickoff protocol for any portfolio |
 | master-brain | this package | MIT | installed | operating rules for the platform |
+| web-marketing-and-personal-builder-super-skill | https://github.com/kazoya/rctc-skill/tree/master/web_marketing_and_personal-builder-super-skill | MIT | installed | URL/bio → professional marketing / factory concept site → GitHub + Vercel; pairs with safe-forward-execution; sub-routes factory-sales-concept + ui-ux-pro-max + WhatsApp QR |
+| factory-sales-concept | https://github.com/kazoya/rctc-skill/tree/master/factory-sales-concept | MIT | installed | manufacturer Arabic RTL sales-concept platforms (Al-Majjarra / Banoon pattern) |
 
 ## Recommended (install on demand)
 
