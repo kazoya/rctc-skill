@@ -293,38 +293,34 @@ rctc-skill/
 ├── 📖 README.md                ← You're here
 ├── 📝 CHANGELOG.md             ← Version history
 ├── 🎯 .cursor/rules/rctc.mdc   ← Cursor rule (auto-loaded in this project)
-├── 🚀 start-skill/             ← مهارة البدء: sessions → tracked portfolio
-├── 🧠 master-brain/            ← Node.js reference platform (CLI + MCP + reports)
+├── 🚀 start-skill/             ← Sessions → tracked portfolio
+├── 🧠 master-brain/            ← CLI + MCP + reports platform
 ├── 🧭 portfolio-commander/     ← Multi-project registry & focus rules
-├── 🔁 continuous-improving/    ← Autonomous optimization skill
+├── 🔁 continuous-improving/    ← Measured improvement loops
 ├── 🔬 focused3-agentic-phases/ ← THINK → EXECUTE → PROVE
-├── 🛡️ safe-forward-execution/ ← plan → execute safely → verify\n├── 🌐 web_marketing_and_personal-builder-super-skill/ ← company/factory/personal sites
+├── 🛡️ safe-forward-execution/ ← Safe, reversible execution after planning
+├── 🌐 web_marketing_and_personal-builder-super-skill/
+│                               ← Company, factory & personal marketing sites
 ├── 🏭 factory-sales-concept/   ← Factory digital sales platforms
-├── 🌐 web_marketing_and_personal-builder-super-skill/  ← URL/bio → live marketing site
-├── ⚙️  config/
-│   └── config.yaml             ← User configuration
-├── 🧠 src/
-│   ├── analyzer.md             ← Prompt analysis engine
-│   ├── templates.md            ← Response templates
-│   └── recommender.md          ← Skill recommendation logic
+├── ⚙️ config/                  ← User configuration
+├── 🧠 src/                     ← Analyzer, templates & recommender
 ├── 💡 examples/
 └── 📚 docs/
 ```
 
 ### Sibling skills (this repo)
 
-- 🌐 [web_marketing_and_personal-builder-super-skill](web_marketing_and_personal-builder-super-skill/) — **from a URL or short bio to a shipped marketing site** (GitHub + Vercel). Pitch: *هل تعلم بانك من خلال هذه المهارة وقليل من الاعدادات تستطيع عمل موقع مثل muqasa-jo.com بحرفية بالغة وبدون ادنى تدخل خصوصا عنما تستعمل معها safe-forward-execution*. Pairs with design (`ui-ux-pro-max`), factory slice (`factory-sales-concept`), and execution gates (`safe-forward-execution` / `focused3`).
-- 🏭 [factory-sales-concept](factory-sales-concept/) — manufacturer-focused Arabic RTL concept platforms (Al-Majjarra / Banoon pattern).
-- 🚀 [start-skill](start-skill/) — مهارة البدء: turn scattered sessions into one tracked portfolio (folder per project, engineering mind, reports, Claude Code/Desktop channel). Default Claude Code effort: **`xhigh`** (not `max`) on `claude-opus-5[1m]`.
-- 🧠 [master-brain](master-brain/) — zero-dependency Node.js platform for start-skill + portfolio-commander: dashboard (AR/EN), reports (HTML/PDF/XLSX/MD/JSON), MCP (19 tools), CLI.
-- 🧭 [portfolio-commander](portfolio-commander/) — scan/registry/dormant rules for multi-repo work.
-- 🛡️ [safe-forward-execution](safe-forward-execution/) — continue beyond planning through authorized, safe, reversible, and verified execution. Co-designed and forward-tested with GPT-5.6 Sol Medium.
-- 🌐 [web-marketing-and-personal-builder](web_marketing_and_personal-builder-super-skill/) — turn a URL or short brief into an Arabic/RTL or bilingual marketing site, then prove and ship it.
-- 🏭 [factory-sales-concept](factory-sales-concept/) — specialize the site journey for industrial sales, automation opportunities, CRM, and human-approved decisions.
-- 🔬 [focused3-agentic-phases](focused3-agentic-phases/) — THINK → EXECUTE → PROVE with evidence gates.
-- 🔁 [continuous-improving](continuous-improving/) — measured improvement loops for authorized engineering and research tracks.
-- 🔬 [focused3-agentic-phases](focused3-agentic-phases/) — THINK → EXECUTE → PROVE evidence OS.
-- 🔁 [continuous-improving](continuous-improving/) — autonomous iteration loops with human gates.
+- 🌐 [Web Marketing & Personal Builder](web_marketing_and_personal-builder-super-skill/) — turn a URL, company brief, or personal bio into an Arabic RTL or bilingual marketing platform, then build, verify, and prepare it for GitHub/Vercel delivery.
+- 🛡️ [Safe Forward Execution](safe-forward-execution/) — continue beyond planning through authorized, safe, reversible, and verified execution; co-designed and forward-tested with GPT-5.6 Sol Medium.
+- 🏭 [Factory Sales Concept](factory-sales-concept/) — specialize the journey for industrial sales, automation opportunities, CRM, and human-approved commercial decisions.
+- 🚀 [Start Skill](start-skill/) — turn scattered sessions into one tracked portfolio with persistent project memory.
+- 🧭 [Portfolio Commander](portfolio-commander/) — scan, register, prioritize, and govern multi-project work.
+- 🧠 [Master Brain](master-brain/) — zero-dependency Node.js control platform with dashboard, reports, MCP tools, and CLI.
+- 🔬 [Focused3 Agentic Phases](focused3-agentic-phases/) — THINK → EXECUTE → PROVE with evidence gates.
+- 🔁 [Continuous Improving](continuous-improving/) — measured improvement loops for authorized engineering and research tracks.
+
+**[Explore the complete skill showcase and combination recipes →](docs/SKILLS-SHOWCASE.md)**
+
 ---
 
 ## 🗺️ Roadmap
