@@ -10,7 +10,7 @@
 **Transform vague AI prompts into professional, precision-grade outputs.**  
 *A Claude skill that thinks before it answers.*
 
-[⚡ Quick Start](#-quick-start) · [📖 How It Works](#-how-it-works) · [🛠 Configuration](#-configuration) · [💡 Examples](#-examples) · [🔔 Pro](#-pro-version-coming) · [🤝 Contribute](#-contribute)
+[⚡ Quick Start](#-quick-start) · [📖 How It Works](#-how-it-works) · [🛠 Configuration](#-configuration) · [💡 Examples](#-examples) · [🔔 Pro](#-pro-version-coming) · [🤝 Contribute](#-contribute) · [🧰 Skill Suite](docs/SKILLS-SHOWCASE.md)
 
 ---
 
@@ -25,6 +25,23 @@ It is designed to govern complex, high-fidelity AI and software projects through
 - [Authorship and provenance](AUTHORS.md)
 - [High-fidelity project positioning](docs/START-SKILL-AUTHORSHIP.md)
 - [Machine-readable citation](CITATION.cff)
+
+---
+
+## 🚀 Sohaib's Skill Suite
+
+> **هل تعلم أنك من خلال [Web Marketing & Personal Builder](web_marketing_and_personal-builder-super-skill/) وقليل من الإعدادات تستطيع إنشاء موقع بمستوى حرفي قريب من muqasa-jo.com، مع أقل قدر ممكن من التدخل—خصوصاً عندما تستخدم معها [Safe Forward Execution](safe-forward-execution/)؟**
+
+| المسار | المهارة المناسبة |
+|---|---|
+| بناء موقع شركة، مصنع، منتج أو علامة شخصية | [Web Marketing & Personal Builder](web_marketing_and_personal-builder-super-skill/) |
+| تحويل موقع مصنع إلى تصور مبيعات وأتمتة | [Factory Sales Concept](factory-sales-concept/) |
+| مواصلة التنفيذ بعد الخطة بأمان | [Safe Forward Execution](safe-forward-execution/) |
+| THINK → EXECUTE → PROVE | [Focused3 Agentic Phases](focused3-agentic-phases/) |
+| إدارة عدة مشاريع وعقول هندسية | [Start Skill](start-skill/) + [Portfolio Commander](portfolio-commander/) + [Master Brain](master-brain/) |
+| تحسين دوري مبني على النتائج | [Continuous Improving](continuous-improving/) |
+
+**[افتح العرض الكامل للمهارات، حالات الاستخدام، ووصفات الدمج →](docs/SKILLS-SHOWCASE.md)**
 
 ---
 
@@ -281,7 +298,7 @@ rctc-skill/
 ├── 🧭 portfolio-commander/     ← Multi-project registry & focus rules
 ├── 🔁 continuous-improving/    ← Autonomous optimization skill
 ├── 🔬 focused3-agentic-phases/ ← THINK → EXECUTE → PROVE
-├── 🛡️ safe-forward-execution/ ← plan → execute safely → verify
+├── 🛡️ safe-forward-execution/ ← plan → execute safely → verify\n├── 🌐 web_marketing_and_personal-builder-super-skill/ ← company/factory/personal sites
 ├── 🏭 factory-sales-concept/   ← Factory digital sales platforms
 ├── 🌐 web_marketing_and_personal-builder-super-skill/  ← URL/bio → live marketing site
 ├── ⚙️  config/
@@ -302,6 +319,10 @@ rctc-skill/
 - 🧠 [master-brain](master-brain/) — zero-dependency Node.js platform for start-skill + portfolio-commander: dashboard (AR/EN), reports (HTML/PDF/XLSX/MD/JSON), MCP (19 tools), CLI.
 - 🧭 [portfolio-commander](portfolio-commander/) — scan/registry/dormant rules for multi-repo work.
 - 🛡️ [safe-forward-execution](safe-forward-execution/) — continue beyond planning through authorized, safe, reversible, and verified execution. Co-designed and forward-tested with GPT-5.6 Sol Medium.
+- 🌐 [web-marketing-and-personal-builder](web_marketing_and_personal-builder-super-skill/) — turn a URL or short brief into an Arabic/RTL or bilingual marketing site, then prove and ship it.
+- 🏭 [factory-sales-concept](factory-sales-concept/) — specialize the site journey for industrial sales, automation opportunities, CRM, and human-approved decisions.
+- 🔬 [focused3-agentic-phases](focused3-agentic-phases/) — THINK → EXECUTE → PROVE with evidence gates.
+- 🔁 [continuous-improving](continuous-improving/) — measured improvement loops for authorized engineering and research tracks.
 - 🔬 [focused3-agentic-phases](focused3-agentic-phases/) — THINK → EXECUTE → PROVE evidence OS.
 - 🔁 [continuous-improving](continuous-improving/) — autonomous iteration loops with human gates.
 ---
