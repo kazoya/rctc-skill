@@ -23,13 +23,15 @@ function say(s = '') { process.stdout.write(s + '\n'); }
 
 /** تحليل الوسائط: الأمر الأول، ثم --profile / --root وما تبقّى موضعي. */
 function parseArgs(argv) {
-  const out = { cmd: null, positional: [], profile: process.env.UZ_PROFILE || 'risha360-social', root: null };
+  const out = { cmd: null, positional: [], profile: process.env.UZ_PROFILE || 'risha360-social', root: null, apply: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--profile') out.profile = argv[++i];
     else if (a.startsWith('--profile=')) out.profile = a.slice(10);
     else if (a === '--root') out.root = argv[++i];
     else if (a.startsWith('--root=')) out.root = a.slice(7);
+    else if (a === '--apply') out.apply = true;
+    else if (a === '--dry-run') out.apply = false;
     else if (!out.cmd) out.cmd = a;
     else out.positional.push(a);
   }
@@ -111,20 +113,32 @@ async function cmdSend() {
   say(res.ok ? `✔ أُرسل — ${res.note || ''}` : `✗ ${res.error}`);
 }
 
-function cmdIngest(dir) {
+function cmdIngest(dir, { apply = false } = {}) {
   if (!dir) { say('✗ حدّد مجلد IMPROVE العائد'); process.exitCode = 1; return; }
   const { ingest } = require('../src/ingest');
-  const r = ingest(dir);
+  const r = ingest(dir, { apply });
   say(r.report);
 }
 
 async function runDefault(a) {
   if (a.cmd === 'harvest') await cmdHarvest();
   else if (a.cmd === 'pack') cmdPack(null);
-  else if (a.cmd === 'cycle') { const live = await cmdHarvest(); cmdPack(live); }
+  else if (a.cmd === 'cycle') {
+    const live = await cmdHarvest();
+    if (live) cmdPack(live);
+    else say('✗ أُوقفت الدورة لأن الحصاد لم ينجح. استخدم `pack` صراحةً فقط إذا قبلت حزمة بلا أرقام حيّة.');
+  }
   else if (a.cmd === 'send') await cmdSend();
-  else if (a.cmd === 'ingest') cmdIngest(a.positional[0]);
-  else { say('أوامر: harvest | pack | cycle | send | ingest <dir>   [--profile <name>] [--root <dir>]'); process.exitCode = 1; }
+  else if (a.cmd === 'ingest') cmdIngest(a.positional[0], { apply: a.apply });
+  else if (a.cmd === 'profiles') {
+    const extra = fs.existsSync(path.join(ROOT, 'profiles')) ? fs.readdirSync(path.join(ROOT, 'profiles')).sort() : [];
+    say(['risha360-social', ...extra].join('\n'));
+  }
+  else if (a.cmd === 'help' || a.cmd === '--help' || a.cmd === '-h') {
+    say('أوامر: harvest | pack | cycle | send | ingest <dir> | profiles');
+    say('خيارات: --profile <name>  --root <dir>  --apply (للجدول بعد التحقق؛ الافتراضي مراجعة فقط)');
+  }
+  else { say('أوامر: harvest | pack | cycle | send | ingest <dir> | profiles   [--profile <name>] [--root <dir>] [--apply]'); process.exitCode = 1; }
 }
 
 /* ================================ ملفات التعريف الأخرى ================================ */

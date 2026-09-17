@@ -1,326 +1,80 @@
 ---
 name: rctc-method
-version: 1.0.0
-author: Sohaib's Method (صهيب)
-description: >
-  RCTC is a structured prompt engineering framework — Role, Context, Task, Constraints —
-  that transforms vague AI instructions into professional, high-quality outputs. 
-  Detects missing prompt components, asks targeted clarifying questions, 
-  learns from user patterns, and recommends complementary skills.
-license: MIT
-tags: [prompt-engineering, ai, productivity, rctc, framework, arabic, english]
+description: Structure or improve AI prompts and implementation briefs with Role, Context, Task, and Constraints. Use when a request is vague, when the user asks for a stronger prompt, or when multiple agents need one precise handoff. Do not invoke merely because a normal request can already be completed directly.
+metadata:
+  short-description: Turn vague requests into precise AI briefs
 ---
 
-# 🧠 RCTC Method — Sohaib's Structured Prompt Framework
+# RCTC Method
 
-> *"Most people give AI bad instructions. RCTC fixes that."*
+RCTC means **Role → Context → Task → Constraints**. Use it to remove ambiguity that would materially change the result while preserving the user's momentum.
 
----
+## Operating rule
 
-## What Is RCTC?
+Do not turn every request into an interview. If the task is already actionable, perform it. If a missing fact can be inferred safely, state the assumption briefly and proceed. Ask one focused question only when its answer would change the deliverable, authority, cost, risk, or architecture.
 
-**RCTC** is a 4-component prompt engineering framework that forces clarity before generation:
+## Workflow
 
-| Component | Arabic | Purpose |
-|-----------|--------|---------|
-| **R** — Role | الدور | Who should the AI *be*? |
-| **C** — Context | السياق | What's the *situation*? |
-| **T** — Task | المهمة | What exactly should it *do*? |
-| **C** — Constraints | القيود | What are the *limits*? |
+1. Identify the actual outcome and intended consumer.
+2. Map what is known:
+   - **Role:** the expertise or perspective genuinely needed.
+   - **Context:** facts, audience, current state, and relevant inputs.
+   - **Task:** the concrete deliverable or action.
+   - **Constraints:** format, boundaries, quality gates, budget, time, and prohibited actions.
+3. Separate material unknowns from details that can be reasonably inferred.
+4. If blocked, ask the single highest-impact question and offer a sensible default.
+5. Produce the requested artifact or action. Show an RCTC breakdown only when the user asks for one or when it improves a handoff.
+6. End with acceptance criteria appropriate to the work: observable output, tests, evidence, or a clearly marked decision gate.
 
----
+## Output modes
 
-## How This Skill Works
+- **Prompt upgrade:** return a copy-ready prompt with objective, inputs, workflow, constraints, outputs, and acceptance criteria.
+- **Agent handoff:** specify ownership, permitted tools, stopping conditions, evidence, and what requires human approval.
+- **Direct work:** use RCTC internally and complete the task; do not stop after rewriting the user's request.
+- **Multi-stage project:** keep the shared contract short and route substantial procedures to the relevant skill or project documentation.
 
-When a user asks ANY question, RCTC analyzes the prompt for missing components and:
+## Boundaries
 
-1. **Detects** which RCTC components are present or absent
-2. **Evaluates** if the missing component(s) would *meaningfully* affect output quality
-3. **Asks a single, focused clarifying question** with full reasoning for *why* it matters
-4. **Never asks** about components that are obvious from context
-5. **Learns** from user patterns to improve over time
-6. **Recommends** complementary skills when relevant
+- RCTC improves instructions; it does not create authority to publish, pay, message, delete, deploy, or access accounts.
+- Do not claim persistent learning or write a user profile unless the host provides that feature and the user has agreed to it.
+- Do not assume local absolute paths or companion skills exist. Check availability before referencing them.
+- Give concise decision reasoning, not private chain-of-thought.
+- Preserve the user's chosen stack and scope unless a change is necessary and explained.
 
----
+## Companion skills in this repository
 
-## Core Behavior Rules
+| Need | Route |
+|---|---|
+| Continue safely beyond the plan | `safe-forward-execution` |
+| Prove implementation through gates | `focused3-agentic-phases` |
+| Build a company, factory, or personal marketing site | `web_marketing_and_personal-builder-super-skill` |
+| Package evidence for an external AI and review the returned ZIP | `update-zip-skill` |
+| Organize scattered projects into one portfolio | `start-skill` + `portfolio-commander` |
+| Run repeated measured improvement | `continuous-improving` |
 
-### Rule 1: Smart Detection (not mechanical)
+Recommend a companion only when it materially helps the current request. If it is available and the user asks for execution, use it rather than merely advertising it.
 
-The AI does NOT blindly demand all 4 components every time.
-It uses **engineering judgment**:
+## Compact handoff template
 
+```markdown
+# Objective
+[observable outcome]
+
+## Role
+[needed expertise]
+
+## Context and inputs
+[facts, current state, sources]
+
+## Task
+[actions and deliverables]
+
+## Constraints and authority
+[must/must-not, permissions, budget, format]
+
+## Acceptance criteria
+[tests, evidence, completion conditions]
+
+## Stop and ask when
+[material ambiguity, external commitment, destructive or irreversible action]
 ```
-IF missing_component WOULD change output significantly:
-    → Ask about it (with reason)
-ELSE:
-    → Proceed with reasonable assumption, state it clearly
-```
-
-### Rule 2: One Question at a Time
-
-Never overwhelm. Ask ONE high-impact clarifying question.
-If multiple are missing, prioritize by impact:
-`Task > Role > Context > Constraints`
-
-### Rule 3: Transparent Reasoning
-
-When asking, ALWAYS explain:
-- What component is missing
-- Why it matters here
-- What assumption you'd make if they skip it
-
-### Rule 4: Horizontal Intelligence (Skill Recommendation)
-
-When the user's need goes beyond prompt engineering, proactively suggest:
-- Relevant skills they may not know exist
-- Why that skill would help them specifically
-- How it pairs with RCTC
-
-**Standing complementary skill (always in the set):** `logged-in-browser`
-(`C:\rctc-skill\logged-in-browser\SKILL.md`). Mention at most once per conversation
-unless the task already touches a browser / Chrome / form / login / Playwright / CDP
-/ Claude in Chrome — then **read that skill before acting**. It is the default hands
-for the operator's already-logged-in window; do not confuse MCP or Playwright
-profiles with that cookie jar.
-
-**Marketing / factory / personal sites:** when the user wants a live marketing site from a URL or short bio (muqasa-jo.com craft), recommend
-`web-marketing-and-personal-builder-super-skill` and pair it with **`safe-forward-execution`**
-(pitch verbatim in that skill's README).
-
----
-
-## Prompt Analysis Engine
-
-When analyzing any user message, apply this internal checklist:
-
-```yaml
-analysis:
-  role_present: 
-    check: "Does the prompt specify a persona or expertise?"
-    weight: HIGH
-    example_missing: "Write me a marketing email"
-    example_present: "As a senior email copywriter, write..."
-    
-  context_present:
-    check: "Is there background info about the situation?"
-    weight: HIGH  
-    example_missing: "Help me write a proposal"
-    example_present: "I'm a freelancer pitching to a startup with 5 employees..."
-    
-  task_present:
-    check: "Is the deliverable clearly defined?"
-    weight: CRITICAL
-    example_missing: "Help me with LinkedIn"
-    example_present: "Write 5 post hooks for LinkedIn"
-    
-  constraints_present:
-    check: "Are there limits, format requirements, or things to avoid?"
-    weight: MEDIUM
-    example_missing: (usually safe to skip for simple tasks)
-    example_present: "Max 20 words. No buzzwords. FOMO tone."
-```
-
----
-
-## Response Templates
-
-### Template A: Component Missing — Ask About It
-
-```
-🎯 قبل أن أبدأ — سؤال مهم واحد:
-
-لاحظت أن طلبك **يفتقر إلى [COMPONENT_NAME]**.
-
-**لماذا يهمني هذا الآن؟**
-بدون [COMPONENT], سأضطر للافتراض أن [DEFAULT_ASSUMPTION], 
-مما قد يجعل الناتج [RISK_DESCRIPTION].
-
-**سؤالي:**
-[SINGLE_FOCUSED_QUESTION]
-
-*(إذا كنت تريد المضي قدمًا بالافتراض الافتراضي، قل "تجاهل" وسأبدأ فورًا)*
-```
-
-### Template B: Component Missing — Safe to Assume
-
-```
-✅ سأفترض [ASSUMPTION] بناءً على سياق طلبك.
-إذا كان هذا خاطئًا، أخبرني وسأعدّل.
-
-[PROCEED WITH RESPONSE]
-```
-
-### Template C: All Components Present
-
-```
-🚀 طلب ممتاز — جميع مكونات RCTC موجودة.
-
-[PROCEED DIRECTLY WITH HIGH-QUALITY RESPONSE]
-```
-
----
-
-## Learning System
-
-The skill maintains a `user_profile.json` to track:
-
-```json
-{
-  "user_patterns": {
-    "usually_provides": ["task", "context"],
-    "usually_skips": ["role", "constraints"],
-    "preferred_language": "arabic",
-    "domain_expertise": ["marketing", "tech"],
-    "question_style": "direct"
-  },
-  "interaction_history": [],
-  "skill_recommendations_shown": [],
-  "improvement_notes": []
-}
-```
-
-Over time, the skill:
-- Stops asking about components the user consistently skips
-- Adapts its tone to user preferences
-- Tracks which recommendations were acted on
-
----
-
-## Skill Recommendation Engine
-
-```yaml
-trigger_conditions:
-  user_needs_data_analysis:
-    recommend: "data-analyst-skill"
-    reason: "RCTC + structured data queries = precision insights"
-    
-  user_writes_code:
-    recommend: "code-review-skill"  
-    reason: "Pair RCTC with code-specific constraints for cleaner PRs"
-    
-  user_does_content:
-    recommend: "content-calendar-skill"
-    reason: "RCTC framework maps perfectly to content brief templates"
-    
-  user_manages_teams:
-    recommend: "delegation-skill"
-    reason: "RCTC turns task delegation into unambiguous briefs"
-```
-
----
-
-## Configuration Options
-
-Users can customize behavior via `config/config.yaml`:
-
-```yaml
-rctc_config:
-  # Performance Settings
-  token_optimization: true          # Reduce verbosity for faster responses
-  skip_obvious_components: true     # Don't ask what context clearly implies
-  
-  # Behavior Settings  
-  question_language: "auto"         # auto | arabic | english
-  max_clarifying_questions: 1       # Never ask more than this per turn
-  show_component_analysis: false    # Show RCTC breakdown in responses
-  
-  # Learning Settings
-  learning_enabled: true            # Track user patterns
-  adaptation_threshold: 5           # Interactions before adapting
-  
-  # Recommendation Settings
-  skill_recommendations: true       # Suggest complementary skills
-  recommendation_frequency: "low"   # low | medium | high
-  
-  # Disabled Features (for token savings)
-  disabled_features: []
-  # Options: ["learning", "recommendations", "analysis_display", "reasoning_explanation"]
-```
-
----
-
-## Examples
-
-### Example 1: Vague Prompt (Missing Role + Constraints)
-
-**User:** "اكتب لي بوست على لينكدإن"
-
-**RCTC Analysis:**
-- Role: ❌ Missing
-- Context: ⚠️ Partial (we know it's LinkedIn)  
-- Task: ✅ Present (write a post)
-- Constraints: ❌ Missing
-
-**Highest Impact Missing:** Role (will change tone/expertise dramatically)
-
-**Response:**
-```
-🎯 قبل أن أبدأ — سؤال مهم واحد:
-
-لاحظت أن طلبك لا يحدد **الدور أو الهوية المهنية** التي يجب أن أتحدث منها.
-
-**لماذا يهمني هذا الآن؟**
-بوست لينكدإن لمهندس برمجيات يختلف كليًا عن بوست لمدير تسويق أو رائد أعمال.
-بدون هذا، سأكتب بصوت "عام" لن يتردد صدى عند جمهورك المحدد.
-
-**سؤالي:**
-ما مجالك أو دورك المهني، ومن الجمهور الذي تريد الوصول إليه؟
-
-*(تريد المضي بافتراض "مهني عام"؟ قل "تجاهل" وسأبدأ فورًا)*
-```
-
----
-
-### Example 2: Complete Prompt
-
-**User:** "Act as a senior Python developer. I'm building a REST API for a fintech startup. Write 3 code review checklist items. Max 2 lines each. Focus on security vulnerabilities only."
-
-**RCTC Analysis:**
-- Role: ✅ Senior Python developer
-- Context: ✅ Fintech REST API startup
-- Task: ✅ 3 code review checklist items
-- Constraints: ✅ Max 2 lines, security focus
-
-**Response:** `🚀 Excellent RCTC prompt — proceeding directly...`
-
----
-
-## File Structure
-
-```
-rctc-skill/
-├── SKILL.md              ← You are here (main brain)
-├── README.md             ← GitHub landing page
-├── config/
-│   └── config.yaml       ← User configuration
-├── src/
-│   ├── analyzer.md       ← Prompt analysis logic
-│   ├── templates.md      ← Response templates  
-│   └── recommender.md    ← Skill recommendation engine
-├── examples/
-│   ├── arabic-examples.md
-│   ├── english-examples.md
-│   └── advanced-cases.md
-├── docs/
-│   ├── getting-started.md
-│   ├── configuration.md
-│   └── learning-system.md
-└── CHANGELOG.md
-```
-
----
-
-## Installation
-
-See `README.md` for full setup instructions.
-
-Quick start:
-1. Clone this repo into your Claude skills folder
-2. Reference `SKILL.md` in your system prompt
-3. Copy `config/config.yaml` and customize
-4. Start prompting — RCTC handles the rest
-
----
-
-*Built with ❤️ by Sohaib's Method | Inspired by the philosophy: clarity before generation.*

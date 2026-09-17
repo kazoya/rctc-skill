@@ -24,6 +24,7 @@
 | تشغيل لوحة وتقارير وCLI وMCP للمحفظة | [Master Brain](../master-brain/) | Start Skill |
 | فرض THINK → EXECUTE → PROVE | [Focused3 Agentic Phases](../focused3-agentic-phases/) | Safe Forward |
 | تحسين مستمر لمسارات مصرح بها | [Continuous Improving](../continuous-improving/) | Focused3 + Safe Forward |
+| تجهيز المشروع لاستشارة وكيل خارجي ثم مراجعة الحزمة العائدة | [Update-Zip Skill](../update-zip-skill/) | Safe Forward + Focused3 |
 | تحويل الطلب المبهم إلى تكليف واضح | [RCTC Method](../SKILL.md) | أي مهارة تنفيذية لاحقة |
 
 ---
@@ -101,7 +102,15 @@ web-marketing-and-personal-builder
 
 [افتح المهارة](../continuous-improving/)
 
-## 9. RCTC Method
+## 9. Update-Zip Skill
+
+**من مشروع مبعثر إلى حزمة أدلة قابلة للاستشارة والمراجعة.**
+
+تحصد الحقائق والاختبارات والقيود، وتبني ZIP منظماً لوكيل خارجي، ثم تعيد الحزمة الناتجة إلى مسار مراجعة مضبوط. لا تكتب في المشروع أو قاعدة البيانات تلقائياً؛ التطبيق الحي يحتاج بوابة صريحة.
+
+[افتح المهارة](../update-zip-skill/)
+
+## 10. RCTC Method
 
 **Role → Context → Task → Constraints**
 
@@ -140,7 +149,8 @@ Start Skill → Portfolio Commander → Master Brain
 ### تحسين دوري مصرح به
 
 ```text
-Continuous Improving → Safe Forward Execution → Focused3 proof gates
+Continuous Improving → Update-Zip Skill
+                     → Safe Forward Execution → Focused3 proof gates
 ```
 
 ## معيار الصدق

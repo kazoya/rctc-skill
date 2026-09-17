@@ -8,7 +8,7 @@
 ![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge)
 
 **Transform vague AI prompts into professional, precision-grade outputs.**  
-*A Claude skill that thinks before it answers.*
+*A portable AI skill suite that clarifies, executes, and verifies.*
 
 [⚡ Quick Start](#-quick-start) · [📖 How It Works](#-how-it-works) · [🛠 Configuration](#-configuration) · [💡 Examples](#-examples) · [🔔 Pro](#-pro-version-coming) · [🤝 Contribute](#-contribute) · [🧰 Skill Suite](docs/SKILLS-SHOWCASE.md)
 
@@ -37,6 +37,7 @@ It is designed to govern complex, high-fidelity AI and software projects through
 | بناء موقع شركة، مصنع، منتج أو علامة شخصية | [Web Marketing & Personal Builder](web_marketing_and_personal-builder-super-skill/) |
 | تحويل موقع مصنع إلى تصور مبيعات وأتمتة | [Factory Sales Concept](factory-sales-concept/) |
 | مواصلة التنفيذ بعد الخطة بأمان | [Safe Forward Execution](safe-forward-execution/) |
+| تجهيز المشروع لاستشارة وكيل خارجي واستيعاب ZIP عائد بأمان | [Update-Zip Skill](update-zip-skill/) |
 | THINK → EXECUTE → PROVE | [Focused3 Agentic Phases](focused3-agentic-phases/) |
 | إدارة عدة مشاريع وعقول هندسية | [Start Skill](start-skill/) + [Portfolio Commander](portfolio-commander/) + [Master Brain](master-brain/) |
 | تحسين دوري مبني على النتائج | [Continuous Improving](continuous-improving/) |
@@ -52,7 +53,7 @@ Most people talk to AI like this:
 
 And get... generic soup.
 
-RCTC teaches Claude to think like a senior consultant — it **analyzes your request** before answering, identifies what's missing, and asks ONE focused question when it matters.
+RCTC teaches an AI assistant to work from a senior consultant-grade brief — it **analyzes your request** before answering, identifies what's missing, and asks ONE focused question when it matters.
 
 The result? Outputs that feel like they were written by someone who actually understood your situation.
 
@@ -125,7 +126,7 @@ Just talk to Claude normally. RCTC runs silently in the background, analyzing ev
 
 ### The Analysis Engine
 
-Every time you send a message, RCTC runs a silent 4-point check:
+When a request needs clarification or prompt design, RCTC runs a compact 4-point check:
 
 ```
 Your Message
@@ -170,16 +171,14 @@ No silent assumptions. Full transparency.
 
 ## 🧠 Learning System
 
-RCTC remembers how you work.
+RCTC can adapt when the host environment provides an approved, writable profile.
 
 Over time it learns:
 - Which components you consistently provide (and stops asking about the others)
 - Your domain and communication style
 - Which suggestions you found useful
 
-This data is stored locally in `user_profile.json` — nothing leaves your environment.
-
-After ~5 interactions, RCTC starts adapting to YOU.
+The repository includes an optional profile schema, but no persistent memory is assumed. Enable it only in an environment that explicitly supports local state and after choosing what may be stored.
 
 ---
 

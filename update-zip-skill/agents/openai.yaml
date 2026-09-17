@@ -1,0 +1,8 @@
+interface:
+  display_name: "Update-Zip Skill"
+  short_description: "Package evidence, consult, then ingest safely"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $update-zip-skill to package this project for evidence-led external review, then inspect the returned improvement bundle safely."
+
+policy:
+  allow_implicit_invocation: true

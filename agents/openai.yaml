@@ -1,0 +1,8 @@
+interface:
+  display_name: "RCTC Method"
+  short_description: "Turn vague requests into precise AI briefs"
+  brand_color: "#6C3483"
+  default_prompt: "Use $rctc-method to turn my request into a precise, executable brief with clear acceptance criteria."
+
+policy:
+  allow_implicit_invocation: true

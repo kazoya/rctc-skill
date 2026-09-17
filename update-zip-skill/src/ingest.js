@@ -50,7 +50,7 @@ function applySchedule(clean) {
   return applied;
 }
 
-function ingest(dir) {
+function ingest(dir, { apply = false } = {}) {
   if (!fs.existsSync(dir)) return { report: `✗ المجلد غير موجود: ${dir}` };
   fs.mkdirSync(REVIEW, { recursive: true });
   const lines = ['# نتيجة استيعاب حزمة التحسين', ''];
@@ -82,12 +82,23 @@ function ingest(dir) {
     catch (e) { lines.push('## أوقات النشر', '', `✗ JSON غير صالح: ${e.message}`); }
     if (parsed) {
       const { clean, notes } = validateSchedule(parsed);
-      const applied = Object.keys(clean).length ? applySchedule(clean) : [];
-      lines.push('## أوقات النشر — طُبِّقت آليًا', '');
-      if (applied.length) {
-        lines.push('| المنصة | قبل | بعد |', '|---|---|---|',
-          ...applied.map(a => `| ${a.platform} | ${a.before} | ${a.after} |`), '');
-      } else lines.push('لم يُطبَّق شيء — لا منصة بأوقات صالحة.', '');
+      const hasValid = Object.keys(clean).length > 0;
+      if (!hasValid) {
+        lines.push('## أوقات النشر', '', 'لم يُطبَّق شيء — لا منصة بأوقات صالحة.', '');
+      } else if (!apply) {
+        lines.push('## أوقات النشر — جاهزة للمراجعة ولم تُطبَّق', '',
+          '> الوضع الافتراضي آمن: لم تُكتب أي قيمة في قاعدة البيانات. أعد الأمر مع `--apply` بعد مراجعة الاقتراح.', '',
+          '```json', JSON.stringify(clean, null, 2), '```', '');
+      } else {
+        const applied = applySchedule(clean);
+        lines.push('## أوقات النشر — طُبِّقت بتفويض صريح `--apply`', '');
+        if (applied.length) {
+          lines.push('| المنصة | قبل | بعد |', '|---|---|---|',
+            ...applied.map(a => `| ${a.platform} | ${a.before} | ${a.after} |`), '');
+        } else {
+          lines.push('لم يُطبَّق شيء — لم تطابق المنصات صفوفًا موجودة في قاعدة البيانات.', '');
+        }
+      }
       if (notes.length) lines.push('**ملاحظات التحقّق:**', ...notes.map(n => `- ${n}`), '');
       if (parsed.why) lines.push('**تعليل المستشار:**', '```', JSON.stringify(parsed.why, null, 1), '```', '');
     }

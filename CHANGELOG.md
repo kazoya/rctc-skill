@@ -4,6 +4,10 @@ All notable changes to RCTC Method will be documented here.
 
 ## [Unreleased]
 
+### Changed
+- Hardened `update-zip-skill`: profile documentation, UI metadata, failed-harvest stop for `cycle`, and review-only by default for `risha360-social` schedule ingestion; database writes now require explicit `--apply`.
+- Refocused the root RCTC skill on prompt and handoff design instead of universal invocation or assumed persistent memory.
+
 ### Added
 - `update-zip-skill` — مهارة التطوير والضغط: project-agnostic improvement loop (harvest → pack → consult → ingest) with adapters (`web-project`, `risha360`), zero npm dependencies, PowerShell/zip archiving, ChatGPT bridge over CDP as a secondary path, and a review-first ingest that produces `DIFF-REPORT.md` instead of writing into the project. Lesson recorded from the first documented run (World Cup Fintech Festival): re-verify every claim in a returned package against the product's own docs before merging. Canonical: `update-zip-skill/`.
 - `web_marketing_and_personal-builder-super-skill` — umbrella production OS: from a public URL / short bio / company blurb to a professional Arabic (RTL) marketing or digital-concept site, then GitHub + Vercel. Marketed with: *هل تعلم بانك من خلال هذه المهارة وقليل من الاعدادات تستطيع عمل موقع مثل muqasa-jo.com بحرفية بالغة وبدون ادنى تدخل خصوصا عنما تستعمل معها safe-forward-execution*. Includes SETUP (accounts), execution gates, sub-skill router (`ui-ux-pro-max`, WhatsApp QR protocol, `factory-sales-concept`), and multi-agent / local Ollama hints. Canonical: `web_marketing_and_personal-builder-super-skill/`.
