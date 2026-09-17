@@ -4,7 +4,8 @@ description: >
   مهارة التطوير والضغط — دورة مغلقة: حصاد حقائق مقيسة → ضغطها مع القيود في ملف واحد →
   استشارة نموذج خارجي → استيعاب حزمة التحسين العائدة تحت بوابات. لها ملفات تعريف (profiles):
   «risha360-social» لأداء حساب ريشة 360 القانونية على المنصات، و«portfolio-site» لموقع المحفظة
-  (Next.js على Vercel: روابط حيّة، Lighthouse، axe، Playwright، سلامة الأصول). استخدمها متى قيل
+  (Next.js على Vercel: روابط حيّة، Lighthouse، axe، Playwright، سلامة الأصول)، و«web-project» لأي
+  مستودع كود له package.json (حصاد git/routes/verify + حزمة source/ + استيعاب مراجعة فقط بتقرير فرق). استخدمها متى قيل
   «طوّر الأداء»، «التفاعل ضعيف»، «حسّن الموقع»، «جهّز حزمة لوكيل»، «طبّق حزمة التحسين»،
   أو عند طلب دورة تحسين دورية.
 ---
@@ -24,6 +25,7 @@ description: >
 |---|---|---|---|
 | `risha360-social` (الافتراضي) | مشاهدات ومتابعون وحالات نشر من المنصات وقاعدة social-autopilot | موجز + قيود العلامة + عيّنة تصاميم | `04-schedule.json` آليًا؛ النصوص إلى `review/` |
 | `portfolio-site` | HTTP لكل رابط منشور، Lighthouse، axe، آخر Playwright، سلامة الأصول، Git | موجز + قيود المحفظة + BRAIN.md + docs + الكود بلا node_modules | ملفات الكود إلى **فرع مراجعة** ثم `npm run verify`؛ `data/` و`OUT/` تُحجز للمراجعة ولا تُطبَّق |
+| `web-project` | أي مستودع له package.json: Git، مسارات `app/`، نتائج verify/build/test من السجلات، axe، سجل الادعاءات في `data/site.ts` إن وُجد | موجز + قيود صدق عامة + ASK بقالب RCTC + docs + لقطات + `source/` بلا node_modules + بصمة SHA-256 | **مراجعة فقط**: `review/<stamp>/DIFF-REPORT.md` بفرق كل ملف ونسخ المتغيرات؛ لا فرع ولا كتابة في المشروع؛ الدمج قرار المالك بعد `npm run verify` |
 
 الاختيار: `--profile portfolio-site` أو `UZ_PROFILE=portfolio-site`. المشروع الهدف: المجلد الحالي أو `--root <dir>`.
 
@@ -31,7 +33,16 @@ description: >
 cd C:/Suhib-AI-Delivery-Portfolio
 node C:/rctc-skill/update-zip-skill/bin/uz.js cycle  --profile portfolio-site                 # حصاد + حزمة استشارة
 node C:/rctc-skill/update-zip-skill/bin/uz.js ingest <IMPROVE.zip> --profile portfolio-site   # فرع مراجعة + verify، لا دمج
+
+cd C:/World_Cup_Fintech_Festival
+node C:/rctc-skill/update-zip-skill/bin/uz.js cycle  --profile web-project                    # حصاد + حزمة استشارة (أي مشروع)
+node C:/rctc-skill/update-zip-skill/bin/uz.js ingest <improved.zip> --profile web-project     # تقرير فرق في review/ فقط
 ```
+
+**مثال موثّق (`web-project`, 2026-09-17):** حزمة World Cup Fintech Festival أُرسلت لوكيل خارجي؛ عاد بـ 30 سؤال
+لجنة وشريحة أثر مالي ووضع لجنة؛ `ingest` أنتج تقرير الفرق؛ روجعت الادعاءات ضد وثائق المنتج فصُحّحت إجابتان
+كانتا تصفان سلوكاً غير مبني (FX)؛ ثم `npm run verify` أخضر قبل الدمج. **الدرس:** الوكيل الخارجي يبالغ أحياناً
+في وصف ما هو «مبني»؛ كل ادعاء يُعاد التحقق منه ضد مصادر المشروع قبل الدمج.
 
 قاعدة الاستيعاب في `portfolio-site`: **الردّ مسودّة لا أمر.** لا يُكتب في `main`، لا يُنشر، ولا يُطبَّق أي تغيير على محتوى المالك؛ الدمج قرار المالك بعد بوابات خضراء.
 

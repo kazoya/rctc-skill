@@ -299,6 +299,7 @@ rctc-skill/
 ├── 🔁 continuous-improving/    ← Measured improvement loops
 ├── 🔬 focused3-agentic-phases/ ← THINK → EXECUTE → PROVE
 ├── 🛡️ safe-forward-execution/ ← Safe, reversible execution after planning
+├── 📦 update-zip-skill/        ← Harvest → pack → consult → ingest (profiles)
 ├── 🌐 web_marketing_and_personal-builder-super-skill/
 │                               ← Company, factory & personal marketing sites
 ├── 🏭 factory-sales-concept/   ← Factory digital sales platforms
@@ -312,6 +313,7 @@ rctc-skill/
 
 - 🌐 [Web Marketing & Personal Builder](web_marketing_and_personal-builder-super-skill/) — turn a URL, company brief, or personal bio into an Arabic RTL or bilingual marketing platform, then build, verify, and prepare it for GitHub/Vercel delivery.
 - 🛡️ [Safe Forward Execution](safe-forward-execution/) — continue beyond planning through authorized, safe, reversible, and verified execution; co-designed and forward-tested with GPT-5.6 Sol Medium.
+- 📦 [Update-Zip Skill](update-zip-skill/) — مهارة التطوير والضغط: closed improvement loop for any project — harvest measured facts, pack them with binding CONSTRAINTS and a literal ASK into one zip, consult an external agent (ChatGPT/Claude/Codex), then ingest the returned zip under gates. Profiles: `risha360-social` (default), `portfolio-site` (review branch + `npm run verify`), `web-project` (any repo with `package.json`; review-only `DIFF-REPORT.md`, nothing written to the project). Documented run: World Cup Fintech Festival, 2026-09-17.
 - 🏭 [Factory Sales Concept](factory-sales-concept/) — specialize the journey for industrial sales, automation opportunities, CRM, and human-approved commercial decisions.
 - 🚀 [Start Skill](start-skill/) — turn scattered sessions into one tracked portfolio with persistent project memory.
 - 🧭 [Portfolio Commander](portfolio-commander/) — scan, register, prioritize, and govern multi-project work.
