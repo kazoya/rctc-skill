@@ -1,0 +1,33 @@
+name: Skill Proposal
+description: Propose a new RCTC skill or major extension
+title: "[Skill Proposal]: "
+labels: ["skill-proposal"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What pain does this skill solve?
+    validations:
+      required: true
+  - type: textarea
+    id: why-new
+    attributes:
+      label: Why not reuse/compose?
+      description: Confirm Reuse → Compose → Extend was considered.
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Draft contract
+      description: inputs, outputs, permissions, side_effect_level
+    validations:
+      required: true
+  - type: checkboxes
+    id: gates
+    attributes:
+      label: Gates
+      options:
+        - label: I understand publish/repo creation is an owner gate
+          required: true

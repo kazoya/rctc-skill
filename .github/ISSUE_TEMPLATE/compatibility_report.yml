@@ -1,0 +1,25 @@
+name: Compatibility Report
+description: Report agent/environment compatibility for a skill
+title: "[Compatibility]: "
+labels: ["compatibility"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill id/path
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options: [supported, unsupported, unknown]
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Commands, agent, OS, dates. Keep unknown distinct from supported.
+    validations:
+      required: true

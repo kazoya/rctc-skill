@@ -1,0 +1,287 @@
+{
+  "generated_at": "2026-09-18",
+  "count": 40,
+  "composition_law": "Reuse -> Compose -> Extend -> Generate New",
+  "skills": [
+    {
+      "id": "ai-portability-advisor",
+      "name": "ai-portability-advisor",
+      "description": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost analysis, recovery/durability, transition recommendations (KEEP through REJECT), human approval gates, evidence register. Use when analyzing AI/RAG/agents systems, migration decisions, greenfield bootstrap, FinOps/MLOps/reliability concerns, or vendor lock-in. Evidence-first; no cloud deploy or git push without explicit user approval.",
+      "path": ".cursor/skills/ai-portability-advisor/SKILL.md",
+      "folder": ".cursor/skills/ai-portability-advisor"
+    },
+    {
+      "id": "ai-portability-advisor",
+      "name": "ai-portability-advisor",
+      "description": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost analysis, recovery/durability, transition recommendations (KEEP through REJECT), human approval gates, evidence register. Use when analyzing AI/RAG/agents systems, migration decisions, greenfield bootstrap, FinOps/MLOps/reliability concerns, or vendor lock-in. Evidence-first; no cloud deploy or git push without explicit user approval.",
+      "path": "ai-portability-advisor/SKILL.md",
+      "folder": "ai-portability-advisor"
+    },
+    {
+      "id": "ai-portability-advisor",
+      "name": "ai-portability-advisor",
+      "description": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost analysis, recovery/durability, transition recommendations (KEEP through REJECT), human approval gates, evidence register. Use when analyzing AI/RAG/agents systems, migration decisions, greenfield bootstrap, FinOps/MLOps/reliability concerns, or vendor lock-in. Evidence-first; no cloud deploy or git push without explicit user approval.",
+      "path": "apca-smarthelp/.cursor/skills/ai-portability-advisor/SKILL.md",
+      "folder": "apca-smarthelp/.cursor/skills/ai-portability-advisor"
+    },
+    {
+      "id": "apca-marketing-site",
+      "name": "apca-marketing-site",
+      "description": "APCA marketing / static web (apcasystems, apccasystems.com). Content and deploy only; not the SmartHelp RAG core. Use for HTML/CSS, company positioning, links to SmartHelp CX.",
+      "path": "portfolio-commander/skills/apca-marketing-site/SKILL.md",
+      "folder": "portfolio-commander/skills/apca-marketing-site"
+    },
+    {
+      "id": "belt-apca-smarthelp-cx",
+      "name": "belt-apca-smarthelp-cx",
+      "description": "P1 APCA SmartHelp CX — Arabic WhatsApp agent, RAG (FastAPI), booking, handoff roadmap. Use for C:\\Belt\\APCA-SmartHelp, embeddings, /api/ask, pytest, and 90-day GTM constraints.",
+      "path": "apca-smarthelp/.cursor/skills/belt-apca-smarthelp-cx/SKILL.md",
+      "folder": "apca-smarthelp/.cursor/skills/belt-apca-smarthelp-cx"
+    },
+    {
+      "id": "belt-apca-smarthelp-cx",
+      "name": "belt-apca-smarthelp-cx",
+      "description": "P1 APCA SmartHelp CX — Arabic WhatsApp agent, RAG (FastAPI), booking, handoff roadmap. Use for C:\\Belt\\APCA-SmartHelp, embeddings, /api/ask, pytest, and 90-day GTM constraints.",
+      "path": "portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md",
+      "folder": "portfolio-commander/skills/belt-apca-smarthelp-cx"
+    },
+    {
+      "id": "belt-gateway-php",
+      "name": "belt-gateway-php",
+      "description": "WhatsApp SMS gateway PHP worker — FIFO queue, MariaDB, booking conversation, BeltKnowledgeClient. Use for flutter_sms_gateway backend PHP, Worker.php, WebhookService, smoke tests.",
+      "path": "portfolio-commander/skills/belt-gateway-php/SKILL.md",
+      "folder": "portfolio-commander/skills/belt-gateway-php"
+    },
+    {
+      "id": "bitter-truth-delivery-audit",
+      "name": "bitter-truth-delivery-audit",
+      "description": "Audit project delivery under scrutiny by preserving completed work, reconciling plans and status claims with observable evidence, distinguishing planned/scaffolded/built/tested/deployed/live capabilities, researching uncertain facts deeply, exposing the \"bitter truth,\" and proposing the smallest safe next actions. Use for project health checks, pre-demo or pre-handover reviews, executive status validation, inherited or long-running repositories, large uncommitted worktrees, contradictory documentation, claims that something is \"done,\" pressure to ship, or requests such as \"tell me what really works,\" \"do not break prior work,\" \"audit before continuing,\" and \"tell the truth even if it hurts.",
+      "path": "bitter-truth-delivery-audit/SKILL.md",
+      "folder": "bitter-truth-delivery-audit"
+    },
+    {
+      "id": "continuous-improving",
+      "name": "continuous-improving",
+      "description": "Continuous Improving (CI) is an autonomous, self-driving execution and optimization OS for competitive AI hunting, competitions (Kaggle), bug bounties (Intigriti, YesWeHack), and SaaS engineering. It keeps projects running autonomously across all tracks, iterating and climbing scores without unneeded pauses, halting only at genuine human/agent decision gates.",
+      "path": ".cursor/skills/continuous-improving/SKILL.md",
+      "folder": ".cursor/skills/continuous-improving"
+    },
+    {
+      "id": "continuous-improving",
+      "name": "continuous-improving",
+      "description": "Continuous Improving (CI) is an autonomous, self-driving execution and optimization OS for competitive AI hunting, competitions (Kaggle), bug bounties (Intigriti, YesWeHack), and SaaS engineering. It keeps projects running autonomously across all tracks, iterating and climbing scores without unneeded pauses, halting only at genuine human/agent decision gates.",
+      "path": "continuous-improving/SKILL.md",
+      "folder": "continuous-improving"
+    },
+    {
+      "id": "dev-agora-skill",
+      "name": "dev-agora-skill",
+      "description": "Use this when marketing developers themselves, building a Stack Overflow–like learning/discussion hub for skills, or viral-launching a programmer community with AI-assisted Q&A — especially with RCTC / Continuous Improving / portfolio links.",
+      "path": "dev-agora-skill/SKILL.md",
+      "folder": "dev-agora-skill"
+    },
+    {
+      "id": "factory-sales-concept",
+      "name": "factory-sales-concept",
+      "description": "Builds an Arabic RTL Next.js digital-concept platform for a factory or manufacturer after inspecting their public website: sales-call copy, WhatsApp QR, human-in-the-loop automation, GitHub repo, and Vercel deploy. Same production pattern as Al-Majjarra and Banoon Kids. Use when starting a factory project under C:\\Factories, C:\\almajjarra, C:\\NoorPlasticFactory, or when the user says مصنع, تصور رقمي, مدير المبيعات, factory-sales-concept, or pastes the factory intake prompt.",
+      "path": "factory-sales-concept/SKILL.md",
+      "folder": "factory-sales-concept"
+    },
+    {
+      "id": "flutter-dart-app",
+      "name": "flutter-dart-app",
+      "description": "Flutter/Dart mobile apps in portfolio. No engineering-mind SKILL.md churn per Portfolio Commander; implement UI/logic only unless user requests rules.",
+      "path": "portfolio-commander/skills/flutter-dart-app/SKILL.md",
+      "folder": "portfolio-commander/skills/flutter-dart-app"
+    },
+    {
+      "id": "focused3-agentic-phases",
+      "name": "focused3-agentic-phases",
+      "description": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert supervision, independent verification, and hard evidence. Use when implementing, reviewing, or sequencing production work; when the user says focused3AgenticPhases, agentic cell, THINK EXECUTE PROVE, or NextScaffold; and for OmniAgent / C:\\airealpro\\chatbase engineering. Do not use for copy edits, status questions, or dumping large unscoped code.",
+      "path": ".cursor/skills/focused3-agentic-phases/SKILL.md",
+      "folder": ".cursor/skills/focused3-agentic-phases"
+    },
+    {
+      "id": "focused3-agentic-phases",
+      "name": "focused3-agentic-phases",
+      "description": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert supervision, independent verification, and hard evidence. Use when implementing, reviewing, or sequencing production work; when the user says focused3AgenticPhases, agentic cell, THINK EXECUTE PROVE, or NextScaffold; and for OmniAgent / C:\\airealpro\\chatbase engineering. Do not use for copy edits, status questions, or dumping large unscoped code.",
+      "path": "focused3-agentic-phases/SKILL.md",
+      "folder": "focused3-agentic-phases"
+    },
+    {
+      "id": "focused3-agentic-phases",
+      "name": "focused3-agentic-phases",
+      "description": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert supervision, independent verification, and hard evidence. Use when implementing, reviewing, or sequencing production work; when the user says focused3AgenticPhases, agentic cell, THINK EXECUTE PROVE, or NextScaffold; and for OmniAgent / C:\\airealpro\\chatbase engineering. Do not use for copy edits, status questions, or dumping large unscoped code.",
+      "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
+      "folder": "master-brain/skills/vendor/focused3-agentic-phases"
+    },
+    {
+      "id": "logged-in-browser",
+      "name": "logged-in-browser",
+      "description": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP origin blocks, Claude-in-Chrome MCP cookie-jar mismatch, and fills Angular/ng-select forms via Windows UI Automation ValuePattern — never via a fresh MCP/Playwright profile. Use on every request that touches a browser, Chrome, form, login, session, Playwright, CDP, Claude in Chrome, YesWeHack, Intigriti, HackerOne, or \"fill this tab\". Standing RCTC complementary skill: always in the recommendation set.",
+      "path": ".agents/skills/logged-in-browser/SKILL.md",
+      "folder": ".agents/skills/logged-in-browser"
+    },
+    {
+      "id": "logged-in-browser",
+      "name": "logged-in-browser",
+      "description": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP origin blocks, Claude-in-Chrome MCP cookie-jar mismatch, and fills Angular/ng-select forms via Windows UI Automation ValuePattern — never via a fresh MCP/Playwright profile. Use on every request that touches a browser, Chrome, form, login, session, Playwright, CDP, Claude in Chrome, YesWeHack, Intigriti, HackerOne, or \"fill this tab\". Standing RCTC complementary skill: always in the recommendation set.",
+      "path": ".cursor/skills/logged-in-browser/SKILL.md",
+      "folder": ".cursor/skills/logged-in-browser"
+    },
+    {
+      "id": "logged-in-browser",
+      "name": "logged-in-browser",
+      "description": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP origin blocks, Claude-in-Chrome MCP cookie-jar mismatch, and fills Angular/ng-select forms via Windows UI Automation ValuePattern — never via a fresh MCP/Playwright profile. Use on every request that touches a browser, Chrome, form, login, session, Playwright, CDP, Claude in Chrome, YesWeHack, Intigriti, HackerOne, or \"fill this tab\". Standing RCTC complementary skill: always in the recommendation set.",
+      "path": "logged-in-browser/SKILL.md",
+      "folder": "logged-in-browser"
+    },
+    {
+      "id": "logged-in-browser",
+      "name": "logged-in-browser",
+      "description": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP origin blocks, Claude-in-Chrome MCP cookie-jar mismatch, and fills Angular/ng-select forms via Windows UI Automation ValuePattern — never via a fresh MCP/Playwright profile. Use on every request that touches a browser, Chrome, form, login, session, Playwright, CDP, Claude in Chrome, YesWeHack, Intigriti, HackerOne, or \"fill this tab\". Standing RCTC complementary skill: always in the recommendation set.",
+      "path": "master-brain/skills/logged-in-browser/SKILL.md",
+      "folder": "master-brain/skills/logged-in-browser"
+    },
+    {
+      "id": "master-brain",
+      "name": "master-brain",
+      "description": "Operate the Master Brain portfolio platform (منصة ماستر برين) from Claude Code / Claude Desktop: read a project's engineering mind before working, log progress after, attribute suggestions to the model that made them, generate period/progress reports, and route tool requests to the owner. Use when the user mentions Master Brain, ماستر برين, العقل الهندسي, متابعة المشاريع, تقرير المشاريع, mb, a project id from the registry, or when a folder contains BRAIN.md / project.json.",
+      "path": "master-brain/skills/master-brain/SKILL.md",
+      "folder": "master-brain/skills/master-brain"
+    },
+    {
+      "id": "muqasa-maintenance",
+      "name": "muqasa-maintenance",
+      "description": "Muqasa P4 — site up, critical fixes, backups only. No new auction/marketplace features without paying client. Use for C:\\muqasa maintenance and hotfixes.",
+      "path": "portfolio-commander/skills/muqasa-maintenance/SKILL.md",
+      "folder": "portfolio-commander/skills/muqasa-maintenance"
+    },
+    {
+      "id": "portfolio-commander",
+      "name": "portfolio-commander",
+      "description": "Portfolio Commander — scan all Cursor workspace projects, maintain projects-registry.xml (active/dormant, last modified, engineering mind), and execute user requests only on active projects. Use when the user asks about project portfolio, dashboard, Mashareena, مشاريعنا, which project to work on, dormant/sleep mode, XML registry, time spent across projects, or sends a \"Portfolio Commander\" task with a project path. Always read the registry before developing across multiple repos.",
+      "path": ".cursor/skills/portfolio-commander/SKILL.md",
+      "folder": ".cursor/skills/portfolio-commander"
+    },
+    {
+      "id": "portfolio-commander",
+      "name": "portfolio-commander",
+      "description": "Portfolio Commander — scan all Cursor workspace projects, maintain projects-registry.xml (active/dormant, last modified, engineering mind), and execute user requests only on active projects. Use when the user asks about project portfolio, dashboard, which project to work on, dormant/sleep mode, XML registry, time spent across projects, or sends a \"Portfolio Commander\" task with a project path. Always read the registry before developing across multiple repos.",
+      "path": "master-brain/skills/vendor/portfolio-commander/SKILL.md",
+      "folder": "master-brain/skills/vendor/portfolio-commander"
+    },
+    {
+      "id": "portfolio-commander",
+      "name": "portfolio-commander",
+      "description": "Portfolio Commander — scan all Cursor workspace projects, maintain projects-registry.xml (active/dormant, last modified, engineering mind), and execute user requests only on active projects. Use when the user asks about project portfolio, dashboard, Mashareena, مشاريعنا, which project to work on, dormant/sleep mode, XML registry, time spent across projects, or sends a \"Portfolio Commander\" task with a project path. Always read the registry before developing across multiple repos.",
+      "path": "portfolio-commander/skill/SKILL.md",
+      "folder": "portfolio-commander/skill"
+    },
+    {
+      "id": "portfolio-skills-router",
+      "name": "portfolio-skills-router",
+      "description": "Routes Cursor Agent Skills to the active portfolio project. Read project-skills-map.yaml, respect Portfolio Commander priority (P1-P6) and lifecycle dormant rules. Use when opening a multi-repo workspace, asking which skill applies, or after scan_projects.py.",
+      "path": "portfolio-commander/skills/portfolio-skills-router/SKILL.md",
+      "folder": "portfolio-commander/skills/portfolio-skills-router"
+    },
+    {
+      "id": "projects-connector",
+      "name": "projects-connector",
+      "description": "Connects Cursor portfolio projects without merging repos: Factories sales concepts, Belt WhatsApp, Muqasa auctions, RCTC, and continuous improving. Use when the user mixes project paths, sends a prompt in one repo meant for another, asks for Mashareena / ربط المشاريع / projectsConnector, or needs GitHub+Vercel routing across C:\\Factories, C:\\Belt, C:\\muqasa, C:\\rctc-skill.",
+      "path": ".cursor/skills/projects-connector/SKILL.md",
+      "folder": ".cursor/skills/projects-connector"
+    },
+    {
+      "id": "projects-connector",
+      "name": "projects-connector",
+      "description": "Connects Cursor portfolio projects without merging repos: Factories sales concepts, Belt WhatsApp, Muqasa auctions, RCTC, and continuous improving. Use when the user mixes project paths, sends a prompt in one repo meant for another, asks for Mashareena / ربط المشاريع / projectsConnector, or needs GitHub+Vercel routing across C:\\Factories, C:\\Belt, C:\\muqasa, C:\\rctc-skill.",
+      "path": "projectsConnector/SKILL.md",
+      "folder": "projectsConnector"
+    },
+    {
+      "id": "rctc-method",
+      "name": "rctc-method",
+      "description": "RCTC prompt framework (Role, Context, Task, Constraints). One clarifying question max when components missing. Use for ambiguous prompts in rctc-skill repo and paired workflows.",
+      "path": ".agents/skills/rctc-method/SKILL.md",
+      "folder": ".agents/skills/rctc-method"
+    },
+    {
+      "id": "rctc-method",
+      "name": "rctc-method",
+      "description": "RCTC prompt framework (Role, Context, Task, Constraints). One clarifying question max when components missing. Use for ambiguous prompts in rctc-skill repo and paired workflows.",
+      "path": ".cursor/skills/rctc-method/SKILL.md",
+      "folder": ".cursor/skills/rctc-method"
+    },
+    {
+      "id": "rctc-method",
+      "name": "rctc-method",
+      "description": "RCTC is a structured prompt engineering framework — Role, Context, Task, Constraints — that transforms vague AI instructions into professional, high-quality outputs. Detects missing prompt components, asks targeted clarifying questions, learns from user patterns, and recommends complementary skills.",
+      "path": "master-brain/skills/vendor/rctc-method/SKILL.md",
+      "folder": "master-brain/skills/vendor/rctc-method"
+    },
+    {
+      "id": "rctc-method",
+      "name": "rctc-method",
+      "description": "Structure or improve AI prompts and implementation briefs with Role, Context, Task, and Constraints. Use when a request is vague, when the user asks for a stronger prompt, or when multiple agents need one precise handoff. Do not invoke merely because a normal request can already be completed directly.",
+      "path": "SKILL.md",
+      "folder": "."
+    },
+    {
+      "id": "safe-forward-execution",
+      "name": "safe-forward-execution",
+      "description": "Continue implementation beyond planning to produce verified, in-scope progress through safe and reversible actions. Use for requests to build, change, fix, complete, or operationalize work, especially when the user asks not to stop at a plan. Do not use for advice-only, review-only, diagnosis-only, monitoring, or unrequested externally consequential actions.",
+      "path": "safe-forward-execution/SKILL.md",
+      "folder": "safe-forward-execution"
+    },
+    {
+      "id": "security-bounty-window",
+      "name": "security-bounty-window",
+      "description": "Bug bounty time-boxed work (P3). 4-6 hours per week, one program per cycle, report or move on. Use for security research repos; not primary income path.",
+      "path": "portfolio-commander/skills/security-bounty-window/SKILL.md",
+      "folder": "portfolio-commander/skills/security-bounty-window"
+    },
+    {
+      "id": "skill-factory",
+      "name": "skill-factory",
+      "description": "Use when drafting, validating, packaging, or preparing a new agent skill for GitHub — especially inside kazoya/rctc-skill. Modes: draft, validate, review, package, repo-ready, publish (owner gate only). Prefer Reuse→Compose→Extend before generating a new skill.",
+      "path": "skill-factory/SKILL.md",
+      "folder": "skill-factory"
+    },
+    {
+      "id": "start-skill",
+      "name": "start-skill",
+      "description": "مهارة البدء (Start Skill) — turns a scattered set of chats/sessions and side-projects into ONE tracked portfolio: a folder per project, a \"conscious engineering mind\" (done / findings / current / next / improvements / model-attributed suggestions), period & progress reports, and a Node.js platform reachable from Claude Code and Claude Desktop (MCP + CLI). Use when the user says: مهارة البدء, ابدأ منصة متابعة, \"set up a tracking platform for my projects\", \"one slot per project\", \"engineering brain\", \"portfolio dashboard\", \"track all my sessions\", or hands you several session ids and asks to organise them. Pairs with portfolio-commander (kazoya/rctc-skill) and master-brain.",
+      "path": "master-brain/skills/start-skill/SKILL.md",
+      "folder": "master-brain/skills/start-skill"
+    },
+    {
+      "id": "start-skill",
+      "name": "start-skill",
+      "description": "مهارة البدء (Start Skill) — turns a scattered set of chats/sessions and side-projects into ONE tracked portfolio: a folder per project, a \"conscious engineering mind\" (done / findings / current / next / improvements / model-attributed suggestions), period & progress reports, and a Node.js platform reachable from Claude Code and Claude Desktop (MCP + CLI). Use when the user says: مهارة البدء, ابدأ منصة متابعة, \"set up a tracking platform for my projects\", \"one slot per project\", \"engineering brain\", \"portfolio dashboard\", \"track all my sessions\", or hands you several session ids and asks to organise them. Pairs with portfolio-commander (kazoya/rctc-skill) and master-brain.",
+      "path": "start-skill/SKILL.md",
+      "folder": "start-skill"
+    },
+    {
+      "id": "update-zip-skill",
+      "name": "update-zip-skill",
+      "description": "Package measured project evidence and constraints into a reviewable ZIP for an external AI consultant, then inspect the returned package under explicit safety gates. Use for “جهّز حزمة تحسين”، “حلّل المشروع عبر وكيل آخر”، “استوعب ملف التحسين”، or repeatable evidence-led improvement cycles. Do not use for ordinary direct edits that need no handoff.",
+      "path": "update-zip-skill/SKILL.md",
+      "folder": "update-zip-skill"
+    },
+    {
+      "id": "web-marketing-and-personal-builder-super-skill",
+      "name": "web-marketing-and-personal-builder-super-skill",
+      "description": "Super-skill that builds a professional Arabic/RTL (or bilingual) marketing website from minimal info about a person, company, or factory — including ops improvement and automation concepts — then ships GitHub + Vercel with near-zero handholding. Pairs with safe-forward-execution and focused3-agentic-phases. Use when the user says موقع تسويقي, تصور رقمي, مصنع, personal site, brand site, muqasa-jo style, web-marketing-and-personal-builder, or pastes only a URL / short bio.",
+      "path": ".cursor/skills/web-marketing-and-personal-builder-super-skill/SKILL.md",
+      "folder": ".cursor/skills/web-marketing-and-personal-builder-super-skill"
+    },
+    {
+      "id": "web-marketing-and-personal-builder-super-skill",
+      "name": "web-marketing-and-personal-builder-super-skill",
+      "description": "Super-skill that builds a professional Arabic/RTL (or bilingual) marketing website from minimal info about a person, company, or factory — including ops improvement and automation concepts — then ships GitHub + Vercel with near-zero handholding. Pairs with safe-forward-execution and focused3-agentic-phases. Use when the user says موقع تسويقي, تصور رقمي, مصنع, personal site, brand site, muqasa-jo style, web-marketing-and-personal-builder, or pastes only a URL / short bio.",
+      "path": "web_marketing_and_personal-builder-super-skill/SKILL.md",
+      "folder": "web_marketing_and_personal-builder-super-skill"
+    }
+  ]
+}

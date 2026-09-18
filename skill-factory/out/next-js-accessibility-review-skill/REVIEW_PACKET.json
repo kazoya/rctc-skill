@@ -1,0 +1,10 @@
+{
+  "id": "next-js-accessibility-review-skill",
+  "status": "draft",
+  "side_effect_level": "reversible",
+  "questions": [
+    "Does an existing registry skill already solve this?",
+    "Are permissions minimal?",
+    "Is publish explicitly owner-gated?"
+  ]
+}

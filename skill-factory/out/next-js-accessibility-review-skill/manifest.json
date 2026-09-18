@@ -1,0 +1,34 @@
+{
+  "id": "next-js-accessibility-review-skill",
+  "name": "next-js-accessibility-review-skill",
+  "version": "0.1.0",
+  "description": "Next.js accessibility review skill",
+  "tags": [
+    "generated",
+    "draft"
+  ],
+  "inputs": [
+    "task description"
+  ],
+  "outputs": [
+    "skill package"
+  ],
+  "required_capabilities": [
+    "filesystem:write-local"
+  ],
+  "permissions": [
+    "create-files-under-skill-factory/out"
+  ],
+  "side_effect_level": "reversible",
+  "reversible": true,
+  "dependencies": [],
+  "compatible_agents": [
+    "cursor",
+    "claude",
+    "grok"
+  ],
+  "verification": "node skill-factory/scripts/sf.js validate next-js-accessibility-review-skill",
+  "rollback": "Delete skill-factory/out/next-js-accessibility-review-skill",
+  "provenance": "skill-factory draft @ 2026-09-18T20:24:45.444Z",
+  "status": "draft"
+}

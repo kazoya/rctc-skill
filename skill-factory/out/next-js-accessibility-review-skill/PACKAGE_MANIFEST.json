@@ -1,0 +1,30 @@
+{
+  "id": "next-js-accessibility-review-skill",
+  "created": "deterministic-content-addressed",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "945a4256b623616760ab4d908e80f07be8df313761a187a381512eb6b7d7a030"
+    },
+    {
+      "path": "REVIEW_PACKET.json",
+      "sha256": "0f8cb674749cb1f7543f97b7d6356f4658d1048aa71d658aa38f7343de8efa58"
+    },
+    {
+      "path": "SAFETY.md",
+      "sha256": "c2baa71f6be2d038e710bcb82a622b7fe3809ef39402279a6d91cf8bf4e4fc8f"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "e852f23e86ff2f8b871c2c0d2f2ee29e4332ed015a2857e95eb5b90bc098d59c"
+    },
+    {
+      "path": "examples/usage.md",
+      "sha256": "44ea7173ca237430a8255c3f37276540c66043b4016a56889dbad86cf37dd490"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "e3afe5f00e4abca924e9beb35065aaba98aa5e99f25f81bc89556366083cbc24"
+    }
+  ]
+}
