@@ -10,3 +10,13 @@ Thumbs.db
 
 # Local config overrides
 config/my-config.yaml
+# Master Brain (local platform files — do not publish)
+/project.json
+/brain.json
+/BRAIN.md
+/journal/
+/files/
+docs/*HANDOFF*.zip
+docs/growth-packs/*.zip
+.rctc-engine/
+*.log

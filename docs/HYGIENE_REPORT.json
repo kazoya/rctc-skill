@@ -1,0 +1,271 @@
+{
+  "root": "C:\\rctc-skill",
+  "scanned_at": "2026-09-18T21:38:06.558Z",
+  "summary": {
+    "KEEP": 1152,
+    "IGNORE": 1,
+    "REVIEW": 49,
+    "GENERATED": 0
+  },
+  "review_sample": [
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\07ded48d-5deb-4ab1-9570-18c6aac7a07a-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\144deb58-9545-4d4b-80d7-5d121adb0f34-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\2da54ce4-e4f2-4f2d-883a-6df23583f92e-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\3846221f-4e7a-4544-b415-8d51cd3d7255.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\3f2db775-009a-4fef-aa2f-c07d745270ab-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\46ef2425-1209-4c2a-bb77-40cc2b482c16-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\473670a7-05c1-4c85-b4ec-baac6c90292d.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\505a398d-9b72-47d5-a4ae-dc918b06af43-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\676f32a8-fc39-4495-acd1-a74a3c14885e.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\74db7b81-03d1-4c57-accb-bec56c67a0bf-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\83b6c388-23a4-4d04-a6bc-0dc99d9ae09c-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\8d1a52d6-5644-424a-8631-0b5abe366b0f-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\8d6bc72e-1f50-426d-9d47-fe75487db878-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\90291433-9972-489a-9e21-e455a52bcc40-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\aa6c842d-a6de-4084-a7d1-d624ae72ee54-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\c012c117-2d25-4f3d-8afc-de7204c42947-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\cd21042e-bdb3-45d0-ba7c-e28e81859235-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\d33761fa-350b-4561-9699-ddee4b03348b-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\e85d3de7-aeb7-4722-848c-7d79d9b78fe5-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\e9e038b4-39e7-4e58-a3d0-fbf81e171006-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "apca-smarthelp\\backend\\data\\rendered\\passages\\fa2eec6c-5fdc-4074-8b86-e8642e042cec-full-page.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "app2.xml",
+      "classification": "REVIEW",
+      "reason": "XML dump candidate"
+    },
+    {
+      "path": "app_front.xml",
+      "classification": "REVIEW",
+      "reason": "XML dump candidate"
+    },
+    {
+      "path": "bundles.xml",
+      "classification": "REVIEW",
+      "reason": "XML dump candidate"
+    },
+    {
+      "path": "current.xml",
+      "classification": "REVIEW",
+      "reason": "XML dump candidate"
+    },
+    {
+      "path": "docs\\growth-packs\\RCTC_GROWTH_CHATGPT_2026-09-19.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "docs\\RCTC_EXECUTION_HANDOFF_2026-09-19.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "docs\\RCTC_EXECUTION_HANDOFF_2026-09-19_0-28-am.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "docs\\RCTC_GROWTH_CHATGPT_2026-09-19.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "portfolio-commander\\projects-registry.example.xml",
+      "classification": "REVIEW",
+      "reason": "XML dump candidate"
+    },
+    {
+      "path": "store.xml",
+      "classification": "REVIEW",
+      "reason": "XML dump candidate"
+    },
+    {
+      "path": "store2.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "store2.xml",
+      "classification": "REVIEW",
+      "reason": "XML dump candidate"
+    },
+    {
+      "path": "umniah_hotlined.png",
+      "classification": "REVIEW",
+      "reason": "image/screenshot candidate"
+    },
+    {
+      "path": "update-zip-skill\\out\\agent-collaboration-bridge-consult-2026-09-17T10-42.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "update-zip-skill\\out\\master-hq-consult-2026-09-17T11-02.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "update-zip-skill\\out\\portfolio-consult-2026-09-17-05-01.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "update-zip-skill\\out\\portfolio-consult-2026-09-17-07-42.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "update-zip-skill\\out\\project1-commerce-intelligence-consult-2026-09-18T12-35.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "update-zip-skill\\out\\project1-commerce-intelligence-consult-2026-09-18T12-49.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "update-zip-skill\\out\\ptreelink-consult-2026-09-17-05-03.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "update-zip-skill\\out\\world-cup-fintech-festival-consult-2026-09-17T08-01.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "update-zip-skill\\out\\world-cup-fintech-festival-consult-2026-09-17T08-02.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "update-zip-skill.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "window.xml",
+      "classification": "REVIEW",
+      "reason": "XML dump candidate"
+    },
+    {
+      "path": "window2.xml",
+      "classification": "REVIEW",
+      "reason": "XML dump candidate"
+    },
+    {
+      "path": "zip\\claude-skills-master-brain.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "zip\\master-brain-full-E-master.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    },
+    {
+      "path": "zip\\start-skill-and-master-brain-for-github.zip",
+      "classification": "REVIEW",
+      "reason": "archive — may be handoff or debris"
+    }
+  ],
+  "generated_sample": [],
+  "gitignore_proposals": [
+    "node_modules/",
+    ".next/",
+    "dist/",
+    "build/",
+    ".cache/",
+    "*.log",
+    "playwright-report/",
+    "test-results/",
+    "docs/*HANDOFF*.zip",
+    "docs/growth-packs/*.zip"
+  ],
+  "policy": "Do NOT automatically delete owner files. Report KEEP/IGNORE/REVIEW/GENERATED only."
+}

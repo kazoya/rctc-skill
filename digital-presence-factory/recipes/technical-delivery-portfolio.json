@@ -7,7 +7,7 @@
     "optional existing C:\\\\Suhib-AI-Delivery-Portfolio"
   ],
   "compose": [
-    "web_marketing_and_personal-builder-super-skill",
+    "web-marketing-and-personal-builder-super-skill",
     "update-zip-skill",
     "safe-forward-execution",
     "portfolio-commander"
