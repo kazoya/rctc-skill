@@ -28,3 +28,6 @@ Validates **declared** context only. Does not create legal authorization. Offici
 
 ## Secrets
 No real credentials in fixtures. Validator rejects common secret patterns.
+
+## Pro layer
+`pro/` adds pedagogy depth for Coffee Pass supporters — still bound by this safety model.

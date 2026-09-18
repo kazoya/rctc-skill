@@ -1,47 +1,47 @@
 # 01 — Safe Recon and Scope Analysis
 
-## Goal
-Organize **non-destructive** reconnaissance and scope facts. No bypass, stealth, credential attacks, brute force, or exploit automation.
+**Boundary:** **Non-destructive** reconnaissance only. Anything more intrusive → local lab.
 
-## What “safe recon” means here
-- Reading **official** program documentation and policy pages
-- Organizing domains/assets **the program already listed**
-- Noting publicly documented technologies (e.g. from their own engineering blogs)
-- Building a **scope ledger** (claims vs verified facts)
-- Conceptual attack-surface notes — not live intrusive probing
+## Purpose
+Organize public knowledge and program documentation into a clear scope ledger — without bypass, stealth, or credential attacks.
 
-Live-target examples in this module stay **informational**. Anything more intrusive → local lab (module 02).
+## Allowed in this module
+- Reading official program documentation and scope policy
+- Organizing domains/assets **the program declared**
+- Identifying technologies from published public information
+- Documenting attack surface **conceptually** (asset/interface inventory)
+- Maintaining a scope ledger
+- Distinguishing assumptions from verified facts
 
-## Scope ledger template
-| Asset | Source of truth | In scope? | Allowed activities (verbatim) | Evidence link/note | Status |
-|---|---|---|---|---|---|
-| example.com | Program policy §2 | Yes/No/Unclear | … | URL + date | VERIFIED / ASSUMPTION |
+## Explicitly forbidden
+Bypass, stealth, credential attacks, brute force, exploit automation, out-of-scope testing, or any unauthorized live activity.
 
-Rules:
-- Mark **ASSUMPTION** distinctly from **VERIFIED**.
-- Unclear → do not test; ask program or switch to lab.
+## Scope ledger (minimum fields)
+| Field | Example |
+|---|---|
+| program_url | Policy URL you read |
+| asset | Exactly as listed |
+| in_scope | true/false with quote |
+| allowed_actions | read / auth’d test / … as stated |
+| rate_limits | As stated or UNKNOWN |
+| evidence_date | Date you read the policy |
+| assumptions | What is not yet verified |
 
-## RCTC prompts (safe)
-### A. Policy digest
-Role: security documentation analyst  
-Context: paste program policy excerpt (public)  
-Task: extract in-scope assets, out-of-scope items, rate limits, prohibited tests  
-Constraints: quote policy; no recommendations to test out-of-scope; flag ambiguities as STOP
+## RCTC prompts (organization only)
+### A) Policy digest
+- **Role:** scope-compliance assistant  
+- **Context:** policy text copied locally  
+- **Task:** table of allowed/excluded assets + rate limits  
+- **Constraints:** no scan suggestions; UNKNOWN when unclear
 
-### B. Scope ledger builder
-Role: bug-bounty coordinator  
-Context: list of assets from the program page only  
-Task: produce a scope ledger table  
-Constraints: no scanning advice; every row needs a source
+### B) Ledger builder
+- **Role:** security records keeper  
+- **Task:** turn notes into ledger rows; mark assumptions  
+- **Constraints:** assumption ≠ authorization
 
-### C. Technology notes (public only)
-Role: defensive researcher  
-Context: vendor’s public tech blog / security.txt / disclosed stack  
-Task: summarize technologies as *reported publicly*  
-Constraints: label confidence; do not invent hidden services
+## Live targets
+Live-target examples in training stay **informational and non-destructive**. Anything more intrusive runs only on a local lab you own.
 
-## Out of bounds for this module
-Port scanning campaigns, fuzzing production, credential stuffing, social engineering, WAF bypass guides, stealth techniques.
+Then run: `node scope-guard/scope-guard.js <context.json>`
 
-## Hand-off
-Run Scope Guard before any lab that simulates HTTP against localhost, and before any authorized program work.
+> Not every rule fits every case — but those who seek excellence keep the night watch. ^_^

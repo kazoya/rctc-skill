@@ -1,23 +1,37 @@
 # 04 — Triage and Responsible Disclosure
 
-## Communicating with triage
-- Answer clarification requests promptly and politely
-- Provide **additional evidence safely** (redacted; via the platform, not random email)
-- Do not pressure analysts with threats of public disclosure
-- Accept **duplicate**, **informative**, or **N/A** as normal outcomes — learn and move on
+## Purpose
+Communicate professionally with triage teams, supply extra evidence safely, accept Duplicate / Informative / N/A outcomes, and honor disclosure timelines.
 
-## Duplicates & N/A
-- Duplicate: someone else reported earlier — still good practice for you
-- Informative: useful note without payout — document the lesson
-- N/A: often scope or impact — re-read policy before arguing
+## Talking with triage
+- Reply promptly, politely, and precisely
+- Re-read their question before answering
+- Add evidence **through the platform**, secrets redacted
+- Do not run new out-of-scope tests “to prove a point”
+- Do not threaten public disclosure or social pressure
+
+## Common outcomes
+| Outcome | Practical meaning | Your move |
+|---|---|---|
+| Duplicate | Already reported | Thank them; note the lesson |
+| Informative | Useful but not a vuln under policy | Accept; update your mental model |
+| N/A | Out of acceptance/scope | Stop that path; return to local lab |
+| Needs more info | Missing proof or steps | Complete with minimal impact |
+| Resolved / Bounty | Accepted | Follow disclosure timeline rules |
 
 ## Disclosure timelines
-- Follow the program’s policy and any coordinated disclosure agreement
-- Avoid public disclosure before rules allow
-- If a vendor is unresponsive **outside** a bounty platform, prefer established coordinated-disclosure norms — and still do not break the law
+- Follow the **current** program policy (it overrides this training text)
+- No public disclosure before permission
+- Do not break local law or platform terms
+- When unsure → STOP and use a local lab
 
-## RCTC reply helper
-Role: calm researcher  
-Context: triage question + your prior report  
-Task: draft a short reply with only needed extra evidence  
-Constraints: no hostility; no new out-of-scope testing “to prove a point”
+## RCTC triage-reply prompt
+- **Role:** calm, professional researcher  
+- **Context:** triage message + your prior report  
+- **Task:** short reply with only the evidence they asked for  
+- **Constraints:** no new out-of-scope testing; no threats; UNKNOWN if unknown
+
+## Practice
+Draft three triage replies for a local-lab report (Duplicate, Needs more info, Informative).
+
+> Not every rule fits every case — but those who seek excellence keep the night watch. ^_^

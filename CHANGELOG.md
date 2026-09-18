@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased] — Ethical Bug-Bounty Training (Portland–Pozzolanic)
+
+### Added
+- Bilingual ethical bug-bounty track under `tracks/bug-bounty/` (EN+AR, modules 00–05)
+- Scope Guard + track validator with intentional invalid fixtures
+- Capability `ethical-bugbounty-training` (side_effect none, network false, STOP/GAP)
+- Pro Coffee Pass pedagogy layer under `tracks/bug-bounty/pro/`
+- Packaging proposal + SAFETY_MODEL + IMPLEMENTATION_REPORT
+- RCTC-SKILLS motto: ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^
+
 All notable changes to RCTC Method will be documented here.
 
 ## [Unreleased]

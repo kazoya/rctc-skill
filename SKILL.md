@@ -5,7 +5,13 @@ metadata:
   short-description: Turn vague requests into precise AI briefs
 ---
 
+<<<<<<< HEAD
 # RCTC Method
+=======
+# 🧠 RCTC Method — Sohaib's Structured Prompt Framework
+> **شعار RCTC-SKILLS:** ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^  
+> _Not every rule fits every case — but those who seek excellence keep the night watch._
+>>>>>>> fe9ba6f (feat(education): elevate ethical bug-bounty Portland-Pozzolanic pack)
 
 RCTC means **Role → Context → Task → Constraints**. Use it to remove ambiguity that would materially change the result while preserving the user's momentum.
 

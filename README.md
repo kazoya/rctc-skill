@@ -347,6 +347,9 @@ rctc-skill/
 
 ## 🔔 Pro Version Coming
 
+Supporters who buy a coffee via [Buy Me a Coffee](https://buymeacoffee.com/Asrawi612) can claim [Coffee Pass](https://github.com/kazoya/rctc-skill/issues/new?template=coffee_pass.yml) for Pro pedagogy under `tracks/bug-bounty/pro/`.
+
+
 **RCTC Pro** (planned): team profiles, shared learning, analytics, advanced prompt builder.
 
 **Want early access?** Leave a note in [GitHub Discussions](https://github.com/kazoya/rctc-skill/discussions/new?category=ideas&title=Pro%20early%20access&body=I%27m%20interested%20in%20RCTC%20Pro.%20My%20use%20case%3A%20) — one click, no form.
@@ -423,6 +426,9 @@ Help without paying:
 - Example, pull request, or skill contribu
 =======
 ## Ethical Bug-Bounty Training (education)
+
+> شعار RCTC-SKILLS: ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^
+
 
 Defensive track: [`tracks/bug-bounty/`](tracks/bug-bounty/) — scope guard, safe labs, responsible disclosure. **Not** an exploitation toolkit.
 >>>>>>> 89bc4f9 (feat(education): ethical bug-bounty training track)

@@ -56,11 +56,12 @@ Persistence, credential theft, phishing, malware, destructive actions, stealth/e
 4. Official bug-bounty programs **only** when the asset is in scope and rules permit the test  
 
 ## RCTC prompt (authorization brief)
-Use RCTC to write a one-page authorization brief before testing:
-
 - **Role:** Security learner following responsible disclosure  
 - **Context:** Program name + URL + asset list excerpt  
 - **Task:** Decide AUTHORIZED / INSUFFICIENT / OUT_OF_SCOPE / USE_LOCAL_LAB  
 - **Constraints:** Default deny; no fuzzy authorization; cite evidence  
 
 Then run `bug-bounty-scope-guard` with that brief.
+
+> Not every rule fits every case — but those who seek excellence keep the night watch. ^_^  
+> ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^
