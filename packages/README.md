@@ -56,3 +56,9 @@ See `packages/catalog.json` (machine-readable) and below (human).
 **For:** من دفعوا BMC، ومن يهدي قهوة لزميل، ومن يتعلم مجاناً عبر GitHub  
 **Paths:** `packages/coffee-pass/`  
 **Rule:** لا مشاركة لأرقام البطاقات — هدية قهوة أو مسار مجاني فقط.
+
+
+### 9. `digital-presence-factory` — مصنع الحضور الرقمي / التصور
+**DNA:** discover→inspect→reason→design→build→verify→package→publish
+**Recipes:** personal / delivery portfolio / factory / company / product / evidence portal
+**Compose only** — not a god-skill. Proving grounds: Portfolio + factory-sales-concept; protect Project1/Master.

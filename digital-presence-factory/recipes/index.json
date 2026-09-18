@@ -1,0 +1,20 @@
+{
+  "pipeline": [
+    "discover",
+    "inspect",
+    "reason",
+    "design",
+    "build",
+    "verify",
+    "package",
+    "publish"
+  ],
+  "recipes": [
+    "personal-engineering-portfolio",
+    "technical-delivery-portfolio",
+    "factory-sales-concept",
+    "company-marketing-site",
+    "product-showcase",
+    "project-evidence-portal"
+  ]
+}

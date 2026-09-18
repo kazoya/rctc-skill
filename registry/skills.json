@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-18",
-  "count": 40,
+  "count": 41,
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "skills": [
     {
@@ -79,6 +79,13 @@
       "description": "Use this when marketing developers themselves, building a Stack Overflow–like learning/discussion hub for skills, or viral-launching a programmer community with AI-assisted Q&A — especially with RCTC / Continuous Improving / portfolio links.",
       "path": "dev-agora-skill/SKILL.md",
       "folder": "dev-agora-skill"
+    },
+    {
+      "id": "digital-presence-factory",
+      "name": "digital-presence-factory",
+      "description": "Reusable production DNA for digital presence sites — not one website template. From a small input (URL, name, GitHub, folder, short blurb) run discover → inspect → reason → design → build → verify → package → publish by composing existing RCTC skills (web-marketing builder, factory-sales-concept, safe-forward-execution, focused3, update-zip). Use when the user wants a portfolio, factory concept, company profile, product showcase, or delivery portal without inventing a new god-skill. Proving grounds: C:\\\\Suhib-AI-Delivery-Portfolio, factory-sales-concept refs, Project1/Master must stay first-class and unweakened.",
+      "path": "digital-presence-factory/SKILL.md",
+      "folder": "digital-presence-factory"
     },
     {
       "id": "factory-sales-concept",

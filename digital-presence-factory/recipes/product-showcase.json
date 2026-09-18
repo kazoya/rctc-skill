@@ -1,0 +1,17 @@
+{
+  "id": "product-showcase",
+  "output": "Product showcase site",
+  "inputs": [
+    "product name",
+    "optional URL",
+    "optional screenshots folder"
+  ],
+  "compose": [
+    "web_marketing_and_personal-builder-super-skill",
+    "safe-forward-execution"
+  ],
+  "verify": [
+    "build"
+  ],
+  "notes": "Label demos clearly."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "company-marketing-site",
+  "output": "Company marketing / brand site",
+  "inputs": [
+    "company URL or short blurb"
+  ],
+  "compose": [
+    "web_marketing_and_personal-builder-super-skill",
+    "safe-forward-execution"
+  ],
+  "verify": [
+    "build"
+  ],
+  "notes": "Muqasa-jo style only as bar of craft, not copy."
+}

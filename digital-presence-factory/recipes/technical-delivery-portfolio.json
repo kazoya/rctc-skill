@@ -1,0 +1,21 @@
+{
+  "id": "technical-delivery-portfolio",
+  "output": "Technical delivery portfolio (Suhib DNA)",
+  "inputs": [
+    "owner identity",
+    "projects evidence folder or Master Brain export",
+    "optional existing C:\\\\Suhib-AI-Delivery-Portfolio"
+  ],
+  "compose": [
+    "web_marketing_and_personal-builder-super-skill",
+    "update-zip-skill",
+    "safe-forward-execution",
+    "portfolio-commander"
+  ],
+  "verify": [
+    "npm run verify when present",
+    "no invented numbers"
+  ],
+  "proving_ground": "C:\\\\Suhib-AI-Delivery-Portfolio",
+  "notes": "Single data source; public pages must stay secret-free."
+}

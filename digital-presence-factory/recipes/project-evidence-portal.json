@@ -1,0 +1,19 @@
+{
+  "id": "project-evidence-portal",
+  "output": "Project evidence portal for one repo/folder",
+  "inputs": [
+    "project folder or GitHub repo",
+    "optional Master registration"
+  ],
+  "compose": [
+    "start-skill",
+    "portfolio-commander",
+    "update-zip-skill",
+    "safe-forward-execution"
+  ],
+  "verify": [
+    "project-native verify if any"
+  ],
+  "proving_ground": "C:\\\\project1 (read-only unless owner asks changes)",
+  "notes": "Never lift Project1 buyHalt/Dry Run to demo RCTC."
+}

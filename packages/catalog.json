@@ -155,6 +155,28 @@
         "docs/SUPPORT_BLOCK.md"
       ],
       "notes": "Early thanks for BMC supporters via receipt id; never collect card numbers; optional GitHub comments"
+    },
+    {
+      "id": "digital-presence-factory",
+      "title": "Digital Presence / Concept Factory",
+      "audience": [
+        "founder",
+        "factory",
+        "engineer",
+        "agency"
+      ],
+      "skills": [
+        "digital-presence-factory",
+        "web_marketing_and_personal-builder-super-skill",
+        "factory-sales-concept",
+        "safe-forward-execution"
+      ],
+      "paths": [
+        "digital-presence-factory/SKILL.md",
+        "digital-presence-factory/PRODUCTION_DNA.md",
+        "digital-presence-factory/recipes/index.json"
+      ],
+      "notes": "Composable production DNA; Project1/Master proving grounds stay protected"
     }
   ]
 }

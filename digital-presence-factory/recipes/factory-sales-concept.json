@@ -1,0 +1,18 @@
+{
+  "id": "factory-sales-concept",
+  "output": "Factory / manufacturer digital sales concept",
+  "inputs": [
+    "factory public URL (required)",
+    "optional WhatsApp",
+    "optional folder under C:\\\\Factories"
+  ],
+  "compose": [
+    "factory-sales-concept",
+    "safe-forward-execution",
+    "focused3-agentic-phases"
+  ],
+  "verify": [
+    "npm run build"
+  ],
+  "notes": "Delegate to factory-sales-concept skill; DPF only orchestrates."
+}

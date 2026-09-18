@@ -4,19 +4,19 @@ Copy into skill READMEs. Hide any line whose URL is not configured.
 
 ---
 
-If this skill saved you time:
-- ⭐ [Star kazoya/rctc-skill](https://github.com/kazoya/rctc-skill) so others can discover it
-- Open an issue or share a reproducible example
-- Answer a question / post a Skill Recipe in Discussions (when enabled)
-- Propose a skill via the Skill Proposal issue template
+If this project saved you time, a GitHub Star helps other developers discover it. If sponsorship isn't practical, an issue, answer, example, compatibility report, contribution, or share is equally useful to the ecosystem.
 
-Optional support (maintainer-configured):
+Help without paying:
+- ⭐ [Star kazoya/rctc-skill](https://github.com/kazoya/rctc-skill)
+- Useful issue / verified answer / compatibility report
+- Example, pull request, or skill contribution
+- Share with another developer
+
+Optional sponsorship (owner-configured URLs only):
 - ☕ [Buy Me a Coffee](https://buymeacoffee.com/Asrawi612)
 - PayPal: `innervision2016@gmail.com`
 - Portfolio: [suhib-ai-delivery-portfolio](https://suhib-ai-delivery-portfolio.vercel.app/en)
 
-No guilt language. No fabricated scarcity. No artificial engagement.
+Coffee Pass (receipt id, never card numbers): `packages/coffee-pass/`
 
-
-## Coffee Pass
-Paid supporters (Buy Me a Coffee receipt id): see `packages/coffee-pass/` for thank-you levels and the optional GitHub comment kit. Never share card numbers — gift a coffee or use the free GitHub path.
+No guilt language. No fabricated scarcity. No artificial engagement (no fake stars, votes, reviews, users, or testimonials).

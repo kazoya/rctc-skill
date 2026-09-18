@@ -1,0 +1,20 @@
+{
+  "id": "personal-engineering-portfolio",
+  "output": "Personal engineering portfolio site",
+  "inputs": [
+    "person name",
+    "optional GitHub",
+    "optional bio",
+    "optional existing folder"
+  ],
+  "compose": [
+    "web_marketing_and_personal-builder-super-skill",
+    "safe-forward-execution",
+    "focused3-agentic-phases"
+  ],
+  "verify": [
+    "npm/pnpm build",
+    "lint if present"
+  ],
+  "notes": "Do not invent employers or metrics."
+}
