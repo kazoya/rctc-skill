@@ -1,0 +1,52 @@
+# RCTC Skill Packages — باقات مترابطة (Cursor · Claude · Codex)
+
+اللهم ارزقني وارزق مني.
+
+These **packages** are curated chains of existing skills. Agents (Cursor, Claude, Codex) should load the **package card** first — then only the linked `SKILL.md` files — instead of pasting the whole monorepo. That cuts tokens and keeps real steps for students, hobbyists, and quiet learners (yes, even the anonymous ones ^_^).
+
+## How agents should load
+
+| Agent | Entry |
+|---|---|
+| **Cursor** | Open this repo → `.cursor/rules/rctc-packages.mdc` + `.cursor/skills/` |
+| **Claude** | Project knowledge / system: paste `packages/CLAUDE_PACKAGES.md` or attach listed paths |
+| **Codex** | `packages/CODEX_PACKAGES.md` as instructions; prefer `registry/skills.json` for lookup |
+
+**Law:** Reuse → Compose → Extend → Generate New (`skill-factory`).
+
+## Packages
+
+See `packages/catalog.json` (machine-readable) and below (human).
+
+### 1. `beginner-coding-path` — أول خطوة للبرمجة
+**For:** طلاب، هواة، باحثون عن مسار واضح  
+**Chain:** `start-skill` → `rctc-method` (root SKILL) → `focused3-agentic-phases` → `safe-forward-execution`  
+**Outcome:** فكرة → خطة → تنفيذ آمن → إثبات  
+**Token tip:** Load only these four SKILL.md files + this card.
+
+### 2. `oss-skill-builder` — صناعة مهارة ونشرها بحذر
+**Chain:** `skill-factory` → `continuous-improving` → `dev-agora-skill`  
+**Outcome:** draft → validate → review → package → repo-ready (*publish = owner gate*)
+
+### 3. `portfolio-ops` — إدارة عدة مشاريع بعقل واحد
+**Chain:** `portfolio-commander` → `master-brain` → `start-skill` → `update-zip-skill`  
+**Also link:** local `C:\\master` when present
+
+### 4. `ship-marketing-site` — موقع تسويقي بأقل تدخل
+**Chain:** `web_marketing_and_personal-builder-super-skill` → `safe-forward-execution` → optional `factory-sales-concept`
+
+### 5. `commerce-owner-ops` — تشغيل مالك (Dry Run أولاً)
+**Chain:** Project1 prompt `docs/PROJECT1_MAX_SPEED_OWNER_PROMPT.md` + `continuous-improving` + `update-zip-skill` (`--profile web-project`)  
+**Keep:** dormant marketplace URLs; `buyHalt` / Dry Run until spend cap
+
+### 6. `local-helpdesk` — مساعدة دلالية من PDF
+**Chain:** `apca-smarthelp` + `ai-portability-advisor` (Cursor skills under apca-smarthelp/.cursor/skills)
+
+### 7. `community-agora` — مجتمع تعلّم بلا سبام
+**Chain:** `dev-agora-skill` + GitHub templates under `.github/` + `docs/SUPPORT_BLOCK.md`
+
+## Support (optional)
+- https://buymeacoffee.com/Asrawi612
+- PayPal: innervision2016@gmail.com
+- https://suhib-ai-delivery-portfolio.vercel.app/en
+- Star: https://github.com/kazoya/rctc-skill

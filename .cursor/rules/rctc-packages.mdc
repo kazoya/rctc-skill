@@ -1,0 +1,16 @@
+---
+description: Prefer RCTC skill packages over loading the entire monorepo
+globs:
+alwaysApply: true
+---
+
+# RCTC packages (token-efficient)
+
+When the user works in this repo or asks for a workflow:
+
+1. Open `packages/catalog.json` and choose the **smallest** matching package.
+2. Read only that package's skill paths — not every folder.
+3. Composition law: Reuse → Compose → Extend → Generate New (`skill-factory`).
+4. Beginners / hobbyists / quiet learners → `beginner-coding-path`.
+5. Do not fake engagement metrics. Owner gates for publish/push of new repos.
+6. Support block: `docs/SUPPORT_BLOCK.md` (coffee/PayPal/portfolio only when relevant).

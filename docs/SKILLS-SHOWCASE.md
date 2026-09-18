@@ -163,3 +163,8 @@ Local-first PDF/EPUB semantic help + Cursor skills under `apca-smarthelp/.cursor
 
 ## Dev Agora Skill
 Viral developer community playbook (`dev-agora-skill/`) — Stack Overflow–like learning + support CTAs.
+
+
+## Skill Packages (Cursor · Claude · Codex)
+
+Curated chains that cut tokens: see [`packages/README.md`](../packages/README.md) and [`packages/catalog.json`](../packages/catalog.json).

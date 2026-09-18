@@ -43,6 +43,7 @@ It is designed to govern complex, high-fidelity AI and software projects through
 | تحسين دوري مبني على النتائج | [Continuous Improving](continuous-improving/) |
 | مساعدة PDF دلالية (JavaHelp-style) + مهارات Cursor للمشروع | [APCA SmartHelp](apca-smarthelp/) + [AI Portability Advisor](ai-portability-advisor/) |
 | عقل ماستر وربط الأدوار بين المشاريع | [Master Brain](master-brain/) ↔ مشروع `C:\\master` |
+| باقات مترابطة لـ Cursor/Claude/Codex (أقل توكينز) | [Skill Packages](packages/) |
 | مجتمع مبرمجين للتعلم والنقاش (StackOverflow-like + AI) | [Dev Agora Skill](dev-agora-skill/) |
 
 **[افتح العرض الكامل للمهارات، حالات الاستخدام، ووصفات الدمج →](docs/SKILLS-SHOWCASE.md)**

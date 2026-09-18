@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "motto_ar": "اللهم ارزقني وارزق مني",
+  "composition_law": "Reuse -> Compose -> Extend -> Generate New",
+  "agents": [
+    "cursor",
+    "claude",
+    "codex"
+  ],
+  "packages": [
+    {
+      "id": "beginner-coding-path",
+      "title": "Beginner coding path",
+      "audience": [
+        "student",
+        "hobbyist",
+        "anonymous-learner"
+      ],
+      "skills": [
+        "start-skill",
+        "rctc-method",
+        "focused3-agentic-phases",
+        "safe-forward-execution"
+      ],
+      "paths": [
+        "start-skill/SKILL.md",
+        "SKILL.md",
+        "focused3-agentic-phases/SKILL.md",
+        "safe-forward-execution/SKILL.md"
+      ]
+    },
+    {
+      "id": "oss-skill-builder",
+      "title": "OSS skill builder",
+      "audience": [
+        "maintainer",
+        "contributor"
+      ],
+      "skills": [
+        "skill-factory",
+        "continuous-improving",
+        "dev-agora-skill"
+      ],
+      "paths": [
+        "skill-factory/SKILL.md",
+        "continuous-improving/SKILL.md",
+        "dev-agora-skill/SKILL.md"
+      ]
+    },
+    {
+      "id": "portfolio-ops",
+      "title": "Portfolio operations",
+      "audience": [
+        "multi-project-owner"
+      ],
+      "skills": [
+        "portfolio-commander",
+        "master-brain",
+        "start-skill",
+        "update-zip-skill"
+      ],
+      "paths": [
+        "portfolio-commander/skill/SKILL.md",
+        "master-brain/README.md",
+        "start-skill/SKILL.md",
+        "update-zip-skill/SKILL.md"
+      ],
+      "local_bridge": "C:\\\\master"
+    },
+    {
+      "id": "ship-marketing-site",
+      "title": "Ship marketing site",
+      "audience": [
+        "founder",
+        "marketer"
+      ],
+      "skills": [
+        "web_marketing_and_personal-builder-super-skill",
+        "safe-forward-execution",
+        "factory-sales-concept"
+      ],
+      "paths": [
+        "web_marketing_and_personal-builder-super-skill/SKILL.md",
+        "safe-forward-execution/SKILL.md",
+        "factory-sales-concept/SKILL.md"
+      ]
+    },
+    {
+      "id": "commerce-owner-ops",
+      "title": "Commerce owner ops (dry-run first)",
+      "audience": [
+        "owner"
+      ],
+      "skills": [
+        "continuous-improving",
+        "update-zip-skill"
+      ],
+      "paths": [
+        "docs/PROJECT1_MAX_SPEED_OWNER_PROMPT.md",
+        "continuous-improving/SKILL.md",
+        "update-zip-skill/SKILL.md"
+      ],
+      "constraints": [
+        "buyHalt",
+        "dry_run",
+        "preserve_dormant_platform_urls"
+      ]
+    },
+    {
+      "id": "local-helpdesk",
+      "title": "Local semantic helpdesk",
+      "audience": [
+        "enterprise-help",
+        "belt"
+      ],
+      "skills": [
+        "apca-smarthelp",
+        "ai-portability-advisor"
+      ],
+      "paths": [
+        "apca-smarthelp/README.md",
+        "ai-portability-advisor/SKILL.md"
+      ]
+    },
+    {
+      "id": "community-agora",
+      "title": "Dev Agora community",
+      "audience": [
+        "oss-community"
+      ],
+      "skills": [
+        "dev-agora-skill"
+      ],
+      "paths": [
+        "dev-agora-skill/SKILL.md",
+        ".github/DISCUSSION_CATEGORY_GUIDE.md",
+        "docs/SUPPORT_BLOCK.md"
+      ]
+    }
+  ]
+}
