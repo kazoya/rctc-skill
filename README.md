@@ -409,7 +409,6 @@ MIT — use freely, credit appreciated.
 
 </div>
 
-<<<<<<< HEAD
 ## 60-second quickstart
 
 See [`docs/QUICKSTART_60S.md`](docs/QUICKSTART_60S.md) and run:
@@ -423,12 +422,11 @@ If this saved you time, a GitHub Star helps other developers discover it. If you
 Help without paying:
 - ⭐ [Star kazoya/rctc-skill](https://github.com/kazoya/rctc-skill)
 - Useful issue / verified answer / compatibility report
-- Example, pull request, or skill contribu
-=======
+- Example, pull request, or skill contribution
+
 ## Ethical Bug-Bounty Training (education)
 
-> شعار RCTC-SKILLS: ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^
+> **شعار RCTC-SKILLS:** ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^
 
+Defensive track (**Unreleased**): [`tracks/bug-bounty/`](tracks/bug-bounty/) — Scope Guard, safe labs, responsible disclosure. **Not** an exploitation toolkit. Capability: `ethical-bugbounty-training`. Public Pro catalog only: [`tracks/bug-bounty/pro/README.md`](tracks/bug-bounty/pro/README.md).
 
-Defensive track: [`tracks/bug-bounty/`](tracks/bug-bounty/) — scope guard, safe labs, responsible disclosure. **Not** an exploitation toolkit.
->>>>>>> 89bc4f9 (feat(education): ethical bug-bounty training track)
