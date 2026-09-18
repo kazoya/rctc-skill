@@ -1,0 +1,34 @@
+{
+  "id": "document-a-beginner-github-first-issue-walkthrou",
+  "name": "document-a-beginner-github-first-issue-walkthrou",
+  "version": "0.1.0",
+  "description": "Document a beginner GitHub first-issue walkthrough for RCTC packages",
+  "tags": [
+    "generated",
+    "draft"
+  ],
+  "inputs": [
+    "task description"
+  ],
+  "outputs": [
+    "skill package"
+  ],
+  "required_capabilities": [
+    "filesystem:write-local"
+  ],
+  "permissions": [
+    "create-files-under-skill-factory/out"
+  ],
+  "side_effect_level": "reversible",
+  "reversible": true,
+  "dependencies": [],
+  "compatible_agents": [
+    "cursor",
+    "claude",
+    "grok"
+  ],
+  "verification": "node skill-factory/scripts/sf.js validate document-a-beginner-github-first-issue-walkthrou",
+  "rollback": "Delete skill-factory/out/document-a-beginner-github-first-issue-walkthrou",
+  "provenance": "skill-factory draft @ 2026-09-18T20:54:42.977Z",
+  "status": "draft"
+}

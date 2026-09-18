@@ -1,0 +1,10 @@
+{
+  "id": "document-a-beginner-github-first-issue-walkthrou",
+  "status": "draft",
+  "side_effect_level": "reversible",
+  "questions": [
+    "Does an existing registry skill already solve this?",
+    "Are permissions minimal?",
+    "Is publish explicitly owner-gated?"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "document-a-beginner-github-first-issue-walkthrou",
+  "created": "deterministic-content-addressed",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "0189ee47443a87a60d73c9cd7c41a4dd7f60db00a1db27135a57a4cc1a6a5ea8"
+    },
+    {
+      "path": "REVIEW_PACKET.json",
+      "sha256": "169febd275f936200fae537140c2f2b2d442f642e1417a568d1fd5465a5b0bdf"
+    },
+    {
+      "path": "SAFETY.md",
+      "sha256": "c2baa71f6be2d038e710bcb82a622b7fe3809ef39402279a6d91cf8bf4e4fc8f"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "bf16a31cc1d57bc62aa3f07f78e7acbf21f746dc29d78f81296d16ab074e9d27"
+    },
+    {
+      "path": "examples/usage.md",
+      "sha256": "9a7cf857be57bb0f8cc3e4b3f89c713b23211ccd6a263a9f654d54ece5e4b951"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "600a71aaf905bed775a6066a29577fec092e7e1d00a29107d288a656bf307466"
+    }
+  ]
+}
