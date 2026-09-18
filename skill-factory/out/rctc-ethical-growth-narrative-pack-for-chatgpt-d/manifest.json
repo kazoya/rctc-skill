@@ -1,0 +1,34 @@
+{
+  "id": "rctc-ethical-growth-narrative-pack-for-chatgpt-d",
+  "name": "rctc-ethical-growth-narrative-pack-for-chatgpt-d",
+  "version": "0.1.0",
+  "description": "RCTC ethical growth narrative pack for ChatGPT Discord Telegram channels",
+  "tags": [
+    "generated",
+    "draft"
+  ],
+  "inputs": [
+    "task description"
+  ],
+  "outputs": [
+    "skill package"
+  ],
+  "required_capabilities": [
+    "filesystem:write-local"
+  ],
+  "permissions": [
+    "create-files-under-skill-factory/out"
+  ],
+  "side_effect_level": "reversible",
+  "reversible": true,
+  "dependencies": [],
+  "compatible_agents": [
+    "cursor",
+    "claude",
+    "grok"
+  ],
+  "verification": "node skill-factory/scripts/sf.js validate rctc-ethical-growth-narrative-pack-for-chatgpt-d",
+  "rollback": "Delete skill-factory/out/rctc-ethical-growth-narrative-pack-for-chatgpt-d",
+  "provenance": "skill-factory draft @ 2026-09-18T21:04:44.463Z",
+  "status": "draft"
+}

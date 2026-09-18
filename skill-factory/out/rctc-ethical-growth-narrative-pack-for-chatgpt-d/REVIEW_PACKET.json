@@ -1,0 +1,10 @@
+{
+  "id": "rctc-ethical-growth-narrative-pack-for-chatgpt-d",
+  "status": "draft",
+  "side_effect_level": "reversible",
+  "questions": [
+    "Does an existing registry skill already solve this?",
+    "Are permissions minimal?",
+    "Is publish explicitly owner-gated?"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "rctc-ethical-growth-narrative-pack-for-chatgpt-d",
+  "created": "deterministic-content-addressed",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "2a524ea6e430cc1d0a0eccdb13f3c1981b08d8172d8d67cb2dff6777d0455252"
+    },
+    {
+      "path": "REVIEW_PACKET.json",
+      "sha256": "6e5b7c70f6f322ab68e82dc3b85822ae4bd9334f07b4ca46f8a8a29396bee82f"
+    },
+    {
+      "path": "SAFETY.md",
+      "sha256": "c2baa71f6be2d038e710bcb82a622b7fe3809ef39402279a6d91cf8bf4e4fc8f"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "9d671a070400a13b173f6c0e003613802841fafb23ede79eff765c2e362723bf"
+    },
+    {
+      "path": "examples/usage.md",
+      "sha256": "aae5e973bce6351a311843ba21c61bc595789cfe2c58915828edbc4002dce561"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "aee8fc30450369ddd969105bb899f697386083cad1174fc4ab576b78f8646467"
+    }
+  ]
+}
