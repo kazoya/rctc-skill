@@ -41,6 +41,9 @@ It is designed to govern complex, high-fidelity AI and software projects through
 | THINK → EXECUTE → PROVE | [Focused3 Agentic Phases](focused3-agentic-phases/) |
 | إدارة عدة مشاريع وعقول هندسية | [Start Skill](start-skill/) + [Portfolio Commander](portfolio-commander/) + [Master Brain](master-brain/) |
 | تحسين دوري مبني على النتائج | [Continuous Improving](continuous-improving/) |
+| مساعدة PDF دلالية (JavaHelp-style) + مهارات Cursor للمشروع | [APCA SmartHelp](apca-smarthelp/) + [AI Portability Advisor](ai-portability-advisor/) |
+| عقل ماستر وربط الأدوار بين المشاريع | [Master Brain](master-brain/) ↔ مشروع `C:\\master` |
+| مجتمع مبرمجين للتعلم والنقاش (StackOverflow-like + AI) | [Dev Agora Skill](dev-agora-skill/) |
 
 **[افتح العرض الكامل للمهارات، حالات الاستخدام، ووصفات الدمج →](docs/SKILLS-SHOWCASE.md)**
 
@@ -370,6 +373,19 @@ PRs welcome. Keep the philosophy: **clarity before generation**.
 
 ---
 
+
+---
+
+## ☕ Support & portfolio
+
+If these skills save you hours — buy Suhaib a coffee or hire delivery:
+
+- [Buy Me a Coffee](https://buymeacoffee.com/Asrawi612)
+- PayPal: `innervision2016@gmail.com`
+- Portfolio: [suhib-ai-delivery-portfolio](https://suhib-ai-delivery-portfolio.vercel.app/en)
+
+**Master loop:** open `C:\\master` + this repo + [Continuous Improving](continuous-improving/) + [Update-Zip](update-zip-skill/) so roles, content, and low-cost cycles stay linked without losing dormant platform URLs.
+
 ## 📜 License
 
 MIT — use freely, credit appreciated.
@@ -383,6 +399,8 @@ MIT — use freely, credit appreciated.
 
 ⭐ Star this repo if RCTC improved your AI workflow
 
-**Made with love for the people of Gaza.**
+**Made with love for the people of Gaza.**  
+**صنع بمحبة أهل غزة وصمودهم**  
+كنت أنا الآن في أوج نشاطي ^_^ مكيف بدون زن الوايف :]
 
 </div>

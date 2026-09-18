@@ -1,0 +1,85 @@
+{
+  "A_shako_mako": {
+    "intent_ok": true,
+    "predicted_intent": "social_small_talk",
+    "dialect": "iraqi",
+    "has_answer": true,
+    "requires_retrieval": false,
+    "retrieval_expected": false,
+    "elapsed_ms": 2.31,
+    "answer_preview": "هلا وغلا، كل الأمور طيبة والحمد لله. أنا حاضر أخدمك بأي معلومة عن شركة حزام أو مشاريعها وخدماتها."
+  },
+  "B_sho_fi": {
+    "intent_ok": true,
+    "predicted_intent": "social_small_talk",
+    "dialect": "levantine",
+    "has_answer": true,
+    "requires_retrieval": false,
+    "retrieval_expected": false,
+    "elapsed_ms": 0.75,
+    "answer_preview": "أهلين وسهلين، الأمور تمام والحمد لله. أنا جاهز لأي استفسار عن الشركة أو خدماتها ومشاريعها."
+  },
+  "C_founded": {
+    "intent_ok": true,
+    "predicted_intent": "company_foundation",
+    "dialect": "msa",
+    "has_answer": true,
+    "requires_retrieval": false,
+    "retrieval_expected": false,
+    "elapsed_ms": 2.83,
+    "answer_preview": "تأسست شركة حزام تقنية المعلومات عام 2008.\n[الملف التعريفي للشركة باللغة العربية 2025، ص 3]",
+    "contains_2008": true
+  },
+  "D_age": {
+    "intent_ok": true,
+    "predicted_intent": "company_age",
+    "dialect": "msa",
+    "has_answer": true,
+    "requires_retrieval": false,
+    "retrieval_expected": false,
+    "elapsed_ms": 1.16,
+    "answer_preview": "تعمل الشركة منذ عام 2008، أي منذ نحو 18 عاماً حتى عام 2026.\n[الملف التعريفي للشركة باللغة العربية 2025، ص 3]",
+    "contains_2008": true
+  },
+  "E_cyber": {
+    "intent_ok": true,
+    "predicted_intent": "cybersecurity_services",
+    "dialect": "saudi",
+    "has_answer": false,
+    "requires_retrieval": true,
+    "retrieval_expected": true,
+    "elapsed_ms": 0.6,
+    "answer_preview": ""
+  },
+  "F_gov": {
+    "intent_ok": true,
+    "predicted_intent": "government_projects",
+    "dialect": "iraqi",
+    "has_answer": true,
+    "requires_retrieval": true,
+    "retrieval_expected": true,
+    "elapsed_ms": 0.75,
+    "answer_preview": "نعم، لدى الشركة خبرة مع جهات حكومية ووطنية، ومن الجهات المعلنة في الملف الرسمي: الهيئة السعودية للبيانات والذكاء الاصطنا"
+  },
+  "H_inference": {
+    "intent_ok": true,
+    "predicted_intent": "supported_inference",
+    "dialect": "msa",
+    "has_answer": true,
+    "requires_retrieval": false,
+    "retrieval_expected": false,
+    "elapsed_ms": 1.17,
+    "answer_preview": "نعم، وبالاستناد إلى عمل الشركة منذ عام 2008، فهي تمتلك خبرة ممتدة تقارب 18 عاماً حتى 2026، وهو ما يُعد خبرة طويلة في قطا"
+  },
+  "I_oos": {
+    "intent_ok": true,
+    "predicted_intent": "out_of_scope",
+    "dialect": "msa",
+    "has_answer": true,
+    "requires_retrieval": false,
+    "retrieval_expected": false,
+    "elapsed_ms": 0.83,
+    "answer_preview": "عذراً، هذا السؤال خارج نطاق معرفتي بشركة حزام تقنية المعلومات. أستطيع مساعدتك في الخدمات، المشاريع، بيانات التواصل، والم",
+    "no_itb_claim": true
+  }
+}

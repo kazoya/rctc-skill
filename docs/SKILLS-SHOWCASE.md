@@ -156,3 +156,10 @@ Continuous Improving → Update-Zip Skill
 ## معيار الصدق
 
 هذه المنظومة تساعد على رفع جودة التنفيذ وتقليل التدخل، لكنها لا تعد بموقع ناجح تجارياً بلا محتوى حقيقي، ولا تنشر أو تدفع أو تتصرف باسم المستخدم دون صلاحية. كل ادعاء اكتمال يجب أن يسنده تنفيذ واختبار وتحقق ودليل.
+
+
+## APCA SmartHelp
+Local-first PDF/EPUB semantic help + Cursor skills under `apca-smarthelp/.cursor/skills/`.
+
+## Dev Agora Skill
+Viral developer community playbook (`dev-agora-skill/`) — Stack Overflow–like learning + support CTAs.

@@ -1,0 +1,10 @@
+{
+  "split": "holdout",
+  "question_count": 50,
+  "intent_accuracy": 1.0,
+  "greeting_question_count": 0,
+  "greeting_accuracy": null,
+  "latency_scope": "router_only_no_retrieval_no_llm",
+  "router_p50_ms": 0.36,
+  "router_p95_ms": 0.41
+}

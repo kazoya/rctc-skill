@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0",
+  "report_id": "scenario-01-closed-rag",
+  "generated_at": "2026-08-06T12:00:00Z",
+  "question_language": "english",
+  "report_mode": "full_assessment",
+  "executive_summary": "High lock-in; defer full migration; abstract data and model boundaries first.",
+  "layers": [
+    {
+      "components": [
+        "component-a"
+      ],
+      "provider_or_technology": "category-managed-saas",
+      "business_criticality": 3,
+      "data_sensitivity": 2,
+      "vendor_lock_in": 5,
+      "portability": 1,
+      "replaceability": 2,
+      "recovery_capability": 2,
+      "observability_clarity": 2,
+      "progress_loss_risk": 2,
+      "rework_risk": 2,
+      "visible_cost": "UNKNOWN",
+      "hidden_cost": "UNKNOWN",
+      "migration_difficulty": 3,
+      "outage_impact": 3,
+      "assessment_confidence": "medium",
+      "evidence_ids": [
+        "ev-001"
+      ],
+      "user_must_retain_control": [
+        "source documents"
+      ],
+      "layer_id": "data_knowledge"
+    },
+    {
+      "components": [
+        "component-a"
+      ],
+      "provider_or_technology": "category-managed-saas",
+      "business_criticality": 3,
+      "data_sensitivity": 2,
+      "vendor_lock_in": 3,
+      "portability": 2,
+      "replaceability": 2,
+      "recovery_capability": 2,
+      "observability_clarity": 2,
+      "progress_loss_risk": 2,
+      "rework_risk": 2,
+      "visible_cost": "UNKNOWN",
+      "hidden_cost": "UNKNOWN",
+      "migration_difficulty": 3,
+      "outage_impact": 3,
+      "assessment_confidence": "medium",
+      "evidence_ids": [
+        "ev-001"
+      ],
+      "user_must_retain_control": [
+        "source documents"
+      ],
+      "layer_id": "models"
+    },
+    {
+      "components": [
+        "component-a"
+      ],
+      "provider_or_technology": "category-managed-saas",
+      "business_criticality": 3,
+      "data_sensitivity": 2,
+      "vendor_lock_in": 3,
+      "portability": 2,
+      "replaceability": 2,
+      "recovery_capability": 2,
+      "observability_clarity": 2,
+      "progress_loss_risk": 2,
+      "rework_risk": 2,
+      "visible_cost": "UNKNOWN",
+      "hidden_cost": "UNKNOWN",
+      "migration_difficulty": 3,
+      "outage_impact": 3,
+      "assessment_confidence": "medium",
+      "evidence_ids": [
+        "ev-001"
+      ],
+      "user_must_retain_control": [
+        "source documents"
+      ],
+      "layer_id": "training_adaptation_evaluation"
+    },
+    {
+      "components": [
+        "component-a"
+      ],
+      "provider_or_technology": "category-managed-saas",
+      "business_criticality": 3,
+      "data_sensitivity": 2,
+      "vendor_lock_in": 3,
+      "portability": 2,
+      "replaceability": 2,
+      "recovery_capability": 2,
+      "observability_clarity": 2,
+      "progress_loss_risk": 2,
+      "rework_risk": 2,
+      "visible_cost": "UNKNOWN",
+      "hidden_cost": "UNKNOWN",
+      "migration_difficulty": 3,
+      "outage_impact": 3,
+      "assessment_confidence": "medium",
+      "evidence_ids": [
+        "ev-001"
+      ],
+      "user_must_retain_control": [
+        "source documents"
+      ],
+      "layer_id": "applications_retrieval_agents"
+    },
+    {
+      "components": [
+        "component-a"
+      ],
+      "provider_or_technology": "category-managed-saas",
+      "business_criticality": 3,
+      "data_sensitivity": 2,
+      "vendor_lock_in": 3,
+      "portability": 2,
+      "replaceability": 2,
+      "recovery_capability": 2,
+      "observability_clarity": 2,
+      "progress_loss_risk": 2,
+      "rework_risk": 2,
+      "visible_cost": "UNKNOWN",
+      "hidden_cost": "UNKNOWN",
+      "migration_difficulty": 3,
+      "outage_impact": 3,
+      "assessment_confidence": "medium",
+      "evidence_ids": [
+        "ev-001"
+      ],
+      "user_must_retain_control": [
+        "source documents"
+      ],
+      "layer_id": "inference_serving"
+    },
+    {
+      "components": [
+        "component-a"
+      ],
+      "provider_or_technology": "category-managed-saas",
+      "business_criticality": 3,
+      "data_sensitivity": 2,
+      "vendor_lock_in": 3,
+      "portability": 2,
+      "replaceability": 2,
+      "recovery_capability": 2,
+      "observability_clarity": 2,
+      "progress_loss_risk": 2,
+      "rework_risk": 2,
+      "visible_cost": "UNKNOWN",
+      "hidden_cost": "UNKNOWN",
+      "migration_difficulty": 3,
+      "outage_impact": 3,
+      "assessment_confidence": "medium",
+      "evidence_ids": [
+        "ev-001"
+      ],
+      "user_must_retain_control": [
+        "source documents"
+      ],
+      "layer_id": "orchestration_execution"
+    }
+  ],
+  "ownership_and_control_matrix": [
+    {
+      "item": "customer documents",
+      "owner": "customer"
+    }
+  ],
+  "lock_in_portability_matrix": {
+    "summary": "elevated lock-in on data plane"
+  },
+  "recovery_assessment": {
+    "checkpoints": false,
+    "notes": "see orchestration layer"
+  },
+  "hidden_cost_assessment": {
+    "notes": "re-embedding cost UNKNOWN"
+  },
+  "risk_signals": [
+    {
+      "id": "rs-1",
+      "signal": "no_export_path",
+      "evidence_id": "ev-001"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-1",
+      "layer_id": "data_knowledge",
+      "action": "ABSTRACT",
+      "current_problem": "Embeddings tied to proprietary index API",
+      "evidence_ids": [
+        "ev-001"
+      ],
+      "impact_if_unchanged": "Cannot change vector backend without rework",
+      "alternatives": [
+        "export-and-reindex pattern",
+        "dual-write shadow index"
+      ],
+      "selection_rationale": "Lower risk than MIGRATE before export path validated",
+      "confidence": "medium",
+      "prerequisites": [
+        "export test on sample corpus"
+      ],
+      "phased_steps": [
+        "spike export",
+        "measure re-embed cost range"
+      ],
+      "rollback_plan": "N/A \u2014 no production change in phase 1",
+      "verification_tests": [
+        "export sample docs",
+        "rehydrate in test index"
+      ],
+      "human_gate_id": "gate-abstract-01",
+      "time_cost_estimate": "1-2 weeks",
+      "transition_risks": [
+        "incomplete export API"
+      ]
+    }
+  ],
+  "authorized_actions": [],
+  "roadmap": {
+    "immediate": [
+      "document export requirements"
+    ],
+    "days_30": [
+      "adapter spike"
+    ],
+    "days_90": [
+      "pilot if metrics pass"
+    ],
+    "strategic": [
+      "reassess managed vs hybrid"
+    ]
+  },
+  "human_approval_gates": [
+    {
+      "gate_id": "gate-abstract-01",
+      "status": "PENDING_HUMAN_APPROVAL",
+      "recommendation_action": "ABSTRACT",
+      "reason": "Production adapter change",
+      "triggers": [],
+      "authorized_action": null
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-001",
+      "status": "VERIFIED",
+      "statement": "User stated single closed vendor for RAG stack",
+      "source": "scenario intake",
+      "layer": "data_knowledge"
+    }
+  ],
+  "assumptions": [
+    "usage scale UNKNOWN"
+  ],
+  "no_bluff_statement": "Scores are qualitative; costs UNKNOWN unless stated.",
+  "recommendation_vs_authorized_action_note": "Recommendations are analytical only; authorized_actions empty until user approves."
+}

@@ -1,0 +1,88 @@
+{
+  "app_name": "APCA SmartHelp",
+  "app_version": "0.1.0",
+  "host": "127.0.0.1",
+  "port": 8787,
+  "data_dir": "backend/data",
+  "max_upload_mb": 100,
+  "query_max_length": 2000,
+  "embedding": {
+    "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "batch_size": 16,
+    "device": "cpu",
+    "cache_folder": "backend/data/models",
+    "normalize": true
+  },
+  "chunking": {
+    "target_tokens_min": 400,
+    "target_tokens_max": 800,
+    "overlap_tokens_min": 80,
+    "overlap_tokens_max": 120
+  },
+  "search": {
+    "semantic_weight": 0.55,
+    "lexical_weight": 0.30,
+    "title_weight": 0.10,
+    "phrase_weight": 0.05,
+    "use_rrf": true,
+    "rrf_k": 60,
+    "auto_open_threshold": 0.72,
+    "min_first_second_gap": 0.05,
+    "top_k": 20,
+    "display_top_n": 5,
+    "dense_top_k": 40,
+    "lexical_top_k": 40
+  },
+  "ollama": {
+    "enabled": true,
+    "universal_mode": false,
+    "base_url": "http://127.0.0.1:11434",
+    "model": "qwen2.5:latest",
+    "timeout_seconds": 18,
+    "num_predict": 420,
+    "master_context_path": "backend/data/knowledge_master.txt",
+    "master_context_max_chars": 14000
+  },
+  "openai": {
+    "enabled": false,
+    "model": "gpt-4o",
+    "timeout_seconds": 22,
+    "prefer_over_ollama": true,
+    "master_context_max_chars": 12000
+  },
+  "timeouts": {
+    "smarthelp_ask_seconds": 22,
+    "php_ask_seconds": 27,
+    "worker_job_seconds": 35
+  },
+  "reranker": {
+    "enabled": false,
+    "provider": "sentence_transformers",
+    "model": "BAAI/bge-reranker-v2-m3",
+    "candidate_count": 20,
+    "answer_top_k": 5,
+    "batch_size": 4,
+    "timeout_seconds": 5,
+    "fail_open": true
+  },
+  "answer_style": {
+    "tone": "formal",
+    "verbosity": "detailed"
+  },
+  "ocr": {
+    "enabled": true,
+    "image_ocr": true,
+    "table_band_ocr": true,
+    "languages": "ara+eng",
+    "min_chars_per_page": 40,
+    "min_image_area_ratio": 0.015,
+    "max_images_per_page": 8,
+    "dpi": 180,
+    "table_band_dpi": 220
+  },
+  "copyright": {
+    "footer": "© 2026 APCA Systems — Amal Al-Hayat for Systems & Electronic Control. Developed by Suhib Asrawi. All rights reserved.",
+    "rights_contact": "innervision2016@gmail.com",
+    "imported_disclaimer": "Imported documents remain the intellectual property of their respective copyright owners. APCA SmartHelp indexes content for authorized internal use and does not transfer ownership of imported material."
+  }
+}

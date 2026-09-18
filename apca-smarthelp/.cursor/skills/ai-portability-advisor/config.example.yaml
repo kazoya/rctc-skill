@@ -1,0 +1,30 @@
+# AI Portability Advisor — copy to config.yaml in this folder (optional)
+# Aligns with RCTC config pattern; does not override global RCTC max_clarifying_questions.
+
+ai_portability_advisor:
+  question_language: auto  # auto | arabic | english — human report language
+
+  human_approval_required_actions:
+    - MIGRATE
+    - SELF-HOST
+    - MANAGED_SERVICE
+    # HYBRIDIZE when production/data movement — evaluated in report gates[]
+
+  high_impact_triggers:
+    - pii_data
+    - health_data
+    - financial_data
+    - legal_hold_data
+    - paid_cost
+    - data_delete_replace_transfer
+    - cloud_resource_create
+    - commit_push_deploy
+    - hard_to_reverse
+
+  report:
+    machine_readable_format: json  # primary: json; yaml optional if PyYAML installed
+    include_no_bluff_statement: true
+
+  vendor_neutrality:
+    treat_vendor_names_as_examples: true
+    require_evidence_for_product_claims: true

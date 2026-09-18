@@ -1,0 +1,16 @@
+FROM python:3.13.14-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+WORKDIR /app
+
+# This image measures the deterministic conversation router only. Keep it
+# intentionally small: importing the unused grounded-RAG module used to pull
+# PyTorch/FAISS and CUDA-adjacent wheels into a router-only benchmark.
+RUN python -m pip install --no-cache-dir pydantic==2.13.4
+
+COPY . /app
+
+CMD ["python", "scripts/run_conversation_benchmarks.py"]

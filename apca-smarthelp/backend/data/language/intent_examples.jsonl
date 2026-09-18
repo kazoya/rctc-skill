@@ -1,0 +1,20 @@
+{"intent":"greeting","examples":["السلام عليكم","مرحبا","اهلا","هلا","صباح الخير","مساء الخير","hello","hi"]}
+{"intent":"social_small_talk","examples":["شاكو ماكو","شلونك","شلونكم","كيف حالك","كيفك","شو في ما في","شخباركم","وش الاخبار","كيف الحال","how are you"]}
+{"intent":"thanks","examples":["شكرا","شكراً","مشكور","thanks","thank you","يعطيك العافية"]}
+{"intent":"farewell","examples":["مع السلامة","باي","bye","goodbye","الله يعطيك العافية"]}
+{"intent":"help_request","examples":["ساعدني","كيف استخدمك","ماذا تستطيع","what can you do","help"]}
+{"intent":"company_overview","examples":["ماذا تعرف عن الشركة","من هي حزام","what is itb","عرفني عن الشركة","tell me about information belt"]}
+{"intent":"company_foundation","examples":["متى تأسست","سنة التاسيس","when was itb founded","من متى تعمل","منذ متى","اي سنة بلشت"]}
+{"intent":"company_age","examples":["صارلهم كم سنة","كم سنة بالسوق","من كم سنة","how old is the company","years in market","خبرة كم سنة"]}
+{"intent":"company_contact","examples":["رقم التواصل","هاتف الشركة","البريد","contact","phone","email","موقع الشركة"]}
+{"intent":"company_location","examples":["وين مقركم","اين المقر","العنوان","headquarters","office location"]}
+{"intent":"company_services","examples":["ما خدماتكم","وش خدماتكم","what services","ماذا تقدمون","services do you provide"]}
+{"intent":"cybersecurity_services","examples":["الامن السيبراني","وش تسوون بالسايبر","خدمات السيبرانية","cybersecurity services","soc siem"]}
+{"intent":"cloud_services","examples":["الحوسبة السحابية","cloud services","azure aws"]}
+{"intent":"erp_services","examples":["erp","تخطيط الموارد","انظمة erp"]}
+{"intent":"government_projects","examples":["مشاريع حكومية","عدكم شغل ويا الوزارات","وزارات","government projects","ministries"]}
+{"intent":"project_lookup","examples":["تفاصيل مشروع","مشروع وزارة","project details","about project"]}
+{"intent":"evidence_request","examples":["وين الدليل","هات الدليل","من وين جبت","ورني المصدر","ارسل المصدر","show evidence","source please"]}
+{"intent":"page_or_image_request","examples":["هات الصورة","ورني الصفحة","صفحة pdf","صورة","send page","show page"]}
+{"intent":"out_of_scope","examples":["زيت السيارة","change car oil","طبخ","weather today","football score","bitcoin price"]}
+{"intent":"supported_inference","examples":["هل خبرتهم قوية","هل خبرتهم طويلة","تعتبر خبرتهم","is their experience strong"]}

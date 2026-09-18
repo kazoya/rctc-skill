@@ -1,0 +1,14 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+pymupdf>=1.24.0
+numpy>=1.26.0
+httpx>=0.27.0
+python-multipart>=0.0.9
+sentence-transformers>=3.0.0
+faiss-cpu>=1.8.0
+# Optional fallback if FAISS unavailable (needs MSVC on Windows):
+# hnswlib>=0.8.0
+pytest>=8.3.0
+rapidocr-onnxruntime>=1.3.0
+pillow>=10.0.0

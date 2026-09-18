@@ -1,0 +1,144 @@
+{
+  "version": "1.0",
+  "description": "Investor/customer demo inquiry catalog for ITB WhatsApp Belt Gateway",
+  "categories": [
+    {
+      "id": "greeting",
+      "label_ar": "ترحيب ومجاملة",
+      "questions": [
+        "مرحباً",
+        "السلام عليكم",
+        "كيف حالك",
+        "شلونك",
+        "شكراً",
+        "مع السلامة",
+        "Hello",
+        "How are you?",
+        "Thank you"
+      ]
+    },
+    {
+      "id": "identity",
+      "label_ar": "هوية الشركة",
+      "questions": [
+        "ما اسم الشركة؟",
+        "ما اسم الشركة بالانجليزية؟",
+        "ماذا يعني ITB؟",
+        "What does ITB stand for?",
+        "What is the company name in English?"
+      ]
+    },
+    {
+      "id": "about",
+      "label_ar": "نبذة وطبيعة العمل",
+      "questions": [
+        "شو طبيعة عمل الشركة؟",
+        "عن الشركة",
+        "ما رأيك في الشركة؟",
+        "Tell me about the company",
+        "What does the company do?",
+        "Why choose ITB?"
+      ]
+    },
+    {
+      "id": "location",
+      "label_ar": "الموقع والتأسيس",
+      "questions": [
+        "وين مقركم؟",
+        "ما العنوان؟",
+        "متى تأسست الشركة؟",
+        "منذ متى تعملون؟",
+        "Where is your office?",
+        "When was ITB founded?"
+      ]
+    },
+    {
+      "id": "contact",
+      "label_ar": "التواصل",
+      "questions": [
+        "رقم هاتف الشركة",
+        "للتواصل",
+        "ما موقعكم؟",
+        "ITB contact phone",
+        "What is your website?"
+      ]
+    },
+    {
+      "id": "services",
+      "label_ar": "الخدمات والقطاعات",
+      "questions": [
+        "ما خدماتكم؟",
+        "شو خدماتكم؟",
+        "في أي قطاعات تعملون؟",
+        "What are your services?",
+        "What sectors do you serve?"
+      ]
+    },
+    {
+      "id": "credentials",
+      "label_ar": "الشهادات والمزايا",
+      "questions": [
+        "ما شهادات ISO لديكم؟",
+        "مزايا الشركة",
+        "لماذا نختاركم؟",
+        "Do you have ISO 27001?",
+        "Company advantages"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "label_ar": "المشاريع والعملاء",
+      "questions": [
+        "كم مشروع اشتغلتو؟",
+        "كم مشروع لسدايا؟",
+        "كم مشروع للهيئة الوطنية للأمن السيبراني؟",
+        "من عملاءكم؟",
+        "How many projects have you delivered?",
+        "How many SDAIA projects?"
+      ]
+    },
+    {
+      "id": "partners",
+      "label_ar": "الشركاء والإحصائيات",
+      "questions": [
+        "كم عميل عندكم؟",
+        "من شركاؤكم التقنيون؟",
+        "كم سنة خبرة؟",
+        "How many clients do you have?",
+        "Technology partners"
+      ]
+    },
+    {
+      "id": "support",
+      "label_ar": "الدعم والفروع",
+      "questions": [
+        "هل عندكم دعم 24 ساعة؟",
+        "هل لديكم فروع خارج الرياض؟",
+        "كم موظف عندكم؟",
+        "24/7 support",
+        "Do you have branches outside Riyadh?"
+      ]
+    },
+    {
+      "id": "registration",
+      "label_ar": "التسجيل والقيادة",
+      "questions": [
+        "رقم السجل التجاري",
+        "الرقم الموحد",
+        "من هو المدير العام؟",
+        "Commercial registration number",
+        "Who is the CEO?"
+      ]
+    },
+    {
+      "id": "investor",
+      "label_ar": "استثمار ومالية",
+      "questions": [
+        "ما إيرادات الشركة؟",
+        "هل تبحثون عن مستثمرين؟",
+        "Company revenue",
+        "Investment opportunities"
+      ]
+    }
+  ]
+}

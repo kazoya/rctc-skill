@@ -1,0 +1,478 @@
+{
+  "row_count": 250,
+  "unique_normalized_inputs": 36,
+  "duplicate_input_count": 36,
+  "conflicting_label_count": 0,
+  "cross_split_leakage_count": 0,
+  "split_intent_counts": {
+    "development": {
+      "social_small_talk": 18,
+      "greeting": 12,
+      "company_foundation": 25,
+      "cybersecurity_services": 25,
+      "company_services": 18,
+      "company_location": 20,
+      "company_age": 10,
+      "government_projects": 16,
+      "cloud_services": 10,
+      "company_overview": 10,
+      "digital_transformation": 10,
+      "company_contact": 10,
+      "project_lookup": 10,
+      "evidence_request": 6
+    },
+    "holdout": {
+      "supported_inference": 9,
+      "company_age": 16,
+      "page_or_image_request": 10,
+      "evidence_request": 5,
+      "project_lookup": 10
+    }
+  },
+  "unique_intent_accuracy": 0.8611,
+  "unique_confusion_matrix": [
+    {
+      "expected": "cloud_services",
+      "predicted": "company_services",
+      "count": 1
+    },
+    {
+      "expected": "company_age",
+      "predicted": "company_age",
+      "count": 3
+    },
+    {
+      "expected": "company_contact",
+      "predicted": "document_status",
+      "count": 1
+    },
+    {
+      "expected": "company_foundation",
+      "predicted": "company_foundation",
+      "count": 2
+    },
+    {
+      "expected": "company_location",
+      "predicted": "document_status",
+      "count": 1
+    },
+    {
+      "expected": "company_overview",
+      "predicted": "company_overview",
+      "count": 1
+    },
+    {
+      "expected": "company_services",
+      "predicted": "company_services",
+      "count": 2
+    },
+    {
+      "expected": "cybersecurity_services",
+      "predicted": "company_services",
+      "count": 1
+    },
+    {
+      "expected": "cybersecurity_services",
+      "predicted": "cybersecurity_services",
+      "count": 2
+    },
+    {
+      "expected": "digital_transformation",
+      "predicted": "digital_transformation",
+      "count": 1
+    },
+    {
+      "expected": "evidence_request",
+      "predicted": "evidence_request",
+      "count": 2
+    },
+    {
+      "expected": "government_projects",
+      "predicted": "government_projects",
+      "count": 2
+    },
+    {
+      "expected": "greeting",
+      "predicted": "greeting",
+      "count": 3
+    },
+    {
+      "expected": "greeting",
+      "predicted": "social_small_talk",
+      "count": 1
+    },
+    {
+      "expected": "page_or_image_request",
+      "predicted": "page_or_image_request",
+      "count": 2
+    },
+    {
+      "expected": "project_lookup",
+      "predicted": "project_lookup",
+      "count": 4
+    },
+    {
+      "expected": "social_small_talk",
+      "predicted": "social_small_talk",
+      "count": 6
+    },
+    {
+      "expected": "supported_inference",
+      "predicted": "supported_inference",
+      "count": 1
+    }
+  ],
+  "unique_failures": [
+    {
+      "normalized_input": "هلا والله",
+      "expected_intent": "greeting",
+      "predicted_intent": "social_small_talk"
+    },
+    {
+      "normalized_input": "وين مقركم؟",
+      "expected_intent": "company_location",
+      "predicted_intent": "document_status"
+    },
+    {
+      "normalized_input": "شنو خدماتكم بالسحابه؟",
+      "expected_intent": "cloud_services",
+      "predicted_intent": "company_services"
+    },
+    {
+      "normalized_input": "كيف تواصل معكم؟",
+      "expected_intent": "company_contact",
+      "predicted_intent": "document_status"
+    },
+    {
+      "normalized_input": "خدمات الامن السبراني",
+      "expected_intent": "cybersecurity_services",
+      "predicted_intent": "company_services"
+    }
+  ],
+  "duplicates": {
+    "شو في ما في": [
+      "AR-CONV-0001",
+      "AR-CONV-0011",
+      "AR-CONV-0021"
+    ],
+    "وش الاخبار عندكم؟": [
+      "AR-CONV-0002",
+      "AR-CONV-0012",
+      "AR-CONV-0022"
+    ],
+    "السلام عليكم": [
+      "AR-CONV-0003",
+      "AR-CONV-0013",
+      "AR-CONV-0023"
+    ],
+    "هلا والله": [
+      "AR-CONV-0004",
+      "AR-CONV-0014",
+      "AR-CONV-0024"
+    ],
+    "كيفك": [
+      "AR-CONV-0005",
+      "AR-CONV-0015",
+      "AR-CONV-0025"
+    ],
+    "شلونكم": [
+      "AR-CONV-0006",
+      "AR-CONV-0016",
+      "AR-CONV-0026"
+    ],
+    "صباح الخير": [
+      "AR-CONV-0007",
+      "AR-CONV-0017",
+      "AR-CONV-0027"
+    ],
+    "hello": [
+      "AR-CONV-0008",
+      "AR-CONV-0018",
+      "AR-CONV-0028"
+    ],
+    "how are you": [
+      "AR-CONV-0009",
+      "AR-CONV-0019",
+      "AR-CONV-0029"
+    ],
+    "شاكو ماكو": [
+      "AR-CONV-0010",
+      "AR-CONV-0020",
+      "AR-CONV-0030"
+    ],
+    "متي تاسست الشركه؟": [
+      "AR-CONV-0031",
+      "AR-CONV-0035",
+      "AR-CONV-0039",
+      "AR-CONV-0043",
+      "AR-CONV-0047",
+      "AR-CONV-0051",
+      "AR-CONV-0055",
+      "AR-CONV-0059",
+      "AR-CONV-0063",
+      "AR-CONV-0067",
+      "AR-CONV-0176",
+      "AR-CONV-0180",
+      "AR-CONV-0184",
+      "AR-CONV-0188",
+      "AR-CONV-0192",
+      "AR-CONV-0196",
+      "AR-CONV-0200"
+    ],
+    "وش تسوون بالامن السيبراني؟": [
+      "AR-CONV-0032",
+      "AR-CONV-0036",
+      "AR-CONV-0040",
+      "AR-CONV-0044",
+      "AR-CONV-0048",
+      "AR-CONV-0052",
+      "AR-CONV-0056",
+      "AR-CONV-0060",
+      "AR-CONV-0064",
+      "AR-CONV-0068"
+    ],
+    "وش خدماتكم؟": [
+      "AR-CONV-0033",
+      "AR-CONV-0037",
+      "AR-CONV-0041",
+      "AR-CONV-0045",
+      "AR-CONV-0049",
+      "AR-CONV-0053",
+      "AR-CONV-0057",
+      "AR-CONV-0061",
+      "AR-CONV-0065",
+      "AR-CONV-0069"
+    ],
+    "وين مقركم؟": [
+      "AR-CONV-0034",
+      "AR-CONV-0038",
+      "AR-CONV-0042",
+      "AR-CONV-0046",
+      "AR-CONV-0050",
+      "AR-CONV-0054",
+      "AR-CONV-0058",
+      "AR-CONV-0062",
+      "AR-CONV-0066",
+      "AR-CONV-0070",
+      "AR-CONV-0074",
+      "AR-CONV-0078",
+      "AR-CONV-0082",
+      "AR-CONV-0086",
+      "AR-CONV-0090",
+      "AR-CONV-0094",
+      "AR-CONV-0098",
+      "AR-CONV-0102",
+      "AR-CONV-0106",
+      "AR-CONV-0110"
+    ],
+    "صارلهم كم سنه بالسوق؟": [
+      "AR-CONV-0071",
+      "AR-CONV-0075",
+      "AR-CONV-0079",
+      "AR-CONV-0083",
+      "AR-CONV-0087",
+      "AR-CONV-0091",
+      "AR-CONV-0095",
+      "AR-CONV-0099",
+      "AR-CONV-0103",
+      "AR-CONV-0107"
+    ],
+    "عدكم شغل ويا الوزارات؟": [
+      "AR-CONV-0072",
+      "AR-CONV-0076",
+      "AR-CONV-0080",
+      "AR-CONV-0084",
+      "AR-CONV-0088",
+      "AR-CONV-0092",
+      "AR-CONV-0096",
+      "AR-CONV-0100",
+      "AR-CONV-0104",
+      "AR-CONV-0108"
+    ],
+    "شنو خدماتكم بالسحابه؟": [
+      "AR-CONV-0073",
+      "AR-CONV-0077",
+      "AR-CONV-0081",
+      "AR-CONV-0085",
+      "AR-CONV-0089",
+      "AR-CONV-0093",
+      "AR-CONV-0097",
+      "AR-CONV-0101",
+      "AR-CONV-0105",
+      "AR-CONV-0109"
+    ],
+    "من هي الشركه؟": [
+      "AR-CONV-0111",
+      "AR-CONV-0115",
+      "AR-CONV-0119",
+      "AR-CONV-0123",
+      "AR-CONV-0127",
+      "AR-CONV-0131",
+      "AR-CONV-0135",
+      "AR-CONV-0139",
+      "AR-CONV-0143",
+      "AR-CONV-0147"
+    ],
+    "شو بتقدموا بالتحول الرقمي؟": [
+      "AR-CONV-0112",
+      "AR-CONV-0116",
+      "AR-CONV-0120",
+      "AR-CONV-0124",
+      "AR-CONV-0128",
+      "AR-CONV-0132",
+      "AR-CONV-0136",
+      "AR-CONV-0140",
+      "AR-CONV-0144",
+      "AR-CONV-0148"
+    ],
+    "كيف تواصل معكم؟": [
+      "AR-CONV-0113",
+      "AR-CONV-0117",
+      "AR-CONV-0121",
+      "AR-CONV-0125",
+      "AR-CONV-0129",
+      "AR-CONV-0133",
+      "AR-CONV-0137",
+      "AR-CONV-0141",
+      "AR-CONV-0145",
+      "AR-CONV-0149"
+    ],
+    "شو مشروع وزاره السياحه؟": [
+      "AR-CONV-0114",
+      "AR-CONV-0118",
+      "AR-CONV-0122",
+      "AR-CONV-0126",
+      "AR-CONV-0130",
+      "AR-CONV-0134",
+      "AR-CONV-0138",
+      "AR-CONV-0142",
+      "AR-CONV-0146",
+      "AR-CONV-0150"
+    ],
+    "itb cybersecurity services?": [
+      "AR-CONV-0151",
+      "AR-CONV-0154",
+      "AR-CONV-0157",
+      "AR-CONV-0160",
+      "AR-CONV-0163",
+      "AR-CONV-0166",
+      "AR-CONV-0169",
+      "AR-CONV-0172",
+      "AR-CONV-0175"
+    ],
+    "hello, when was itb founded?": [
+      "AR-CONV-0152",
+      "AR-CONV-0155",
+      "AR-CONV-0158",
+      "AR-CONV-0161",
+      "AR-CONV-0164",
+      "AR-CONV-0167",
+      "AR-CONV-0170",
+      "AR-CONV-0173"
+    ],
+    "هلا شخباركم، what services do u provide?": [
+      "AR-CONV-0153",
+      "AR-CONV-0156",
+      "AR-CONV-0159",
+      "AR-CONV-0162",
+      "AR-CONV-0165",
+      "AR-CONV-0168",
+      "AR-CONV-0171",
+      "AR-CONV-0174"
+    ],
+    "خدمات الامن السبراني": [
+      "AR-CONV-0177",
+      "AR-CONV-0181",
+      "AR-CONV-0185",
+      "AR-CONV-0189",
+      "AR-CONV-0193",
+      "AR-CONV-0197"
+    ],
+    "مشاريع حكوميه": [
+      "AR-CONV-0178",
+      "AR-CONV-0182",
+      "AR-CONV-0186",
+      "AR-CONV-0190",
+      "AR-CONV-0194",
+      "AR-CONV-0198"
+    ],
+    "وين الدليل": [
+      "AR-CONV-0179",
+      "AR-CONV-0183",
+      "AR-CONV-0187",
+      "AR-CONV-0191",
+      "AR-CONV-0195",
+      "AR-CONV-0199"
+    ],
+    "هل خبرتهم تعتبر قويه؟": [
+      "AR-CONV-0201",
+      "AR-CONV-0204",
+      "AR-CONV-0207",
+      "AR-CONV-0210",
+      "AR-CONV-0213",
+      "AR-CONV-0216",
+      "AR-CONV-0219",
+      "AR-CONV-0222",
+      "AR-CONV-0225"
+    ],
+    "صارلهم كم سنه؟": [
+      "AR-CONV-0202",
+      "AR-CONV-0205",
+      "AR-CONV-0208",
+      "AR-CONV-0211",
+      "AR-CONV-0214",
+      "AR-CONV-0217",
+      "AR-CONV-0220",
+      "AR-CONV-0223"
+    ],
+    "من كم سنه بالسوق؟": [
+      "AR-CONV-0203",
+      "AR-CONV-0206",
+      "AR-CONV-0209",
+      "AR-CONV-0212",
+      "AR-CONV-0215",
+      "AR-CONV-0218",
+      "AR-CONV-0221",
+      "AR-CONV-0224"
+    ],
+    "ورني الصفحه": [
+      "AR-CONV-0226",
+      "AR-CONV-0229",
+      "AR-CONV-0232",
+      "AR-CONV-0235",
+      "AR-CONV-0238"
+    ],
+    "هات الصوره": [
+      "AR-CONV-0227",
+      "AR-CONV-0230",
+      "AR-CONV-0233",
+      "AR-CONV-0236",
+      "AR-CONV-0239"
+    ],
+    "وين الدليل علي كلامك؟": [
+      "AR-CONV-0228",
+      "AR-CONV-0231",
+      "AR-CONV-0234",
+      "AR-CONV-0237",
+      "AR-CONV-0240"
+    ],
+    "مشروع العدل": [
+      "AR-CONV-0241",
+      "AR-CONV-0244",
+      "AR-CONV-0247",
+      "AR-CONV-0250"
+    ],
+    "مشروع الماليه": [
+      "AR-CONV-0242",
+      "AR-CONV-0245",
+      "AR-CONV-0248"
+    ],
+    "تفاصيل مشروع الوزاره": [
+      "AR-CONV-0243",
+      "AR-CONV-0246",
+      "AR-CONV-0249"
+    ]
+  },
+  "conflicts": {},
+  "cross_split_leakage": {}
+}

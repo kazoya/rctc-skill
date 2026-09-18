@@ -1,0 +1,10 @@
+{
+  "split": "development",
+  "question_count": 200,
+  "intent_accuracy": 0.755,
+  "greeting_question_count": 30,
+  "greeting_accuracy": 0.9,
+  "latency_scope": "router_only_no_retrieval_no_llm",
+  "router_p50_ms": 0.38,
+  "router_p95_ms": 1.06
+}

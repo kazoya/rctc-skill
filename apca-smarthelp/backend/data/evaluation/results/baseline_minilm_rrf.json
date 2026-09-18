@@ -1,0 +1,17 @@
+{
+  "config": "baseline_minilm_rrf",
+  "dataset": "C:\\Belt\\APCA-SmartHelp\\backend\\data\\evaluation\\itb_retrieval_golden.jsonl",
+  "split": "dev",
+  "question_count": 30,
+  "recall_at_1": 0.6,
+  "recall_at_3": 0.6667,
+  "recall_at_5": 0.6667,
+  "mrr_at_10": 0.6278,
+  "correct_document_at_1": 0.6,
+  "correct_page_at_1": 0.3,
+  "correct_page_at_3": 0.4333,
+  "out_of_scope_false_positive_rate": 0.0,
+  "p50_latency_ms": 38.24,
+  "p95_latency_ms": 47.64,
+  "peak_rss_mb": 0.0
+}

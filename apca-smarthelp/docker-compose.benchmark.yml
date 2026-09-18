@@ -1,0 +1,11 @@
+services:
+  benchmark:
+    build:
+      context: .
+      dockerfile: Dockerfile.benchmark
+    working_dir: /app
+    environment:
+      PYTHONPATH: /app
+    volumes:
+      - ./backend/data/evaluation/results:/app/backend/data/evaluation/results
+    command: ["python", "scripts/run_conversation_benchmarks.py"]

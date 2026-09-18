@@ -1,0 +1,20 @@
+{
+  "company_profile_doc_id": "84d2d0b1-c42a-4163-89c9-01d0b5092831",
+  "company_profile_title_ar": "الملف التعريفي للشركة باللغة العربية 2025",
+  "projects_doc_id": "fd9de67d-7e3a-4258-a8a6-d957782b7cda",
+  "projects_title_ar": "حزام المعلومات - نبذة عن المشاريع",
+  "clients": {
+    "sdaia": ["sdaia", "الهيئة السعودية للبيانات", "الذكاء الاصطناعي", "سدايا"],
+    "tourism": ["وزارة السياحة", "ministry of tourism", "السياحة"],
+    "moj": ["وزارة العدل", "ministry of justice", "العدل"],
+    "mof": ["وزارة المالية", "ministry of finance", "المالية"],
+    "nca": ["الهيئة الوطنية للأمن السيبراني", "nca", "الامن السيبراني"],
+    "sec": ["الشركة السعودية للكهرباء", "sec", "الكهرباء"]
+  },
+  "service_keywords": {
+    "cybersecurity": ["الامن السيبراني", "سيبراني", "cyber", "security", "soc", "siem"],
+    "cloud": ["سحاب", "cloud", "azure", "aws"],
+    "erp": ["erp", "تخطيط الموارد", "موارد مؤسسية"],
+    "digital_transformation": ["تحول رقمي", "digital transformation", "رقمنة"]
+  }
+}
