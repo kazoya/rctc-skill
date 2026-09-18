@@ -4,6 +4,8 @@
 > للتعليم والإيثيكال هاكينغ وتجربة الأمن السيبراني كديمو فقط — مع الالتزام بالاتفاقيات وسياسة الاستخدام والقانون.  
 > See: [SAFETY_MODEL.md](SAFETY_MODEL.md) · [ETHICAL_USE](../../docs/ETHICAL_USE.md) · [Packaging](../../docs/BUG_BOUNTY_PACKAGING_PROPOSAL.md)
 
+> **Release state:** Unreleased track (core RCTC remains `SKILL.md` 1.0.0).
+
 **North Star:** Teach people to find and report vulnerabilities responsibly — **not** to attack systems.
 
 > **RCTC-SKILLS motto / شعار:**  
@@ -14,7 +16,7 @@
 | Layer | Path | Audience |
 |---|---|---|
 | Portland (Free MIT) | `en/`, `ar/`, `scope-guard/`, `examples/`, `scripts/` | Everyone |
-| Pozzolan (Pro) | `pro/` | Buy Me a Coffee + [Coffee Pass](https://github.com/kazoya/rctc-skill/issues/new?template=coffee_pass.yml) |
+| Pozzolan (Pro) | `pro/README.md` catalog only | Coffee Pass entitlement; lesson bodies private |
 
 ## Languages
 | Module | English | العربية |

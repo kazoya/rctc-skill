@@ -24,10 +24,13 @@ Persistence, credential theft, phishing, malware, destructive actions, stealth/e
 | uncertainty | STOP/GAP |
 
 ## Scope Guard
-Validates **declared** context only. Does not create legal authorization. Official program policy always overrides training text.
+Validates **declared** context only. Does not create or independently verify legal authorization.
+Decision `DECLARED_SCOPE_CONTEXT_ACCEPTED` always includes `authorization_verified_by_rctc: false` and `human_confirmation_required_for_live_target: true`.
+
+> This decision validates the supplied declaration only. It does not create or independently verify legal authorization. Official program scope and rules remain authoritative.
 
 ## Secrets
 No real credentials in fixtures. Validator rejects common secret patterns.
 
 ## Pro layer
-`pro/` adds pedagogy depth for Coffee Pass supporters — still bound by this safety model.
+Public repo ships `pro/README.md` catalog only. Supporter lesson bodies are private/non-public and remain bound by this safety model when delivered.

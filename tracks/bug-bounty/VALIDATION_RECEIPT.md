@@ -1,23 +1,21 @@
-# VALIDATION_RECEIPT — Portland–Pozzolanic pack
+# VALIDATION_RECEIPT — pre-push
 
-Date: 2026-09-19 (Asia/Amman)
-Host: local learner machine
-Track: tracks/bug-bounty
-
-## Commands
+## Expected
 ```
 node tracks/bug-bounty/scripts/validate-track.js
-# => TRACK_VALIDATOR_PASS { files: 31, authHits: 21, scopeHits: 23, discHits: 4 }
-
-node tracks/bug-bounty/scope-guard/scope-guard.js tracks/bug-bounty/fixtures/invalid/uncertain-live-target.json
-# => decision INSUFFICIENT_SCOPE_EVIDENCE / STOP / GAP (exit 1)
+# TRACK_VALIDATOR_PASS … declared_decision: DECLARED_SCOPE_CONTEXT_ACCEPTED, authorization_verified_by_rctc: false
 
 node tracks/bug-bounty/scope-guard/scope-guard.js tracks/bug-bounty/fixtures/valid/local-lab-context.json
-# => decision USE_LOCAL_LAB / PROCEED_IN_LAB_ONLY (exit 0)
+# USE_LOCAL_LAB
+
+node tracks/bug-bounty/scope-guard/scope-guard.js tracks/bug-bounty/fixtures/invalid/uncertain-live-target.json
+# INSUFFICIENT_SCOPE_EVIDENCE / STOP / GAP
+
+node tracks/bug-bounty/scope-guard/scope-guard.js tracks/bug-bounty/fixtures/invalid/out-of-scope-claim.json
+# OUT_OF_SCOPE
+
+node tracks/bug-bounty/scope-guard/scope-guard.js tracks/bug-bounty/fixtures/valid/declared-program-context.json
+# DECLARED_SCOPE_CONTEXT_ACCEPTED + authorization_verified_by_rctc:false + human_confirmation_required_for_live_target:true
 ```
 
-## Guarantees in this pack
-- No third-party production target required
-- No real secrets in fixtures
-- Uncertainty defaults to STOP/GAP
-- Motto: ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^
+No real secrets. No live target tests.

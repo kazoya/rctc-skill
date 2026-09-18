@@ -19,9 +19,9 @@ const requiredFiles = [
   'ar/05-platform-workflows.md',
   'SAFETY_MODEL.md',
   'README.md',
+  'pro/README.md',
 ];
 
-// Built from parts so this file does not self-match
 const forbidden = [
   new RegExp(['how to bypass waf', ' on production'].join(''), 'i'),
   new RegExp(['credential theft', ' tutorial'].join(''), 'i'),
@@ -46,6 +46,15 @@ function fail(msg) {
 
 for (const rel of requiredFiles) {
   if (!fs.existsSync(path.join(ROOT, rel))) fail('missing ' + rel);
+}
+
+// Pro lesson bodies must NOT be in the public MIT tree
+for (const banned of [
+  'pro/mentor-presubmit-checklist.md',
+  'pro/annotated-report-sample.md',
+  'pro/expanded-lab-narratives.md',
+]) {
+  if (fs.existsSync(path.join(ROOT, banned))) fail('supporter-only Pro lesson body must not be public: ' + banned);
 }
 
 function walk(dir, out = []) {
@@ -73,6 +82,9 @@ for (const f of files) {
   if (/authoriz|تفويض|مصرّح/i.test(text)) authHits++;
   if (/scope|نطاق/i.test(text)) scopeHits++;
   if (/responsible disclosure|إفصاح مسؤول/i.test(text)) discHits++;
+  if (/AUTHORIZED_FOR_DECLARED_ACTIVITY/.test(text)) {
+    fail('legacy decision name still present in ' + path.relative(ROOT, f));
+  }
   for (const re of forbidden) {
     if (re.test(text)) fail('forbidden pattern in ' + path.relative(ROOT, f));
   }
@@ -89,8 +101,8 @@ const { decide } = require('../scope-guard/scope-guard.js');
 const badJ = JSON.parse(fs.readFileSync(path.join(ROOT, 'fixtures/invalid/uncertain-live-target.json'), 'utf8'));
 if (badJ.uncertainty !== true) fail('invalid fixture must set uncertainty true');
 const invalidDecision = decide(badJ);
-if (invalidDecision.decision === 'AUTHORIZED_FOR_DECLARED_ACTIVITY') {
-  fail('scope guard must not authorize uncertain live target');
+if (invalidDecision.decision === 'DECLARED_SCOPE_CONTEXT_ACCEPTED') {
+  fail('scope guard must not accept uncertain live target declaration');
 }
 if (
   invalidDecision.decision !== 'INSUFFICIENT_SCOPE_EVIDENCE' &&
@@ -98,19 +110,46 @@ if (
 ) {
   fail('uncertain live target should be INSUFFICIENT or OUT_OF_SCOPE, got ' + invalidDecision.decision);
 }
+if (invalidDecision.authorization_verified_by_rctc !== false) {
+  fail('uncertain fixture must keep authorization_verified_by_rctc=false');
+}
 
 const good = decide(
   JSON.parse(fs.readFileSync(path.join(ROOT, 'fixtures/valid/local-lab-context.json'), 'utf8'))
 );
 if (good.decision !== 'USE_LOCAL_LAB') fail('local lab fixture expected USE_LOCAL_LAB');
+if (good.authorization_verified_by_rctc !== false) fail('local lab must not claim RCTC authorization verification');
 
 const oos = decide(
   JSON.parse(fs.readFileSync(path.join(ROOT, 'fixtures/invalid/out-of-scope-claim.json'), 'utf8'))
 );
 if (oos.decision !== 'OUT_OF_SCOPE') fail('out-of-scope fixture expected OUT_OF_SCOPE');
 
+const declared = decide(
+  JSON.parse(fs.readFileSync(path.join(ROOT, 'fixtures/valid/declared-program-context.json'), 'utf8'))
+);
+if (declared.decision !== 'DECLARED_SCOPE_CONTEXT_ACCEPTED') {
+  fail('declared live-target fixture expected DECLARED_SCOPE_CONTEXT_ACCEPTED, got ' + declared.decision);
+}
+if (declared.authorization_verified_by_rctc !== false) {
+  fail('declared fixture must set authorization_verified_by_rctc=false');
+}
+if (declared.human_confirmation_required_for_live_target !== true) {
+  fail('declared fixture must require human confirmation for live target');
+}
+if (!/validates the supplied declaration only/i.test(String(declared.note || ''))) {
+  fail('declared fixture note must state declaration-only validation');
+}
+
 if (failed) {
   console.error('VALIDATOR_FAILED', failed);
   process.exit(1);
 }
-console.log('TRACK_VALIDATOR_PASS', { files: files.length, authHits, scopeHits, discHits });
+console.log('TRACK_VALIDATOR_PASS', {
+  files: files.length,
+  authHits,
+  scopeHits,
+  discHits,
+  declared_decision: declared.decision,
+  authorization_verified_by_rctc: declared.authorization_verified_by_rctc,
+});

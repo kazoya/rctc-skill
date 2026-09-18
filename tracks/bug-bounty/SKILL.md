@@ -13,4 +13,4 @@ description: >
 
 Load `README.md` and enforce `SAFETY_MODEL.md`.  
 Always run `scope-guard` before any activity beyond reading public policy text.  
-Pro pedagogy: `pro/` for Coffee Pass supporters — still no offensive automation.
+Pro: public catalog at `pro/README.md`; lesson bodies stay private (not under ambiguous MIT).

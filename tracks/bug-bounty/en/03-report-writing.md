@@ -46,7 +46,7 @@ If you only have an observation, say so. Do not inflate CVSS without evidence.
 First three reports from `examples/lab/` and `examples/synthetic/` only — no third-party production targets.
 
 ## Pro add-on (Buy Me a Coffee / Coffee Pass)
-Mentor pre-submit checklists and annotated sample reports live under `pro/` after Coffee Pass verification — see `docs/BUG_BOUNTY_PACKAGING_PROPOSAL.md`.
+See the public Pro catalog at [`pro/README.md`](../pro/README.md). Supporter lesson bodies are delivered privately — not shipped under root MIT.
 
 > Track motto: Not every rule fits every case — but those who seek excellence keep the night watch. ^_^  
 > ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^

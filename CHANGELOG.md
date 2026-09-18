@@ -2,15 +2,20 @@
 
 ## [Unreleased] — Ethical Bug-Bounty Training (Portland–Pozzolanic)
 
+> Track status: **Unreleased**. Root `SKILL.md` remains `version: 1.0.0`. This is not a stable 1.1 / 1.1.0-rc product release.
+
 ### Added
 - Bilingual ethical bug-bounty track under `tracks/bug-bounty/` (EN+AR, modules 00–05)
-- Scope Guard + track validator with intentional invalid fixtures
-- Capability `ethical-bugbounty-training` (side_effect none, network false, STOP/GAP)
-- Pro Coffee Pass pedagogy layer under `tracks/bug-bounty/pro/`
-- Packaging proposal + SAFETY_MODEL + IMPLEMENTATION_REPORT
-- RCTC-SKILLS motto: ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^
+- Scope Guard (declaration-only decisions) + track validator + fixtures
+- Capability `ethical-bugbounty-training` (`release_state: unreleased`)
+- Public Pro catalog `tracks/bug-bounty/pro/README.md` + Coffee Pass pointers (no Pro lesson bodies in MIT tree)
+- Multi-track extension point `tracks/README.md` (future competition labs not implemented)
+- RCTC-SKILLS motto
 
-All notable changes to RCTC Method will be documented here.
+### Changed (pre-push)
+- Renamed `AUTHORIZED_FOR_DECLARED_ACTIVITY` → `DECLARED_SCOPE_CONTEXT_ACCEPTED`
+- Explicit `authorization_verified_by_rctc: false` and human confirmation for declared live targets
+- Removed supporter-only Pro lesson files from the public tree
 
 ## [Unreleased]
 

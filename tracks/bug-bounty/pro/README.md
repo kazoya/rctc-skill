@@ -1,16 +1,25 @@
-# Pro layer — Coffee Pass / Buy Me a Coffee
+# Pro offering — catalog only (public)
 
-**Access:** Supporters who bought a coffee via [https://buymeacoffee.com/Asrawi612](https://buymeacoffee.com/Asrawi612) and filed a [Coffee Pass](https://github.com/kazoya/rctc-skill/issues/new?template=coffee_pass.yml) issue (receipt ID only).
+This public repository **does not** ship supporter-only Pro lesson bodies under the root MIT tree.
 
-This folder is the **pozzolanic** add-on: it deepens judgment; it does **not** add offensive tooling.
+## Why
+Root license is **MIT**. Shipping commercial/personal-use-restricted lesson content beside MIT core without a clear separate license would be ambiguous and misleading.
 
-## Included (educational)
-- `mentor-presubmit-checklist.md` — pre-submit quality gate
-- `annotated-report-sample.md` — local-lab sample with good vs weak impact language
-- `expanded-lab-narratives.md` — extra reasoning scenarios on localhost/synthetic only
+## What is public here
+- Free/MIT Bug-Bounty track: `tracks/bug-bounty/` (modules, Scope Guard, examples, validator)
+- This catalog page describing the **optional** Pro educational add-on
+- Buy Me a Coffee + Coffee Pass entitlement pointers
 
-## Not included
-Scanners, exploit packs, credential attacks, live third-party automation.
+## What is NOT in this public repo
+Actual supporter-only Pro materials (mentor checklists, annotated report packs, expanded lab narratives) are packaged from a **private / non-public** source after Coffee Pass verification — not from DRM, and not from ambiguous MIT+restricted dual claims in-tree.
 
-## Motto
-> ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^
+## Entitlement (public info)
+1. Support: https://buymeacoffee.com/Asrawi612
+2. Claim: [Coffee Pass issue](https://github.com/kazoya/rctc-skill/issues/new?template=coffee_pass.yml) (receipt / Order ID only — never card numbers)
+3. Delivery: out-of-band from the private Pro pack (not committed here)
+
+## Placeholders
+- `{{SUPPORT_URL}}` (public default: Buy Me a Coffee above)
+- `{{PRO_CURRICULUM_URL}}` (private index; not invented here)
+
+No DRM in this repository.

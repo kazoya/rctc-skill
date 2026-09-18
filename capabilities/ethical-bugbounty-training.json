@@ -1,12 +1,14 @@
 {
   "id": "ethical-bugbounty-training",
   "kind": "canonical_capability",
+  "release_state": "unreleased",
+  "track_status": "Unreleased (ships with repo; not a separate stable product version)",
   "name": {
     "en": "Ethical Bug-Bounty Training",
     "ar": "تدريب Bug Bounty الأخلاقي"
   },
   "purpose": "Teach authorized vulnerability research methodology, safe lab practice, scope discipline, evidence collection, and responsible disclosure.",
-  "not": "Not an exploitation framework. Not a scanner. Not authorization to test third-party systems.",
+  "not": "Not an exploitation framework. Not a scanner. Not authorization to test third-party systems. Not an independent verifier of bug-bounty legal authorization.",
   "path": "tracks/bug-bounty/",
   "side_effect_level": "none",
   "network": false,
@@ -17,8 +19,9 @@
   "safety_model": "tracks/bug-bounty/SAFETY_MODEL.md",
   "packaging": {
     "metaphor": "portland-pozzolanic",
-    "free": "MIT core under tracks/bug-bounty/ (except pro/)",
-    "pro": "tracks/bug-bounty/pro/ via Buy Me a Coffee + Coffee Pass",
+    "free": "MIT material under tracks/bug-bounty/ (except pro lesson bodies)",
+    "pro_public": "tracks/bug-bounty/pro/README.md catalog + Coffee Pass pointers only",
+    "pro_lesson_bodies": "private/non-public pack — not in this MIT tree",
     "support_url_placeholder": "{{SUPPORT_URL}}",
     "buy_me_a_coffee": "https://buymeacoffee.com/Asrawi612"
   },
