@@ -405,3 +405,18 @@ MIT — use freely, credit appreciated.
 كنت أنا الآن في أوج نشاطي ^_^ مكيف بدون زن الوايف :]
 
 </div>
+
+## 60-second quickstart
+
+See [`docs/QUICKSTART_60S.md`](docs/QUICKSTART_60S.md) and run:
+
+```bash
+node digital-presence-factory/cli.js --list
+```
+
+If this saved you time, a GitHub Star helps other developers discover it. If you can't sponsor the project, a useful issue, answer, example, compatibility report, skill contribution, or share is valuable support.
+
+Help without paying:
+- ⭐ [Star kazoya/rctc-skill](https://github.com/kazoya/rctc-skill)
+- Useful issue / verified answer / compatibility report
+- Example, pull request, or skill contribu

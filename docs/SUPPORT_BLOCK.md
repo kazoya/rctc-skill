@@ -4,7 +4,7 @@ Copy into skill READMEs. Hide any line whose URL is not configured.
 
 ---
 
-If this project saved you time, a GitHub Star helps other developers discover it. If sponsorship isn't practical, an issue, answer, example, compatibility report, contribution, or share is equally useful to the ecosystem.
+If this saved you time, a GitHub Star helps other developers discover it. If you can't sponsor the project, a useful issue, answer, example, compatibility report, skill contribution, or share is valuable support.
 
 Help without paying:
 - ⭐ [Star kazoya/rctc-skill](https://github.com/kazoya/rctc-skill)
