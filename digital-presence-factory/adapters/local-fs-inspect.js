@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 
-/** Read-only inspect adapter — no writes */
 function run(input) {
   const started = Date.now();
   const source = input.source;
@@ -11,38 +10,19 @@ function run(input) {
     return {
       status: 'error',
       duration_ms: Date.now() - started,
-      output: { error: 'source_missing', source },
+      output: { error: 'source_missing' },
       evidence: [],
       files_changed: [],
       side_effect_classification: 'read-only',
-      verification: { ok: false, checks: ['source exists'] },
+      verification: { ok: false },
     };
   }
   const st = fs.statSync(source);
-  evidence.push({ kind: 'stat', isDirectory: st.isDirectory(), size: st.size });
+  evidence.push({ kind: 'stat', isDirectory: st.isDirectory() });
   if (st.isDirectory()) {
-    const markers = [
-      'package.json',
-      'README.md',
-      'SKILL.md',
-      'brain.json',
-      'BRAIN.md',
-      'data',
-      'app',
-      'project.json',
-    ];
-    for (const m of markers) {
-      const p = path.join(source, m);
-      if (fs.existsSync(p)) evidence.push({ kind: 'marker', name: m });
+    for (const m of ['package.json', 'README.md', 'brain.json', 'BRAIN.md', 'project.json', 'app', 'data']) {
+      if (fs.existsSync(path.join(source, m))) evidence.push({ kind: 'marker', name: m });
     }
-    try {
-      const pkg = JSON.parse(fs.readFileSync(path.join(source, 'package.json'), 'utf8'));
-      evidence.push({
-        kind: 'package',
-        name: pkg.name || null,
-        scripts: Object.keys(pkg.scripts || {}).slice(0, 30),
-      });
-    } catch (_) {}
   }
   return {
     status: 'ok',

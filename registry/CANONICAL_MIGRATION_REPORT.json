@@ -1,0 +1,13 @@
+{
+  "before": {
+    "records": 41,
+    "unique_ids": 24
+  },
+  "after": {
+    "discovered_skill_records": 41,
+    "canonical_capabilities": 24,
+    "multi_install_capabilities": 10,
+    "public_claim": "24 canonical capabilities (41 discovered installations/copies — not independent skills)"
+  },
+  "note": "Duplicates retained as installations under one canonical capability. No silent deletion."
+}

@@ -1,0 +1,22 @@
+{
+  "adapter_id": "adapter.example-echo-inspect",
+  "version": "1",
+  "canonical_capability_id": "digital-presence-factory",
+  "module": "adapters/example-echo-inspect.js",
+  "stages": ["inspect"],
+  "match": {
+    "recipe_ids": ["project-evidence-portal"],
+    "require_markers": ["package.json"]
+  },
+  "permissions": {
+    "read_paths": ["${source}"],
+    "write_paths": [],
+    "process_exec": false,
+    "network": false,
+    "git_read": true,
+    "git_write": false,
+    "github_write": false,
+    "deploy": false,
+    "secrets": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "adapter_id": "adapter.local-verify",
+  "version": "1",
+  "canonical_capability_id": "digital-presence-factory",
+  "module": "adapters/local-verify.js",
+  "stages": ["verify"],
+  "match": {
+    "recipe_ids": [
+      "technical-delivery-portfolio",
+      "personal-engineering-portfolio",
+      "factory-sales-concept",
+      "company-marketing-site",
+      "product-showcase",
+      "project-evidence-portal"
+    ]
+  },
+  "permissions": {
+    "read_paths": ["${source}"],
+    "write_paths": [],
+    "process_exec": true,
+    "network": false,
+    "git_read": true,
+    "git_write": false,
+    "github_write": false,
+    "deploy": false,
+    "secrets": false
+  },
+  "verify_marker": "<!-- rctc-dpf-dogfood-2026-09-19 -->"
+}

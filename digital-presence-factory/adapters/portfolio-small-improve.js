@@ -2,20 +2,15 @@
 const fs = require('fs');
 const path = require('path');
 
-/**
- * ONE small reversible improvement for Suhib portfolio dogfood:
- * ensure README links RCTC DPF quickstart + ethical support CTA.
- * Does not invent metrics. Does not rebuild the site.
- */
 const MARKER = '<!-- rctc-dpf-dogfood-2026-09-19 -->';
 const BLOCK = `
 ${MARKER}
 ## RCTC Digital Presence Factory
 
-Plan-only composition for delivery portfolios (no auto-deploy):
+Plan-only / gated execution for delivery portfolios:
 
 \`\`\`bash
-node C:/rctc-skill/digital-presence-factory/cli.js --type technical-delivery --source .
+node C:/rctc-skill/digital-presence-factory/cli.js plan --type technical-delivery --source .
 \`\`\`
 
 Quickstart: \`C:/rctc-skill/docs/QUICKSTART_60S.md\`
@@ -45,20 +40,18 @@ function run(input) {
       status: 'ok',
       duration_ms: Date.now() - started,
       output: { action: 'noop_already_present' },
-      evidence: [{ kind: 'marker_present', marker: MARKER }],
+      evidence: [{ kind: 'marker_present' }],
       files_changed: [],
       side_effect_classification: 'reversible-local-writes',
       verification: { ok: true, checks: ['idempotent'] },
-      notes: 'Improvement already applied — no write',
     };
   }
-  const before = text;
   text = text.trimEnd() + '\n' + BLOCK + '\n';
   fs.writeFileSync(readme, text, 'utf8');
   return {
     status: 'ok',
     duration_ms: Date.now() - started,
-    output: { action: 'appended_rctc_dpf_block', bytes_before: before.length, bytes_after: text.length },
+    output: { action: 'appended_rctc_block' },
     evidence: [{ kind: 'readme_append', path: readme }],
     files_changed: [readme],
     side_effect_classification: 'reversible-local-writes',
@@ -66,4 +59,4 @@ function run(input) {
   };
 }
 
-module.exports = { id: 'adapter.portfolio-small-improve', run, MARKER };
+module.exports = { id: 'adapter.readme-rctc-block', run, MARKER };

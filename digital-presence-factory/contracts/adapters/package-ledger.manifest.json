@@ -1,0 +1,28 @@
+{
+  "adapter_id": "adapter.package-ledger",
+  "version": "1",
+  "canonical_capability_id": "digital-presence-factory",
+  "module": "adapters/package-ledger.js",
+  "stages": ["package"],
+  "match": {
+    "recipe_ids": [
+      "technical-delivery-portfolio",
+      "personal-engineering-portfolio",
+      "factory-sales-concept",
+      "company-marketing-site",
+      "product-showcase",
+      "project-evidence-portal"
+    ]
+  },
+  "permissions": {
+    "read_paths": ["${source}", "${out}"],
+    "write_paths": ["${out}"],
+    "process_exec": false,
+    "network": false,
+    "git_read": true,
+    "git_write": false,
+    "github_write": false,
+    "deploy": false,
+    "secrets": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "adapter_id": "adapter.sdk-demo-inspect",
+  "version": "1",
+  "canonical_capability_id": "digital-presence-factory",
+  "module": "adapters/sdk-demo-inspect.js",
+  "stages": ["inspect"],
+  "match": {
+    "recipe_ids": ["sdk-demo-only"],
+    "require_markers": [".rctc-sdk-demo"]
+  },
+  "permissions": {
+    "read_paths": ["${source}"],
+    "write_paths": [],
+    "process_exec": false,
+    "network": false,
+    "git_read": false,
+    "git_write": false,
+    "github_write": false,
+    "deploy": false,
+    "secrets": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "adapter_id": "adapter.readme-rctc-block",
+  "version": "1",
+  "canonical_capability_id": "digital-presence-factory",
+  "module": "adapters/portfolio-small-improve.js",
+  "stages": ["build"],
+  "match": {
+    "recipe_ids": ["technical-delivery-portfolio"],
+    "require_markers": ["README.md", "brain.json"]
+  },
+  "permissions": {
+    "read_paths": ["${source}"],
+    "write_paths": ["${source}/README.md"],
+    "process_exec": false,
+    "network": false,
+    "git_read": true,
+    "git_write": false,
+    "github_write": false,
+    "deploy": false,
+    "secrets": false
+  },
+  "verify_marker": "<!-- rctc-dpf-dogfood-2026-09-19 -->",
+  "notes": "Generic marker match (README+brain.json) — no project folder name in engine."
+}

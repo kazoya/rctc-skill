@@ -1,0 +1,29 @@
+{
+  "adapter_id": "adapter.local-fs-inspect",
+  "version": "1",
+  "canonical_capability_id": "digital-presence-factory",
+  "module": "adapters/local-fs-inspect.js",
+  "stages": ["inspect", "discover"],
+  "match": {
+    "recipe_ids": [
+      "personal-engineering-portfolio",
+      "technical-delivery-portfolio",
+      "factory-sales-concept",
+      "company-marketing-site",
+      "product-showcase",
+      "project-evidence-portal"
+    ],
+    "require_markers": []
+  },
+  "permissions": {
+    "read_paths": ["${source}"],
+    "write_paths": [],
+    "process_exec": false,
+    "network": false,
+    "git_read": true,
+    "git_write": false,
+    "github_write": false,
+    "deploy": false,
+    "secrets": false
+  }
+}
