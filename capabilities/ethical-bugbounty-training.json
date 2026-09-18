@@ -1,0 +1,18 @@
+{
+  "id": "ethical-bugbounty-training",
+  "kind": "canonical_capability",
+  "name": {
+    "en": "Ethical Bug-Bounty Training",
+    "ar": "تدريب Bug Bounty الأخلاقي"
+  },
+  "purpose": "Teach authorized vulnerability research methodology, safe lab practice, scope discipline, evidence collection, and responsible disclosure.",
+  "not": "Not an exploitation framework. Not a scanner. Not authorization to test third-party systems.",
+  "path": "tracks/bug-bounty/",
+  "side_effect_level": "none",
+  "network": false,
+  "live_target_execution": false,
+  "uncertainty_behavior": "STOP/GAP",
+  "scope_guard": "tracks/bug-bounty/scope-guard/scope-guard.js",
+  "validate": "node tracks/bug-bounty/scripts/validate-track.js",
+  "safety_model": "tracks/bug-bounty/SAFETY_MODEL.md"
+}

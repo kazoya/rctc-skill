@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><title>Local reflection demo (safe)</title></head>
+<body>
+  <h1>Local reflection demo</h1>
+  <p>Educational only. Open as a local file. Do not host on a public production site for “tests”.</p>
+  <label>Note: <input id="q" value="hello"/></label>
+  <button type="button" id="go">Reflect locally</button>
+  <div id="out"></div>
+  <script>
+    // Intentionally naive local demo for XSS *reasoning* — not a third-party target.
+    document.getElementById('go').onclick = function () {
+      var v = document.getElementById('q').value;
+      document.getElementById('out').innerHTML = 'You typed: ' + v;
+    };
+  </script>
+</body>
+</html>

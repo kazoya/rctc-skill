@@ -406,6 +406,7 @@ MIT — use freely, credit appreciated.
 
 </div>
 
+<<<<<<< HEAD
 ## 60-second quickstart
 
 See [`docs/QUICKSTART_60S.md`](docs/QUICKSTART_60S.md) and run:
@@ -420,3 +421,8 @@ Help without paying:
 - ⭐ [Star kazoya/rctc-skill](https://github.com/kazoya/rctc-skill)
 - Useful issue / verified answer / compatibility report
 - Example, pull request, or skill contribu
+=======
+## Ethical Bug-Bounty Training (education)
+
+Defensive track: [`tracks/bug-bounty/`](tracks/bug-bounty/) — scope guard, safe labs, responsible disclosure. **Not** an exploitation toolkit.
+>>>>>>> 89bc4f9 (feat(education): ethical bug-bounty training track)

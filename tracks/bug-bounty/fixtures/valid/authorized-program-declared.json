@@ -1,0 +1,13 @@
+{
+  "program_platform": "HackerOne",
+  "program_url": "https://example-program.example/policy",
+  "asset": "api.example-program.example",
+  "claimed_scope": "api.example-program.example listed in program assets",
+  "intended_activity": "Non-destructive review of publicly documented API behavior within program rules",
+  "authorization_evidence": "Program policy page dated YYYY-MM-DD lists asset and permits security research within rules of engagement; researcher account eligible.",
+  "environment": "authorized_program",
+  "asset_explicitly_listed": true,
+  "activity_explicitly_permitted": true,
+  "uncertainty": false,
+  "note": "Synthetic example for training validators — not a claim of a real engagement"
+}
