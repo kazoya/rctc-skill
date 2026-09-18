@@ -136,6 +136,25 @@
         ".github/DISCUSSION_CATEGORY_GUIDE.md",
         "docs/SUPPORT_BLOCK.md"
       ]
+    },
+    {
+      "id": "coffee-pass",
+      "title": "Coffee Pass (supporters)",
+      "audience": [
+        "supporter",
+        "gift-coffee-friend",
+        "free-learner"
+      ],
+      "skills": [
+        "dev-agora-skill"
+      ],
+      "paths": [
+        "packages/coffee-pass/README.md",
+        "packages/coffee-pass/GITHUB_COMMENT_KIT.md",
+        "packages/coffee-pass/SUPPORTERS.md",
+        "docs/SUPPORT_BLOCK.md"
+      ],
+      "notes": "Early thanks for BMC supporters via receipt id; never collect card numbers; optional GitHub comments"
     }
   ]
 }

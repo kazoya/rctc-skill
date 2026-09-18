@@ -53,3 +53,7 @@ Optional support (maintainer-configured):
 كل الاحترام لكم جميعاً.
 
 — Suhaib / @kazoya
+
+
+### Coffee Pass
+Supporters who buy a coffee can claim a gentle early-thanks lane via receipt id (never card numbers). See `packages/coffee-pass/`. Optional GitHub comments welcome — first sample points to https://suhib-ai-delivery-portfolio.vercel.app/en

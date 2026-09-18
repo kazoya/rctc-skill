@@ -16,3 +16,7 @@ Optional support (maintainer-configured):
 - Portfolio: [suhib-ai-delivery-portfolio](https://suhib-ai-delivery-portfolio.vercel.app/en)
 
 No guilt language. No fabricated scarcity. No artificial engagement.
+
+
+## Coffee Pass
+Paid supporters (Buy Me a Coffee receipt id): see `packages/coffee-pass/` for thank-you levels and the optional GitHub comment kit. Never share card numbers — gift a coffee or use the free GitHub path.

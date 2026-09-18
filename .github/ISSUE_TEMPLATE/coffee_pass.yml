@@ -1,0 +1,52 @@
+name: Coffee Pass
+description: Claim early-thanks access after buying a coffee (receipt id only — never card numbers)
+title: "[Coffee Pass]: "
+labels: ["coffee-supporter"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        شكراً لدعمك ☕
+        **لا تلصق رقم بطاقة ولا CVV.** فقط رقم إيصال / Order ID.
+        Buy Me a Coffee: https://buymeacoffee.com/Asrawi612
+  - type: input
+    id: receipt
+    attributes:
+      label: Receipt / Order ID
+      description: From your Buy Me a Coffee or PayPal confirmation email
+    validations:
+      required: true
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Payment channel
+      options:
+        - Buy Me a Coffee
+        - PayPal
+        - Other (explain)
+    validations:
+      required: true
+  - type: dropdown
+    id: level_ask
+    attributes:
+      label: Which thank-you level are you hoping for?
+      options:
+        - L1 Coffee Friend
+        - L2 Table Host (I also shared a recipe/example)
+        - L3 Agora Builder (I also sent a skill/PR)
+    validations:
+      required: true
+  - type: textarea
+    id: gift_note
+    attributes:
+      label: Helping a classmate?
+      description: If you bought a coffee as a gift for a learner, say so here. Never share card numbers — buy them a coffee instead.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: I did not paste any card number, CVV, or password
+          required: true
+        - label: I understand GitHub comments are optional (a kind request, not an order)
+          required: true

@@ -50,3 +50,9 @@ See `packages/catalog.json` (machine-readable) and below (human).
 - PayPal: innervision2016@gmail.com
 - https://suhib-ai-delivery-portfolio.vercel.app/en
 - Star: https://github.com/kazoya/rctc-skill
+
+
+### 8. `coffee-pass` — شرف داعمي القهوة
+**For:** من دفعوا BMC، ومن يهدي قهوة لزميل، ومن يتعلم مجاناً عبر GitHub  
+**Paths:** `packages/coffee-pass/`  
+**Rule:** لا مشاركة لأرقام البطاقات — هدية قهوة أو مسار مجاني فقط.
