@@ -1,0 +1,14 @@
+{
+  "name": "rctc-skill",
+  "private": true,
+  "description": "RCTC skill repository — integrity scripts only at root",
+  "scripts": {
+    "validate:repo": "node scripts/validate-repo.js",
+    "registry:generate": "node scripts/generate-canonical-registry.js",
+    "registry:check": "node scripts/generate-canonical-registry.js --check",
+    "test:integrity": "node scripts/integrity/run-fixture-tests.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

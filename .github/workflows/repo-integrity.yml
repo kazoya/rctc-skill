@@ -1,0 +1,29 @@
+name: repo-integrity
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Registry check (no drift)
+        run: npm run registry:check
+
+      - name: Validate repository
+        run: npm run validate:repo
+
+      - name: Integrity fixture tests
+        run: npm run test:integrity

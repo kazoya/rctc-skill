@@ -20,3 +20,6 @@ docs/*HANDOFF*.zip
 docs/growth-packs/*.zip
 .rctc-engine/
 *.log
+
+scripts/integrity/_tmp/
+
