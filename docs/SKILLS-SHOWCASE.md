@@ -26,6 +26,7 @@
 | تحسين مستمر لمسارات مصرح بها | [Continuous Improving](../continuous-improving/) | Focused3 + Safe Forward |
 | تجهيز المشروع لاستشارة وكيل خارجي ثم مراجعة الحزمة العائدة | [Update-Zip Skill](../update-zip-skill/) | Safe Forward + Focused3 |
 | تحويل الطلب المبهم إلى تكليف واضح | [RCTC Method](../SKILL.md) | أي مهارة تنفيذية لاحقة |
+| تشغيل أدوات وخدمات من WhatsApp/Telegram/Web ضمن صلاحيات وموافقات واضحة | [WhatsApp Agent Orchestrator](../whatsapp-agent-orchestrator-super-skill/) | Safe Forward + Focused3 + Master Brain |
 
 ---
 
@@ -119,6 +120,16 @@ web-marketing-and-personal-builder
 [افتح RCTC](../SKILL.md)
 
 ---
+
+## 11. WhatsApp Agent Orchestrator — Super Skill
+
+**حوّل المحادثة إلى واجهة عمليات AI محكومة، لا مجرد chatbot.**
+
+تستقبل أمراً من WhatsApp أو Telegram أو Web، توحّد الرسالة والهوية، تصنّف المخاطر، تختار أداة محدودة الصلاحية مثل البريد أو التقويم أو GitHub أو CRM، تمر عبر بوابة موافقة عند الحاجة، ثم تتحقق من نتيجة المزود وتسجل إيصال تدقيق قبل الرد. تدعم n8n وMCP وواجهات API ولا تربط التصميم بمزود واحد.
+
+**قوتها الحقيقية:** الفصل بين فهم الذكاء الاصطناعي وبين التفويض والتنفيذ. لذلك يمكن إعادة استخدامها كطبقة تحكم لمقاصة، ريشة 360، Factory AI OS، وMaster Brain دون إعطاء النموذج مفاتيح مفتوحة للأنظمة.
+
+[افتح المهارة](../whatsapp-agent-orchestrator-super-skill/)
 
 ## وصفات جاهزة
 

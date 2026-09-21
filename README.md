@@ -42,6 +42,7 @@ It is designed to govern complex, high-fidelity AI and software projects through
 | إدارة عدة مشاريع وعقول هندسية | [Start Skill](start-skill/) + [Portfolio Commander](portfolio-commander/) + [Master Brain](master-brain/) |
 | تحسين دوري مبني على النتائج | [Continuous Improving](continuous-improving/) |
 | مساعدة PDF دلالية (JavaHelp-style) + مهارات Cursor للمشروع | [APCA SmartHelp](apca-smarthelp/) + [AI Portability Advisor](ai-portability-advisor/) |
+| تحويل WhatsApp إلى واجهة عمليات AI محكومة تربط البريد والتقويم وGitHub وCRM وn8n | [WhatsApp Agent Orchestrator](whatsapp-agent-orchestrator-super-skill/) |
 | عقل ماستر وربط الأدوار بين المشاريع | [Master Brain](master-brain/) ↔ مشروع `C:\\master` |
 | باقات مترابطة لـ Cursor/Claude/Codex (أقل توكينز) | [Skill Packages](packages/) |
 | مجتمع مبرمجين للتعلم والنقاش (StackOverflow-like + AI) | [Dev Agora Skill](dev-agora-skill/) |
@@ -314,6 +315,7 @@ rctc-skill/
 
 ### Sibling skills (this repo)
 
+- 🤖 [WhatsApp Agent Orchestrator](whatsapp-agent-orchestrator-super-skill/) — turn WhatsApp/Telegram/web chat into a governed AI operations interface with identity, risk classes, approval gates, bounded tools, provider verification, and audit receipts; n8n/MCP/API friendly.
 - 🌐 [Web Marketing & Personal Builder](web_marketing_and_personal-builder-super-skill/) — turn a URL, company brief, or personal bio into an Arabic RTL or bilingual marketing platform, then build, verify, and prepare it for GitHub/Vercel delivery.
 - 🛡️ [Safe Forward Execution](safe-forward-execution/) — continue beyond planning through authorized, safe, reversible, and verified execution; co-designed and forward-tested with GPT-5.6 Sol Medium.
 - 📦 [Update-Zip Skill](update-zip-skill/) — مهارة التطوير والضغط: closed improvement loop for any project — harvest measured facts, pack them with binding CONSTRAINTS and a literal ASK into one zip, consult an external agent (ChatGPT/Claude/Codex), then ingest the returned zip under gates. Profiles: `risha360-social` (default), `portfolio-site` (review branch + `npm run verify`), `web-project` (any repo with `package.json`; review-only `DIFF-REPORT.md`, nothing written to the project). Documented run: World Cup Fintech Festival, 2026-09-17.
