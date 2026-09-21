@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-18",
-  "count": 41,
+  "count": 42,
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "skills": [
     {
@@ -289,6 +289,13 @@
       "description": "Super-skill that builds a professional Arabic/RTL (or bilingual) marketing website from minimal info about a person, company, or factory — including ops improvement and automation concepts — then ships GitHub + Vercel with near-zero handholding. Pairs with safe-forward-execution and focused3-agentic-phases. Use when the user says موقع تسويقي, تصور رقمي, مصنع, personal site, brand site, muqasa-jo style, web-marketing-and-personal-builder, or pastes only a URL / short bio.",
       "path": "web_marketing_and_personal-builder-super-skill/SKILL.md",
       "folder": "web_marketing_and_personal-builder-super-skill"
+    },
+    {
+      "id": "whatsapp-agent-orchestrator-super-skill",
+      "name": "whatsapp-agent-orchestrator-super-skill",
+      "description": "Build or extend a governed conversational AI operations layer where WhatsApp, Telegram, web chat, or another channel can invoke an AI orchestrator that selects approved tools such as email, calendar, GitHub, CRM, documents, databases, and n8n workflows.",
+      "path": "whatsapp-agent-orchestrator-super-skill/SKILL.md",
+      "folder": "whatsapp-agent-orchestrator-super-skill"
     }
   ]
 }
