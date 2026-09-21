@@ -1,5 +1,8 @@
 # Master Brain — ماستر برين
 
+> [!IMPORTANT]
+> **Repository snapshot notice:** this bundled Master Brain is the repository snapshot declared by `master-brain/package.json` (currently 1.0.0 / 19-tool generation). Do not infer that it is the newest private/local Master Brain runtime. Consumers that need newer operations must verify the source/version explicitly before claiming parity.
+
 **منصة متابعة المشاريع والعقل الهندسي الواعي** — مجلد لكل مشروع، عقل هندسي (المنجز / النتائج / الجاري / التالي / التحسينات / مقترحات منسوبة للنموذج)، تقارير بالفترات وطبيعة التقدّم (HTML → PDF، Excel، Markdown، JSON)، وقناة مباشرة مع **Claude Code** و**Claude Desktop** عبر MCP والطرفية.
 
 **Portfolio tracker & conscious engineering mind** — a folder per project, an engineering brain per project, period/progress reports, and a native MCP + CLI channel for Claude Code / Claude Desktop. **Zero npm dependencies** — runs with `node` alone (≥ 18).
