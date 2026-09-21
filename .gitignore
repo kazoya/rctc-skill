@@ -20,3 +20,6 @@ docs/*HANDOFF*.zip
 docs/growth-packs/*.zip
 .rctc-engine/
 *.log
+
+# Generated skill-factory artifacts (do not add new drafts)
+skill-factory/out/

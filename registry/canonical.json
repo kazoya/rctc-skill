@@ -3,10 +3,10 @@
   "generated_at": "2026-09-18T21:48:25.783Z",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 41,
-    "canonical_capabilities": 24,
+    "discovered_skill_records": 42,
+    "canonical_capabilities": 25,
     "multi_install_capabilities": 10,
-    "public_claim": "24 canonical capabilities (41 discovered installations/copies — not independent skills)"
+    "public_claim": "25 canonical capabilities (42 discovered installations/copies — not independent skills)"
   },
   "capabilities": [
     {
@@ -583,6 +583,25 @@
       "installation_count": 2,
       "ambiguity": "multi_install_ok",
       "executable_default": "web_marketing_and_personal-builder-super-skill/SKILL.md"
+    },
+    {
+      "canonical_id": "whatsapp-agent-orchestrator-super-skill",
+      "kind": "canonical_capability",
+      "title": "whatsapp-agent-orchestrator-super-skill",
+      "description": "Governed conversational AI operations layer for WhatsApp/Telegram/web with bounded tools, approvals, provider verification and audit.",
+      "primary_installation_id": "whatsapp-agent-orchestrator-super-skill::0",
+      "installations": [
+        {
+          "installation_id": "whatsapp-agent-orchestrator-super-skill::0",
+          "path": "whatsapp-agent-orchestrator-super-skill/SKILL.md",
+          "folder": "whatsapp-agent-orchestrator-super-skill",
+          "kind": "primary_tree",
+          "description_snippet": "Governed conversational AI operations layer for WhatsApp/Telegram/web with bounded tools and approvals."
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "whatsapp-agent-orchestrator-super-skill/SKILL.md"
     }
   ]
 }

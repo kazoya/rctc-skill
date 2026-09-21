@@ -1,0 +1,20 @@
+name: Skill integrity
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate skills and repository hygiene
+        run: node scripts/validate-skills.js
+      - name: Rebuild discovery registry
+        run: node skill-factory/scripts/build-registry.js
+      - name: Ensure generated registry is committed
+        run: git diff --exit-code -- registry/skills.json

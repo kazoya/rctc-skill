@@ -1,0 +1,15 @@
+{
+  "schema": "rctc.skill-manifest.v1",
+  "id": "whatsapp-agent-orchestrator-super-skill",
+  "entry": "SKILL.md",
+  "required": [
+    "SKILL.md",
+    "README.md",
+    "ARCHITECTURE.md",
+    "PROJECT-RECIPES.md"
+  ],
+  "recommended_siblings": [
+    "safe-forward-execution",
+    "focused3-agentic-phases"
+  ]
+}

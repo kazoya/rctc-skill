@@ -1,0 +1,18 @@
+{
+  "schema": "rctc.skill-manifest.v1",
+  "id": "focused3-agentic-phases",
+  "entry": "SKILL.md",
+  "required": [
+    "SKILL.md",
+    "EXECUTION_PROTOCOL.md",
+    "AGENT_ROLES.md",
+    "PROMPT_FACTORY.md",
+    "QUALITY_GATES.md",
+    "EVIDENCE_PROTOCOL.md",
+    "FAILURE_PROTOCOL.md",
+    "templates/task-agent.md",
+    "templates/completion-report.md",
+    "examples/feature-task.md"
+  ],
+  "note": "Consumers should fail loudly when required files are absent instead of silently degrading."
+}

@@ -54,7 +54,7 @@ const skills = files.map((fp) => {
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 const payload = {
-  generated_at: new Date().toISOString().slice(0, 10),
+  generated_at: fs.existsSync(OUT) ? (JSON.parse(fs.readFileSync(OUT, 'utf8')).generated_at || 'unknown') : new Date().toISOString().slice(0, 10),
   count: skills.length,
   composition_law: 'Reuse -> Compose -> Extend -> Generate New',
   skills
