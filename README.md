@@ -302,6 +302,9 @@ rctc-skill/
 ├── 🧭 portfolio-commander/     ← Multi-project registry & focus rules
 ├── 🔁 continuous-improving/    ← Measured improvement loops
 ├── 🔬 focused3-agentic-phases/ ← THINK → EXECUTE → PROVE
+├── 🎯 focus-council/            ← expert perspectives → jury → synthesis
+├── 🔊 local-ssml-voice-cost-optimizer/
+│                               ← Arabic prep → W3C SSML → local preview/cache → premium adapter
 ├── 🛡️ safe-forward-execution/ ← Safe, reversible execution after planning
 ├── 📦 update-zip-skill/        ← Harvest → pack → consult → ingest (profiles)
 ├── 🌐 web_marketing_and_personal-builder-super-skill/
@@ -324,9 +327,26 @@ rctc-skill/
 - 🧭 [Portfolio Commander](portfolio-commander/) — scan, register, prioritize, and govern multi-project work.
 - 🧠 [Master Brain](master-brain/) — zero-dependency Node.js control platform with dashboard, reports, MCP tools, and CLI.
 - 🔬 [Focused3 Agentic Phases](focused3-agentic-phases/) — THINK → EXECUTE → PROVE with evidence gates.
+- 🎯 [Focus Council](focus-council/) — concentrate difficult answers with simulated expert perspectives, independent candidates, a neutral jury, sensitivity analysis, and one final synthesis.
+- 🔊 [Local SSML Voice Cost Optimizer](local-ssml-voice-cost-optimizer/) — Arabic-first local preprocessing + W3C SSML IR + preview/cache + selective premium TTS adapters such as Narakeet.
 - 🔁 [Continuous Improving](continuous-improving/) — measured improvement loops for authorized engineering and research tracks.
 
 **[Explore the complete skill showcase and combination recipes →](docs/SKILLS-SHOWCASE.md)**
+
+### 🐕 Dogfooded pair — المهارتان أكلتا من طبختهما
+
+`Focus Council` was used to compare architectures for the voice-cost skill; the winning local-first
+SSML/cache architecture then fed its FinOps lesson back into Focus Council's QUICK/STANDARD/DEEP modes.
+
+```text
+Focus Council ──selects──▶ Local SSML Voice Cost Optimizer
+      ▲                              │
+      └──────── cost discipline ◀────┘
+```
+
+The public MIT core stays free. If this pair saves you time, a ⭐ Star, useful issue/example, or optional
+☕ coffee helps; community/supporter recognition starts at
+[`focus_access.yml`](.github/ISSUE_TEMPLATE/focus_access.yml).
 
 ---
 
