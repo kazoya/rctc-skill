@@ -1,12 +1,12 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-09-18T21:48:25.783Z",
+  "generated_at": "2026-09-23T20:00:00.000Z",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 41,
-    "canonical_capabilities": 24,
+    "discovered_skill_records": 43,
+    "canonical_capabilities": 26,
     "multi_install_capabilities": 10,
-    "public_claim": "24 canonical capabilities (41 discovered installations/copies — not independent skills)"
+    "public_claim": "26 canonical capabilities (43 discovered installations/copies — not independent skills)"
   },
   "capabilities": [
     {
@@ -228,6 +228,25 @@
       "executable_default": "portfolio-commander/skills/flutter-dart-app/SKILL.md"
     },
     {
+      "canonical_id": "focus-council",
+      "kind": "canonical_capability",
+      "title": "focus-council",
+      "description": "Structured simulated expert deliberation with independent proposals, cross-critique, neutral jury scoring, sensitivity analysis and final synthesis. Never represents simulated experts or customers as real.",
+      "primary_installation_id": "focus-council::0",
+      "installations": [
+        {
+          "installation_id": "focus-council::0",
+          "path": "focus-council/SKILL.md",
+          "folder": "focus-council",
+          "kind": "primary_tree",
+          "description_snippet": "Structured simulated expert deliberation, neutral jury scoring, sensitivity analysis and final synthesis."
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "focus-council/SKILL.md"
+    },
+    {
       "canonical_id": "focused3-agentic-phases",
       "kind": "canonical_capability",
       "title": "focused3-agentic-phases",
@@ -259,6 +278,25 @@
       "installation_count": 3,
       "ambiguity": "multi_install_ok",
       "executable_default": "focused3-agentic-phases/SKILL.md"
+    },
+    {
+      "canonical_id": "local-ssml-voice-cost-optimizer",
+      "kind": "canonical_capability",
+      "title": "local-ssml-voice-cost-optimizer",
+      "description": "Arabic-first local TTS preprocessing and cost optimization using W3C SSML as local IR, preview/cache, changed-only routing and optional premium-provider adapters.",
+      "primary_installation_id": "local-ssml-voice-cost-optimizer::0",
+      "installations": [
+        {
+          "installation_id": "local-ssml-voice-cost-optimizer::0",
+          "path": "local-ssml-voice-cost-optimizer/SKILL.md",
+          "folder": "local-ssml-voice-cost-optimizer",
+          "kind": "primary_tree",
+          "description_snippet": "Arabic-first local preprocessing, W3C SSML IR, preview/cache and selective premium-provider routing."
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "local-ssml-voice-cost-optimizer/SKILL.md"
     },
     {
       "canonical_id": "logged-in-browser",
