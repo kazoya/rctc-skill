@@ -8,5 +8,7 @@ Procedure:
 3. If stuck, query `registry/skills.json` by name/tag — still one skill at a time.
 4. Use `skill-factory` only after composition fails.
 5. No auto-git-push of new public skill repos without explicit owner approval text.
+6. Expert-panel / compare-and-select requests → `decision-focus`.
+7. Arabic TTS / SSML / premium voice cost requests → `arabic-voice-cost`.
 
 Default for "I want to learn programming": `beginner-coding-path`.

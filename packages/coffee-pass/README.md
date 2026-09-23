@@ -48,3 +48,15 @@ Phase 2 العامة تبقى مفتوحة للجميع عبر الريبو؛ ا
 
 بقدونس أو عادي :]
 كل الاحترام لكم جميعاً.
+
+
+## Focus Council
+
+`focus-council` itself remains public MIT.
+
+For community/supporter recognition and optional early experiments:
+- **L0 Explorer:** Star or useful GitHub contribution can use `.github/ISSUE_TEMPLATE/focus_access.yml`
+- **L1+ Coffee Friend:** link an existing Coffee Pass / verified receipt issue
+- no card data, no fake star verification, no DRM claim
+
+This keeps the free learning path intact while giving supporters visible thanks and a clean place to request deeper presets.

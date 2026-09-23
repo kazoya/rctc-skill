@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-18",
-  "count": 41,
+  "generated_at": "2026-09-23",
+  "count": 43,
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "skills": [
     {
@@ -102,6 +102,13 @@
       "folder": "portfolio-commander/skills/flutter-dart-app"
     },
     {
+      "id": "focus-council",
+      "name": "focus-council",
+      "description": "High-signal answer focusing through simulated expert deliberation and a neutral jury. Use when a decision, architecture, strategy, recommendation, or difficult prompt benefits from multiple domain perspectives: frame the problem, assemble relevant expert roles, generate independent candidates, cross-critique, shortlist, score with neutral evaluator personas, then synthesize one recommendation with evidence, trade-offs, confidence and a runner-up. Never present simulated experts, customers, votes, or testimonials as real.",
+      "path": "focus-council/SKILL.md",
+      "folder": "focus-council"
+    },
+    {
       "id": "focused3-agentic-phases",
       "name": "focused3-agentic-phases",
       "description": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert supervision, independent verification, and hard evidence. Use when implementing, reviewing, or sequencing production work; when the user says focused3AgenticPhases, agentic cell, THINK EXECUTE PROVE, or NextScaffold; and for OmniAgent / C:\\airealpro\\chatbase engineering. Do not use for copy edits, status questions, or dumping large unscoped code.",
@@ -121,6 +128,13 @@
       "description": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert supervision, independent verification, and hard evidence. Use when implementing, reviewing, or sequencing production work; when the user says focused3AgenticPhases, agentic cell, THINK EXECUTE PROVE, or NextScaffold; and for OmniAgent / C:\\airealpro\\chatbase engineering. Do not use for copy edits, status questions, or dumping large unscoped code.",
       "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
       "folder": "master-brain/skills/vendor/focused3-agentic-phases"
+    },
+    {
+      "id": "local-ssml-voice-cost-optimizer",
+      "name": "local-ssml-voice-cost-optimizer",
+      "description": "Local-first Arabic text-to-speech quality and cost optimization. Use when building Arabic TTS, SSML, voice-over, Narakeet or another premium-provider workflow where preprocessing, punctuation, context, optional diacritization, segmentation, preview, caching and W3C SSML should happen locally so paid synthesis is reserved for final/high-value segments. Provider-neutral; never claim external API usage is free when it is not.",
+      "path": "local-ssml-voice-cost-optimizer/SKILL.md",
+      "folder": "local-ssml-voice-cost-optimizer"
     },
     {
       "id": "logged-in-browser",

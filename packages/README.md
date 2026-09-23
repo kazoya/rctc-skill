@@ -62,3 +62,14 @@ See `packages/catalog.json` (machine-readable) and below (human).
 **DNA:** discover→inspect→reason→design→build→verify→package→publish
 **Recipes:** personal / delivery portfolio / factory / company / product / evidence portal
 **Compose only** — not a god-skill. Proving grounds: Portfolio + factory-sales-concept; protect Project1/Master.
+
+
+### 10. `decision-focus` — مجلس التركيز قبل القرار
+**Chain:** `rctc-method` → `focus-council` → `focused3-agentic-phases`  
+**Outcome:** مشكلة → زوايا خبرة محاكاة → حلول مستقلة → Jury محايد → توصية مركزة → إثبات عند التنفيذ  
+**Truth rule:** لا نعرض الشخصيات أو “الزبائن” على أنهم أشخاص حقيقيون.
+
+### 11. `arabic-voice-cost` — صوت عربي أعلى جودة بأقل استهلاك مدفوع
+**Chain:** `focus-council` → `local-ssml-voice-cost-optimizer` → `focused3-agentic-phases`  
+**Outcome:** نص عربي → تنسيق/سياق/تشكيل اختياري محلي → W3C SSML IR → Preview محلي → Cache → Premium فقط للمقاطع اللازمة  
+**Dogfooding:** تم اختيار هذه المعمارية عبر Focus Council، ثم أعادت مبادئ FinOps تحسين QUICK/STANDARD/DEEP في Focus Council.

@@ -177,6 +177,49 @@
         "digital-presence-factory/recipes/index.json"
       ],
       "notes": "Composable production DNA; Project1/Master proving grounds stay protected"
+    },
+    {
+      "id": "decision-focus",
+      "title": "Focus Council — concentrated decision quality",
+      "audience": [
+        "engineer",
+        "founder",
+        "researcher",
+        "decision-maker"
+      ],
+      "skills": [
+        "rctc-method",
+        "focus-council",
+        "focused3-agentic-phases"
+      ],
+      "paths": [
+        "SKILL.md",
+        "focus-council/SKILL.md",
+        "focused3-agentic-phases/SKILL.md"
+      ],
+      "notes": "Simulated expert perspectives -> shortlist -> neutral jury -> synthesis. No fake customers or testimonials."
+    },
+    {
+      "id": "arabic-voice-cost",
+      "title": "Arabic voice — local-first SSML cost optimizer",
+      "audience": [
+        "arabic-content",
+        "tts-builder",
+        "voice-product",
+        "finops"
+      ],
+      "skills": [
+        "focus-council",
+        "local-ssml-voice-cost-optimizer",
+        "focused3-agentic-phases"
+      ],
+      "paths": [
+        "focus-council/SKILL.md",
+        "local-ssml-voice-cost-optimizer/SKILL.md",
+        "local-ssml-voice-cost-optimizer/PROVIDER_NARAKEET.md",
+        "focused3-agentic-phases/SKILL.md"
+      ],
+      "notes": "Dogfooded pair: local Arabic prep + W3C SSML IR + cache + selective premium provider rendering."
     }
   ]
 }
