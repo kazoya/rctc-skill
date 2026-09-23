@@ -26,6 +26,8 @@
 | تحسين مستمر لمسارات مصرح بها | [Continuous Improving](../continuous-improving/) | Focused3 + Safe Forward |
 | تجهيز المشروع لاستشارة وكيل خارجي ثم مراجعة الحزمة العائدة | [Update-Zip Skill](../update-zip-skill/) | Safe Forward + Focused3 |
 | تحويل الطلب المبهم إلى تكليف واضح | [RCTC Method](../SKILL.md) | أي مهارة تنفيذية لاحقة |
+| تركيز أفضل إجابة عبر خبراء متنوعين ثم Jury محايد | [Focus Council](../focus-council/) | Focused3 عند الانتقال من القرار إلى التنفيذ |
+| تحسين جودة TTS العربي وتقليل الاستدعاءات المدفوعة | [Local SSML Voice Cost Optimizer](../local-ssml-voice-cost-optimizer/) | Focus Council + Focused3 |
 | تشغيل أدوات وخدمات من WhatsApp/Telegram/Web ضمن صلاحيات وموافقات واضحة | [WhatsApp Agent Orchestrator](../whatsapp-agent-orchestrator-super-skill/) | Safe Forward + Focused3 + Master Brain |
 
 ---
@@ -131,6 +133,29 @@ web-marketing-and-personal-builder
 
 [افتح المهارة](../whatsapp-agent-orchestrator-super-skill/)
 
+## 12. Focus Council
+
+**قبل أن تختار الحل، اصنع خلافاً منظماً ثم ركّز النتيجة.**
+
+يشكّل زوايا خبرة محاكاة مرتبطة مباشرة بالمشكلة، يجعلها تقترح حلولاً مستقلة وتنتقد بعضها،
+ثم يستخدم لجنة تقييم محايدة بأوزان معلنة ليصل إلى توصية واحدة، Runner-up، وحساسية القرار.
+لا يختلق أشخاصاً أو عملاء أو Testimonials.
+
+[افتح المهارة](../focus-council/)
+
+## 13. Local SSML Voice Cost Optimizer
+
+**قم بالتفكير اللغوي محلياً وادفع فقط للصوت الذي يحتاج Premium.**
+
+يجهز العربية محلياً (سياق، ترقيم، تطبيع، تشكيل اختياري، Lexicon)، يحول نية النطق إلى
+W3C SSML كطبقة وسيطة، يعاين محلياً، يعيد استخدام المقاطع من Cache، ثم يمرر فقط المقاطع
+المعتمدة/المتغيرة/الصعبة إلى Adapter مثل Narakeet أو أي مزود آخر.
+
+**سابقة Dogfooding داخل الريبو:** Focus Council اختار هذه المعمارية من عدة بدائل، ومبادئ
+خفض التكلفة أعادت بدورها تحسين أوضاع QUICK/STANDARD/DEEP في Focus Council.
+
+[افتح المهارة](../local-ssml-voice-cost-optimizer/)
+
 ## وصفات جاهزة
 
 ### إنشاء موقع شركة أو علامة شخصية
@@ -162,6 +187,19 @@ Start Skill → Portfolio Commander → Master Brain
 ```text
 Continuous Improving → Update-Zip Skill
                      → Safe Forward Execution → Focused3 proof gates
+```
+
+### قرار تقني عالي القيمة
+
+```text
+RCTC → Focus Council → Focused3 → Safe Forward Execution
+```
+
+### صوت عربي محلي-أولاً
+
+```text
+Focus Council → Local SSML Voice Cost Optimizer
+              → Focused3 proof gates
 ```
 
 ## معيار الصدق
