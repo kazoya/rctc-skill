@@ -1,7 +1,6 @@
 name: Focus Council — community/supporter recognition
 description: Claim L0 community recognition or Coffee Pass-linked early Focus experiments
 title: "[Focus Council]: "
-labels: ["focus-council"]
 body:
   - type: markdown
     attributes:
