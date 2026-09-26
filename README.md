@@ -53,6 +53,7 @@ It is designed to govern complex, high-fidelity AI and software projects through
 | مساعدة PDF دلالية (JavaHelp-style) + مهارات Cursor للمشروع | [APCA SmartHelp](apca-smarthelp/) + [AI Portability Advisor](ai-portability-advisor/) |
 | تحويل WhatsApp إلى واجهة عمليات AI محكومة تربط البريد والتقويم وGitHub وCRM وn8n | [WhatsApp Agent Orchestrator](whatsapp-agent-orchestrator-super-skill/) |
 | عقل ماستر وربط الأدوار بين المشاريع | [Master Brain](master-brain/) ↔ مشروع `C:\\master` |
+| تطبيق المهارات المفتوحة على مستوى محدد من مشروع master | [Master Apply Packs](master-apply-packs/risha-pro-talents/) — حزمة ريشة برو للمواهب (`risha360.com`) |
 | باقات مترابطة لـ Cursor/Claude/Codex (أقل توكينز) | [Skill Packages](packages/) |
 | مجتمع مبرمجين للتعلم والنقاش (StackOverflow-like + AI) | [Dev Agora Skill](dev-agora-skill/) |
 

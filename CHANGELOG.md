@@ -1,5 +1,20 @@
 # Changelog
 
+## [Unreleased] — Master Apply Pack: Risha Pro talents level
+
+### Added
+- `master-apply-packs/risha-pro-talents/` — an executable pack that applies the open skill suite to one declared level of the local `E:\master` project (Risha Pro talents marketing, `risha360.com`) instead of dumping the whole catalogue on it.
+- `APPLY-PLAN.md` — four waves (governance → marketing surface → channels → measurement), each row naming skill, output, entry command, human gate, and acceptance evidence; four skills are explicitly excluded from this level as a decision, not an omission.
+- `LEVELS.md` — levels register: the active level is fixed, the other three are left for the owner rather than invented, plus a no-leak rule and a cross-level request queue.
+- `scripts/apply-risha-pro-level.mjs` — Node applier: dry-run by default, never deletes, never silently overwrites (`--force` required), writes `APPLY-MANIFEST.json` of everything it touched, exits non-zero on a bad path. PowerShell and `.cmd` wrappers forward to the same tested logic.
+- `scripts/validate-pack.js` — pack self-check (required files, capability-card keys and gates, composed skills exist in this repo, RCTC shape of every prompt, relative links, and a guard that the applier keeps every write behind `--apply`); wired into the expertise CI workflow.
+- Five copy-ready RCTC briefs in `prompts/` for bootstrap, talents site build, social improvement cycle, safe WhatsApp slice, and the measured improvement loop.
+- `capabilities/risha-pro-talents-level.json` — capability card in the repo format, ready to register in `E:\master\files\capabilities\`.
+
+### Notes
+- Nothing was written to `E:\master` from the authoring session; the pack is prepared to run on the owner's machine.
+- Brand constraints documented for `risha360-social` belong to the legal account and are referenced, not assumed, for the talents level.
+
 ## [Unreleased] — Focus Council + Local SSML Voice Cost Optimizer
 
 ### Added

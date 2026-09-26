@@ -9,6 +9,7 @@ on:
       - "registry/**"
       - "packages/**"
       - "tracks/bug-bounty/**"
+      - "master-apply-packs/**"
       - ".github/workflows/validate-expertise.yml"
   pull_request:
     paths:
@@ -18,6 +19,7 @@ on:
       - "registry/**"
       - "packages/**"
       - "tracks/bug-bounty/**"
+      - "master-apply-packs/**"
       - ".github/workflows/validate-expertise.yml"
 
 permissions:
@@ -35,6 +37,8 @@ jobs:
         run: node htpaap/scripts/validate-sources.mjs htpaap/references/sources.json
       - name: Validate WEHM source map
         run: node wehm/scripts/validate-sources.mjs wehm/references/sources.json
+      - name: Validate master apply packs
+        run: node master-apply-packs/risha-pro-talents/scripts/validate-pack.js
       - name: Validate ethical training track
         run: node tracks/bug-bounty/scripts/validate-track.js
       - name: Verify registry and package integration

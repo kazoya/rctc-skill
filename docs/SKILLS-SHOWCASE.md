@@ -29,6 +29,7 @@
 | تركيز أفضل إجابة عبر خبراء متنوعين ثم Jury محايد | [Focus Council](../focus-council/) | Focused3 عند الانتقال من القرار إلى التنفيذ |
 | تحسين جودة TTS العربي وتقليل الاستدعاءات المدفوعة | [Local SSML Voice Cost Optimizer](../local-ssml-voice-cost-optimizer/) | Focus Council + Focused3 |
 | تشغيل أدوات وخدمات من WhatsApp/Telegram/Web ضمن صلاحيات وموافقات واضحة | [WhatsApp Agent Orchestrator](../whatsapp-agent-orchestrator-super-skill/) | Safe Forward + Focused3 + Master Brain |
+| تطبيق المهارات على مستوى محدد من مشروع master بأدلة وبوابات | [Master Apply Pack — ريشة برو للمواهب](../master-apply-packs/risha-pro-talents/) | RCTC + Safe Forward + Focused3 |
 
 ---
 

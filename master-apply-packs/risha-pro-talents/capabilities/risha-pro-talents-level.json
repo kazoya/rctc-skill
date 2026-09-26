@@ -1,0 +1,52 @@
+{
+  "id": "risha-pro-talents-level",
+  "kind": "canonical_capability",
+  "release_state": "draft",
+  "name": {
+    "en": "Risha Pro — talents marketing level",
+    "ar": "ريشة برو — المستوى التسويقي للمواهب"
+  },
+  "purpose": "Apply the open RCTC skill suite to the talents-marketing level of the master project (risha360.com) under explicit levels, gates, and evidence.",
+  "not": "Not a publishing, messaging, payment, or account-linking authority. Not a second source of truth for skill ids. Not a definition of the other three project levels.",
+  "path": "master-apply-packs/risha-pro-talents/",
+  "target_project": "E:\\master",
+  "active_level": "L2 — risha-pro-talents",
+  "levels_register": "master-apply-packs/risha-pro-talents/LEVELS.md",
+  "side_effect_level": "local_write_gated",
+  "network": false,
+  "uncertainty_behavior": "LABEL_AND_VERIFY",
+  "composition_law": "Reuse -> Compose -> Extend -> Generate New",
+  "composes": [
+    "rctc-method",
+    "start-skill",
+    "portfolio-commander",
+    "master-brain",
+    "safe-forward-execution",
+    "focused3-agentic-phases",
+    "web-marketing-and-personal-builder-super-skill",
+    "digital-presence-factory",
+    "whatsapp-agent-orchestrator-super-skill",
+    "update-zip-skill",
+    "local-ssml-voice-cost-optimizer",
+    "focus-council",
+    "continuous-improving",
+    "htpaap",
+    "wehm"
+  ],
+  "excluded_here": [
+    "apca-smarthelp",
+    "dev-agora-skill",
+    "factory-sales-concept",
+    "tracks/bug-bounty"
+  ],
+  "human_gates": [
+    "publish or deploy anything",
+    "send any real message to a talent",
+    "link or authorize any external account",
+    "write into a project level other than L2",
+    "ingest an external improvement package with --apply"
+  ],
+  "apply": "powershell -ExecutionPolicy Bypass -File master-apply-packs/risha-pro-talents/scripts/apply-risha-pro-level.ps1 -MasterPath E:\\master -SkillsPath E:\\rctc-skill",
+  "validate": "node master-apply-packs/risha-pro-talents/scripts/validate-pack.js",
+  "layer": 2
+}
