@@ -13,6 +13,9 @@
 
 ### Fixed
 - Prompt 00 assumed the applier had not run yet, so it told the agent to re-create the three level files the script writes; it now starts from the post-script state, verifies the manifest, and fills the memory files with real project state instead.
+- Prompt 01 carried a garbled sentence about who owns the project facts, which read as the opposite of the rule it was stating; it now says plainly that the agent has none of them. It also had no fallback when `risha360.com` is unreachable, so the agent could have filled the gap with plausible invention — it must now stop and ask.
+- Prompt 02 treated `uz cycle` as if it sent the package and listed "package sent" as an acceptance criterion, which would have let an agent perform an external send with no owner gate. `cycle` is now stated as harvest+pack only, sending is an explicit gate, `ingest` is shown with its required path argument, and sending without approval is defined as a gate failure.
+- Prompts 01–04 had no stated precondition, so they read as independently runnable; each now names where it sits in the order.
 - `--force` could wipe a `BRAIN.md`, `DECISIONS.md`, or `CROSS-LEVEL-REQUESTS.md` the owner had filled in. Those three are now protected even under `--force`; overwriting them requires the explicit `--force-memory` flag, so refreshing the pack after a pull no longer risks the owner's notes.
 
 ### Notes

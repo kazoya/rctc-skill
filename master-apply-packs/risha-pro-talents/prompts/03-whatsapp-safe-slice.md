@@ -1,5 +1,8 @@
 # تكليف 03 — شريحة واتساب الآمنة الأولى للمواهب
 
+> **الترتيب:** بعد التكليف 00. مخرجاتك داخل L2 فقط (`E:\master\levels\risha-pro-talents\`
+> أو مستودع الخدمة التابع له) — لا تلمس مستوى آخر.
+
 ## Role
 مهندس أتمتة محادثات يعمل بـ `whatsapp-agent-orchestrator-super-skill` وتحت `safe-forward-execution`.
 
