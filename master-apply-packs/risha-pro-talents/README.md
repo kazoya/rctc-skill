@@ -68,8 +68,16 @@ apply-risha-pro-level.cmd E:\master E:\rctc-skill --apply
 | المعاينة لا تكتب شيئاً | شغّل بلا `--apply` ثم `dir` — لا ملف جديد |
 | لا حذف إطلاقاً | لا يحتوي الكود على `rmSync` / `unlinkSync` — والمُحقِّق يفشل إن أُضيفت |
 | لا استبدال صامت | التشغيل الثاني يطبع `SKIP` لكل ملف قائم، ولا يكتب |
+| ذاكرتك محمية | `BRAIN.md` و`DECISIONS.md` و`CROSS-LEVEL-REQUESTS.md` لا يستبدلها حتى `--force`؛ محوها يحتاج `--force-memory` صراحةً |
 | كل ما كُتب مُوثَّق | `E:\master\levels\risha-pro-talents\APPLY-MANIFEST.json` |
 | فشل صريح لا صامت | مسار master خاطئ ⇦ رسالة عربية وخروج بالرمز 1 |
+
+**تحديث الحزمة بعد `git pull`:** أعد التشغيل بـ `--apply --force` — يُحدِّث الخطة والبوابات والتكاليف،
+ويترك ذاكرة المستوى كما كتبتها. ولتحديث ملف واحد فقط:
+
+```bat
+copy /Y E:\rctc-skill\master-apply-packs\risha-pro-talents\prompts\00-bootstrap-master-level.md E:\master\levels\risha-pro-talents\prompts\
+```
 
 للتحقق من سلامة الحزمة نفسها في أي وقت:
 

@@ -9,6 +9,8 @@
  *   - جفاف افتراضي: لا يُكتب شيء بلا --apply.
  *   - لا حذف إطلاقاً.
  *   - لا استبدال لملف قائم إلا مع --force.
+ *   - ملفات ذاكرة المستوى (BRAIN/DECISIONS/CROSS-LEVEL-REQUESTS) محمية حتى من --force،
+ *     لأنها تحمل عمل المالك؛ استبدالها يحتاج --force-memory صراحةً.
  *   - كل ما يُكتب يُسجَّل في levels/<level>/APPLY-MANIFEST.json
  */
 import fs from 'node:fs';
@@ -23,7 +25,7 @@ const C = process.stdout.isTTY
   : { dim: '', y: '', g: '', c: '', r: '', x: '' };
 
 function parseArgs(argv) {
-  const out = { master: null, skills: null, level: 'risha-pro-talents', apply: false, force: false };
+  const out = { master: null, skills: null, level: 'risha-pro-talents', apply: false, force: false, forceMemory: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--master' || a === '-m') out.master = argv[++i];
@@ -31,6 +33,7 @@ function parseArgs(argv) {
     else if (a === '--level') out.level = argv[++i];
     else if (a === '--apply') out.apply = true;
     else if (a === '--force') out.force = true;
+    else if (a === '--force-memory') { out.force = true; out.forceMemory = true; }
     else if (a === '--help' || a === '-h') out.help = true;
     else if (a.startsWith('--master=')) out.master = a.slice(9);
     else if (a.startsWith('--skills=')) out.skills = a.slice(9);
@@ -48,6 +51,7 @@ const HELP = `
   --level <id>          معرّف المستوى (افتراضي: risha-pro-talents)
   --apply               نفّذ فعلياً. بدونه: معاينة لا تكتب شيئاً
   --force               اسمح باستبدال ملف قائم (بلا حذف مجلدات)
+  --force-memory        اسمح باستبدال ملفات ذاكرة المستوى أيضاً — يمحو عملك المكتوب فيها
 `;
 
 const planned = [];
@@ -74,10 +78,20 @@ function ensureDir(dir) {
   if (opts.apply) fs.mkdirSync(dir, { recursive: true });
 }
 
+/** ملفات تحمل عمل المالك: لا يكفي --force لاستبدالها. */
+const MEMORY_FILES = new Set(['BRAIN.md', 'DECISIONS.md', 'CROSS-LEVEL-REQUESTS.md']);
+
 function writeOnce(file, content) {
-  if (fs.existsSync(file) && !opts.force) {
-    skip(file, 'موجود — أعد التشغيل مع --force للاستبدال');
-    return;
+  const isMemory = MEMORY_FILES.has(path.basename(file));
+  if (fs.existsSync(file)) {
+    if (isMemory && !opts.forceMemory) {
+      skip(file, 'ملف ذاكرة قائم — محمي حتى من --force؛ استخدم --force-memory إن أردت محوه');
+      return;
+    }
+    if (!opts.force) {
+      skip(file, 'موجود — أعد التشغيل مع --force للاستبدال');
+      return;
+    }
   }
   act('write', file);
   if (opts.apply) {

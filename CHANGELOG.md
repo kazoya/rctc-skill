@@ -11,6 +11,10 @@
 - Five copy-ready RCTC briefs in `prompts/` for bootstrap, talents site build, social improvement cycle, safe WhatsApp slice, and the measured improvement loop.
 - `capabilities/risha-pro-talents-level.json` — capability card in the repo format, ready to register in `E:\master\files\capabilities\`.
 
+### Fixed
+- Prompt 00 assumed the applier had not run yet, so it told the agent to re-create the three level files the script writes; it now starts from the post-script state, verifies the manifest, and fills the memory files with real project state instead.
+- `--force` could wipe a `BRAIN.md`, `DECISIONS.md`, or `CROSS-LEVEL-REQUESTS.md` the owner had filled in. Those three are now protected even under `--force`; overwriting them requires the explicit `--force-memory` flag, so refreshing the pack after a pull no longer risks the owner's notes.
+
 ### Notes
 - Nothing was written to `E:\master` from the authoring session; the pack is prepared to run on the owner's machine.
 - Brand constraints documented for `risha360-social` belong to the legal account and are referenced, not assumed, for the talents level.
