@@ -1,0 +1,55 @@
+name: Validate expertise layer
+
+on:
+  push:
+    paths:
+      - "htpaap/**"
+      - "wehm/**"
+      - "capabilities/**"
+      - "registry/**"
+      - "packages/**"
+      - "tracks/bug-bounty/**"
+      - ".github/workflows/validate-expertise.yml"
+  pull_request:
+    paths:
+      - "htpaap/**"
+      - "wehm/**"
+      - "capabilities/**"
+      - "registry/**"
+      - "packages/**"
+      - "tracks/bug-bounty/**"
+      - ".github/workflows/validate-expertise.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate HTPAAP source map
+        run: node htpaap/scripts/validate-sources.mjs htpaap/references/sources.json
+      - name: Validate WEHM source map
+        run: node wehm/scripts/validate-sources.mjs wehm/references/sources.json
+      - name: Validate ethical training track
+        run: node tracks/bug-bounty/scripts/validate-track.js
+      - name: Verify registry and package integration
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const skills = JSON.parse(fs.readFileSync('registry/skills.json', 'utf8')).skills;
+          const canonical = JSON.parse(fs.readFileSync('registry/canonical.json', 'utf8')).capabilities;
+          const packages = JSON.parse(fs.readFileSync('packages/catalog.json', 'utf8')).packages;
+          for (const id of ['htpaap', 'wehm']) {
+            if (!skills.some(x => x.id === id)) throw new Error(id + ' missing from skills registry');
+            if (!canonical.some(x => x.canonical_id === id)) throw new Error(id + ' missing from canonical registry');
+          }
+          for (const id of ['professional-programming-foundations', 'ethical-security-foundations']) {
+            if (!packages.some(x => x.id === id)) throw new Error(id + ' missing from package catalog');
+          }
+          NODE

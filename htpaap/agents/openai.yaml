@@ -1,0 +1,14 @@
+interface:
+  display_name: HTPAAP — Program As A Pro
+  short_description: Extract elite programming practice into repeatable work
+  default_prompt: Use $htpaap to map this codebase and apply one evidence-backed professional
+    engineering lesson.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

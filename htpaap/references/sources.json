@@ -1,0 +1,54 @@
+{
+  "schema": "rctc.expertise-source-map.v1",
+  "skill": "htpaap",
+  "layer": 1,
+  "generated_at": "2026-09-26",
+  "policy": "Primary-source map only; verify licenses before copying code or text.",
+  "sources": [
+    {
+      "rank": 1,
+      "id": "tigerbeetle",
+      "repository": "https://github.com/tigerbeetle/tigerbeetle",
+      "default_branch": "main",
+      "focus": ["invariants", "deterministic simulation", "failure-aware architecture"],
+      "anchors": ["docs/TIGER_STYLE.md", "docs/ARCHITECTURE.md"],
+      "relationship": "Sets the correctness-first lens used to study the remaining sources."
+    },
+    {
+      "rank": 2,
+      "id": "sqlite",
+      "repository": "https://github.com/sqlite/sqlite",
+      "default_branch": "master",
+      "focus": ["durability", "compatibility", "boundary testing"],
+      "anchors": ["README.md", "src/", "test/"],
+      "relationship": "Applies invariant thinking to a mature embedded data engine."
+    },
+    {
+      "rank": 3,
+      "id": "curl",
+      "repository": "https://github.com/curl/curl",
+      "default_branch": "master",
+      "focus": ["portability", "protocol robustness", "security response"],
+      "anchors": ["docs/", "tests/", "docs/VULN-DISCLOSURE-POLICY.md"],
+      "relationship": "Extends correctness into network protocols and broad platform matrices."
+    },
+    {
+      "rank": 4,
+      "id": "ripgrep",
+      "repository": "https://github.com/BurntSushi/ripgrep",
+      "default_branch": "master",
+      "focus": ["measurement", "performance trade-offs", "CLI ergonomics"],
+      "anchors": ["README.md", "GUIDE.md", "FAQ.md"],
+      "relationship": "Adds benchmark discipline and user-facing performance reasoning."
+    },
+    {
+      "rank": 5,
+      "id": "xv6-riscv",
+      "repository": "https://github.com/mit-pdos/xv6-riscv",
+      "default_branch": "riscv",
+      "focus": ["operating-system fundamentals", "concurrency", "trust boundaries"],
+      "anchors": ["README", "kernel/", "user/"],
+      "relationship": "Supplies the systems vocabulary needed for deeper performance and security study."
+    }
+  ]
+}

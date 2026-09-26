@@ -217,3 +217,20 @@ Viral developer community playbook (`dev-agora-skill/`) — Stack Overflow–lik
 ## Skill Packages (Cursor · Claude · Codex)
 
 Curated chains that cut tokens: see [`packages/README.md`](../packages/README.md) and [`packages/catalog.json`](../packages/catalog.json).
+
+
+## 14. HTPAAP — How To Program As A Pro
+
+**الخبرة البرمجية المتراكمة قبل القفز إلى التنفيذ.**
+
+يرتب مصادر أولية قوية، يرسم هيكل كل مشروع وعلاقاته، ثم يستخرج درساً واحداً بإيصال أدلة وتجربة محلية قابلة للتكرار. الطبقة الأولى تشمل TigerBeetle وSQLite وcurl وripgrep وxv6 بلا نسخ كودها أو ادعاء إتقانها من الملخص.
+
+[افتح المهارة](../htpaap/)
+
+## 15. WEHM — What Ethical Hacking Means
+
+**الأخلاق والتفويض والأدلة ليست مقدمة شكلية؛ هي جزء من الآلية.**
+
+يرتب المسار من OpenSSF وOWASP، مروراً بمختبرات PortSwigger وpwn.college، ثم CodeQL وTrail of Bits وAFL++ وangr، وصولاً إلى Project Zero RCA. يعيد استخدام Scope Guard الحالي، وأي غموض في التفويض يعني STOP.
+
+[افتح المهارة](../wehm/)

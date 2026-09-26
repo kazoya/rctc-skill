@@ -73,3 +73,12 @@ See `packages/catalog.json` (machine-readable) and below (human).
 **Chain:** `focus-council` → `local-ssml-voice-cost-optimizer` → `focused3-agentic-phases`  
 **Outcome:** نص عربي → تنسيق/سياق/تشكيل اختياري محلي → W3C SSML IR → Preview محلي → Cache → Premium فقط للمقاطع اللازمة  
 **Dogfooding:** تم اختيار هذه المعمارية عبر Focus Council، ثم أعادت مبادئ FinOps تحسين QUICK/STANDARD/DEEP في Focus Council.
+
+
+### 12. `professional-programming-foundations` — خبرة البرمجة المتراكمة
+**Chain:** `rctc-method` → `htpaap` → `focused3-agentic-phases` → `safe-forward-execution` → optional `continuous-improving`
+**Outcome:** source map → evidence receipt → bounded transfer → proof.
+
+### 13. `ethical-security-foundations` — معنى الإيثيكال هاكينغ
+**Chain:** `rctc-method` → `wehm` → `ethical-bugbounty-training` Scope Guard → `focused3-agentic-phases`
+**Outcome:** authorization → safe learning tier → local evidence → remediation/disclosure.

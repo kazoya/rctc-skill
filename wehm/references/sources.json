@@ -1,0 +1,113 @@
+{
+  "schema": "rctc.expertise-source-map.v1",
+  "skill": "wehm",
+  "layer": 1,
+  "generated_at": "2026-09-26",
+  "safety": {
+    "default_environment": "local-or-deliberately-vulnerable-lab",
+    "uncertain_authorization": "STOP",
+    "forbidden": ["credential theft", "malware", "persistence", "evasion", "destructive action", "denial of service", "mass exploitation"]
+  },
+  "sources": [
+    {
+      "rank": 1,
+      "tier": 0,
+      "id": "openssf-secure-development",
+      "repository": "https://github.com/ossf/secure-sw-dev-fundamentals",
+      "default_branch": "main",
+      "focus": ["secure design", "development lifecycle", "supply-chain basics"],
+      "anchors": ["README.md", "docs/"],
+      "relationship": "Establishes the defensive software baseline before testing."
+    },
+    {
+      "rank": 2,
+      "tier": 0,
+      "id": "owasp-wstg",
+      "repository": "https://github.com/OWASP/wstg",
+      "default_branch": "master",
+      "focus": ["web testing methodology", "scenario structure", "evidence"],
+      "anchors": ["README.md", "document/"],
+      "relationship": "Turns the secure-development baseline into repeatable test plans."
+    },
+    {
+      "rank": 3,
+      "tier": 1,
+      "id": "portswigger-research-labs",
+      "repository": "https://github.com/PortSwigger/research-labs",
+      "default_branch": "main",
+      "focus": ["web vulnerability research", "local vulnerable applications", "remediation reasoning"],
+      "anchors": ["README.md", "lab directories"],
+      "relationship": "Provides controlled practice for OWASP-style web hypotheses."
+    },
+    {
+      "rank": 4,
+      "tier": 1,
+      "id": "pwncollege-official-dojos",
+      "repository": "https://github.com/pwncollege/official-dojos",
+      "default_branch": "main",
+      "focus": ["hands-on foundations", "program security", "systems security"],
+      "anchors": ["README.md", "linked official dojo repositories"],
+      "relationship": "Builds systems skill in a purpose-built training environment."
+    },
+    {
+      "rank": 5,
+      "tier": 2,
+      "id": "trailofbits-testing-handbook",
+      "repository": "https://github.com/trailofbits/testing-handbook",
+      "default_branch": "main",
+      "focus": ["static analysis", "dynamic analysis", "fuzzing discipline"],
+      "anchors": ["README.md", "handbook chapters"],
+      "relationship": "Connects manual reasoning to repeatable analysis workflows."
+    },
+    {
+      "rank": 6,
+      "tier": 2,
+      "id": "github-codeql",
+      "repository": "https://github.com/github/codeql",
+      "default_branch": "main",
+      "focus": ["data flow", "taint tracking", "query testing"],
+      "anchors": ["README.md", "docs/supported-queries.md", "language query suites"],
+      "relationship": "Makes source-code security hypotheses explicit and testable."
+    },
+    {
+      "rank": 7,
+      "tier": 3,
+      "id": "aflplusplus",
+      "repository": "https://github.com/AFLplusplus/AFLplusplus",
+      "default_branch": "stable",
+      "focus": ["coverage-guided fuzzing", "harness design", "campaign measurement"],
+      "anchors": ["README.md", "docs/fuzzing_in_depth.md", "docs/best_practices.md"],
+      "relationship": "Tests parser and state assumptions through bounded generated inputs."
+    },
+    {
+      "rank": 8,
+      "tier": 3,
+      "id": "angr",
+      "repository": "https://github.com/angr/angr",
+      "default_branch": "master",
+      "focus": ["binary analysis", "symbolic execution", "control-flow analysis"],
+      "anchors": ["README.md", "docs/"],
+      "relationship": "Extends reasoning to binaries while making analysis limits explicit."
+    },
+    {
+      "rank": 9,
+      "tier": 4,
+      "id": "project-zero-tools",
+      "repository": "https://github.com/googleprojectzero/p0tools",
+      "default_branch": "master",
+      "focus": ["research tooling", "platform internals", "reproducible artifacts"],
+      "anchors": ["README.md", "project directories"],
+      "relationship": "Shows research artifacts used near the frontier; study after lower tiers."
+    },
+    {
+      "rank": 10,
+      "tier": 4,
+      "id": "project-zero-rca",
+      "repository": "https://github.com/googleprojectzero/0days-in-the-wild",
+      "default_branch": "main",
+      "focus": ["root-cause analysis", "variant analysis", "coordinated disclosure"],
+      "anchors": ["README.md", "rca.md"],
+      "relationship": "Synthesizes mechanism, impact, missed variants, fixes, and prevention from disclosed cases."
+    }
+  ]
+}
