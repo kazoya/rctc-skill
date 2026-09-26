@@ -1,12 +1,12 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-09-23T20:00:00.000Z",
+  "generated_at": "2026-09-26T12:00:00.000Z",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 43,
-    "canonical_capabilities": 26,
+    "discovered_skill_records": 45,
+    "canonical_capabilities": 28,
     "multi_install_capabilities": 10,
-    "public_claim": "26 canonical capabilities (43 discovered installations/copies — not independent skills)"
+    "public_claim": "28 canonical capabilities (45 discovered installations/copies — not independent skills)"
   },
   "capabilities": [
     {
@@ -278,6 +278,25 @@
       "installation_count": 3,
       "ambiguity": "multi_install_ok",
       "executable_default": "focused3-agentic-phases/SKILL.md"
+    },
+    {
+      "canonical_id": "htpaap",
+      "kind": "canonical_capability",
+      "title": "htpaap",
+      "description": "Extract and apply professional software-engineering judgment from exemplary open-source codebases through pinned primary evidence, bounded experiments, and verified transfer.",
+      "primary_installation_id": "htpaap::0",
+      "installations": [
+        {
+          "installation_id": "htpaap::0",
+          "path": "htpaap/SKILL.md",
+          "folder": "htpaap",
+          "kind": "primary_tree",
+          "description_snippet": "Evidence-first extraction of professional software-engineering judgment from exemplary primary sources."
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "htpaap/SKILL.md"
     },
     {
       "canonical_id": "local-ssml-voice-cost-optimizer",
@@ -621,6 +640,25 @@
       "installation_count": 2,
       "ambiguity": "multi_install_ok",
       "executable_default": "web_marketing_and_personal-builder-super-skill/SKILL.md"
+    },
+    {
+      "canonical_id": "wehm",
+      "kind": "canonical_capability",
+      "title": "wehm",
+      "description": "Teach authorization-first cybersecurity learning, safe labs, threat modeling, analysis, evidence, remediation, and responsible disclosure; uncertainty means STOP.",
+      "primary_installation_id": "wehm::0",
+      "installations": [
+        {
+          "installation_id": "wehm::0",
+          "path": "wehm/SKILL.md",
+          "folder": "wehm",
+          "kind": "primary_tree",
+          "description_snippet": "Authorization-first security learning from secure development to public root-cause analysis."
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "wehm/SKILL.md"
     }
   ]
 }

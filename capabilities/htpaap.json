@@ -1,0 +1,19 @@
+{
+  "id": "htpaap",
+  "kind": "canonical_capability",
+  "release_state": "validated",
+  "name": {
+    "en": "How To Program As A Pro",
+    "ar": "كيف تبرمج كمحترف"
+  },
+  "purpose": "Map and extract evidence-backed software-engineering judgment from exemplary primary sources.",
+  "not": "Not a code-copying system, star-count ranking, or claim of mastery from summaries.",
+  "path": "htpaap/",
+  "side_effect_level": "none",
+  "network": false,
+  "uncertainty_behavior": "LABEL_AND_VERIFY",
+  "validate": "node htpaap/scripts/validate-sources.mjs htpaap/references/sources.json",
+  "source_count": 5,
+  "layer": 1,
+  "buy_me_a_coffee": "https://buymeacoffee.com/Asrawi612"
+}

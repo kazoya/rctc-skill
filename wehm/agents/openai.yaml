@@ -1,0 +1,14 @@
+interface:
+  display_name: WEHM — Ethical Hacking Means
+  short_description: Learn authorized security research safely
+  default_prompt: Use $wehm to build a safe, authorized cybersecurity learning plan
+    with evidence gates.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

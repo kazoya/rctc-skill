@@ -30,6 +30,15 @@ It is designed to govern complex, high-fidelity AI and software projects through
 
 ## 🚀 Sohaib's Skill Suite
 
+### 🧬 Expertise-first layer — الخبرة قبل الأدوات
+
+| الأولوية | المهارة | النتيجة |
+|---:|---|---|
+| 1 | [HTPAAP — How To Program As A Pro](htpaap/) | خريطة أدلة من TigerBeetle وSQLite وcurl وripgrep وxv6 إلى ممارسة هندسية قابلة للتحقق |
+| 2 | [WEHM — What Ethical Hacking Means](wehm/) | مسار تفويض وأخلاق ومختبرات وتحليل من OpenSSF/OWASP إلى Project Zero RCA |
+
+ابدأ من [خريطة طبقات القوة](docs/EXPERTISE-STACK.md) واقرأ [التقييم الصريح للمستودع](docs/REPOSITORY-ASSESSMENT.md).
+
 > **هل تعلم أنك من خلال [Web Marketing & Personal Builder](web_marketing_and_personal-builder-super-skill/) وقليل من الإعدادات تستطيع إنشاء موقع بمستوى حرفي قريب من muqasa-jo.com، مع أقل قدر ممكن من التدخل—خصوصاً عندما تستخدم معها [Safe Forward Execution](safe-forward-execution/)؟**
 
 | المسار | المهارة المناسبة |
@@ -305,6 +314,8 @@ rctc-skill/
 ├── 🎯 focus-council/            ← expert perspectives → jury → synthesis
 ├── 🔊 local-ssml-voice-cost-optimizer/
 │                               ← Arabic prep → W3C SSML → local preview/cache → premium adapter
+├── 🧬 htpaap/                 ← Accumulated programming expertise map
+├── 🛡️ wehm/                   ← Authorization-first security learning map
 ├── 🛡️ safe-forward-execution/ ← Safe, reversible execution after planning
 ├── 📦 update-zip-skill/        ← Harvest → pack → consult → ingest (profiles)
 ├── 🌐 web_marketing_and_personal-builder-super-skill/

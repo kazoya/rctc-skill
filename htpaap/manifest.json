@@ -1,0 +1,46 @@
+{
+  "id": "htpaap",
+  "name": "HTPAAP — How To Program As A Pro",
+  "version": "1.0.0",
+  "description": "Evidence-first extraction of professional software-engineering judgment from exemplary open-source projects.",
+  "status": "validated",
+  "tags": [
+    "programming",
+    "architecture",
+    "testing",
+    "performance",
+    "open-source"
+  ],
+  "inputs": [
+    "learning target",
+    "source repository or approved source id",
+    "authorized destination repository when transferring a lesson"
+  ],
+  "outputs": [
+    "layer-1 project map",
+    "evidence receipt",
+    "bounded transfer recommendation"
+  ],
+  "required_capabilities": [
+    "read public source",
+    "run local validation"
+  ],
+  "permissions": [
+    "read-only by default"
+  ],
+  "side_effect_level": "none",
+  "reversible": true,
+  "dependencies": [
+    "rctc-method",
+    "focused3-agentic-phases",
+    "safe-forward-execution"
+  ],
+  "compatible_agents": [
+    "cursor",
+    "claude",
+    "codex"
+  ],
+  "verification": "node scripts/validate-sources.mjs references/sources.json",
+  "rollback": "Remove htpaap/ and regenerate registries.",
+  "provenance": "Layer-1 map authored for kazoya/rctc-skill from primary public repositories; no third-party code vendored."
+}

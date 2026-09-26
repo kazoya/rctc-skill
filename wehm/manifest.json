@@ -1,0 +1,49 @@
+{
+  "id": "wehm",
+  "name": "WEHM — What Ethical Hacking Means",
+  "version": "1.0.0",
+  "description": "Authorization-first cybersecurity learning map from secure development to public root-cause analysis.",
+  "status": "validated",
+  "tags": [
+    "cybersecurity",
+    "ethical-hacking",
+    "appsec",
+    "fuzzing",
+    "responsible-disclosure"
+  ],
+  "inputs": [
+    "defensive objective",
+    "authorization context",
+    "learner level",
+    "approved source id"
+  ],
+  "outputs": [
+    "authorization decision",
+    "tiered learning map",
+    "evidence receipt",
+    "defensive next step"
+  ],
+  "required_capabilities": [
+    "read public source",
+    "local or deliberately vulnerable lab"
+  ],
+  "permissions": [
+    "no network by default",
+    "no live targets by default"
+  ],
+  "side_effect_level": "none",
+  "reversible": true,
+  "dependencies": [
+    "ethical-bugbounty-training",
+    "focused3-agentic-phases",
+    "htpaap"
+  ],
+  "compatible_agents": [
+    "cursor",
+    "claude",
+    "codex"
+  ],
+  "verification": "node scripts/validate-sources.mjs references/sources.json",
+  "rollback": "Remove wehm/ and regenerate registries.",
+  "provenance": "Layer-1 map authored for kazoya/rctc-skill from primary public repositories; no offensive toolkit or third-party code vendored."
+}

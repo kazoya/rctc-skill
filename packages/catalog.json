@@ -220,6 +220,60 @@
         "focused3-agentic-phases/SKILL.md"
       ],
       "notes": "Dogfooded pair: local Arabic prep + W3C SSML IR + cache + selective premium provider rendering."
+    },
+    {
+      "id": "professional-programming-foundations",
+      "title": "HTPAAP — accumulated programming expertise",
+      "audience": [
+        "developer",
+        "technical-lead",
+        "code-reviewer",
+        "ai-assisted-builder"
+      ],
+      "skills": [
+        "rctc-method",
+        "htpaap",
+        "focused3-agentic-phases",
+        "safe-forward-execution",
+        "continuous-improving"
+      ],
+      "paths": [
+        "SKILL.md",
+        "htpaap/SKILL.md",
+        "focused3-agentic-phases/SKILL.md",
+        "safe-forward-execution/SKILL.md",
+        "continuous-improving/SKILL.md"
+      ],
+      "notes": "Layer 1 maps five primary sources; deeper claims require pinned evidence and a bounded experiment."
+    },
+    {
+      "id": "ethical-security-foundations",
+      "title": "WEHM — authorization-first security learning",
+      "audience": [
+        "security-learner",
+        "developer",
+        "appsec-reviewer",
+        "authorized-researcher"
+      ],
+      "skills": [
+        "rctc-method",
+        "wehm",
+        "ethical-bugbounty-training",
+        "focused3-agentic-phases"
+      ],
+      "paths": [
+        "SKILL.md",
+        "wehm/SKILL.md",
+        "tracks/bug-bounty/SKILL.md",
+        "tracks/bug-bounty/SAFETY_MODEL.md",
+        "focused3-agentic-phases/SKILL.md"
+      ],
+      "constraints": [
+        "local_or_deliberately_vulnerable_lab_default",
+        "uncertain_authorization_STOP",
+        "no_live_target_automation"
+      ],
+      "notes": "Strength-ordered path from secure development and WSTG to public Project Zero RCA."
     }
   ]
 }
