@@ -1,0 +1,13 @@
+{
+  "name": "mock-broken-access-control-lab",
+  "description": "Synthetic records only — run reasoning against this file, not a third-party API.",
+  "users": [
+    { "id": "u1", "role": "user", "can_read_orders": ["o1"] },
+    { "id": "u2", "role": "user", "can_read_orders": ["o2"] }
+  ],
+  "orders": [
+    { "id": "o1", "owner": "u1", "total": 10, "note": "demo" },
+    { "id": "o2", "owner": "u2", "total": 20, "note": "demo" }
+  ],
+  "exercise": "Hypothesis: if the mock API returned o2 to u1 without ownership check, that would be IDOR. Document the assumption; do not attack a real shop."
+}

@@ -20,3 +20,11 @@ Optional sponsorship (owner-configured URLs only):
 Coffee Pass (receipt id, never card numbers): `packages/coffee-pass/`
 
 No guilt language. No fabricated scarcity. No artificial engagement (no fake stars, votes, reviews, users, or testimonials).
+
+
+Focus Council recognition / early experiment path:
+- L0: Star or useful example/issue/compatibility result
+- L1+: Coffee Pass supporter
+- Claim: `.github/ISSUE_TEMPLATE/focus_access.yml`
+
+The public MIT skill remains usable without payment. Never gate public MIT files behind a fake local entitlement check.

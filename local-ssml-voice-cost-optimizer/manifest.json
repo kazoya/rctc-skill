@@ -1,0 +1,19 @@
+{
+  "id": "local-ssml-voice-cost-optimizer",
+  "name": "local-ssml-voice-cost-optimizer",
+  "version": "0.1.0",
+  "description": "Local-first Arabic TTS preparation, W3C SSML IR, caching and selective premium-provider routing.",
+  "tags": ["arabic", "tts", "ssml", "w3c", "cost-optimization", "narakeet", "local-first"],
+  "inputs": ["Arabic or multilingual text", "voice intent", "provider optional", "quality/cost constraints"],
+  "outputs": ["prepared text", "SSML", "provider-neutral segment plan", "render routing plan", "cost report"],
+  "required_capabilities": ["filesystem:read-write-local"],
+  "permissions": ["local preprocessing", "optional external TTS API only when explicitly configured"],
+  "side_effect_level": "reversible",
+  "reversible": true,
+  "dependencies": ["focus-council optional", "local TTS optional", "CAMeL Tools optional", "PyArabic optional"],
+  "compatible_agents": ["cursor", "claude", "codex", "local-llm"],
+  "verification": "Compile examples/ar_demo.ssml locally, verify segment plan and prove cache/provider routing before paid calls.",
+  "rollback": "Remove local-ssml-voice-cost-optimizer/ and references from package/showcase indexes.",
+  "provenance": "Dogfooded with Focus Council: Arabic NLP + Speech/TTS + FinOps + product + accessibility perspectives.",
+  "status": "reviewed"
+}

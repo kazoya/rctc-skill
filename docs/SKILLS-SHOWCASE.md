@@ -26,6 +26,9 @@
 | تحسين مستمر لمسارات مصرح بها | [Continuous Improving](../continuous-improving/) | Focused3 + Safe Forward |
 | تجهيز المشروع لاستشارة وكيل خارجي ثم مراجعة الحزمة العائدة | [Update-Zip Skill](../update-zip-skill/) | Safe Forward + Focused3 |
 | تحويل الطلب المبهم إلى تكليف واضح | [RCTC Method](../SKILL.md) | أي مهارة تنفيذية لاحقة |
+| تركيز أفضل إجابة عبر خبراء متنوعين ثم Jury محايد | [Focus Council](../focus-council/) | Focused3 عند الانتقال من القرار إلى التنفيذ |
+| تحسين جودة TTS العربي وتقليل الاستدعاءات المدفوعة | [Local SSML Voice Cost Optimizer](../local-ssml-voice-cost-optimizer/) | Focus Council + Focused3 |
+| تشغيل أدوات وخدمات من WhatsApp/Telegram/Web ضمن صلاحيات وموافقات واضحة | [WhatsApp Agent Orchestrator](../whatsapp-agent-orchestrator-super-skill/) | Safe Forward + Focused3 + Master Brain |
 
 ---
 
@@ -120,6 +123,39 @@ web-marketing-and-personal-builder
 
 ---
 
+## 11. WhatsApp Agent Orchestrator — Super Skill
+
+**حوّل المحادثة إلى واجهة عمليات AI محكومة، لا مجرد chatbot.**
+
+تستقبل أمراً من WhatsApp أو Telegram أو Web، توحّد الرسالة والهوية، تصنّف المخاطر، تختار أداة محدودة الصلاحية مثل البريد أو التقويم أو GitHub أو CRM، تمر عبر بوابة موافقة عند الحاجة، ثم تتحقق من نتيجة المزود وتسجل إيصال تدقيق قبل الرد. تدعم n8n وMCP وواجهات API ولا تربط التصميم بمزود واحد.
+
+**قوتها الحقيقية:** الفصل بين فهم الذكاء الاصطناعي وبين التفويض والتنفيذ. لذلك يمكن إعادة استخدامها كطبقة تحكم لمقاصة، ريشة 360، Factory AI OS، وMaster Brain دون إعطاء النموذج مفاتيح مفتوحة للأنظمة.
+
+[افتح المهارة](../whatsapp-agent-orchestrator-super-skill/)
+
+## 12. Focus Council
+
+**قبل أن تختار الحل، اصنع خلافاً منظماً ثم ركّز النتيجة.**
+
+يشكّل زوايا خبرة محاكاة مرتبطة مباشرة بالمشكلة، يجعلها تقترح حلولاً مستقلة وتنتقد بعضها،
+ثم يستخدم لجنة تقييم محايدة بأوزان معلنة ليصل إلى توصية واحدة، Runner-up، وحساسية القرار.
+لا يختلق أشخاصاً أو عملاء أو Testimonials.
+
+[افتح المهارة](../focus-council/)
+
+## 13. Local SSML Voice Cost Optimizer
+
+**قم بالتفكير اللغوي محلياً وادفع فقط للصوت الذي يحتاج Premium.**
+
+يجهز العربية محلياً (سياق، ترقيم، تطبيع، تشكيل اختياري، Lexicon)، يحول نية النطق إلى
+W3C SSML كطبقة وسيطة، يعاين محلياً، يعيد استخدام المقاطع من Cache، ثم يمرر فقط المقاطع
+المعتمدة/المتغيرة/الصعبة إلى Adapter مثل Narakeet أو أي مزود آخر.
+
+**سابقة Dogfooding داخل الريبو:** Focus Council اختار هذه المعمارية من عدة بدائل، ومبادئ
+خفض التكلفة أعادت بدورها تحسين أوضاع QUICK/STANDARD/DEEP في Focus Council.
+
+[افتح المهارة](../local-ssml-voice-cost-optimizer/)
+
 ## وصفات جاهزة
 
 ### إنشاء موقع شركة أو علامة شخصية
@@ -153,6 +189,19 @@ Continuous Improving → Update-Zip Skill
                      → Safe Forward Execution → Focused3 proof gates
 ```
 
+### قرار تقني عالي القيمة
+
+```text
+RCTC → Focus Council → Focused3 → Safe Forward Execution
+```
+
+### صوت عربي محلي-أولاً
+
+```text
+Focus Council → Local SSML Voice Cost Optimizer
+              → Focused3 proof gates
+```
+
 ## معيار الصدق
 
 هذه المنظومة تساعد على رفع جودة التنفيذ وتقليل التدخل، لكنها لا تعد بموقع ناجح تجارياً بلا محتوى حقيقي، ولا تنشر أو تدفع أو تتصرف باسم المستخدم دون صلاحية. كل ادعاء اكتمال يجب أن يسنده تنفيذ واختبار وتحقق ودليل.
@@ -168,3 +217,20 @@ Viral developer community playbook (`dev-agora-skill/`) — Stack Overflow–lik
 ## Skill Packages (Cursor · Claude · Codex)
 
 Curated chains that cut tokens: see [`packages/README.md`](../packages/README.md) and [`packages/catalog.json`](../packages/catalog.json).
+
+
+## 14. HTPAAP — How To Program As A Pro
+
+**الخبرة البرمجية المتراكمة قبل القفز إلى التنفيذ.**
+
+يرتب مصادر أولية قوية، يرسم هيكل كل مشروع وعلاقاته، ثم يستخرج درساً واحداً بإيصال أدلة وتجربة محلية قابلة للتكرار. الطبقة الأولى تشمل TigerBeetle وSQLite وcurl وripgrep وxv6 بلا نسخ كودها أو ادعاء إتقانها من الملخص.
+
+[افتح المهارة](../htpaap/)
+
+## 15. WEHM — What Ethical Hacking Means
+
+**الأخلاق والتفويض والأدلة ليست مقدمة شكلية؛ هي جزء من الآلية.**
+
+يرتب المسار من OpenSSF وOWASP، مروراً بمختبرات PortSwigger وpwn.college، ثم CodeQL وTrail of Bits وAFL++ وangr، وصولاً إلى Project Zero RCA. يعيد استخدام Scope Guard الحالي، وأي غموض في التفويض يعني STOP.
+
+[افتح المهارة](../wehm/)

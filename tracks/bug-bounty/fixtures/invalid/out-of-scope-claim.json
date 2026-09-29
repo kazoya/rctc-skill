@@ -1,0 +1,12 @@
+{
+  "program_platform": "YesWeHack",
+  "program_url": "https://example-program.example/policy",
+  "asset": "hr-internal.example",
+  "claimed_scope": "Explicitly out of scope per policy",
+  "intended_activity": "Authenticated testing",
+  "authorization_evidence": "Policy section Out of scope lists hr-internal.example",
+  "environment": "authorized_program",
+  "asset_explicitly_listed": false,
+  "activity_explicitly_permitted": false,
+  "uncertainty": false
+}

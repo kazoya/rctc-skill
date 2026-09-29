@@ -1,0 +1,10 @@
+{
+  "program_platform": "unknown",
+  "program_url": "",
+  "asset": "https://random-public-site.example",
+  "claimed_scope": "It is public so maybe ok",
+  "intended_activity": "Quick security test on a public website",
+  "authorization_evidence": "",
+  "environment": "internet",
+  "uncertainty": true
+}

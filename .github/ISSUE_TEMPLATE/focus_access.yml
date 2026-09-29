@@ -1,0 +1,41 @@
+name: Focus Council — community/supporter recognition
+description: Claim L0 community recognition or Coffee Pass-linked early Focus experiments
+title: "[Focus Council]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        شكراً لتجربة Focus Council.
+        النواة العامة MIT ومجانية. هذا القالب فقط للاعتراف بالمجتمع/الداعمين وتجارب مبكرة اختيارية.
+        لا تشارك أي رقم بطاقة أو CVV.
+  - type: dropdown
+    id: path
+    attributes:
+      label: Support path
+      options:
+        - L0 — I starred the repo
+        - L0 — I shared a useful example / issue / compatibility result
+        - L1+ — I have a Coffee Pass / receipt
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: What did you use Focus Council for?
+      description: A real use case helps improve the skill more than a generic compliment.
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Optional link or Coffee Pass issue
+      description: Link to your example/issue, or your Coffee Pass issue. Never paste card data.
+  - type: checkboxes
+    id: truth
+    attributes:
+      label: Truth
+      options:
+        - label: I understand this is optional recognition, not a requirement to use the MIT skill
+          required: true
+        - label: I did not include card numbers, CVV, passwords, or secrets
+          required: true

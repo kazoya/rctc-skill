@@ -30,6 +30,15 @@ It is designed to govern complex, high-fidelity AI and software projects through
 
 ## 🚀 Sohaib's Skill Suite
 
+### 🧬 Expertise-first layer — الخبرة قبل الأدوات
+
+| الأولوية | المهارة | النتيجة |
+|---:|---|---|
+| 1 | [HTPAAP — How To Program As A Pro](htpaap/) | خريطة أدلة من TigerBeetle وSQLite وcurl وripgrep وxv6 إلى ممارسة هندسية قابلة للتحقق |
+| 2 | [WEHM — What Ethical Hacking Means](wehm/) | مسار تفويض وأخلاق ومختبرات وتحليل من OpenSSF/OWASP إلى Project Zero RCA |
+
+ابدأ من [خريطة طبقات القوة](docs/EXPERTISE-STACK.md) واقرأ [التقييم الصريح للمستودع](docs/REPOSITORY-ASSESSMENT.md).
+
 > **هل تعلم أنك من خلال [Web Marketing & Personal Builder](web_marketing_and_personal-builder-super-skill/) وقليل من الإعدادات تستطيع إنشاء موقع بمستوى حرفي قريب من muqasa-jo.com، مع أقل قدر ممكن من التدخل—خصوصاً عندما تستخدم معها [Safe Forward Execution](safe-forward-execution/)؟**
 
 | المسار | المهارة المناسبة |
@@ -42,6 +51,7 @@ It is designed to govern complex, high-fidelity AI and software projects through
 | إدارة عدة مشاريع وعقول هندسية | [Start Skill](start-skill/) + [Portfolio Commander](portfolio-commander/) + [Master Brain](master-brain/) |
 | تحسين دوري مبني على النتائج | [Continuous Improving](continuous-improving/) |
 | مساعدة PDF دلالية (JavaHelp-style) + مهارات Cursor للمشروع | [APCA SmartHelp](apca-smarthelp/) + [AI Portability Advisor](ai-portability-advisor/) |
+| تحويل WhatsApp إلى واجهة عمليات AI محكومة تربط البريد والتقويم وGitHub وCRM وn8n | [WhatsApp Agent Orchestrator](whatsapp-agent-orchestrator-super-skill/) |
 | عقل ماستر وربط الأدوار بين المشاريع | [Master Brain](master-brain/) ↔ مشروع `C:\\master` |
 | باقات مترابطة لـ Cursor/Claude/Codex (أقل توكينز) | [Skill Packages](packages/) |
 | مجتمع مبرمجين للتعلم والنقاش (StackOverflow-like + AI) | [Dev Agora Skill](dev-agora-skill/) |
@@ -301,6 +311,11 @@ rctc-skill/
 ├── 🧭 portfolio-commander/     ← Multi-project registry & focus rules
 ├── 🔁 continuous-improving/    ← Measured improvement loops
 ├── 🔬 focused3-agentic-phases/ ← THINK → EXECUTE → PROVE
+├── 🎯 focus-council/            ← expert perspectives → jury → synthesis
+├── 🔊 local-ssml-voice-cost-optimizer/
+│                               ← Arabic prep → W3C SSML → local preview/cache → premium adapter
+├── 🧬 htpaap/                 ← Accumulated programming expertise map
+├── 🛡️ wehm/                   ← Authorization-first security learning map
 ├── 🛡️ safe-forward-execution/ ← Safe, reversible execution after planning
 ├── 📦 update-zip-skill/        ← Harvest → pack → consult → ingest (profiles)
 ├── 🌐 web_marketing_and_personal-builder-super-skill/
@@ -314,6 +329,7 @@ rctc-skill/
 
 ### Sibling skills (this repo)
 
+- 🤖 [WhatsApp Agent Orchestrator](whatsapp-agent-orchestrator-super-skill/) — turn WhatsApp/Telegram/web chat into a governed AI operations interface with identity, risk classes, approval gates, bounded tools, provider verification, and audit receipts; n8n/MCP/API friendly.
 - 🌐 [Web Marketing & Personal Builder](web_marketing_and_personal-builder-super-skill/) — turn a URL, company brief, or personal bio into an Arabic RTL or bilingual marketing platform, then build, verify, and prepare it for GitHub/Vercel delivery.
 - 🛡️ [Safe Forward Execution](safe-forward-execution/) — continue beyond planning through authorized, safe, reversible, and verified execution; co-designed and forward-tested with GPT-5.6 Sol Medium.
 - 📦 [Update-Zip Skill](update-zip-skill/) — مهارة التطوير والضغط: closed improvement loop for any project — harvest measured facts, pack them with binding CONSTRAINTS and a literal ASK into one zip, consult an external agent (ChatGPT/Claude/Codex), then ingest the returned zip under gates. Profiles: `risha360-social` (default), `portfolio-site` (review branch + `npm run verify`), `web-project` (any repo with `package.json`; review-only `DIFF-REPORT.md`, nothing written to the project). Documented run: World Cup Fintech Festival, 2026-09-17.
@@ -322,9 +338,26 @@ rctc-skill/
 - 🧭 [Portfolio Commander](portfolio-commander/) — scan, register, prioritize, and govern multi-project work.
 - 🧠 [Master Brain](master-brain/) — zero-dependency Node.js control platform with dashboard, reports, MCP tools, and CLI.
 - 🔬 [Focused3 Agentic Phases](focused3-agentic-phases/) — THINK → EXECUTE → PROVE with evidence gates.
+- 🎯 [Focus Council](focus-council/) — concentrate difficult answers with simulated expert perspectives, independent candidates, a neutral jury, sensitivity analysis, and one final synthesis.
+- 🔊 [Local SSML Voice Cost Optimizer](local-ssml-voice-cost-optimizer/) — Arabic-first local preprocessing + W3C SSML IR + preview/cache + selective premium TTS adapters such as Narakeet.
 - 🔁 [Continuous Improving](continuous-improving/) — measured improvement loops for authorized engineering and research tracks.
 
 **[Explore the complete skill showcase and combination recipes →](docs/SKILLS-SHOWCASE.md)**
+
+### 🐕 Dogfooded pair — المهارتان أكلتا من طبختهما
+
+`Focus Council` was used to compare architectures for the voice-cost skill; the winning local-first
+SSML/cache architecture then fed its FinOps lesson back into Focus Council's QUICK/STANDARD/DEEP modes.
+
+```text
+Focus Council ──selects──▶ Local SSML Voice Cost Optimizer
+      ▲                              │
+      └──────── cost discipline ◀────┘
+```
+
+The public MIT core stays free. If this pair saves you time, a ⭐ Star, useful issue/example, or optional
+☕ coffee helps; community/supporter recognition starts at
+[`focus_access.yml`](.github/ISSUE_TEMPLATE/focus_access.yml).
 
 ---
 
@@ -346,6 +379,9 @@ rctc-skill/
 ---
 
 ## 🔔 Pro Version Coming
+
+Supporters who buy a coffee via [Buy Me a Coffee](https://buymeacoffee.com/Asrawi612) can claim [Coffee Pass](https://github.com/kazoya/rctc-skill/issues/new?template=coffee_pass.yml) for Pro pedagogy under `tracks/bug-bounty/pro/`.
+
 
 **RCTC Pro** (planned): team profiles, shared learning, analytics, advanced prompt builder.
 
@@ -419,4 +455,11 @@ If this saved you time, a GitHub Star helps other developers discover it. If you
 Help without paying:
 - ⭐ [Star kazoya/rctc-skill](https://github.com/kazoya/rctc-skill)
 - Useful issue / verified answer / compatibility report
-- Example, pull request, or skill contribu
+- Example, pull request, or skill contribution
+
+## Ethical Bug-Bounty Training (education)
+
+> **شعار RCTC-SKILLS:** ليست كل الحكم تصلح دائماً ولكن من طلب العلى سهر الليالي ^_^
+
+Defensive track (**Unreleased**): [`tracks/bug-bounty/`](tracks/bug-bounty/) — Scope Guard, safe labs, responsible disclosure. **Not** an exploitation toolkit. Capability: `ethical-bugbounty-training`. Public Pro catalog only: [`tracks/bug-bounty/pro/README.md`](tracks/bug-bounty/pro/README.md).
+

@@ -1,0 +1,12 @@
+{
+  "program_platform": "local-lab",
+  "program_url": "",
+  "asset": "http://127.0.0.1:8765/",
+  "claimed_scope": "Learner-owned intentionally vulnerable demo",
+  "intended_activity": "Read synthetic HTTP fixtures and reason about access control on localhost",
+  "authorization_evidence": "Learner owns the local process and lab files under examples/lab",
+  "environment": "local_lab",
+  "asset_explicitly_listed": true,
+  "activity_explicitly_permitted": true,
+  "uncertainty": false
+}

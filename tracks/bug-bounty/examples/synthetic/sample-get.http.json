@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:8765/orders/o2",
+    "headers": { "X-Demo-User": "u1" }
+  },
+  "response": {
+    "status": 200,
+    "body": { "id": "o2", "owner": "u2", "total": 20 }
+  },
+  "teaching_note": "Synthetic evidence of cross-user read in a fake lab. Redact real tokens if you ever capture traffic elsewhere."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wehm",
+  "kind": "canonical_capability",
+  "release_state": "validated",
+  "name": {
+    "en": "What Ethical Hacking Means",
+    "ar": "ما معنى الاختبار الأمني الأخلاقي"
+  },
+  "purpose": "Teach authorization-first security reasoning, safe labs, evidence, remediation, and responsible disclosure.",
+  "not": "Not an exploitation framework, scanner, authorization grant, or live-target automation.",
+  "path": "wehm/",
+  "side_effect_level": "none",
+  "network": false,
+  "live_target_execution": false,
+  "uncertainty_behavior": "STOP",
+  "reuse_guard": "tracks/bug-bounty/scope-guard/scope-guard.js",
+  "validate": "node wehm/scripts/validate-sources.mjs wehm/references/sources.json",
+  "source_count": 10,
+  "layer": 1,
+  "buy_me_a_coffee": "https://buymeacoffee.com/Asrawi612"
+}

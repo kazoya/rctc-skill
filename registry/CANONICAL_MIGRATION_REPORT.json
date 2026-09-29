@@ -1,13 +1,13 @@
 {
   "before": {
-    "records": 41,
-    "unique_ids": 24
+    "records": 45,
+    "unique_ids": 28
   },
   "after": {
-    "discovered_skill_records": 41,
-    "canonical_capabilities": 24,
+    "discovered_skill_records": 45,
+    "canonical_capabilities": 28,
     "multi_install_capabilities": 10,
-    "public_claim": "24 canonical capabilities (41 discovered installations/copies — not independent skills)"
+    "public_claim": "28 canonical capabilities (45 discovered installations/copies — not independent skills)"
   },
-  "note": "Duplicates retained as installations under one canonical capability. No silent deletion."
+  "note": "Duplicates retained as installations under one canonical capability. HTPAAP and WEHM added as single primary installations. No silent deletion."
 }

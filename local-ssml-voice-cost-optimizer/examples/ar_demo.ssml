@@ -1,0 +1,14 @@
+<speak xml:lang="ar-JO">
+  <p>
+    مرحباً صهيب.
+    <break time="500ms"/>
+    <prosody rate="90%">
+      هذه معاينة محلية أبطأ قليلاً، حتى نراجع النطق قبل أي توليد مدفوع.
+    </prosody>
+  </p>
+  <p>
+    <sub alias="أوبن إيه آي">OpenAI</sub>
+    <break time="300ms"/>
+    <emphasis level="strong">لا نعيد توليد المقطع إذا لم يتغير.</emphasis>
+  </p>
+</speak>

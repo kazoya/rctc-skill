@@ -1,6 +1,30 @@
 # Changelog
 
-All notable changes to RCTC Method will be documented here.
+## [Unreleased] — Focus Council + Local SSML Voice Cost Optimizer
+
+### Added
+- `focus-council` — answer-concentration skill: simulated domain experts → independent proposals → cross-critique → shortlist → neutral jury → sensitivity check → final synthesis. Truth rule forbids presenting simulated experts/customers as real.
+- `local-ssml-voice-cost-optimizer` — Arabic-first local preprocessing, W3C SSML intermediate representation, local preview, content-addressed cache, changed-only/selective premium rendering, and provider adapters (Narakeet documented as one example, not a free local API).
+- Dogfooding record showing the two skills shaping each other.
+- `decision-focus` and `arabic-voice-cost` package recipes.
+- Focus Council community/supporter recognition issue template; public MIT core remains usable without payment.
+
+## [Unreleased] — Ethical Bug-Bounty Training (Portland–Pozzolanic)
+
+> Track status: **Unreleased**. Root `SKILL.md` remains `version: 1.0.0`. This is not a stable 1.1 / 1.1.0-rc product release.
+
+### Added
+- Bilingual ethical bug-bounty track under `tracks/bug-bounty/` (EN+AR, modules 00–05)
+- Scope Guard (declaration-only decisions) + track validator + fixtures
+- Capability `ethical-bugbounty-training` (`release_state: unreleased`)
+- Public Pro catalog `tracks/bug-bounty/pro/README.md` + Coffee Pass pointers (no Pro lesson bodies in MIT tree)
+- Multi-track extension point `tracks/README.md` (future competition labs not implemented)
+- RCTC-SKILLS motto
+
+### Changed (pre-push)
+- Renamed `AUTHORIZED_FOR_DECLARED_ACTIVITY` → `DECLARED_SCOPE_CONTEXT_ACCEPTED`
+- Explicit `authorization_verified_by_rctc: false` and human confirmation for declared live targets
+- Removed supporter-only Pro lesson files from the public tree
 
 ## [Unreleased]
 
