@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kazoya/rctc-skill/ai-portability-advisor/report-schema.json",
+  "title": "AIPortabilityReport",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "report_id",
+    "generated_at",
+    "question_language",
+    "report_mode",
+    "executive_summary",
+    "layers",
+    "ownership_and_control_matrix",
+    "lock_in_portability_matrix",
+    "recovery_assessment",
+    "hidden_cost_assessment",
+    "recommendations",
+    "roadmap",
+    "human_approval_gates",
+    "evidence",
+    "assumptions",
+    "no_bluff_statement",
+    "recommendation_vs_authorized_action_note"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "report_id": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string" },
+    "question_language": { "enum": ["auto", "arabic", "english", "ar", "en"] },
+    "report_mode": {
+      "enum": [
+        "full_assessment",
+        "architecture_transition_advisor",
+        "project_bootstrap_advisor"
+      ]
+    },
+    "executive_summary": { "type": "string" },
+    "layers": {
+      "type": "array",
+      "minItems": 6,
+      "items": { "$ref": "#/$defs/layer_assessment" }
+    },
+    "ownership_and_control_matrix": { "type": "array", "items": { "type": "object" } },
+    "lock_in_portability_matrix": { "type": "object" },
+    "recovery_assessment": { "type": "object" },
+    "hidden_cost_assessment": { "type": "object" },
+    "risk_signals": { "type": "array", "items": { "type": "object" } },
+    "recommendations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/recommendation" }
+    },
+    "authorized_actions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/authorized_action" }
+    },
+    "roadmap": { "$ref": "#/$defs/roadmap" },
+    "human_approval_gates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/human_gate" }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/evidence" }
+    },
+    "assumptions": { "type": "array", "items": { "type": "string" } },
+    "no_bluff_statement": { "type": "string", "minLength": 10 },
+    "recommendation_vs_authorized_action_note": { "type": "string" }
+  },
+  "$defs": {
+    "score_or_null": {
+      "oneOf": [
+        { "type": "integer", "minimum": 0, "maximum": 5 },
+        { "type": "null" }
+      ]
+    },
+    "evidence_status": { "enum": ["VERIFIED", "INFERRED", "UNKNOWN"] },
+    "recommendation_action": {
+      "enum": [
+        "KEEP",
+        "OPTIMIZE",
+        "ABSTRACT",
+        "HYBRIDIZE",
+        "MIGRATE",
+        "SELF-HOST",
+        "MANAGED_SERVICE",
+        "DEFER",
+        "REJECT"
+      ]
+    },
+    "gate_status": {
+      "enum": ["APPROVED", "PENDING_HUMAN_APPROVAL", "DEFER", "REJECT"]
+    },
+    "confidence": { "enum": ["high", "medium", "low"] },
+    "layer_id": {
+      "enum": [
+        "data_knowledge",
+        "models",
+        "training_adaptation_evaluation",
+        "applications_retrieval_agents",
+        "inference_serving",
+        "orchestration_execution"
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["id", "status", "statement"],
+      "properties": {
+        "id": { "type": "string" },
+        "status": { "$ref": "#/$defs/evidence_status" },
+        "statement": { "type": "string" },
+        "source": { "type": "string" },
+        "layer": { "$ref": "#/$defs/layer_id" }
+      }
+    },
+    "layer_assessment": {
+      "type": "object",
+      "required": ["layer_id", "assessment_confidence", "evidence_ids"],
+      "properties": {
+        "layer_id": { "$ref": "#/$defs/layer_id" },
+        "components": { "type": "array", "items": { "type": "string" } },
+        "provider_or_technology": { "type": "string" },
+        "business_criticality": { "$ref": "#/$defs/score_or_null" },
+        "data_sensitivity": { "$ref": "#/$defs/score_or_null" },
+        "vendor_lock_in": { "$ref": "#/$defs/score_or_null" },
+        "portability": { "$ref": "#/$defs/score_or_null" },
+        "replaceability": { "$ref": "#/$defs/score_or_null" },
+        "recovery_capability": { "$ref": "#/$defs/score_or_null" },
+        "observability_clarity": { "$ref": "#/$defs/score_or_null" },
+        "progress_loss_risk": { "$ref": "#/$defs/score_or_null" },
+        "rework_risk": { "$ref": "#/$defs/score_or_null" },
+        "visible_cost": { "type": "string" },
+        "hidden_cost": { "type": "string" },
+        "migration_difficulty": { "$ref": "#/$defs/score_or_null" },
+        "outage_impact": { "$ref": "#/$defs/score_or_null" },
+        "assessment_confidence": { "$ref": "#/$defs/confidence" },
+        "evidence_ids": { "type": "array", "items": { "type": "string" } },
+        "user_must_retain_control": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "recommendation": {
+      "type": "object",
+      "required": [
+        "id",
+        "layer_id",
+        "action",
+        "current_problem",
+        "confidence",
+        "human_gate_id"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "layer_id": { "$ref": "#/$defs/layer_id" },
+        "action": { "$ref": "#/$defs/recommendation_action" },
+        "current_problem": { "type": "string" },
+        "evidence_ids": { "type": "array", "items": { "type": "string" } },
+        "impact_if_unchanged": { "type": "string" },
+        "alternatives": { "type": "array", "items": { "type": "string" } },
+        "selection_rationale": { "type": "string" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "prerequisites": { "type": "array", "items": { "type": "string" } },
+        "phased_steps": { "type": "array", "items": { "type": "string" } },
+        "rollback_plan": { "type": "string" },
+        "verification_tests": { "type": "array", "items": { "type": "string" } },
+        "pilot_plan": { "type": "object" },
+        "time_cost_estimate": { "type": "string" },
+        "transition_risks": { "type": "array", "items": { "type": "string" } },
+        "human_gate_id": { "type": "string" },
+        "vendor_examples": {
+          "type": "array",
+          "items": { "type": "object" },
+          "description": "Optional; must cite evidence_ids if naming products"
+        }
+      }
+    },
+    "authorized_action": {
+      "type": "object",
+      "required": ["recommendation_id", "status"],
+      "properties": {
+        "recommendation_id": { "type": "string" },
+        "status": { "$ref": "#/$defs/gate_status" },
+        "approved_by": { "type": ["string", "null"] },
+        "scope": { "type": ["string", "null"] }
+      }
+    },
+    "human_gate": {
+      "type": "object",
+      "required": ["gate_id", "status", "recommendation_action", "reason"],
+      "properties": {
+        "gate_id": { "type": "string" },
+        "status": { "$ref": "#/$defs/gate_status" },
+        "recommendation_action": { "$ref": "#/$defs/recommendation_action" },
+        "reason": { "type": "string" },
+        "triggers": { "type": "array", "items": { "type": "string" } },
+        "authorized_action": { "type": ["string", "null"] }
+      }
+    },
+    "roadmap": {
+      "type": "object",
+      "required": ["immediate", "days_30", "days_90", "strategic"],
+      "properties": {
+        "immediate": { "type": "array", "items": { "type": "string" } },
+        "days_30": { "type": "array", "items": { "type": "string" } },
+        "days_90": { "type": "array", "items": { "type": "string" } },
+        "strategic": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

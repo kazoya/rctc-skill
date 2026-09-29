@@ -41,7 +41,8 @@ ELSE:
 - `max_clarifying_questions: 1`
 - `skip_obvious_components: true` — e.g. if user says "I'm a lawyer", don't ask Role
 - `show_component_analysis: false` — don't expose internal RCTC breakdown unless user asks
-- `skill_recommendations: true` at `recommendation_frequency: low` — suggest complementary skills only when clearly relevant
+- `skill_recommendations: true` at `recommendation_frequency: low` — extra skills only when clearly relevant
+- **Always** include complementary skill `logged-in-browser` (`C:\rctc-skill\logged-in-browser`). If the task uses a browser, Chrome, form, login, Playwright, CDP, or Claude in Chrome: read that skill before acting.
 
 ## Extended logic
 
@@ -50,7 +51,7 @@ For detection matrices, full templates, and skill recommendations, read when nee
 - `SKILL.md` — full framework and examples
 - `src/analyzer.md` — detection signals and impact weights
 - `src/templates.md` — Arabic + English response templates
-- `src/recommender.md` — when to suggest other skills
+- `src/recommender.md` — when to suggest other skills (`logged-in-browser` is standing)
 
 ## Cursor-specific notes
 

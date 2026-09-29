@@ -1,0 +1,22 @@
+# Acceptance criteria (cross-cutting)
+
+install:
+  - install.ps1 writes only under %USERPROFILE%\.cursor\skills\ai-portability-advisor
+  - re-run install is idempotent (overwrite same tree)
+
+reports:
+  - no secrets or realistic API keys in fixtures
+  - UNKNOWN scores remain null not 0
+  - provider difference alone must not justify MIGRATE
+  - recommendation_vs_authorized_action_note required
+  - vendor product names require evidence_ids when used as more than generic category
+
+validator:
+  - valid fixtures exit 0
+  - invalid-migrate fixture exit non-zero
+  - no network calls
+
+scenarios:
+  "01": ABSTRACT not blind MIGRATE
+  "02": checkpoint gap; OPTIMIZE orchestration
+  "03": HYBRIDIZE with human gate on PII movement

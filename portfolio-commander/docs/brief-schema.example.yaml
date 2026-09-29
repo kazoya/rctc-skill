@@ -1,0 +1,15 @@
+# مشاريعنا — schema for per-project briefs
+# File: briefs/{project-id}.yaml
+# After editing: python %USERPROFILE%\.cursor\portfolio\scripts\scan_projects.py
+
+id: string          # must match <project id> in projects-registry.xml
+updated: date       # ISO date YYYY-MM-DD
+confidence: string  # verified | locally_verified | implemented_unverified | scaffolded | planned | dormant
+
+accomplished: string  # what exists, with evidence (tests / code / deploy)
+current: string       # state now + confidence
+next: string          # one executable next step
+blocker: string       # what blocks demo or sale
+offer: string         # honest marketing sentence (never promise scaffolded features)
+priceHint: string     # pricing hint or "—"
+gtm: string           # sales channel, or "ليس منتجاً"

@@ -12,8 +12,9 @@
 - One XML registry for every Cursor project you touch
 - **Active** vs **dormant** (سكون) — agents skip dev on dormant repos
 - **Priority 1–5** and **revenue** flags you control
-- Dashboard + copy-paste agent requests
-- Engineering mind path (`SKILL.md`, rules) — skipped for Flutter/Dart
+- Dashboard **مشاريعنا** + copy-paste agent requests
+- Per-project briefs (`accomplished` / `current` / `next` / `offer`) — local YAML, never on GitHub
+- Engineering mind path (`PORTFOLIO.md`, `SKILL.md`, rules) — skipped for Flutter/Dart
 
 ## Quick install (Windows)
 

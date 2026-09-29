@@ -2,17 +2,41 @@
 
 ## أين تعدّل؟
 
-**ملف واحد (محلي، خاص):**
+**طريقتان:**
 
-```
-%USERPROFILE%\.cursor\portfolio\projects-registry.xml
-```
+1. **لوحة المشاريع** — غيّر الأولوية / الدخل / الحالة من القوائم في الجدول، ثم **تنزيل** `project-overrides.yaml` أو انسخ النص المعروض.
+2. **ملفات يدوية:**
+   - `%USERPROFILE%\.cursor\portfolio\project-overrides.yaml` (مُفضّل للنسخ الاحتياطية والأولويات)
+   - `%USERPROFILE%\.cursor\portfolio\projects-registry.xml`
 
-بعد أي تعديل يدوي:
+بعد أي تعديل يدوي في YAML أو XML:
 
 ```powershell
 python "%USERPROFILE%\.cursor\portfolio\scripts\scan_projects.py"
 ```
+
+## نسخة احتياطية vs المشروع الحقيقي
+
+في `project-overrides.yaml`:
+
+```yaml
+c-muqasa:
+  priority: 2
+  revenue: "yes"
+
+c-muqasa-jo:
+  role: backup
+  canonicalId: c-muqasa
+  lifecycle: dormant
+```
+
+`role=backup` يخفى المشروع من قائمة **طلب الوكيل** (إن كان `hide_backup_projects: true` في config).
+
+## لوحة: بحث وترتيب
+
+- **بحث** في الاسم والمسار.
+- **إخفاء السكون** / **إخفاء النسخ الاحتياطية**.
+- انقر **رأس العمود** للترتيب (مثلاً آخر تعديل ↑↓).
 
 ## مثال مشروع بدخل وأولوية قصوى
 

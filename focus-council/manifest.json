@@ -1,0 +1,19 @@
+{
+  "id": "focus-council",
+  "name": "focus-council",
+  "version": "0.1.0",
+  "description": "Structured simulated expert deliberation, neutral jury scoring, and final synthesis for high-value decisions.",
+  "tags": ["decision-quality", "multi-perspective", "jury", "prompting", "synthesis"],
+  "inputs": ["problem", "constraints", "candidate_count optional", "juror_count optional", "decision criteria optional"],
+  "outputs": ["shortlist", "weighted evaluation", "recommendation", "runner-up", "uncertainties"],
+  "required_capabilities": [],
+  "permissions": [],
+  "side_effect_level": "none",
+  "reversible": true,
+  "dependencies": ["rctc-method"],
+  "compatible_agents": ["cursor", "claude", "codex", "grok", "local-llm"],
+  "verification": "Review SKILL.md truth rules and run one documented example without fabricating real people or customer evidence.",
+  "rollback": "Remove focus-council/ and references from package/showcase indexes.",
+  "provenance": "RCTC composition: Reuse focused3 evidence discipline, extend with expert divergence + neutral jury + synthesis.",
+  "status": "reviewed"
+}

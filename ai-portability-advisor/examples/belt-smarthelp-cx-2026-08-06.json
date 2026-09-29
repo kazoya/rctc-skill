@@ -1,0 +1,433 @@
+{
+  "schema_version": "1.0",
+  "report_id": "belt-apca-smarthelp-cx-2026-08-06",
+  "generated_at": "2026-08-06T15:10:00Z",
+  "question_language": "arabic",
+  "report_mode": "full_assessment",
+  "executive_summary": "منصة APCA SmartHelp CX (Belt + flutter_sms_gateway + APCA-SmartHelp) قابلة للبيع كـ Pilot: معرفة محلية قابلة للتصدير، واجهة HTTP بين PHP وFastAPI، وطابور MySQL مع إعادة محاولة وقفل FIFO. أعلى مخاطر lock-in: قناة واتساب عبر مستمع Android (وليس Cloud API بعد)، وتعدد مسارات الرد (OpenAI/Ollama/HTML) داخل BeltConversationService دون طبقة موحدة للمزوّد. لا يُوصى بهجرة بعيدة عن SmartHelp في 90 يومًا؛ الأولوية ABSTRACT للنموذج، OPTIMIZE للحجز/handoff، وPilot لاحقًا لـ WhatsApp Cloud API مع بوابة موافقة.",
+  "layers": [
+    {
+      "layer_id": "data_knowledge",
+      "components": ["PDF/EPUB ingest", "SQLite FTS5", "FAISS/hnswlib embeddings", "learned_qa.json", "company_facts.json", ".apcahelp export"],
+      "provider_or_technology": "self-hosted files + local indexes",
+      "business_criticality": 5,
+      "data_sensitivity": 4,
+      "vendor_lock_in": 2,
+      "portability": 4,
+      "replaceability": 4,
+      "recovery_capability": 3,
+      "observability_clarity": 2,
+      "progress_loss_risk": 2,
+      "rework_risk": 2,
+      "visible_cost": "استضافة محلية/VPS — UNKNOWN شهريًا",
+      "hidden_cost": "إعادة تضمين كاملة عند تغيير نموذج embedding — نطاق UNKNOWN",
+      "migration_difficulty": 2,
+      "outage_impact": 5,
+      "assessment_confidence": "high",
+      "evidence_ids": ["ev-sh-readme", "ev-gateway-overview"],
+      "user_must_retain_control": ["مستندات العميل", "فهارس التضمين", "learned Q&A", "نسخ .apcahelp"]
+    },
+    {
+      "layer_id": "models",
+      "components": ["Sentence Transformers (MiniLM)", "Ollama grounded answers", "OpenAI paths in conversation service"],
+      "provider_or_technology": "mixed local + hosted LLM APIs",
+      "business_criticality": 4,
+      "data_sensitivity": 3,
+      "vendor_lock_in": 3,
+      "portability": 3,
+      "replaceability": 3,
+      "recovery_capability": null,
+      "observability_clarity": 2,
+      "progress_loss_risk": 2,
+      "rework_risk": 3,
+      "visible_cost": "OpenAI usage per token — UNKNOWN",
+      "hidden_cost": "تبديل نموذج embedding يتطلب re-index — UNKNOWN",
+      "migration_difficulty": 3,
+      "outage_impact": 4,
+      "assessment_confidence": "medium",
+      "evidence_ids": ["ev-sh-readme", "ev-belt-conv"],
+      "user_must_retain_control": ["اختيار النموذج", "مفاتيح API في .env فقط"]
+    },
+    {
+      "layer_id": "training_adaptation_evaluation",
+      "components": ["learned_qa via WhatsApp", "investor_qa_suite.py", "pytest suites in gateway"],
+      "provider_or_technology": "file-based QA + local tests",
+      "business_criticality": 3,
+      "data_sensitivity": 3,
+      "vendor_lock_in": 1,
+      "portability": 4,
+      "replaceability": 4,
+      "recovery_capability": null,
+      "observability_clarity": 2,
+      "progress_loss_risk": 1,
+      "rework_risk": 2,
+      "visible_cost": "UNKNOWN",
+      "hidden_cost": "غياب مجموعة تقييم ثابتة لكل عميل — rework عند التخصيص",
+      "migration_difficulty": 2,
+      "outage_impact": 2,
+      "assessment_confidence": "medium",
+      "evidence_ids": ["ev-learned-qa", "ev-gateway-overview"],
+      "user_must_retain_control": ["golden Q&A sets", "سياسة الموافقة على learned answers"]
+    },
+    {
+      "layer_id": "applications_retrieval_agents",
+      "components": ["BeltConversationService", "BeltKnowledgeClient", "ProjectBrainService", "HelpKnowledgeService HTML fallback", "PromptBuilder intents incl. human_handoff"],
+      "provider_or_technology": "PHP application layer + HTTP to FastAPI",
+      "business_criticality": 5,
+      "data_sensitivity": 4,
+      "vendor_lock_in": 3,
+      "portability": 3,
+      "replaceability": 3,
+      "recovery_capability": 2,
+      "observability_clarity": 2,
+      "progress_loss_risk": 3,
+      "rework_risk": 4,
+      "visible_cost": "UNKNOWN",
+      "hidden_cost": "تعقيد منطق الأعمال في ملف كبير — تكلفة صيانة عالية",
+      "migration_difficulty": 4,
+      "outage_impact": 5,
+      "assessment_confidence": "high",
+      "evidence_ids": ["ev-belt-client", "ev-belt-conv", "ev-prompt-handoff"],
+      "user_must_retain_control": ["قواعد الحجز", "سياسات الرد", "مسار handoff"]
+    },
+    {
+      "layer_id": "inference_serving",
+      "components": ["FastAPI :8787", "BELT_ASK_TIMEOUT_SECONDS", "Node UI :5173"],
+      "provider_or_technology": "self-hosted Python API",
+      "business_criticality": 4,
+      "data_sensitivity": 3,
+      "vendor_lock_in": 2,
+      "portability": 4,
+      "replaceability": 4,
+      "recovery_capability": 2,
+      "observability_clarity": 2,
+      "progress_loss_risk": 2,
+      "rework_risk": 2,
+      "visible_cost": "GPU اختياري — UNKNOWN",
+      "hidden_cost": "تحميل نموذج embedding مرتين إن شُغّل API مكرر",
+      "migration_difficulty": 2,
+      "outage_impact": 4,
+      "assessment_confidence": "high",
+      "evidence_ids": ["ev-sh-readme", "ev-belt-client"],
+      "user_must_retain_control": ["SLO زمن الرد", "حدود timeout"]
+    },
+    {
+      "layer_id": "orchestration_execution",
+      "components": ["MySQL MariaDB queue", "Worker FIFO GET_LOCK", "next_attempt_at retries", "InboundIdempotency", "stale processing recovery 5min", "Android WhatsApp listener"],
+      "provider_or_technology": "DB-backed queue + mobile gateway",
+      "business_criticality": 5,
+      "data_sensitivity": 4,
+      "vendor_lock_in": 4,
+      "portability": 2,
+      "replaceability": 3,
+      "recovery_capability": 3,
+      "observability_clarity": 2,
+      "progress_loss_risk": 3,
+      "rework_risk": 3,
+      "visible_cost": "UNKNOWN",
+      "hidden_cost": "اعتماد هاتف Android على واجهة إشعارات — مخاطر تشغيلية",
+      "migration_difficulty": 4,
+      "outage_impact": 5,
+      "assessment_confidence": "high",
+      "evidence_ids": ["ev-worker", "ev-overview-prod", "ev-idempotency"],
+      "user_must_retain_control": ["سجل الرسائل", "سياسة إعادة المحاولة", "قرار Cloud API"]
+    }
+  ],
+  "ownership_and_control_matrix": [
+    {"asset": "مستندات PDF/EPUB والفهارس", "owner": "العميل/الشركة", "control": "يجب أن تبقى قابلة للتصدير (.apcahelp)"},
+    {"asset": "محادثات واتساب والحجوزات", "owner": "العميل", "control": "MariaDB + نسخ احتياطي"},
+    {"asset": "مفاتيح OpenAI/مزودي LLM", "owner": "العميل", "control": ".env فقط — لا Git"},
+    {"asset": "قناة واتساب (هاتف vs Cloud API)", "owner": "قرار تشغيلي", "control": "Pilot Cloud API لاحقًا بموافقة"}
+  ],
+  "lock_in_portability_matrix": {
+    "highest_lock_in": ["orchestration_execution — Android WhatsApp path", "applications — monolithic PHP conversation logic"],
+    "strongest_portability": ["data_knowledge — local indexes + apcahelp", "inference — HTTP API boundary BeltKnowledgeClient"]
+  },
+  "recovery_assessment": {
+    "message_pipeline": "MySQL transactional queue with stale lock recovery (VERIFIED)",
+    "long_running_research_jobs": "not in scope for WhatsApp worker — UNKNOWN for separate agents",
+    "checkpoints_for_multi_step_booking": "partial — booking flow in progress per PROJECT_OVERVIEW",
+    "dead_letter_queue": "failed outbound status — INFERRED; formal DLQ not verified"
+  },
+  "hidden_cost_assessment": {
+    "re_embedding_on_model_change": "UNKNOWN magnitude",
+    "openai_without_per_customer_metering": "INFERRED risk",
+    "dual_api_smarthelp_process": "documented risk of double model load if API duplicated (README)"
+  },
+  "risk_signals": [
+    {"id": "rs-wa-android", "signal": "whatsapp_via_android_notification_listener", "evidence_id": "ev-overview-prod"},
+    {"id": "rs-multi-llm", "signal": "multiple_llm_paths_without_single_adapter", "evidence_id": "ev-belt-conv"},
+    {"id": "rs-html-fallback", "signal": "parallel_html_help_search_not_smarthelp_api", "evidence_id": "ev-help-html"},
+    {"id": "rs-no-dlq", "signal": "dead_letter_not_formalized", "evidence_id": "ev-overview-prod"}
+  ],
+  "recommendations": [
+    {
+      "id": "rec-keep-smarthelp",
+      "layer_id": "data_knowledge",
+      "action": "KEEP",
+      "current_problem": "SmartHelp already local-first with export path",
+      "evidence_ids": ["ev-sh-readme"],
+      "impact_if_unchanged": "N/A — baseline asset",
+      "alternatives": ["proprietary closed RAG SaaS"],
+      "selection_rationale": "Core sellable IP; migration away would destroy 90-day GTM",
+      "confidence": "high",
+      "prerequisites": [],
+      "phased_steps": ["document export/restore for pilots"],
+      "rollback_plan": "N/A",
+      "verification_tests": ["import .apcahelp on clean VM"],
+      "human_gate_id": "gate-keep-01",
+      "time_cost_estimate": "0",
+      "transition_risks": []
+    },
+    {
+      "id": "rec-abstract-llm",
+      "layer_id": "models",
+      "action": "ABSTRACT",
+      "current_problem": "OpenAI and Ollama paths referenced in same conversation layer",
+      "evidence_ids": ["ev-belt-conv"],
+      "impact_if_unchanged": "Provider switch requires wide PHP edits",
+      "alternatives": ["single LlmGateway interface", "config-driven provider routing"],
+      "selection_rationale": "Enables customer choice without rewriting business rules",
+      "confidence": "medium",
+      "prerequisites": ["inventory all LLM call sites"],
+      "phased_steps": ["define interface", "route existing calls", "swap test double"],
+      "rollback_plan": "Feature flag to legacy paths",
+      "verification_tests": ["same golden questions under Ollama vs OpenAI stub"],
+      "human_gate_id": "gate-abstract-01",
+      "time_cost_estimate": "2-4 weeks",
+      "transition_risks": ["regression in Arabic tone"]
+    },
+    {
+      "id": "rec-optimize-handoff-booking",
+      "layer_id": "applications_retrieval_agents",
+      "action": "OPTIMIZE",
+      "current_problem": "human_handoff intent exists; booking completion marked as next phase in overview",
+      "evidence_ids": ["ev-prompt-handoff", "ev-gateway-overview"],
+      "impact_if_unchanged": "Cannot sell full CX promise in 30-day pilot",
+      "alternatives": ["minimal operator inbox", "webhook to CRM"],
+      "selection_rationale": "Matches P1 revenue path without architecture churn",
+      "confidence": "high",
+      "prerequisites": ["define handoff SLA for clinics"],
+      "phased_steps": ["complete booking CRUD", "handoff queue for staff", "audit log"],
+      "rollback_plan": "Disable handoff route via config",
+      "verification_tests": ["e2e booking + handoff scenario"],
+      "human_gate_id": "gate-opt-01",
+      "time_cost_estimate": "3-6 weeks",
+      "transition_risks": ["scope creep per customer"]
+    },
+    {
+      "id": "rec-hybrid-wa-cloud",
+      "layer_id": "orchestration_execution",
+      "action": "HYBRIDIZE",
+      "current_problem": "Production scale doc recommends Cloud API; current Android gateway operational",
+      "evidence_ids": ["ev-overview-prod"],
+      "impact_if_unchanged": "Phone UI changes can break ingestion",
+      "alternatives": ["keep Android for pilot only", "parallel Cloud API webhook path"],
+      "selection_rationale": "Hybrid pilot reduces risk; production data movement",
+      "confidence": "medium",
+      "prerequisites": ["Meta Business verification", "customer billing for WA fees"],
+      "phased_steps": ["non-prod webhook", "dual-write messages table", "cutover per customer"],
+      "rollback_plan": "Revert to Android gateway route flag",
+      "verification_tests": ["parity test inbound/outbound ids"],
+      "pilot_plan": {"scope": "one clinic number", "duration": "4-8 weeks", "success_metrics": ["delivery rate", "latency p95"]},
+      "human_gate_id": "gate-hybrid-wa-01",
+      "time_cost_estimate": "4-12 weeks",
+      "transition_risks": ["production", "data_delete_replace_transfer", "paid_cost"]
+    },
+    {
+      "id": "rec-defer-voice",
+      "layer_id": "applications_retrieval_agents",
+      "action": "DEFER",
+      "current_problem": "Pipecat present in repo; voice marked next phase",
+      "evidence_ids": ["ev-overview-roadmap"],
+      "impact_if_unchanged": "None for 30-day text pilot",
+      "alternatives": ["Pipecat stack", "other voice pipeline"],
+      "selection_rationale": "Strategy P2 after paid text pilot",
+      "confidence": "high",
+      "prerequisites": ["text pilot revenue"],
+      "phased_steps": [],
+      "rollback_plan": "N/A",
+      "verification_tests": [],
+      "human_gate_id": "gate-defer-01",
+      "time_cost_estimate": "UNKNOWN",
+      "transition_risks": []
+    },
+    {
+      "id": "rec-reject-erp-rewrite",
+      "layer_id": "applications_retrieval_agents",
+      "action": "REJECT",
+      "current_problem": "Temptation to rewrite monolith while selling CX",
+      "evidence_ids": ["ev-gateway-overview"],
+      "impact_if_unchanged": "Distraction from GTM",
+      "alternatives": ["incremental modules", "extract handoff service later"],
+      "selection_rationale": "Rework cost exceeds pilot value in 90 days",
+      "confidence": "high",
+      "prerequisites": [],
+      "phased_steps": [],
+      "rollback_plan": "N/A",
+      "verification_tests": [],
+      "human_gate_id": "gate-reject-01",
+      "time_cost_estimate": "N/A",
+      "transition_risks": []
+    }
+  ],
+  "authorized_actions": [],
+  "roadmap": {
+    "immediate": [
+      "توثيق تصدير .apcahelp + نسخ MariaDB للعميل التجريبي",
+      "قائمة golden questions عربية للعيادة/صيانة",
+      "تأكيد عدم وجود أسرار في Git (مراجعة .env.example فقط في التقرير)"
+    ],
+    "days_30": [
+      "إكمال handoff + حجز كامل مع سجل تدقيق",
+      "ABSTRACT طبقة LLM خلف واجهة واحدة",
+      "لوحة محادثات بسيطة + موافقة opt-out"
+    ],
+    "days_90": [
+      "عميل مدفوع أول + Case Study",
+      "Pilot هجين WhatsApp Cloud API لعميل واحد (بعد موافقة)",
+      "تكلفة تقريبية لكل محادثة (حتى لو UNKNOWN أولًا ثم قياس)"
+    ],
+    "strategic": [
+      "Smart Branch / دور ناطق (P2) على نفس BeltKnowledgeClient",
+      "Redis/DLQ إن تجاوزت الطابور حدود MySQL-FIFO"
+    ]
+  },
+  "human_approval_gates": [
+    {
+      "gate_id": "gate-keep-01",
+      "status": "APPROVED",
+      "recommendation_action": "KEEP",
+      "reason": "Analytical baseline — user strategy P1",
+      "triggers": [],
+      "authorized_action": null
+    },
+    {
+      "gate_id": "gate-abstract-01",
+      "status": "PENDING_HUMAN_APPROVAL",
+      "recommendation_action": "ABSTRACT",
+      "reason": "Production code change in conversation layer",
+      "triggers": ["hard_to_reverse"],
+      "authorized_action": null
+    },
+    {
+      "gate_id": "gate-opt-01",
+      "status": "PENDING_HUMAN_APPROVAL",
+      "recommendation_action": "OPTIMIZE",
+      "reason": "Booking + handoff touches PII workflows",
+      "triggers": ["pii_data"],
+      "authorized_action": null
+    },
+    {
+      "gate_id": "gate-hybrid-wa-01",
+      "status": "PENDING_HUMAN_APPROVAL",
+      "recommendation_action": "HYBRIDIZE",
+      "reason": "WhatsApp Cloud pilot — production routing + paid API",
+      "triggers": ["pii_data", "paid_cost", "data_delete_replace_transfer"],
+      "authorized_action": null
+    },
+    {
+      "gate_id": "gate-defer-01",
+      "status": "DEFER",
+      "recommendation_action": "DEFER",
+      "reason": "Voice/Pipecat — evidence sufficient to defer",
+      "triggers": [],
+      "authorized_action": null
+    },
+    {
+      "gate_id": "gate-reject-01",
+      "status": "APPROVED",
+      "recommendation_action": "REJECT",
+      "reason": "Analytical — no full rewrite in 90d",
+      "triggers": [],
+      "authorized_action": null
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-sh-readme",
+      "status": "VERIFIED",
+      "statement": "APCA-SmartHelp uses SQLite FTS5, FAISS, Ollama optional, .apcahelp export, API :8787",
+      "source": "C:\\Belt\\APCA-SmartHelp\\README.md",
+      "layer": "data_knowledge"
+    },
+    {
+      "id": "ev-belt-client",
+      "status": "VERIFIED",
+      "statement": "PHP BeltKnowledgeClient calls /api/ask and /api/search on BELT_API_URL default 8787",
+      "source": "C:\\Belt\\flutter_sms_gateway\\backend\\src\\BeltKnowledgeClient.php",
+      "layer": "inference_serving"
+    },
+    {
+      "id": "ev-worker",
+      "status": "VERIFIED",
+      "statement": "Worker uses MySQL GET_LOCK FIFO, next_attempt_at, stale processing recovery 5 minutes",
+      "source": "C:\\Belt\\flutter_sms_gateway\\backend\\src\\Worker.php",
+      "layer": "orchestration_execution"
+    },
+    {
+      "id": "ev-idempotency",
+      "status": "VERIFIED",
+      "statement": "InboundIdempotency used in WebhookService",
+      "source": "C:\\Belt\\flutter_sms_gateway\\backend\\src\\WebhookService.php",
+      "layer": "orchestration_execution"
+    },
+    {
+      "id": "ev-gateway-overview",
+      "status": "VERIFIED",
+      "statement": "Overview lists FIFO, embeddings search, booking path, production Cloud API and Redis/DLQ as future",
+      "source": "C:\\Belt\\flutter_sms_gateway\\PROJECT_OVERVIEW_AR.md",
+      "layer": "applications_retrieval_agents"
+    },
+    {
+      "id": "ev-overview-prod",
+      "status": "VERIFIED",
+      "statement": "Production section recommends WhatsApp Cloud API and Redis/RabbitMQ DLQ",
+      "source": "C:\\Belt\\flutter_sms_gateway\\PROJECT_OVERVIEW_AR.md",
+      "layer": "orchestration_execution"
+    },
+    {
+      "id": "ev-belt-conv",
+      "status": "VERIFIED",
+      "statement": "BeltConversationService references ollama_universal, openai_grounded, openai_universal explanation types",
+      "source": "C:\\Belt\\flutter_sms_gateway\\backend\\src\\BeltConversationService.php",
+      "layer": "models"
+    },
+    {
+      "id": "ev-prompt-handoff",
+      "status": "VERIFIED",
+      "statement": "PromptBuilder includes human_handoff intent",
+      "source": "C:\\Belt\\flutter_sms_gateway\\backend\\src\\PromptBuilder.php",
+      "layer": "applications_retrieval_agents"
+    },
+    {
+      "id": "ev-help-html",
+      "status": "VERIFIED",
+      "statement": "HelpKnowledgeService searches HTML under PROJECT_HELP_ROOT not SmartHelp API",
+      "source": "C:\\Belt\\flutter_sms_gateway\\backend\\src\\HelpKnowledgeService.php",
+      "layer": "applications_retrieval_agents"
+    },
+    {
+      "id": "ev-learned-qa",
+      "status": "VERIFIED",
+      "statement": "LearnedQaService documents WhatsApp-taught Q&A to SmartHelp learned_qa.json",
+      "source": "C:\\Belt\\flutter_sms_gateway\\backend\\src\\LearnedQaService.php",
+      "layer": "training_adaptation_evaluation"
+    },
+    {
+      "id": "ev-overview-roadmap",
+      "status": "VERIFIED",
+      "statement": "Roadmap lists voice STT/TTS and human transfer as next phase",
+      "source": "C:\\Belt\\flutter_sms_gateway\\PROJECT_OVERVIEW_AR.md",
+      "layer": "applications_retrieval_agents"
+    }
+  ],
+  "assumptions": [
+    "حجم الرسائل اليومي للإنتاج — UNKNOWN",
+    "تكلفة OpenAI الفعلية لكل عميل — UNKNOWN",
+    "امتثال HIPAA/PCI — UNKNOWN؛ افتراض عيادات/صيانة حساسية متوسطة",
+    "AIPRO (Next+Supabase) منفصل عن مسار Belt التشغيلي الحالي — لم يُحلل في هذا التقرير"
+  ],
+  "no_bluff_statement": "الدرجات نوعية مبنية على ملفات README وPHP المقروءة محليًا. لم تُشغَّل خدمات 8787 ولا قياسات latency أو تكلفة فعلية. لا توصية MIGRATE بعيدًا عن SmartHelp. HYBRIDIZE لواتساب Cloud API يتطلب موافقتك قبل أي pilot مدفوع.",
+  "recommendation_vs_authorized_action_note": "جميع البنود في recommendations تحليلية فقط. authorized_actions فارغة — لا commit ولا deploy ولا Cloud API حتى تعيّن APPROVED صراحةً."
+}

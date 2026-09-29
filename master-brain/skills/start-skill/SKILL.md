@@ -18,7 +18,7 @@ description: >
 > **One line:** when the owner has several chats/sessions, each about a different project, turn them into one tracked portfolio:
 > a folder per project + a conscious engineering mind + reports + a direct channel to Claude Code / Claude Desktop — then document what you learned.
 
-**Invoke:** `/start-skill` · **Reference implementation:** `master-brain/` (zero-dependency Node.js) · **Sibling skills:** `portfolio-commander`, `rctc-method`, `focused3-agentic-phases`, `master-brain`
+**Invoke:** `/start-skill` · **Reference implementation:** `master-brain/` (zero-dependency Node.js) · **Sibling skills:** `portfolio-commander`, `rctc-method`, `focused3-agentic-phases`, `master-brain`, `logged-in-browser` (standing)
 
 ## Effort & model defaults (Claude Code)
 

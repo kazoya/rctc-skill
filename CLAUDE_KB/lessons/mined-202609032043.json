@@ -1,0 +1,117 @@
+﻿[
+    {
+        "source":  "pair-logs-arc/pair-65.md",
+        "advice_snip":  "**(1) ╪د┘╪ز╪╣╪»┘è┘** ظ¤ ┘┘è `score.py` ┘┘é╪╖: `_rows_from_log` ┘è┘é╪▒╪ث `actions` ╪ث┘ê┘╪د┘ï ╪س┘à `total_actions` ┘â╪ذ╪»┘è┘╪î ┘ê┘è╪│╪ش┘ّ┘ `actions_key` ┘┘è ╪د┘╪╡┘╪ؤ ┘à┘╪ز╪د╪ص ╪ز┘é╪▒┘è╪▒ ╪ش╪»┘è╪» `runs_actions_from_total_actions` (┘è┘╪╣╪»┘ّ ┘┘ê┘é ╪د┘╪╡┘┘ê┘ ┘â┘à╪د ┘é┘╪▒┘╪خ╪ز) ┘ê╪│╪╖╪▒ ┘┘ç ┘┘è `_write_md`. ╪د┘╪╡┘è╪║╪ر ┘ê`score_bounds` ┘ê`score_proportional` ┘ê`_combine` ┘ê`level_score` ┘ê╪ص╪د╪▒╪│ 63 ┘ê`--allow-zero-actions` ╪ذ┘╪د ╪ز╪║┘è┘è╪▒.\r\n**(4) ┘à╪│╪ص ┘â┘ `src/agi3/*.py`** ┘┘è ╪د┘╪ز┘é╪▒┘è╪▒: ╪ث╪▒╪ذ╪╣ ┘ê╪ص╪»╪د╪ز ╪ز┘â╪ز╪ذ `total_actions` ┘ê┘╪د ╪ز┘â╪ز╪ذ `actions` ظ¤ `sweep.py` (╪│╪ذ╪ذ ╪د┘╪ز╪│╪▒┘ّ╪ذ) ┘ê`baseline.py` ┘ê`play.py` ┘ê`memory.py`╪î ┘ê┘â┘┘ç╪د ┘â╪د┘╪ز ╪│╪ز╪ز╪│╪▒┘ّ╪ذ ┘╪ص╪╕╪ر ╪ذ┘┘â┘ç╪د ┘à╪│╪ز┘ê┘ë. ┘┘à ╪ث╪╣╪»┘ّ┘ ╪ث┘è ┘â╪د╪ز╪ذ ╪│╪ش┘╪د╪ز.\r\n**(5)** `evidence/actions_key_pair64.txt` ┘à┘â╪ز┘ê╪ذ ╪ذ┘â┘ ┘à╪د ╪│╪ذ┘é. **ARC-AGI-3 ┘à╪د ╪▓╪د┘ ╪ذ╪╡┘╪▒ ╪ح╪▒╪│╪د┘╪د╪ز ┘ê┘╪د ┘é╪▒╪د╪▒ ╪ح╪▒╪│╪د┘.**\r\n3. ╪ث╪»┘ê╪د╪ز Cursor ╪د┘┘à╪│╪ز╪«╪»┘┘à╪ر: `pytest` ┘à╪ص┘┘è╪د┘ï╪î `python -m src.agi3.score` (╪ث╪▒╪ذ╪╣ ╪ز╪┤╪║┘è┘╪د╪ز)╪î ┘à╪│╪ص ╪د┘┘à╪╡╪»╪▒ ┘ê┘â╪ز╪د╪ذ╪ر `evidence/` + `experiments/` + `docs/` ظ¤ ╪ذ┘╪د ╪ث┘è ╪ث┘à╪▒ Kaggle ┘ê╪ذ┘╪د commit.\r\n╪ث┘è ┘à┘┘ ╪│╪د╪ذ┘é ╪ز╪ص╪ز evidence/ ╪ث┘ê docs/.\r\nsweep.py ┘ê baseline.py ┘ê play.py ┘ê memory.py ╪ز┘â╪ز╪ذ total_actions╪î ╪ذ┘è┘┘à╪د\r\n    - RUN_ROW_REQUIRED = (\"game_id\", \"levels_completed\", \"actions\")\r\n      {game, levels_completed, actions, actions_key, plan_length} ╪ذ┘┘╪│ ┘à┘╪╖┘é\r\n        levels_completed╪î ╪ح┘ ┘â╪د┘ ╪ث┘è ╪╡┘┘ّ ┘┘è┘ç levels_completed \u003e 0 ┘┘è╪ش╪ذ ╪ث┘ ┘è╪ص┘à┘\r\n(5) ╪د┘â╪ز╪ذ evidence/runlog_contract_pair66.txt ┘è╪ص┘ê┘è: ╪ش╪»┘ê┘ ╪ث┘è ┘â╪د╪ز╪ذ ╪╡╪د╪▒ ┘è╪│╪ز╪«╪»┘à\r",
+        "next_order":  "┘à╪│╪د╪▒ ARC-AGI-3 ظ¤ ╪د┘╪▓┘ê╪ش 66/210. ┘à╪ش┘╪» C:\\ArabBank\\arc_prize_2026.\r\n┘╪د ╪ز╪▒╪│┘ ╪ح┘┘ë Kaggle╪î ┘╪د ╪ز┘┘┘ّ╪░ commit╪î ┘╪د ╪ز╪┤╪║┘ّ┘ ╪ث┘è ╪ث┘à╪▒ kaggle╪î ┘ê┘╪د ╪ز╪ص╪░┘ ┘ê┘╪د ╪ز╪╣╪»┘ّ┘\r\n╪ث┘è ┘à┘┘ ╪│╪د╪ذ┘é ╪ز╪ص╪ز evidence/ ╪ث┘ê docs/.\r\n\r\n╪د┘╪«┘┘┘è╪ر: ╪د┘╪▓┘ê╪ش 65 ╪ث╪س╪ذ╪ز ╪ث┘ ╪│╪ش┘╪د╪ز ┘ç╪░╪د ╪د┘┘à╪│╪ز┘ê╪»╪╣ ┘╪د ╪ز╪ز┘┘é ╪╣┘┘ë ╪د╪│┘à ╪╣╪»┘ّ╪د╪» ╪د┘╪ث┘╪╣╪د┘ ظ¤\r\nsweep.py ┘ê baseline.py ┘ê play.py ┘ê memory.py ╪ز┘â╪ز╪ذ total_actions╪î ╪ذ┘è┘┘à╪د\r\nsweep_v2.py ┘ê hybrid.py ┘ê smoke.py ┘ê ida.py ╪ز┘â╪ز╪ذ actions. ┘ê┘╪│┘┘ّ╪╣ _rows_from_log\r\n┘┘è┘é╪▒╪ث ╪د┘╪د╪س┘┘è┘╪î ┘ê╪ث┘╪╢┘è┘ ╪╣╪»┘ّ╪د╪» runs_actions_from_total_actions. ┘ç╪░╪د ╪د┘╪▓┘ê╪ش ┘è┘ê╪ص┘ّ╪»\r\n╪د┘┘à╪╡╪»╪▒ ┘╪د ╪د┘┘é╪د╪▒╪خ ┘┘é╪╖╪î ┘ê┘è┘é┘┘ ╪د┘┘╪ش┘ê╪ر ╪د┘╪س╪د┘┘è╪ر: ╪│╪ش┘ ┘è╪ذ┘┘â ┘à╪│╪ز┘ê┘è╪د╪ز ┘ê┘╪د ┘è┘â╪ز╪ذ ╪ث┘è ╪╣╪»┘ّ╪د╪».\r\n\r\n╪د┘┘ç╪»┘: ╪╣┘é╪» ┘à┘â╪ز┘ê╪ذ ┘╪╡┘┘ّ ╪د┘╪│╪ش┘╪î ┘à┘┘╪▓┘┘à ╪ذ╪د╪«╪ز╪ذ╪د╪▒ ┘è┘à╪│╪ص ┘â┘ ╪د┘┘â╪ز┘ّ╪د╪ذ.\r\n\r\n(1) ╪ث┘╪┤╪خ src/agi3/runlog.py ظ ┘ê╪ص╪»╪ر ╪╡╪║┘è╪▒╪ر ┘ê╪د╪ص╪»╪ر ┘┘è┘ç╪د:\r\n    - RUN_ROW_REQUIRED = (\"game_id\", \"levels_completed\", \"actions\")\r\n      ┘ê RUN_ROW_ALIASES = {\"actions\": (\"total_actions\",), \"game_id\": (\"game\",)}\r\n    - ╪»╪د┘╪ر norm"
+    },
+    {
+        "source":  "pair-logs-arc/pair-66.md",
+        "advice_snip":  "`agi3_probe_coverage.json`: `families_changed = 2`, `changed_games = [\u0027ft09-0d8bbf25\u0027, \u0027sb26-7fbdac44\u0027]` ظ¤ ┘ç┘à╪د **╪د┘┘ê╪ص┘è╪»╪ز╪د┘** ╪ذ╪╣╪د╪خ┘╪ر `toggle_gf2`. ft09 ┘ç┘è ╪د┘┘╪╣╪ذ╪ر ╪د┘┘ê╪ص┘è╪»╪ر ╪د┘╪ز┘è ┘╪▓┘╪د ╪ذ┘ç╪د 6/6. ┘êsb26 ┘ç┘è **╪ث╪▒╪«╪╡ ┘╪╣╪ذ╪ر ┘┘è ╪د┘┘┘ç╪▒╪│** (8 ┘à╪│╪ز┘ê┘è╪د╪ز╪î ┘à╪ش┘à┘ê╪╣ baseline = 213 ┘à┘é╪د╪ذ┘ 233 ┘╪ث┘é╪▒╪ذ ┘à┘╪د┘╪│). ┘╪▒╪╢┘è╪ر ┘é╪د╪ذ┘╪ر ┘┘╪د╪«╪ز╪ذ╪د╪▒ ╪ذ╪╢╪║╪╖╪ر ┘ê╪د╪ص╪»╪ر: ╪د┘╪ز┘ç┘è╪خ╪ر ╪د┘╪ز┘è ┘â╪│╪ذ╪ز ft09 ╪ز┘╪ز┘é┘ ╪ح┘┘ë sb26.\r\nsb26 ظْ sb26-7fbdac44  win_levels 8   valid 6    avail [5,6,7]\r\nr11l ظْ r11l-495a7899  win_levels 6   valid 256  avail [6]\r\ntn36 ظْ tn36-ef4dde99  win_levels 7   valid 11   avail [6]\r\n   ╪ذ┘┘╪│ ┘à╪╣╪د┘à┘╪د╪ز ╪د┘┘ sweep ╪د┘╪│╪د╪ذ┘é (--max-actions-per-level 400 --per-run-timeout 75)\r\n10) ╪د┘â╪ز╪ذ evidence/cover19_pair66.txt ┘à╪ز╪╢┘à┘╪د┘ï:\r\n    - ╪ش╪»┘ê┘ 19 ╪╡┘╪د┘ï: game_id | win_levels | levels_completed | total_actions | proportional | ╪س╪د┘┘è╪ر\r\n12) ┘╪د submit. ╪د┘╪ذ┘ê╪د╪ذ╪ر ┘┘à ╪ز┘┘╪ز╪ص ╪ذ╪╣╪»╪ؤ ┘ç╪░╪د pair ╪ز╪║╪╖┘è╪ر ┘ê┘é┘è╪د╪│ ┘┘é╪╖.\r",
+        "next_order":  "╪د┘┘à┘ç┘à╪ر (pair 66/210 ظ¤ track ARC-AGI-3): ╪ز╪║╪╖┘è╪ر ╪د┘┘19 ┘╪╣╪ذ╪ر ╪║┘è╪▒ ╪د┘┘à┘╪╣┘ê╪ذ╪ر + ╪ح╪║┘╪د┘é ┘é┘╪د╪ر ┘à╪╖╪د╪ذ┘é╪ر ╪د┘╪ذ╪د╪»╪خ╪ر.\r\n┘â┘ ╪┤┘è╪ة offline. ┘╪د ╪ث┘à╪▒ kaggle. ┘╪د ╪ص╪░┘. ┘╪د commit ╪ح┘╪د ╪ذ╪╣╪» ┘╪ش╪د╪ص pytest.\r\n\r\n╪د┘╪ش╪▓╪ة ╪ث ظ¤ sweep ╪ز╪║╪╖┘è╪ر ╪╣┘┘ë ╪د┘┘┘ç╪▒╪│ ╪د┘╪▒╪│┘à┘è:\r\n1) ╪س╪ذ┘ّ╪ز ╪د┘╪ذ┘è╪خ╪ر: AGI3_GAMES_ROOT=data/official_env/environment_files (╪د╪ش╪╣┘┘ç╪د explicit ┘┘è ╪د┘╪ث┘à╪▒╪î ┘╪د ╪ز╪╣╪ز┘à╪» ╪╣┘┘ë ╪د┘╪د┘╪ز╪▒╪د╪╢┘è).\r\n2) ╪┤╪║┘ّ┘ src/agi3/sweep.py ╪╣┘┘ë ╪د┘┘19 ┘╪╣╪ذ╪ر ╪║┘è╪▒ ╪د┘┘à┘╪╣┘ê╪ذ╪ر ╪ذ╪د┘╪╢╪ذ╪╖:\r\n   sb26,tn36,sc25,su15,lp85,tr87,tu93,s5i5,bp35,ka59,cn04,g50t,sk48,m0r0,dc22,re86,lf52,wa30,r11l\r\n   ╪ذ┘┘╪│ ┘à╪╣╪د┘à┘╪د╪ز ╪د┘┘ sweep ╪د┘╪│╪د╪ذ┘é (--max-actions-per-level 400 --per-run-timeout 75)\r\n   ┘ê┘ê╪│┘ّ╪╣ --deadline ┘╪ث┘ ╪د┘╪ث┘╪╣╪د╪ذ 19 ┘╪د 6.\r\n   ╪د┘┘à╪«╪▒╪ش: experiments/agi3_sweep_cover19_pair66.json ┘ê docs/agi3_sweep_cover19_pair66.md\r\n3) ┘╪د ╪ز╪╣╪»┘ّ┘ DEFAULT_GAMES ┘┘è sweep.py ظ¤ ┘à╪▒┘ّ╪▒ --games ╪╡╪▒╪د╪ص╪ر┘ï.\r\n\r\n╪د┘╪ش╪▓╪ة ╪ذ ظ¤ ╪ح╪╣╪د╪»╪ر ╪ز╪│╪ش┘è┘ ╪د┘╪ذ╪╖╪د┘é╪ر ╪ذ╪╡╪▒╪د┘à╪ر ╪د┘┘à╪╣╪▒┘ّ┘╪د╪ز:\r\n4) ╪ث╪╢┘ ╪ح┘┘ë src/agi3/score.py ╪«┘è╪د╪▒ --strict-ids: ╪╣┘╪»┘à╪د ┘è┘â┘ê┘ ┘à┘╪╣"
+    },
+    {
+        "source":  "pair-logs-arc/pair-67.md",
+        "advice_snip":  "| ┘╪╣╪ذ╪ر | game_id | win_levels | valid | avail |\r\n╪د┘╪│╪ذ╪ذ ╪ذ┘┘è┘ê┘è: `_rows_from_log` ┘è┘é╪▒╪ث `actions`/`total_actions` ┘┘é╪╖ ┘ê┘╪د ┘è╪╣╪▒┘ `level_markers`/`sent_actions` ╪ح╪╖┘╪د┘é┘ï╪د. ╪ث┘╪╢┘ ┘à╪د ╪╣┘┘ë ╪د┘┘é╪▒╪╡ ┘┘â┘ ┘╪╣╪ذ╪ر ┘è╪╣╪╖┘è ╪ذ╪╖╪د┘é╪ر **19.07** ╪╣┘┘ë 6 ╪ث┘╪╣╪د╪ذ ┘à┘╪╣┘ê╪ذ╪ر (╪ث┘ê **13.24** ╪╣┘┘ë 9 ╪ح┘ ╪╣┘╪»┘┘ّ╪ز sb26/tn36/r11l ┘à┘╪ز┘ê╪ص╪ر) ┘à┘é╪د╪ذ┘ **1.3840** ╪د┘┘à┘╪╣┘┘╪ر ظ¤ ┘╪د╪▒┘é ~10├ù╪î ┘à╪ش┘ّ╪د┘┘ï╪د╪î ╪ذ┘╪د ╪ذ╪ص╪س ╪ش╪»┘è╪». ┘ç╪░╪د ╪د┘à╪ز╪»╪د╪» ┘à╪ذ╪د╪┤╪▒ ┘╪«╪╖╪ث pair 64 ┘┘╪│┘ç: ╪د╪│┘à ╪╣┘à┘ê╪»╪î ┘╪د ╪╡┘è╪║╪ر.\r\n**╪ث╪»┘ê╪د╪ز Cursor ╪د┘┘à╪│╪ز╪«╪»┘à╪ر:** ╪ز╪┤╪║┘è┘ ╪ذ╪د┘è╪س┘ê┘ ┘à╪ص┘┘è ╪╣┘┘ë `src/agi3/{env,score,ida}.py`╪î ┘é╪▒╪د╪ة╪ر `experiments/*.json` ┘ê`evidence/*.txt`╪î ╪ذ┘╪د ╪ث┘à╪▒ kaggle ┘ê╪ذ┘╪د commit.\r\n- src/agi3/score.py::_rows_from_log ┘╪د ┘è┘é╪▒╪ث level_markers ┘ê┘╪د sent_actions╪î ┘╪░╪د\r\n   - ╪د┘é╪ذ┘ ╪╡┘┘ï┘ّ╪د ┘è╪ص┘à┘ level_markers (┘é╪د╪خ┘à╪ر) + sent_actions/total_actions/actions╪î\r\n     scored_by=\"markers\". ┘╪د ╪ز┘╪╢╪╣┘ ╪ص╪د╪▒╪│ pair 63 (levels\u003e0 ┘ê actions\u003c=0 ┘è╪«╪▒╪ش).\r\n   - ╪د╪«╪ز╪ذ╪د╪▒ ┘è╪س╪ذ╪ز ╪ث┘ ╪╡┘ ft09 ╪ذ╪╣┘╪د┘à╪د╪ز┘ç ┘è┘╪│╪ش┘┘ّ┘ 100.0000 ┘ê╪ث┘ ╪ح╪▓╪د┘╪ر level_markers\r\n   - ╪ث┘â┘ّ╪» ╪ث┘ metadata.baseline_actions == (43,12,23,28,65,37) ┘ê╪ث┘ game_id ┘à╪╖╪د╪ذ┘é.\r\n   - ╪ح┘ ╪ز┘â╪▒┘ّ╪▒╪ز level_markers [4,12,27,44,66,80] ┘┘è ╪د┘╪ز╪┤╪║┘è┘┘è┘: ╪د┘┘╪ز┘è╪ش╪ر ┘à┘╪س╪ذ╪ز╪ر.\r\n   - evidence/marker_fold_pair68.txt ┘è╪ص┘ê┘è: ╪ث┘ê╪د┘à╪▒ ╪ص┘é┘è┘é┘è╪ر ┘ê┘à╪«╪▒╪ش╪د╪ز┘ç╪د╪î ╪ش╪»┘ê┘\r\n   - ┘à┘┘╪د╪ز ╪ش╪»┘è╪»╪ر ╪ز╪ص╪ز src/agi3, tests, docs, experiments, evidence ┘┘é╪╖.\r",
+        "next_order":  "┘à┘ç┘à╪ر pair 68/210 ظ¤ ┘à╪│╪د╪▒ ARC-AGI-3 ظ¤ \"╪╖┘è┘ّ ╪د┘╪│╪ش┘┘ّ╪د╪ز ╪د┘╪»┘é┘è┘é╪ر ┘ê╪د┘╪ز╪ص┘é┘é ┘à┘ ft09\"\r\n\r\n╪د┘╪│┘è╪د┘é ╪د┘┘à┘╪ز╪ص┘é┘┘ّ┘é ┘à┘┘ç (┘╪د ╪ز╪╣┘è╪» ╪د┘â╪ز╪┤╪د┘┘ç):\r\n- experiments/agi3_headroom_top5.json ┘è╪ص┘à┘ ╪╡┘┘ê┘┘ï╪د ┘à╪│╪ش┘┘ّ┘╪ر ╪ذ┘ score_run ╪د┘╪»┘é┘è┘é:\r\n  ft09 6/6 markers [4,12,27,44,66,80] sent 80 -\u003e 100.0000 (win, 0.753s, arm=octo)\r\n  cd82 2/6 markers [5,11] sent 11 -\u003e 14.2857 | r11l 1/6 markers [3] sent 3 -\u003e 4.7619\r\n  sb26 0/8 sent 0 (stalled) | tn36 0/7 sent 0 (timeout)\r\n- src/agi3/score.py::_rows_from_log ┘╪د ┘è┘é╪▒╪ث level_markers ┘ê┘╪د sent_actions╪î ┘╪░╪د\r\n  ┘╪د ┘è┘╪╖┘ê┘ë ╪ث┘è┘î┘ّ ┘à┘ ┘ç╪░┘ç ╪د┘╪╡┘┘ê┘╪î ┘ê╪د┘╪ذ╪╖╪د┘é╪ر ╪د┘┘à┘╪╣┘┘╪ر 1.3840 (pair64) ╪ث┘é┘ ┘à┘ ╪د┘╪ص┘é┘è┘é╪ر.\r\n- sb26 valid=6 avail=[5,6,7] win=8 | r11l valid=256 avail=[6] win=6 | tn36 valid=11 avail=[6] win=7\r\n\r\n┘┘┘ّ╪░ ╪د┘╪«┘à╪│╪ر ╪ذ╪د┘╪ز╪▒╪ز┘è╪ذ╪î ┘ê┘é┘ ╪╣┘╪» ╪ث┘ê┘ ┘╪┤┘ ╪ز╪ص┘é┘é:\r\n\r\n1) ╪ز┘ê╪│┘è╪╣ ╪د┘┘é╪د╪▒╪خ (src/agi3/score.py ┘┘é╪╖╪î ╪ذ┘╪د ┘┘à╪│ ╪د┘╪╡┘è╪║╪ر):\r\n   - ╪د┘é╪ذ┘ ╪╡┘┘ï┘ّ╪د ┘è╪ص┘à┘ level_markers (┘é╪د╪خ┘à╪ر) + sent_actions/total_actions/actions╪î\r\n     ┘ê╪│╪ش┘ّ┘┘ç ╪╣╪ذ╪▒ score_run ╪د┘╪»┘é┘è┘é ┘╪د ╪╣╪ذ╪▒ score_bounds ╪د┘╪ز┘"
+    },
+    {
+        "source":  "pair-logs-arc/pair-68.md",
+        "advice_snip":  "best = max(runs, key=lambda r: (r[\"levels_completed\"], -r[\"seconds\"]))\r\n╪د┘╪ث┘ê┘┘ê┘è╪ر ┘┘è ┘ç╪░╪د ╪د┘╪▓┘ê╪ش ┘┘è╪│╪ز ╪ص┘┘ّ sb26 ظ¤ ╪ذ┘ ╪ح╪║┘╪د┘é ┘à┘╪│╪▒┘┘ّ╪ذ ╪د┘╪د╪«╪ز┘è╪د╪▒ ┘é╪ذ┘ ╪ث┘è submit╪î ┘╪ث┘ ╪ث┘è ╪ذ┘ê╪د╪ذ╪ر ╪ز┘╪«╪ز┘à ╪╣┘┘ë `best` ┘à╪║┘┘ê╪╖ ╪ز┘╪«╪ز┘à ╪╣┘┘ë ╪▒┘é┘à ╪«╪د╪╖╪خ.\r\n  Same 6/6 levels. 80 actions = 100.00 (coverage-bound); 743 actions = 6.94 (efficiency-bound).\r\n  best = max(runs, key=lambda r: (r[\"levels_completed\"], -r[\"seconds\"]))\r\n  Every run in `runs` already carries a computed `score` (score_row runs on the loop above,\r\n  line ~588). The merge then throws that score away and ranks by wall-clock seconds.\r\n  (a) On equal levels, a fast-but-wasteful arm displaces a slow-but-efficient one.\r\n      carries zero evidence and must never outrank a row that actually played.\r\n1. Replace the merge key with a score-first, evidence-aware ordering:\r\n     key = (levels_completed, score or 0.0, 1 if sent_actions \u003e 0 else 0, -sent_actions, -seconds)\r\n   Keep the existing comment\u0027s intent (a fallback never displaces an EQUAL first arm) by\r\n   making `seconds` the LAST tiebreaker only, never the first. Do not change score_row.\r",
+        "next_order":  {
+
+                       }
+    },
+    {
+        "source":  "pair-logs-arc/pair-69.md",
+        "advice_snip":  "best = max(runs, key=lambda r: (r[\"levels_completed\"], -r[\"seconds\"]))\r\n╪د┘╪│╪╖╪▒╪د┘ ┘é╪ذ┘┘ç (588ظّ589) ┘è╪ص╪│╪ذ╪د┘ `score_row` ┘┘â┘ ╪░╪▒╪د╪╣╪î ╪س┘à ┘à┘╪ز╪د╪ص ╪د┘╪ز╪▒╪ز┘è╪ذ ┘è╪ز╪ش╪د┘ç┘ `score` ╪ز┘à╪د┘à┘ï╪د ┘ê┘è┘â╪│╪▒ ╪د┘╪ز╪╣╪د╪»┘ ╪ذ┘`-seconds`. ┘┘à╪س╪د┘┘â ╪»┘é┘è┘é: octo 6/6 ╪ذ┘80 ╪ص╪▒┘â╪ر ┘ê85╪س ┘à┘é╪د╪ذ┘ v2 6/6 ╪ذ┘743 ╪ص╪▒┘â╪ر ┘ê20╪س ظçْ ┘è┘┘ê╪▓ v2 ┘ê╪ز┘╪╖╪ذ╪╣ ┘┘é╪د╪╖┘ç╪î ┘╪د 100.00. ╪د┘╪ز╪╣┘┘è┘é ┘┘╪│┘ç ┘è┘é┘ê┘ ┬سTies go to the cheaper run, so a fallback never displaces an equal first arm┬╗ ظ¤ ┘ê╪د┘┘┘è╪ر ╪│┘┘è┘à╪ر (╪س╪ذ╪د╪ز ┘╪╡╪د┘╪ص ╪د┘╪░╪▒╪د╪╣ ╪د┘╪ث┘ê┘) ┘┘â┘ `-seconds` ┘ê┘â┘è┘ ╪«╪د╪╖╪خ ╪╣┘┘ç╪د: ╪د┘╪░╪▒╪د╪╣ ╪د┘╪ث┘ê┘ ┘┘è╪│ ╪ذ╪د┘╪╢╪▒┘ê╪▒╪ر ╪د┘╪ث╪│╪▒╪╣.\r\n**3) ┘╪د ╪د╪«╪ز╪ذ╪د╪▒ ┘è╪ص╪▒╪│ ┘ç╪░╪د** ظ¤ `tests/test_agi3_hybrid.py:211` ┘è╪ج┘â┘ّ╪» ┘┘é╪╖ `row[\"levels_completed\"] \u003e= row[\"runs\"][0][\"levels_completed\"]`╪î ╪ث┘è ╪▒╪ز╪د╪ذ╪ر ╪د┘┘à╪│╪ز┘ê┘è╪د╪ز ┘╪د ╪د┘┘┘é╪د╪╖. ┘╪د ┘è┘ê╪ش╪» ┘┘è ┘â╪د┘à┘ ╪د┘┘à┘┘ ╪ث┘è ╪ز╪ث┘â┘è╪» ┘è╪▒╪ذ╪╖ `row[\"score\"]` ╪ذ┘`max(run[\"score\"])`.\r\n┘à┘ç┘à┘ّ╪ر (ARC-AGI-3 ظ¤ ╪ح╪╡┘╪د╪ص ╪د╪«╪ز┘è╪د╪▒ ╪د┘╪░╪▒╪د╪╣ ┘┘è hybrid): ╪د┘é╪▒╪ث ╪ث┘ê┘┘ï╪د CURSOR_CAPABILITIES.md ┘ê KAGGLE_WIN_HUNT.md. ┘╪د ╪ز┘╪▒╪│┘ ╪ث┘è submit ┘┘è ┘ç╪░┘ç ╪د┘┘à┘ç┘à┘ّ╪ر.\r\n  src/agi3/hybrid.py:593 ┘è╪«╪ز╪د╪▒ ╪د┘╪░╪▒╪د╪╣ ╪د┘┘╪د╪خ╪▓ ╪ذ┘ (levels_completed, -seconds) ┘ê┘è╪ز╪ش╪د┘ç┘ score ╪د┘┘à╪ص╪│┘ê╪ذ ┘┘è ╪د┘╪│╪╖┘ê╪▒ 588-589╪î\r\n1) hybrid.py ظ¤ ╪ث╪╡┘╪ص ┘à┘╪ز╪د╪ص ╪د┘╪ز╪▒╪ز┘è╪ذ ┘┘è hybrid_play ╪ذ╪ص┘è╪س ┘è╪╡┘è╪▒: (levels_completed, score ╪ح┘ ┘ê┘╪ش╪» ┘ê╪ح┘╪د -1.0, ╪س┘à ╪ز╪▒╪ش┘è╪ص ╪د┘╪░╪▒╪د╪╣ ╪د┘╪ث┘ê┘ ╪╣┘╪» ╪د┘╪ز╪╣╪د╪»┘ ╪د┘╪ز╪د┘à).\r\n2) hybrid.py ظ¤ ╪ث╪╢┘ ╪ح┘┘ë ╪د┘╪╡┘ ╪د┘┘à╪»┘à┘ê╪ش ┘à┘╪ز╪د╪ص┘è┘ ┘à╪┤╪ز┘é┘ّ┘è┘ ┘à┘ runs: \"runs_scores\" = [{arm, levels_completed, score, seconds, status} ┘┘â┘ ╪░╪▒╪د╪╣]╪î ┘ê \"score_gap\" = (╪ث╪╣┘┘ë score ╪ذ┘è┘ runs) ┘╪د┘é╪╡ (score ╪د┘╪╡┘ ╪د┘┘à╪«╪ز╪د╪▒)╪î ╪ذ╪ص┘è╪س ┘è┘â┘ê┘ 0.0 ╪ص┘è┘ ┘╪د ┘╪▒┘é.\r\n3) hybrid.py / write_report ظ¤ ╪ذ╪╣╪» ╪ش╪»┘ê┘ Results ╪ث╪╢┘ ╪ش╪»┘ê┘┘ï╪د ┘╪▒╪╣┘è┘ï╪د ┬سAll arms tried┬╗ ┘è╪│╪▒╪» ┘â┘ ╪╡┘ ┘┘è runs ┘┘â┘ ┘╪╣╪ذ╪ر (game | arm | levels | sent | score | secs | status)╪î ┘ê┘╪د ╪ز╪╣╪▒╪╢┘ç ╪ح┘╪د ┘┘╪ث┘╪╣╪د╪ذ ╪د┘╪ز┘è ┘┘è┘ç╪د ╪ث┘â╪س╪▒ ┘à┘ ╪░╪▒╪د╪╣. ┘ê╪ث╪╢┘ ╪│╪╖╪▒┘ï╪د ┘╪╡┘è┘ï╪د ┘è╪░┘â╪▒ ╪ث╪╣┘┘ë score_gap ┘┘è ╪د┘╪ز┘é╪▒┘è╪▒.\r\n5) tests/test_agi3_hybrid.py ظ¤ ╪ث╪╢┘ ╪ث╪▒╪ذ╪╣╪ر ╪د╪«╪ز╪ذ╪د╪▒╪د╪ز ╪ش╪»┘è╪»╪ر (╪د╪│╪ز╪«╪»┘à monkeypatch ╪╣┘┘ë _run_arm ╪╣┘┘ë ┘┘à╪╖ test_the_ladder_stops_as_soon_as_an_arm_banks_a_level):\r\n7) ╪»┘é┘ّ┘é ╪د┘╪ث╪س╪▒ ╪د┘┘é╪»┘è┘à: ╪د┘â╪ز╪ذ ╪│┘â╪▒╪ذ╪ز ┘é╪▒╪د╪ة╪ر ┘┘é╪╖ ┘è┘à╪│╪ص ┘â┘ ┘à┘┘╪د╪ز experiments/*.json ╪د┘╪ز┘è ╪ز╪ص┘ê┘è rows[].runs╪î ┘ê┘è╪╖╪ذ╪╣ ┘┘â┘ ╪╡┘: game, ╪د┘╪░╪▒╪د╪╣ ╪د┘┘à╪«╪ز╪د╪▒, ╪ث╪╣┘┘ë score ╪ذ┘è┘ runs, ╪د┘┘╪د╪▒┘é. ╪د╪ص┘╪╕ ╪د┘┘╪د╪ز╪ش ┘┘è evidence/agi3_score_leak_audit_pair69.json ┘à╪╣ ╪ص┘é┘ max_gap ┘ê rows_affected.\r\n╪│┘┘ّ┘à ┘┘è ╪▒╪»┘ّ┘â: (1) ╪د┘┘diff ╪د┘┘â╪د┘à┘ ┘┘ hybrid.py╪î (2) ┘à╪«╪▒╪ش╪د╪ز pytest ╪د┘╪ص┘é┘è┘é┘è╪ر ╪ذ╪ث╪╣╪»╪د╪» ╪د┘┘╪ش╪د╪ص/╪د┘┘╪┤┘╪î (3) ┘à╪ص╪ز┘ê┘ë evidence/agi3_score_leak_audit_pair69.json╪î (4) ┘ç┘ ╪ز╪║┘è┘ّ╪▒ played_mean/corpus_mean ╪ذ╪╣╪» ╪د┘╪ح╪╡┘╪د╪ص ┘ê┘à┘é╪»╪د╪▒ ╪د┘╪ز╪║┘è┘ّ╪▒╪î (5) ╪ث┘è ┘╪╣╪ذ╪ر ┘â╪د┘ ╪د╪«╪ز┘è╪د╪▒ ╪د┘╪░╪▒╪د╪╣ ┘┘è┘ç╪د ╪│┘è╪ز╪ذ╪»┘ّ┘ ╪ذ╪د┘┘à┘╪ز╪د╪ص ╪د┘╪ش╪»┘è╪».\r",
+        "next_order":  {
+
+                       }
+    },
+    {
+        "source":  "pair-logs-arc/pair-70.md",
+        "advice_snip":  "best = max(runs, key=lambda r: (r[\"levels_completed\"], -r[\"seconds\"]))\r\n┘╪د ╪░┘â╪▒ ┘┘`score` ╪▒╪║┘à ╪ث┘ `score_row` (╪│╪╖╪▒ 427) ┘è╪ص╪│╪ذ┘ç ┘┘â┘ ╪░╪▒╪د╪╣ ┘┘è ╪د┘╪ص┘┘é╪ر ╪ث╪╣┘╪د┘ç ┘à╪ذ╪د╪┤╪▒╪ر (╪│╪╖╪▒ 588ظô589). ┘┘à╪س╪د┘┘â ╪»┘é┘è┘é: ╪╣┘╪» ╪ز╪╣╪د╪»┘ 6/6 ┘è┘┘ê╪▓ ╪د┘╪ث╪│╪▒╪╣ ╪▓┘à┘┘è╪د┘ï ┘╪د ╪د┘╪ث╪╣┘┘ë ┘┘é╪د╪╖╪د┘ï╪î ┘ê╪د┘╪ز╪╣┘┘è┘é ┬سTies go to the cheaper runظخ never displaces an equal first arm┬╗ ┘è╪╡┘ ┘┘è┘ّ╪ر **╪س╪ذ╪د╪ز ╪د┘╪ز╪▒╪ز┘è╪ذ** ╪ذ┘è┘┘à╪د ╪د┘┘â┘ê╪» ┘è┘┘┘ّ╪░ **╪د┘╪ث╪│╪▒╪╣**╪î ┘ê┘ç┘à╪د ╪┤┘è╪خ╪د┘ ┘à╪«╪ز┘┘╪د┘.\r\n**2) ╪ث╪«╪╖╪▒ ┘à┘à┘ّ╪د ┘┘è ╪ز┘é╪▒┘è╪▒┘â:** ┘╪▒╪╣ ╪د┘╪د╪│╪ز╪س┘╪د╪ة ┘┘è `_run_arm` (╪│╪╖┘ê╪▒ 541ظô553) ┘è╪╣┘è╪» `levels_completed: 0` ┘ê`win_levels: 0` ┘ê`status: \"error\"` ┘à╪╣ `seconds` ╪╡╪║┘è╪▒ ╪ش╪»╪د┘ï. ┘╪د┘╪░╪▒╪د╪╣ ╪د┘╪░┘è **┘è┘┘ç╪د╪▒ ┘┘è 0.01s** ┘è┘ç╪▓┘à ظ¤ ╪ز╪ص╪ز `-seconds` ظ¤ ╪ز╪┤╪║┘è┘╪د┘ï ╪ص┘é┘è┘é┘è╪د┘ï 0/8 ╪د╪│╪ز╪║╪▒┘é 89s. ╪د┘┘╪ز┘è╪ش╪ر ╪د┘┘à┘╪┤┘ê╪▒╪ر ╪ز╪╡╪ذ╪ص `0/0 error`╪î ╪ث┘è ╪ث┘ `win_levels` ┘┘╪│┘ç ┘è┘┘ç╪د╪▒ ┘┘è ╪د┘┘à╪«╪▒╪ش╪د╪ز╪î ┘╪د ┘à╪ش╪▒╪» ╪د┘╪ص╪د┘╪ر.\r\n**╪ز╪ص┘┘ّ╪╕ ╪╣┘┘ë ╪د┘╪ح╪╡┘╪د╪ص ╪د┘┘à┘é╪ز╪▒╪ص:** ╪ز╪▒╪ز┘è╪ذ `score` ╪ث┘ê┘╪د┘ï ┘é╪» ┘è┘╪╢┘ّ┘ ╪ز╪┤╪║┘è┘╪د┘ï ╪ذ┘à╪│╪ز┘ê┘è╪د╪ز ╪ث┘é┘ ┘ê┘┘é╪د╪╖ ╪ث╪╣┘┘ë (╪│┘é┘ ╪د┘╪ز╪║╪╖┘è╪ر ┘è╪│┘à╪ص ╪ذ╪░┘┘â ┘╪╕╪▒┘è╪د┘ï) ┘ê┘è┘â╪│╪▒ ╪د┘╪▒╪ز╪د╪ذ╪ر ╪د┘┘à╪╣┘┘╪ر╪ؤ ┘╪░┘┘â ╪ث╪س╪ذ┘ّ╪ز `levels` ╪ث┘ê┘╪د┘ï ┘ê`score` ╪س╪د┘┘è╪د┘ï╪î ┘ê╪ث┘ê╪س┘ّ┘é ╪د┘╪ص╪د┘╪ر ╪د┘╪ص╪»┘ّ┘è╪ر ╪ذ╪»┘ ╪د╪ذ╪ز┘╪د╪╣┘ç╪د.\r\n1. ┘à╪│╪د╪▒ ARC: ╪╣┘è╪ذ ┘â╪د┘à┘ ┘à╪ج┘â┘┘ّ╪» ┘┘è ╪»┘à╪ش ╪د┘╪ث╪░╪▒╪╣ (╪ز╪▒╪ز┘è╪ذ ╪▓┘à┘┘è ╪ذ╪»┘ ┘┘é╪د╪╖┘è) + ╪د┘┘ç┘è╪د╪▒ `win_levels` ╪╣┘╪» ╪«╪╖╪ث ╪░╪▒╪د╪╣╪ؤ ┘┘à ┘è┘┘┘ê┘┘ّ╪س ╪ث┘è ╪»┘┘è┘ ┘à┘╪┤┘ê╪▒ ╪ذ╪╣╪».\r\nTRACK: ARC-AGI-3 ظ¤ pair 70/210. Fix the arm-merge ranking in src/agi3/hybrid.py. No Kaggle submit this pair.\r\nCONTEXT (verified, do not re-litigate):\r\n- src/agi3/hybrid.py:593 ranks merged arms by (levels_completed, -seconds). `score` is computed for every run at lines 588-589 but never used to pick the winner.\r\n- src/agi3/hybrid.py:541-553 (_run_arm except branch) returns levels_completed=0, win_levels=0, status=\"error\", secondsظëê0.0. Under -seconds a crashed arm BEATS a genuine 0-level 89s run, and the merged row then publishes 0/0 error.\r\n- write_score_report (~lines 789-797) builds runs_by_game from `rows` only, so best_run_score never sees the losing arm\u0027s score stored in row[\"runs\"].\r\nTASK 1 ظ¤ ranking key (hybrid.py ~588-594)\r\n            r[\"levels_completed\"],\r",
+        "next_order":  {
+
+                       }
+    },
+    {
+        "source":  "pair-logs-arc/pair-71.md",
+        "advice_snip":  "1. **╪╣┘è╪ذ ╪د┘╪ز╪▒╪ز┘è╪ذ ┘à╪ج┘â┘┘ّ╪» ┘┘è ╪د┘┘à╪╡╪»╪▒.** `src/agi3/hybrid.py:588` ┘è╪ص╪│╪ذ `best = max(runs, key=lambda r: (r[\"levels_completed\"], -r[\"seconds\"]))` ظ¤ ┘╪د ┘ê╪ش┘ê╪» ┘┘ `score` ┘┘è ╪د┘┘à┘╪ز╪د╪ص╪î ┘à╪╣ ╪ث┘ `score_row` ┘è┘╪╖╪ذ┘┘ّ┘é ╪╣┘┘ë ┘â┘ ╪╡┘ ┘é╪ذ┘┘ç ┘à╪ذ╪د╪┤╪▒╪ر (╪│╪╖╪▒ 584ظّ585).\r\n   - ╪░╪▒╪د╪╣ `status: error` ╪ذ╪▓┘à┘ 0.012s ┘è┘ç╪▓┘à ╪ز╪┤╪║┘è┘╪د┘ï ╪ص┘é┘è┘é┘è╪د┘ï `depth_cap` ╪ذ╪▓┘à┘ 89.4s ╪╣┘╪» ╪ز╪│╪د┘ê┘è `levels=0` ظْ ╪د┘╪╡┘ ╪د┘┘à┘╪ذ┘┘┘ّ╪║ ┘è╪▒╪س `arm/status/score` ┘à┘ ╪د┘╪د┘┘ç┘è╪د╪▒.\r\n5. **┘à┘╪د╪ص╪╕╪ر ╪ز┘╪ذ╪│┘┘ّ╪╖ ╪د┘╪ح╪╡┘╪د╪ص:** `score_row` ┘è┘╪▒╪ش╪╣ `score: None` ┘┘é╪╖ ╪╣┘╪» ┘╪┤┘ `baseline_for(game)`╪î ╪ث┘è ╪ث┘ ╪د┘┘╪┤┘ **┘╪╣╪ذ╪ر ┘â╪د┘à┘╪ر** ┘╪د ╪╡┘┘ّ╪د┘ï ┘à┘┘╪▒╪»╪د┘ï ظ¤ ┘╪░╪د ╪د╪│╪ز╪«╪»╪د┘à ╪ص╪د╪▒╪│ ╪╣╪»╪»┘è ┘┘┘`None` ╪ت┘à┘╪î ┘ê╪ز╪▒╪ز┘è╪ذ ╪د┘┘┘é╪د╪╖ ╪ث┘ê┘╪د┘ï ┘╪د ┘è╪╕┘┘à ┘╪╣╪ذ╪ر ╪║┘è╪▒ ┘à┘╪╣╪د┘è┘╪▒╪ر (┘â┘ ╪╡┘┘ê┘┘ç╪د ╪ز╪│┘é╪╖ ┘à╪╣╪د┘ï ╪ح┘┘ë ┘à┘╪ز╪د╪ص ╪د┘┘à╪│╪ز┘ê┘è╪د╪ز).\r\n    def rank_key(run: dict) -\u003e tuple:\r\n        return (ok, score, int(run.get(\"levels_completed\") or 0), -float(run.get(\"seconds\") or 0.0))\r\n    def pick_best(runs: list[dict]) -\u003e dict:  return max(runs, key=rank_key)\r\n    - ╪د┘╪ص╪د╪▒╪│ -1.0 ╪ت┘à┘ ┘╪ث┘ score=None ┘è┘╪ز╪ش ┘┘é╪╖ ╪╣┘ ┘╪┤┘ baseline_for(game)╪î ╪ث┘è ┘┘â┘ ╪╡┘┘ê┘ ╪د┘┘╪╣╪ذ╪ر ┘à╪╣╪د┘ï╪î ┘┘è╪ج┘ê┘ ╪د┘╪ز╪▒╪ز┘è╪ذ ╪╣┘╪»┘ç╪د ╪ح┘┘ë ╪د┘┘à╪│╪ز┘ê┘è╪د╪ز.\r\n    \"Ties go to the cheaper run, so a fallback never displaces an equal first arm\"\r\n(3) ┘┘è _run_arm (╪╡┘ ╪د┘╪د╪│╪ز╪س┘╪د╪ة╪î ~╪│╪╖╪▒ 541-553): ┘╪د ╪ز┘╪╣┘┘ win_levels=0 ┘â╪ث┘┘ç╪د ╪ص┘é┘è┘é╪ر.\r\n    ╪ذ╪╣╪» ╪ش┘à╪╣ runs ╪»╪د╪«┘ hybrid_play╪î ╪╣╪ذ┘┘ّ╪خ win_levels ┘╪ث┘è ╪╡┘ status==\"error\" ┘à┘ ╪ث┘â╪ذ╪▒ win_levels\r\n    test_the_ladder_stops_as_soon_as_an_arm_banks_a_level) ┘è╪ش╪ذ ╪ث┘ ╪ز┘╪┤┘ ┘é╪ذ┘ (1)-(4) ┘ê╪ز┘╪ش╪ص ╪ذ╪╣╪»┘ç╪د:\r\n    b. ╪░╪▒╪د╪╣╪د┘ ╪ذ┘┘╪│ levels ┘êscore ┘à╪«╪ز┘┘ (12.5 ┘à┘é╪د╪ذ┘ 31.0) ظْ row[\"score\"] == 31.0 ┘ê╪د┘╪░╪▒╪د╪╣ ┘ç┘ê ╪╡╪د╪ص╪ذ 31.0.\r",
+        "next_order":  {
+
+                       }
+    },
+    {
+        "source":  "pair-logs-arc/pair-72.md",
+        "advice_snip":  "- `src/agi3/hybrid.py:593` ┘ç┘ê ┘à┘ê╪╢╪╣ ╪د┘╪«┘┘: `best = max(runs, key=lambda r: (r[\"levels_completed\"], -r[\"seconds\"]))`.\r\nTRACK: ARC-AGI-3 ظ¤ offline only. NO Kaggle submit, NO network calls in tests.\r\nAdd a module-level constant next to ARMS (line ~69) and a public function above hybrid_play:\r\n    def rank_key(run: dict) -\u003e tuple:\r\n        machine, not of the play, and ranking on it makes the winning row\r\n        levels banked, then official points, then actions spent.\r\n            int(run.get(\"levels_completed\") or 0),\r\n    # Ranked on the record, not on the clock: see rank_key.  When two runs tie\r\n    # on every component, max() keeps the earlier one, so a fallback still\r\n    # never displaces an equal first arm.\r\n    best = max(runs, key=rank_key)\r\nExport \"rank_key\" and \"ARM_ORDER\" in __all__ (the list starting line ~60).\r",
+        "next_order":  {
+
+                       }
+    },
+    {
+        "source":  "pair-logs-kaggle-rest/pair-92.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-kaggle-rest/pair-93.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-kaggle-rest/pair-94.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-kaggle-rest/pair-95.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-kaggle-rest/pair-96.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-kaggle-rest/pair-97.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-kaggle-rest/pair-98.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-kaggle-rest/pair-99.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-scout/pair-95.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-scout/pair-96.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-scout/pair-97.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-scout/pair-98.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    },
+    {
+        "source":  "pair-logs-scout/pair-99.md",
+        "advice_snip":  "",
+        "next_order":  ""
+    }
+]

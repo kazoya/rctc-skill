@@ -2,13 +2,31 @@
 
 scan:
   cursor_workspace_storage: "%APPDATA%\\Cursor\\User\\workspaceStorage"
+  extra_roots:
+    - "C:\\"
+  always_include: []
+  max_depth: 2
+  exclude_dir_names:
+    - node_modules
+    - .git
+    - Windows
+    - "Program Files"
+    - "Program Files (x86)"
 
 dormant:
   days_without_activity: 45
 
 engineering_mind:
   candidates:
+    - PORTFOLIO.md
     - SKILL.md
     - AGENTS.md
     - CLAUDE.md
     - README.md
+
+agent:
+  hide_backup_projects: true
+
+paths:
+  project_overrides: "%USERPROFILE%\\.cursor\\portfolio\\project-overrides.yaml"
+  briefs_dir: "%USERPROFILE%\\.cursor\\portfolio\\briefs"

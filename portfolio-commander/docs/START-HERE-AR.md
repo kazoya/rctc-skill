@@ -13,11 +13,13 @@ cd c:\rctc-skill\portfolio-commander
 python "$env:USERPROFILE\.cursor\portfolio\scripts\scan_projects.py"
 ```
 
-## الخطوة 3 — افتح الداشبورد
+## الخطوة 3 — افتح الداشبورد (مشاريعنا)
 
 ```powershell
 start "$env:USERPROFILE\.cursor\portfolio\dashboard\index.html"
 ```
+
+أو `.\scripts\serve-dashboard.ps1`. التقارير في `briefs\{id}.yaml` — انظر `docs/MASHAREENA-AR.md`.
 
 ## الخطوة 4 — رتّب الأولويات (أنت)
 
