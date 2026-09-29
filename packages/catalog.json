@@ -274,6 +274,49 @@
         "no_live_target_automation"
       ],
       "notes": "Strength-ordered path from secure development and WSTG to public Project Zero RCA."
+    },
+    {
+      "id": "evidence-first-delivery",
+      "title": "Evidence before claim + bitter-truth audit",
+      "audience": [
+        "maintainer",
+        "client-demo",
+        "delivery-lead"
+      ],
+      "skills": [
+        "evidence-before-claim",
+        "bitter-truth-delivery-audit",
+        "focused3-agentic-phases"
+      ],
+      "paths": [
+        "evidence-before-claim/SKILL.md",
+        "bitter-truth-delivery-audit/SKILL.md",
+        "focused3-agentic-phases/SKILL.md",
+        "docs/GITHUB-ACHIEVEMENTS-AR.md"
+      ],
+      "notes": "Prove before promising; pair with delivery audit for commercial honesty."
+    },
+    {
+      "id": "whatsapp-agent-ops",
+      "title": "WhatsApp agent orchestrator",
+      "audience": [
+        "cx-builder",
+        "belt",
+        "automation"
+      ],
+      "skills": [
+        "whatsapp-agent-orchestrator-super-skill",
+        "logged-in-browser",
+        "projectsConnector",
+        "ai-portability-advisor"
+      ],
+      "paths": [
+        "whatsapp-agent-orchestrator-super-skill/SKILL.md",
+        "logged-in-browser/SKILL.md",
+        "projectsConnector/SKILL.md",
+        "ai-portability-advisor/SKILL.md"
+      ],
+      "notes": "Orchestrate WhatsApp agent work with browser login skill and portfolio connectors."
     }
   ]
 }
