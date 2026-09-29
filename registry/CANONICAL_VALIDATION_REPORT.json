@@ -1,124 +1,11 @@
 {
-  "generated_at": "2026-09-29T17:30:07.478Z",
-  "tracked_skill_count": 48,
-  "canonical_capability_count": 36,
-  "installation_count": 48,
+  "generated_at": "2026-09-29T17:56:09.220Z",
+  "tracked_skill_count": 37,
+  "canonical_capability_count": 32,
+  "installation_count": 37,
   "unregistered_tracked_skills": [],
   "dead_registry_paths": [],
-  "exact_duplicate_groups": [
-    {
-      "content_sha256": "9b1e4fcf6efbbc18f1523335e4d6b88f7f4e956ce41986094d20d738e41aec87",
-      "paths": [
-        ".cursor/skills/continuous-improving/SKILL.md",
-        "continuous-improving/SKILL.md"
-      ],
-      "slugs": [
-        "continuous-improving",
-        "continuous-improving"
-      ],
-      "kinds": [
-        "host_install",
-        "primary_tree"
-      ],
-      "canonical_candidate": "continuous-improving/SKILL.md"
-    },
-    {
-      "content_sha256": "c359a59abc1d0e8069d26ae2eab23ddf097271fe7b4e3e83bc7e984b1a827c3f",
-      "paths": [
-        ".cursor/skills/ethical-bugbounty-training/SKILL.md",
-        "tracks/bug-bounty/SKILL.md"
-      ],
-      "slugs": [
-        "ethical-bugbounty-training",
-        "bug-bounty"
-      ],
-      "kinds": [
-        "host_install",
-        "nested_skill"
-      ],
-      "canonical_candidate": "tracks/bug-bounty/SKILL.md"
-    },
-    {
-      "content_sha256": "1a234495b55416e895745107b7db3f898bcc8657d57b5d9ea45515efa16f14df",
-      "paths": [
-        ".cursor/skills/web-marketing-and-personal-builder-super-skill/SKILL.md",
-        "web_marketing_and_personal-builder-super-skill/SKILL.md"
-      ],
-      "slugs": [
-        "web-marketing-and-personal-builder-super-skill",
-        "web_marketing_and_personal-builder-super-skill"
-      ],
-      "kinds": [
-        "host_install",
-        "primary_tree"
-      ],
-      "canonical_candidate": "web_marketing_and_personal-builder-super-skill/SKILL.md"
-    },
-    {
-      "content_sha256": "691a3bacb91f7706471fa684d6a196164fc7484ab8f886c28dd463971a44badf",
-      "paths": [
-        "ai-portability-advisor/SKILL.md",
-        "apca-smarthelp/.cursor/skills/ai-portability-advisor/SKILL.md"
-      ],
-      "slugs": [
-        "ai-portability-advisor",
-        "ai-portability-advisor"
-      ],
-      "kinds": [
-        "primary_tree",
-        "vendored_copy"
-      ],
-      "canonical_candidate": "ai-portability-advisor/SKILL.md"
-    },
-    {
-      "content_sha256": "c95ecbb8e32c7773370d7029c770ab209fed1956265ceb54c656581b3edb9219",
-      "paths": [
-        "apca-smarthelp/.cursor/skills/belt-apca-smarthelp-cx/SKILL.md",
-        "portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md"
-      ],
-      "slugs": [
-        "belt-apca-smarthelp-cx",
-        "belt-apca-smarthelp-cx"
-      ],
-      "kinds": [
-        "vendored_copy",
-        "nested_skill"
-      ],
-      "canonical_candidate": "portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md"
-    },
-    {
-      "content_sha256": "4d46b532d394bc52e29e3f17fcd1931a85ac9448285f75ed42cee20f833b0828",
-      "paths": [
-        "logged-in-browser/SKILL.md",
-        "master-brain/skills/logged-in-browser/SKILL.md"
-      ],
-      "slugs": [
-        "logged-in-browser",
-        "logged-in-browser"
-      ],
-      "kinds": [
-        "primary_tree",
-        "nested_skill"
-      ],
-      "canonical_candidate": "logged-in-browser/SKILL.md"
-    },
-    {
-      "content_sha256": "e852f23e86ff2f8b871c2c0d2f2ee29e4332ed015a2857e95eb5b90bc098d59c",
-      "paths": [
-        "skill-factory/out/next-js-accessibility-review-skill/SKILL.md",
-        "skill-factory/out/next-js-accessibility-review-skill/repo-ready/SKILL.md"
-      ],
-      "slugs": [
-        "next-js-accessibility-review-skill",
-        "repo-ready"
-      ],
-      "kinds": [
-        "nested_skill",
-        "nested_skill"
-      ],
-      "canonical_candidate": "skill-factory/out/next-js-accessibility-review-skill/SKILL.md"
-    }
-  ],
+  "exact_duplicate_groups": [],
   "slug_inconsistencies": [
     {
       "path": "SKILL.md",
@@ -149,13 +36,6 @@
       "normalized_folder": "projectsconnector"
     },
     {
-      "path": "skill-factory/out/next-js-accessibility-review-skill/repo-ready/SKILL.md",
-      "frontmatter_name": "next-js-accessibility-review-skill",
-      "folder": "repo-ready",
-      "normalized_name": "next-js-accessibility-review-skill",
-      "normalized_folder": "repo-ready"
-    },
-    {
       "path": "tracks/bug-bounty/SKILL.md",
       "frontmatter_name": "ethical-bugbounty-training",
       "folder": "bug-bounty",
@@ -163,9 +43,7 @@
       "normalized_folder": "bug-bounty"
     }
   ],
-  "unexpected_tracked_outputs": [
-    "dist/RCTC-Ethical-BugBounty-Portland-Pozzolanic-20260919-0146.zip"
-  ],
+  "unexpected_tracked_outputs": [],
   "warnings": [
     {
       "type": "divergent_installations",
@@ -213,7 +91,7 @@
       "note": "Same canonical_id, different content hashes — not silently collapsed"
     }
   ],
-  "status": "FAIL",
+  "status": "PASS",
   "notes": [
     "Authoritative input: git ls-files",
     "Local-only untracked skills are excluded by design",

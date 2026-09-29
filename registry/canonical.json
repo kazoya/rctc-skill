@@ -1,13 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-09-29T17:30:07.478Z",
+  "generated_at": "2026-09-29T17:56:09.220Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 48,
-    "canonical_capabilities": 36,
-    "multi_install_capabilities": 12,
-    "public_claim": "36 canonical capabilities (48 tracked SKILL.md installations — not independent product claims)"
+    "discovered_skill_records": 37,
+    "canonical_capabilities": 32,
+    "multi_install_capabilities": 5,
+    "public_claim": "32 canonical capabilities (37 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -24,18 +24,10 @@
           "kind": "primary_tree",
           "description_snippet": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost ana",
           "content_sha256": "691a3bacb91f7706471fa684d6a196164fc7484ab8f886c28dd463971a44badf"
-        },
-        {
-          "installation_id": "ai-portability-advisor::1",
-          "path": "apca-smarthelp/.cursor/skills/ai-portability-advisor/SKILL.md",
-          "folder": "apca-smarthelp/.cursor/skills/ai-portability-advisor",
-          "kind": "vendored_copy",
-          "description_snippet": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost ana",
-          "content_sha256": "691a3bacb91f7706471fa684d6a196164fc7484ab8f886c28dd463971a44badf"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_identical",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "ai-portability-advisor/SKILL.md"
     },
     {
@@ -63,18 +55,10 @@
       "kind": "canonical_capability",
       "title": "belt-apca-smarthelp-cx",
       "description": "P1 APCA SmartHelp CX — Arabic WhatsApp agent, RAG (FastAPI), booking, handoff roadmap. Use for C:\\Belt\\APCA-SmartHelp, embeddings, /api/ask, pytest, and 90-day GTM constraints.",
-      "primary_installation_id": "belt-apca-smarthelp-cx::1",
+      "primary_installation_id": "belt-apca-smarthelp-cx::0",
       "installations": [
         {
           "installation_id": "belt-apca-smarthelp-cx::0",
-          "path": "apca-smarthelp/.cursor/skills/belt-apca-smarthelp-cx/SKILL.md",
-          "folder": "apca-smarthelp/.cursor/skills/belt-apca-smarthelp-cx",
-          "kind": "vendored_copy",
-          "description_snippet": "P1 APCA SmartHelp CX — Arabic WhatsApp agent, RAG (FastAPI), booking, handoff roadmap. Use for C:\\Belt\\APCA-SmartHelp, e",
-          "content_sha256": "c95ecbb8e32c7773370d7029c770ab209fed1956265ceb54c656581b3edb9219"
-        },
-        {
-          "installation_id": "belt-apca-smarthelp-cx::1",
           "path": "portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md",
           "folder": "portfolio-commander/skills/belt-apca-smarthelp-cx",
           "kind": "nested_skill",
@@ -82,8 +66,8 @@
           "content_sha256": "c95ecbb8e32c7773370d7029c770ab209fed1956265ceb54c656581b3edb9219"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_identical",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md"
     },
     {
@@ -127,42 +111,14 @@
       "executable_default": "bitter-truth-delivery-audit/SKILL.md"
     },
     {
-      "canonical_id": "compose-first-skill-gate",
-      "kind": "canonical_capability",
-      "title": "compose-first-skill-gate",
-      "description": "DRAFT ONLY — Before generating a new skill, require a composition plan against the registry and Digital Presence Factory recipes. Prefer Reuse→Compose→Extend→Generate New. Do not publish without owner approval.",
-      "primary_installation_id": "compose-first-skill-gate::0",
-      "installations": [
-        {
-          "installation_id": "compose-first-skill-gate::0",
-          "path": "skill-factory/out/drafts/compose-first-skill-gate/SKILL.md",
-          "folder": "skill-factory/out/drafts/compose-first-skill-gate",
-          "kind": "nested_skill",
-          "description_snippet": "DRAFT ONLY — Before generating a new skill, require a composition plan against the registry and Digital Presence Factory",
-          "content_sha256": "1ca65494e3549c9cd9389019957498d945084d4b45bdaae54e93951d66714809"
-        }
-      ],
-      "installation_count": 1,
-      "ambiguity": "single",
-      "executable_default": "skill-factory/out/drafts/compose-first-skill-gate/SKILL.md"
-    },
-    {
       "canonical_id": "continuous-improving",
       "kind": "canonical_capability",
       "title": "continuous-improving",
       "description": "Continuous Improving (CI) is an autonomous, self-driving execution and optimization OS for competitive AI hunting, competitions (Kaggle), bug bounties (Intigriti, YesWeHack), and SaaS engineering. It keeps projects running autonomously across all tracks, iterating and climbing scores without unneeded pauses, halting only at genuine human/agent decision gates.",
-      "primary_installation_id": "continuous-improving::1",
+      "primary_installation_id": "continuous-improving::0",
       "installations": [
         {
           "installation_id": "continuous-improving::0",
-          "path": ".cursor/skills/continuous-improving/SKILL.md",
-          "folder": ".cursor/skills/continuous-improving",
-          "kind": "host_install",
-          "description_snippet": "Continuous Improving (CI) is an autonomous, self-driving execution and optimization OS for competitive AI hunting, compe",
-          "content_sha256": "9b1e4fcf6efbbc18f1523335e4d6b88f7f4e956ce41986094d20d738e41aec87"
-        },
-        {
-          "installation_id": "continuous-improving::1",
           "path": "continuous-improving/SKILL.md",
           "folder": "continuous-improving",
           "kind": "primary_tree",
@@ -170,8 +126,8 @@
           "content_sha256": "9b1e4fcf6efbbc18f1523335e4d6b88f7f4e956ce41986094d20d738e41aec87"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_identical",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "continuous-improving/SKILL.md"
     },
     {
@@ -215,42 +171,14 @@
       "executable_default": "digital-presence-factory/SKILL.md"
     },
     {
-      "canonical_id": "document-a-beginner-github-first-issue-walkthrou",
-      "kind": "canonical_capability",
-      "title": "document-a-beginner-github-first-issue-walkthrou",
-      "description": "Document a beginner GitHub first-issue walkthrough for RCTC packages",
-      "primary_installation_id": "document-a-beginner-github-first-issue-walkthrou::0",
-      "installations": [
-        {
-          "installation_id": "document-a-beginner-github-first-issue-walkthrou::0",
-          "path": "skill-factory/out/document-a-beginner-github-first-issue-walkthrou/SKILL.md",
-          "folder": "skill-factory/out/document-a-beginner-github-first-issue-walkthrou",
-          "kind": "nested_skill",
-          "description_snippet": "Document a beginner GitHub first-issue walkthrough for RCTC packages",
-          "content_sha256": "bf16a31cc1d57bc62aa3f07f78e7acbf21f746dc29d78f81296d16ab074e9d27"
-        }
-      ],
-      "installation_count": 1,
-      "ambiguity": "single",
-      "executable_default": "skill-factory/out/document-a-beginner-github-first-issue-walkthrou/SKILL.md"
-    },
-    {
       "canonical_id": "ethical-bugbounty-training",
       "kind": "canonical_capability",
       "title": "ethical-bugbounty-training",
       "description": "Teach authorized vulnerability research methodology, safe lab practice, scope discipline, evidence collection, and responsible disclosure. Defensive education only — not an exploitation framework. Default: no network, no live targets, STOP/GAP on authorization uncertainty.",
-      "primary_installation_id": "ethical-bugbounty-training::1",
+      "primary_installation_id": "ethical-bugbounty-training::0",
       "installations": [
         {
           "installation_id": "ethical-bugbounty-training::0",
-          "path": ".cursor/skills/ethical-bugbounty-training/SKILL.md",
-          "folder": ".cursor/skills/ethical-bugbounty-training",
-          "kind": "host_install",
-          "description_snippet": "Teach authorized vulnerability research methodology, safe lab practice, scope discipline, evidence collection, and respo",
-          "content_sha256": "c359a59abc1d0e8069d26ae2eab23ddf097271fe7b4e3e83bc7e984b1a827c3f"
-        },
-        {
-          "installation_id": "ethical-bugbounty-training::1",
           "path": "tracks/bug-bounty/SKILL.md",
           "folder": "tracks/bug-bounty",
           "kind": "nested_skill",
@@ -258,8 +186,8 @@
           "content_sha256": "c359a59abc1d0e8069d26ae2eab23ddf097271fe7b4e3e83bc7e984b1a827c3f"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_identical",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "tracks/bug-bounty/SKILL.md"
     },
     {
@@ -432,18 +360,10 @@
           "kind": "primary_tree",
           "description_snippet": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP ori",
           "content_sha256": "4d46b532d394bc52e29e3f17fcd1931a85ac9448285f75ed42cee20f833b0828"
-        },
-        {
-          "installation_id": "logged-in-browser::1",
-          "path": "master-brain/skills/logged-in-browser/SKILL.md",
-          "folder": "master-brain/skills/logged-in-browser",
-          "kind": "nested_skill",
-          "description_snippet": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP ori",
-          "content_sha256": "4d46b532d394bc52e29e3f17fcd1931a85ac9448285f75ed42cee20f833b0828"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_identical",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "logged-in-browser/SKILL.md"
     },
     {
@@ -485,34 +405,6 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "portfolio-commander/skills/muqasa-maintenance/SKILL.md"
-    },
-    {
-      "canonical_id": "next-js-accessibility-review-skill",
-      "kind": "canonical_capability",
-      "title": "next-js-accessibility-review-skill",
-      "description": "Next.js accessibility review skill",
-      "primary_installation_id": "next-js-accessibility-review-skill::0",
-      "installations": [
-        {
-          "installation_id": "next-js-accessibility-review-skill::0",
-          "path": "skill-factory/out/next-js-accessibility-review-skill/repo-ready/SKILL.md",
-          "folder": "skill-factory/out/next-js-accessibility-review-skill/repo-ready",
-          "kind": "nested_skill",
-          "description_snippet": "Next.js accessibility review skill",
-          "content_sha256": "e852f23e86ff2f8b871c2c0d2f2ee29e4332ed015a2857e95eb5b90bc098d59c"
-        },
-        {
-          "installation_id": "next-js-accessibility-review-skill::1",
-          "path": "skill-factory/out/next-js-accessibility-review-skill/SKILL.md",
-          "folder": "skill-factory/out/next-js-accessibility-review-skill",
-          "kind": "nested_skill",
-          "description_snippet": "Next.js accessibility review skill",
-          "content_sha256": "e852f23e86ff2f8b871c2c0d2f2ee29e4332ed015a2857e95eb5b90bc098d59c"
-        }
-      ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_identical",
-      "executable_default": "skill-factory/out/next-js-accessibility-review-skill/repo-ready/SKILL.md"
     },
     {
       "canonical_id": "portfolio-commander",
@@ -581,26 +473,6 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "projectsConnector/SKILL.md"
-    },
-    {
-      "canonical_id": "rctc-ethical-growth-narrative-pack-for-chatgpt-d",
-      "kind": "canonical_capability",
-      "title": "rctc-ethical-growth-narrative-pack-for-chatgpt-d",
-      "description": "RCTC ethical growth narrative pack for ChatGPT Discord Telegram channels",
-      "primary_installation_id": "rctc-ethical-growth-narrative-pack-for-chatgpt-d::0",
-      "installations": [
-        {
-          "installation_id": "rctc-ethical-growth-narrative-pack-for-chatgpt-d::0",
-          "path": "skill-factory/out/rctc-ethical-growth-narrative-pack-for-chatgpt-d/SKILL.md",
-          "folder": "skill-factory/out/rctc-ethical-growth-narrative-pack-for-chatgpt-d",
-          "kind": "nested_skill",
-          "description_snippet": "RCTC ethical growth narrative pack for ChatGPT Discord Telegram channels",
-          "content_sha256": "9d671a070400a13b173f6c0e003613802841fafb23ede79eff765c2e362723bf"
-        }
-      ],
-      "installation_count": 1,
-      "ambiguity": "single",
-      "executable_default": "skill-factory/out/rctc-ethical-growth-narrative-pack-for-chatgpt-d/SKILL.md"
     },
     {
       "canonical_id": "rctc-method",
@@ -763,18 +635,10 @@
       "kind": "canonical_capability",
       "title": "web-marketing-and-personal-builder-super-skill",
       "description": "Super-skill that builds a professional Arabic/RTL (or bilingual) marketing website from minimal info about a person, company, or factory — including ops improvement and automation concepts — then ships GitHub + Vercel with near-zero handholding. Pairs with safe-forward-execution and focused3-agentic-phases. Use when the user says موقع تسويقي, تصور رقمي, مصنع, personal site, brand site, muqasa-jo style, web-marketing-and-personal-builder, or pastes only a URL / short bio.",
-      "primary_installation_id": "web-marketing-and-personal-builder-super-skill::1",
+      "primary_installation_id": "web-marketing-and-personal-builder-super-skill::0",
       "installations": [
         {
           "installation_id": "web-marketing-and-personal-builder-super-skill::0",
-          "path": ".cursor/skills/web-marketing-and-personal-builder-super-skill/SKILL.md",
-          "folder": ".cursor/skills/web-marketing-and-personal-builder-super-skill",
-          "kind": "host_install",
-          "description_snippet": "Super-skill that builds a professional Arabic/RTL (or bilingual) marketing website from minimal info about a person, com",
-          "content_sha256": "1a234495b55416e895745107b7db3f898bcc8657d57b5d9ea45515efa16f14df"
-        },
-        {
-          "installation_id": "web-marketing-and-personal-builder-super-skill::1",
           "path": "web_marketing_and_personal-builder-super-skill/SKILL.md",
           "folder": "web_marketing_and_personal-builder-super-skill",
           "kind": "primary_tree",
@@ -782,8 +646,8 @@
           "content_sha256": "1a234495b55416e895745107b7db3f898bcc8657d57b5d9ea45515efa16f14df"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_identical",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "web_marketing_and_personal-builder-super-skill/SKILL.md"
     },
     {
