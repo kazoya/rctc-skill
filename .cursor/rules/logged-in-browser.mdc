@@ -1,0 +1,16 @@
+---
+description: Standing skill logged-in-browser — drive the operator's already-logged-in Chrome
+alwaysApply: true
+---
+
+# logged-in-browser (standing)
+
+Always treat `logged-in-browser` as a complementary skill.
+
+Canonical: `C:\rctc-skill\logged-in-browser\SKILL.md`
+
+If the user task uses a browser, Chrome, form, login, session, Playwright, CDP, Claude in Chrome, YesWeHack, Intigriti, or HackerOne: **read that skill first** and drive the visible logged-in window (same cookie jar). Do not open a second Playwright/MCP profile and call it the same session.
+
+Mention the skill at most once per conversation unless you are already executing it.
+
+Never click YWH / H1 / Intigriti / Kaggle Submit unless the operator's current message authorizes that exact click.

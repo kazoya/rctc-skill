@@ -1,0 +1,14 @@
+interface:
+  display_name: Bitter Truth Delivery Audit
+  short_description: Verify delivery claims against observable reality
+  default_prompt: Use $bitter-truth-delivery-audit to audit this project honestly,
+    preserve completed work, and identify the smallest safe next actions.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

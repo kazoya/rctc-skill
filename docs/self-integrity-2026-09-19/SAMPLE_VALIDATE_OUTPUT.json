@@ -1,0 +1,504 @@
+﻿{
+  "summary": {
+    "tracked_files": 525,
+    "tracked_skills": 27,
+    "errors": 0,
+    "warnings": 49,
+    "status": "PASS",
+    "notes": [
+      "Gate C is heuristic (markdown relative links + bare sibling backticks = warnings; markdown links = hard-fail).",
+      "Duplicates (E) and slug mismatches (G) are warnings only."
+    ]
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": ".cursor/skills/continuous-improving/SKILL.md",
+      "referenced": "PORTFOLIO_STATUS.md",
+      "tried": [
+        ".cursor/skills/continuous-improving/PORTFOLIO_STATUS.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": ".cursor/skills/continuous-improving/SKILL.md",
+      "referenced": "hit_log.txt",
+      "tried": [
+        ".cursor/skills/continuous-improving/hit_log.txt"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": ".cursor/skills/continuous-improving/SKILL.md",
+      "referenced": "TASK_CONTRACT_HUNTING.md",
+      "tried": [
+        ".cursor/skills/continuous-improving/TASK_CONTRACT_HUNTING.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": ".cursor/skills/continuous-improving/SKILL.md",
+      "referenced": "PORTFOLIO_STATUS.md",
+      "tried": [
+        ".cursor/skills/continuous-improving/PORTFOLIO_STATUS.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "continuous-improving/SKILL.md",
+      "referenced": "PORTFOLIO_STATUS.md",
+      "tried": [
+        "continuous-improving/PORTFOLIO_STATUS.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "continuous-improving/SKILL.md",
+      "referenced": "hit_log.txt",
+      "tried": [
+        "continuous-improving/hit_log.txt"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "continuous-improving/SKILL.md",
+      "referenced": "TASK_CONTRACT_HUNTING.md",
+      "tried": [
+        "continuous-improving/TASK_CONTRACT_HUNTING.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "continuous-improving/SKILL.md",
+      "referenced": "PORTFOLIO_STATUS.md",
+      "tried": [
+        "continuous-improving/PORTFOLIO_STATUS.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/master-brain/SKILL.md",
+      "referenced": "BRAIN.md",
+      "tried": [
+        "master-brain/skills/master-brain/BRAIN.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/master-brain/SKILL.md",
+      "referenced": "BRAIN.md",
+      "tried": [
+        "master-brain/skills/master-brain/BRAIN.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/master-brain/SKILL.md",
+      "referenced": "brain.json",
+      "tried": [
+        "master-brain/skills/master-brain/brain.json"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/start-skill/SKILL.md",
+      "referenced": "brain.json",
+      "tried": [
+        "master-brain/skills/start-skill/brain.json"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/start-skill/SKILL.md",
+      "referenced": "claude_desktop_config.json",
+      "tried": [
+        "master-brain/skills/start-skill/claude_desktop_config.json"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/start-skill/SKILL.md",
+      "referenced": "CLAUDE.md",
+      "tried": [
+        "master-brain/skills/start-skill/CLAUDE.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/start-skill/SKILL.md",
+      "referenced": "BRAIN.md",
+      "tried": [
+        "master-brain/skills/start-skill/BRAIN.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "incomplete_vendored_or_host_skill",
+      "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
+      "referenced": "AGENT_ROLES.md",
+      "tried": [
+        "master-brain/skills/vendor/focused3-agentic-phases/AGENT_ROLES.md"
+      ],
+      "note": "heuristic: markdown link missing under vendor/host install (warning; primary tree still hard-fails)"
+    },
+    {
+      "gate": "C",
+      "code": "incomplete_vendored_or_host_skill",
+      "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
+      "referenced": "PROMPT_FACTORY.md",
+      "tried": [
+        "master-brain/skills/vendor/focused3-agentic-phases/PROMPT_FACTORY.md"
+      ],
+      "note": "heuristic: markdown link missing under vendor/host install (warning; primary tree still hard-fails)"
+    },
+    {
+      "gate": "C",
+      "code": "incomplete_vendored_or_host_skill",
+      "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
+      "referenced": "FAILURE_PROTOCOL.md",
+      "tried": [
+        "master-brain/skills/vendor/focused3-agentic-phases/FAILURE_PROTOCOL.md"
+      ],
+      "note": "heuristic: markdown link missing under vendor/host install (warning; primary tree still hard-fails)"
+    },
+    {
+      "gate": "C",
+      "code": "incomplete_vendored_or_host_skill",
+      "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
+      "referenced": "templates/task-agent.md",
+      "tried": [
+        "master-brain/skills/vendor/focused3-agentic-phases/templates/task-agent.md",
+        "templates/task-agent.md"
+      ],
+      "note": "heuristic: markdown link missing under vendor/host install (warning; primary tree still hard-fails)"
+    },
+    {
+      "gate": "C",
+      "code": "incomplete_vendored_or_host_skill",
+      "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
+      "referenced": "examples/feature-task.md",
+      "tried": [
+        "master-brain/skills/vendor/focused3-agentic-phases/examples/feature-task.md",
+        "examples/feature-task.md"
+      ],
+      "note": "heuristic: markdown link missing under vendor/host install (warning; primary tree still hard-fails)"
+    },
+    {
+      "gate": "C",
+      "code": "incomplete_vendored_or_host_skill",
+      "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
+      "referenced": "templates/completion-report.md",
+      "tried": [
+        "master-brain/skills/vendor/focused3-agentic-phases/templates/completion-report.md",
+        "templates/completion-report.md"
+      ],
+      "note": "heuristic: markdown link missing under vendor/host install (warning; primary tree still hard-fails)"
+    },
+    {
+      "gate": "C",
+      "code": "incomplete_vendored_or_host_skill",
+      "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
+      "referenced": "PROMPT_FACTORY.md",
+      "tried": [
+        "master-brain/skills/vendor/focused3-agentic-phases/PROMPT_FACTORY.md"
+      ],
+      "note": "heuristic: markdown link missing under vendor/host install (warning; primary tree still hard-fails)"
+    },
+    {
+      "gate": "C",
+      "code": "incomplete_vendored_or_host_skill",
+      "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
+      "referenced": "templates/task-agent.md",
+      "tried": [
+        "master-brain/skills/vendor/focused3-agentic-phases/templates/task-agent.md",
+        "templates/task-agent.md"
+      ],
+      "note": "heuristic: markdown link missing under vendor/host install (warning; primary tree still hard-fails)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/vendor/portfolio-commander/SKILL.md",
+      "referenced": "pubspec.yaml",
+      "tried": [
+        "master-brain/skills/vendor/portfolio-commander/pubspec.yaml"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/vendor/portfolio-commander/SKILL.md",
+      "referenced": "AGENTS.md",
+      "tried": [
+        "master-brain/skills/vendor/portfolio-commander/AGENTS.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/vendor/portfolio-commander/SKILL.md",
+      "referenced": "CLAUDE.md",
+      "tried": [
+        "master-brain/skills/vendor/portfolio-commander/CLAUDE.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/vendor/portfolio-commander/SKILL.md",
+      "referenced": "README.md",
+      "tried": [
+        "master-brain/skills/vendor/portfolio-commander/README.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/vendor/rctc-method/SKILL.md",
+      "referenced": "user_profile.json",
+      "tried": [
+        "master-brain/skills/vendor/rctc-method/user_profile.json"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "master-brain/skills/vendor/rctc-method/SKILL.md",
+      "referenced": "README.md",
+      "tried": [
+        "master-brain/skills/vendor/rctc-method/README.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "portfolio-commander/skill/SKILL.md",
+      "referenced": "project-overrides.yaml",
+      "tried": [
+        "portfolio-commander/skill/project-overrides.yaml"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "portfolio-commander/skill/SKILL.md",
+      "referenced": "pubspec.yaml",
+      "tried": [
+        "portfolio-commander/skill/pubspec.yaml"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "portfolio-commander/skill/SKILL.md",
+      "referenced": "PORTFOLIO.md",
+      "tried": [
+        "portfolio-commander/skill/PORTFOLIO.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "portfolio-commander/skill/SKILL.md",
+      "referenced": "AGENTS.md",
+      "tried": [
+        "portfolio-commander/skill/AGENTS.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "portfolio-commander/skill/SKILL.md",
+      "referenced": "CLAUDE.md",
+      "tried": [
+        "portfolio-commander/skill/CLAUDE.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "portfolio-commander/skill/SKILL.md",
+      "referenced": "README.md",
+      "tried": [
+        "portfolio-commander/skill/README.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "portfolio-commander/skill/SKILL.md",
+      "referenced": "PORTFOLIO.md",
+      "tried": [
+        "portfolio-commander/skill/PORTFOLIO.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "G",
+      "code": "slug_folder_mismatch",
+      "path": "portfolio-commander/skill/SKILL.md",
+      "frontmatter_name": "portfolio-commander",
+      "folder": "skill"
+    },
+    {
+      "gate": "G",
+      "code": "slug_folder_mismatch",
+      "path": "skill-factory/out/next-js-accessibility-review-skill/repo-ready/SKILL.md",
+      "frontmatter_name": "next-js-accessibility-review-skill",
+      "folder": "repo-ready"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "start-skill/SKILL.md",
+      "referenced": "brain.json",
+      "tried": [
+        "start-skill/brain.json"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "start-skill/SKILL.md",
+      "referenced": "claude_desktop_config.json",
+      "tried": [
+        "start-skill/claude_desktop_config.json"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "start-skill/SKILL.md",
+      "referenced": "CLAUDE.md",
+      "tried": [
+        "start-skill/CLAUDE.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "start-skill/SKILL.md",
+      "referenced": "BRAIN.md",
+      "tried": [
+        "start-skill/BRAIN.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "update-zip-skill/SKILL.md",
+      "referenced": "package.json",
+      "tried": [
+        "update-zip-skill/package.json"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "update-zip-skill/SKILL.md",
+      "referenced": "SUMMARY.md",
+      "tried": [
+        "update-zip-skill/SUMMARY.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "update-zip-skill/SKILL.md",
+      "referenced": "CONSTRAINTS.md",
+      "tried": [
+        "update-zip-skill/CONSTRAINTS.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "C",
+      "code": "missing_referenced_file_soft",
+      "path": "update-zip-skill/SKILL.md",
+      "referenced": "ASK.md",
+      "tried": [
+        "update-zip-skill/ASK.md"
+      ],
+      "note": "heuristic: bare sibling filename in backticks (warning only; markdown links hard-fail)"
+    },
+    {
+      "gate": "E",
+      "code": "exact_duplicate_skill_bodies",
+      "paths": [
+        ".cursor/skills/continuous-improving/SKILL.md",
+        "continuous-improving/SKILL.md"
+      ],
+      "content_sha256": "9b1e4fcf6efbbc18f1523335e4d6b88f7f4e956ce41986094d20d738e41aec87",
+      "canonical_candidate": "continuous-improving/SKILL.md"
+    },
+    {
+      "gate": "E",
+      "code": "exact_duplicate_skill_bodies",
+      "paths": [
+        ".cursor/skills/web-marketing-and-personal-builder-super-skill/SKILL.md",
+        "web_marketing_and_personal-builder-super-skill/SKILL.md"
+      ],
+      "content_sha256": "1a234495b55416e895745107b7db3f898bcc8657d57b5d9ea45515efa16f14df",
+      "canonical_candidate": "web_marketing_and_personal-builder-super-skill/SKILL.md"
+    },
+    {
+      "gate": "E",
+      "code": "exact_duplicate_skill_bodies",
+      "paths": [
+        "skill-factory/out/next-js-accessibility-review-skill/SKILL.md",
+        "skill-factory/out/next-js-accessibility-review-skill/repo-ready/SKILL.md"
+      ],
+      "content_sha256": "e852f23e86ff2f8b871c2c0d2f2ee29e4332ed015a2857e95eb5b90bc098d59c",
+      "canonical_candidate": "skill-factory/out/next-js-accessibility-review-skill/SKILL.md"
+    }
+  ]
+}

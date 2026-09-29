@@ -1,0 +1,10 @@
+# Paths (posix, relative to repo root) that may be tracked under generated-output
+# locations such as skill-factory/out/, or intentional shipped zip artifacts.
+skill-factory/out/document-a-beginner-github-first-issue-walkthrou/SKILL.md
+skill-factory/out/drafts/compose-first-skill-gate/SKILL.md
+skill-factory/out/next-js-accessibility-review-skill/SKILL.md
+skill-factory/out/next-js-accessibility-review-skill/repo-ready/SKILL.md
+skill-factory/out/rctc-ethical-growth-narrative-pack-for-chatgpt-d/SKILL.md
+docs/RCTC_EXECUTION_HANDOFF_2026-09-19.zip
+docs/RCTC_GROWTH_CHATGPT_2026-09-19.zip
+docs/growth-packs/RCTC_GROWTH_CHATGPT_2026-09-19.zip

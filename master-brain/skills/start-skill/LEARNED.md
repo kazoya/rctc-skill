@@ -4,7 +4,7 @@
 > لائحة حيّة — تُحدَّث في كل جلسة. النسخة المباشرة تعيش على المنصة (`mb brain-platform` / صفحة «العقل العام») وهذه نسخة موثّقة داخل المهارة.
 > Living list — updated every session. The live copy is on the platform (`mb brain-platform` / “Platform brain” page); this is the documented copy inside the skill.
 
-آخر تحديث / Last update: **2026-09-03** · بواسطة / by: **Cursor + Claude Opus (`xhigh`)**
+آخر تحديث / Last update: **2026-09-04** · بواسطة / by: **Cursor Grok + Claude (ArabBank hunt)**
 
 ## 0) دورة جوائز / Prize-hunt operating note
 
@@ -31,12 +31,14 @@
 | 8 | تطبيقات متجر Microsoft لإنستقرام/فيسبوك/تيك توك تعمل داخل Edge ولا يمكن التحكم بها؛ إضافة Claude in Chrome على بروفايل العمل هي القناة الكاملة الوحيدة | Microsoft-Store social apps can't be automated; the Chrome extension on the work profile is the only full channel | Claude |
 | 9 | لا تُقل «تم» بلا دليل: اختبار أخضر، ملف موجود، لقطة شاشة (focused3: DONE = IMPLEMENTATION × TEST × VERIFICATION × EVIDENCE) | Never claim done without evidence | Fable |
 | 10 | عند بناء أدوات لمستخدم عربي: RTL في كل شيء (اللوحة، التقرير، Excel)، أرقام لاتينية للتواريخ، وواجهة ثنائية اللغة بمفتاح تبديل | Arabic-first tooling: RTL everywhere, Latin digits for dates, bilingual toggle | Fable |
+| 11 | Playwright/CDP وClaude-in-Chrome MCP ليسا نفس جلسة التبويب الظاهر: جرّة كوكيز مختلفة حتى يثبت العكس. املأ النافذة المسجّلة عبر UI Automation (`SetValue`) ولا تضغط Submit | Playwright/CDP and Claude-in-Chrome MCP tabs are a different cookie jar from the visible logged-in window; fill that window via UIA SetValue; never Submit without a gate | Cursor + Claude |
 
 ## 2) المهارات المكتسبة / Acquired skills
 
 | المهارة | المصدر | الحالة | كيف تُستخدم |
 |---------|--------|--------|-------------|
 | **start-skill** (مهارة البدء) | هذه الحزمة | مثبّتة | `/start-skill` — تأسيس منصة متابعة لأي محفظة مشاريع |
+| **logged-in-browser** | هذه الحزمة | مثبّتة · **مقترحة دائماً** | `/logged-in-browser` — يد المتصفح المسجّل (نفس جرّة الكوكيز). RCTC يوصي بها دائماً |
 | **master-brain** | هذه الحزمة | مثبّتة | تشغيل المنصة من Claude Code/Desktop: اقرأ العقل → نفّذ → سجّل → انسب |
 | **rctc-method** | [kazoya/rctc-skill](https://github.com/kazoya/rctc-skill) (MIT) | مضمّنة (vendor) | Role → Context → Task → Constraints؛ سؤال واحد مركّز قبل التنفيذ |
 | **portfolio-commander** | [kazoya/rctc-skill/portfolio-commander](https://github.com/kazoya/rctc-skill/tree/master/portfolio-commander) (MIT) | مضمّنة (vendor) | سجل المشاريع، سكون/أولوية/دخل، العقل الهندسي، خصوصية البيانات |

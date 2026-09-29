@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-09-29T17:56:09.220Z",
+  "tracked_skill_count": 37,
+  "canonical_capability_count": 32,
+  "installation_count": 37,
+  "unregistered_tracked_skills": [],
+  "dead_registry_paths": [],
+  "exact_duplicate_groups": [],
+  "slug_inconsistencies": [
+    {
+      "path": "SKILL.md",
+      "frontmatter_name": "rctc-method",
+      "folder": "",
+      "normalized_name": "rctc-method",
+      "normalized_folder": ""
+    },
+    {
+      "path": "docs/SKILL.md",
+      "frontmatter_name": "evidence-before-claim",
+      "folder": "docs",
+      "normalized_name": "evidence-before-claim",
+      "normalized_folder": "docs"
+    },
+    {
+      "path": "portfolio-commander/skill/SKILL.md",
+      "frontmatter_name": "portfolio-commander",
+      "folder": "skill",
+      "normalized_name": "portfolio-commander",
+      "normalized_folder": "skill"
+    },
+    {
+      "path": "projectsConnector/SKILL.md",
+      "frontmatter_name": "projects-connector",
+      "folder": "projectsConnector",
+      "normalized_name": "projects-connector",
+      "normalized_folder": "projectsconnector"
+    },
+    {
+      "path": "tracks/bug-bounty/SKILL.md",
+      "frontmatter_name": "ethical-bugbounty-training",
+      "folder": "bug-bounty",
+      "normalized_name": "ethical-bugbounty-training",
+      "normalized_folder": "bug-bounty"
+    }
+  ],
+  "unexpected_tracked_outputs": [],
+  "warnings": [
+    {
+      "type": "divergent_installations",
+      "canonical_id": "evidence-before-claim",
+      "paths": [
+        "docs/SKILL.md",
+        "evidence-before-claim/SKILL.md"
+      ],
+      "note": "Same canonical_id, different content hashes — not silently collapsed"
+    },
+    {
+      "type": "divergent_installations",
+      "canonical_id": "focused3-agentic-phases",
+      "paths": [
+        "focused3-agentic-phases/SKILL.md",
+        "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md"
+      ],
+      "note": "Same canonical_id, different content hashes — not silently collapsed"
+    },
+    {
+      "type": "divergent_installations",
+      "canonical_id": "portfolio-commander",
+      "paths": [
+        "master-brain/skills/vendor/portfolio-commander/SKILL.md",
+        "portfolio-commander/skill/SKILL.md"
+      ],
+      "note": "Same canonical_id, different content hashes — not silently collapsed"
+    },
+    {
+      "type": "divergent_installations",
+      "canonical_id": "rctc-method",
+      "paths": [
+        "master-brain/skills/vendor/rctc-method/SKILL.md",
+        "SKILL.md"
+      ],
+      "note": "Same canonical_id, different content hashes — not silently collapsed"
+    },
+    {
+      "type": "divergent_installations",
+      "canonical_id": "start-skill",
+      "paths": [
+        "master-brain/skills/start-skill/SKILL.md",
+        "start-skill/SKILL.md"
+      ],
+      "note": "Same canonical_id, different content hashes — not silently collapsed"
+    }
+  ],
+  "status": "PASS",
+  "notes": [
+    "Authoritative input: git ls-files",
+    "Local-only untracked skills are excluded by design",
+    "Heuristic/frontmatter name used for canonical_id when present; else folder name",
+    "Do not hand-edit registry/canonical.json"
+  ]
+}

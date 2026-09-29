@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio Commander — لوحة المشاريع</title>
+  <title>مشاريعنا — لوحة المحفظة</title>
   <style>
     :root {
       --bg: #0b0f1a;
@@ -13,13 +13,14 @@
       --muted: #9ca3af;
       --active: #10b981;
       --dormant: #6b7280;
+      --text: #f3f4f6;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, sans-serif;
       background: var(--bg);
-      color: #f3f4f6;
+      color: var(--text);
       line-height: 1.5;
     }
     header {
@@ -31,12 +32,12 @@
       align-items: center;
       justify-content: space-between;
     }
-    h1 { margin: 0; font-size: 1.25rem; }
+    h1 { margin: 0; font-size: 1.35rem; color: var(--gold); }
     .meta { color: var(--muted); font-size: 0.85rem; }
-    main { padding: 1.5rem; max-width: 1200px; margin: 0 auto; }
+    main { padding: 1.5rem; max-width: 1400px; margin: 0 auto; }
     .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.75rem;
       margin-bottom: 1.25rem;
     }
@@ -47,19 +48,69 @@
       padding: 0.85rem 1rem;
     }
     .stat strong { display: block; font-size: 1.4rem; color: var(--gold); }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+      gap: 1rem;
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: 1fr; }
+    }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
     th, td {
       border-bottom: 1px solid var(--border);
-      padding: 0.65rem 0.5rem;
+      padding: 0.55rem 0.45rem;
       text-align: right;
       vertical-align: top;
     }
     th { color: var(--muted); font-weight: 600; }
-  .badge {
+    th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+    th.sortable:hover { color: var(--gold); }
+    th .sort-ind { opacity: 0.45; font-size: 0.75rem; margin-inline-start: 0.25rem; }
+    th.sorted .sort-ind { opacity: 1; color: var(--gold); }
+    tr.row-click { cursor: pointer; }
+    tr.row-click:hover td { background: rgba(200,173,115,.06); }
+    tr.row-selected td { background: rgba(200,173,115,.12); }
+    tr.row-backup { opacity: 0.72; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .toolbar input[type="search"], .toolbar select.filter {
+      padding: 0.55rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #1a2035;
+      color: var(--text);
+      font: inherit;
+    }
+    .toolbar input[type="search"] { flex: 1 1 180px; min-width: 160px; }
+    .toolbar label.chk {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 0;
+      cursor: pointer;
+    }
+    .toolbar .shown { color: var(--muted); font-size: 0.85rem; }
+    .cell-edit {
+      width: auto;
+      min-height: 2rem;
+      padding: 0.25rem 0.35rem;
+      font-size: 0.85rem;
+    }
+    .badge-backup { background: rgba(248,113,113,.12); color: #fca5a5; }
+    .badge {
       display: inline-block;
       padding: 0.15rem 0.5rem;
       border-radius: 999px;
@@ -74,20 +125,40 @@
       border-radius: 12px;
       padding: 1rem;
     }
+    .detail {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      position: sticky;
+      top: 0.75rem;
+    }
+    .detail h2 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+    .detail h3 {
+      margin: 0.9rem 0 0.25rem;
+      font-size: 0.78rem;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .detail p { margin: 0; font-size: 0.9rem; }
+    .detail .empty { color: var(--muted); }
     label { display: block; margin-bottom: 0.35rem; color: var(--muted); font-size: 0.85rem; }
     select, textarea, button {
       width: 100%;
       font: inherit;
+      font-size: 1rem;
       border-radius: 8px;
       border: 1px solid var(--border);
-      background: #0a0e18;
-      color: #fff;
+      background: #1a2035;
+      color: var(--text);
       padding: 0.6rem 0.75rem;
+      min-height: 2.75rem;
     }
+    select option { background: #1a2035; color: var(--text); }
     button {
       margin-top: 0.75rem;
       cursor: pointer;
-      background: linear-gradient(135deg, #e5c07b, #c8ad73);
+      background: var(--gold);
       color: #111;
       font-weight: 600;
       border: none;
@@ -108,44 +179,79 @@
 <body>
   <header>
     <div>
-      <h1>Portfolio Commander</h1>
+      <h1>مشاريعنا</h1>
       <div class="meta" id="generated">—</div>
     </div>
     <div class="meta">
-      XML: <code>%USERPROFILE%\.cursor\portfolio\projects-registry.xml</code>
+      العقل الهندسي في <code>briefs\{id}.yaml</code> · بعد كل مهمة أعد المسح
     </div>
   </header>
   <main>
+    <div id="bootError" class="meta" style="display:none;color:#f87171;margin-bottom:1rem;"></div>
     <div class="stats" id="stats"></div>
-    <table>
-      <thead>
-        <tr>
-          <th>أولوية</th>
-          <th>دخل؟</th>
-          <th>المشروع</th>
-          <th>الحالة</th>
-          <th>آخر تعديل</th>
-          <th>commits (30d)</th>
-          <th>النشاط</th>
-          <th>العقل الهندسي</th>
-        </tr>
-      </thead>
-      <tbody id="rows"></tbody>
-    </table>
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="بحث: اسم، مسار، عرض، خطوة…" autocomplete="off" />
+      <select class="filter" id="priFilter" aria-label="أولوية">
+        <option value="">كل الأولويات</option>
+        <option value="1">P1</option>
+        <option value="2">P2</option>
+        <option value="3">P3</option>
+        <option value="4">P4</option>
+        <option value="5">P5+</option>
+      </select>
+      <label class="chk"><input type="checkbox" id="hideDormant" /> إخفاء السكون</label>
+      <label class="chk"><input type="checkbox" id="hideBackup" checked /> إخفاء النسخ الاحتياطية</label>
+      <span class="shown" id="shownCount">—</span>
+    </div>
+    <div class="layout">
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="priority">أولوية <span class="sort-ind">↕</span></th>
+              <th class="sortable" data-sort="revenue">دخل؟ <span class="sort-ind">↕</span></th>
+              <th class="sortable" data-sort="displayName">المشروع <span class="sort-ind">↕</span></th>
+              <th class="sortable" data-sort="lifecycle">الحالة <span class="sort-ind">↕</span></th>
+              <th class="sortable" data-sort="lastModified">آخر تعديل <span class="sort-ind">↕</span></th>
+              <th class="sortable" data-sort="gitCommits30d">commits <span class="sort-ind">↕</span></th>
+              <th>العقل</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <aside class="detail" id="detail">
+        <h2>تقرير المشروع</h2>
+        <p class="empty">اختر صفاً لعرض المنجز والوضع والخطوة التالية والعرض التسويقي.</p>
+      </aside>
+    </div>
+
+    <div class="panel" id="editPanel" hidden>
+      <h2 style="margin-top:0;font-size:1rem;">تعديل الأولويات (حفظ دائم)</h2>
+      <p class="meta">غيّر القيم من الجدول ثم انسخ الملف أو حمّله إلى <code>project-overrides.yaml</code> وأعد المسح.</p>
+      <pre id="overridesYaml"></pre>
+      <button type="button" id="dlOverrides" style="margin-top:0.5rem;width:auto;padding:0.5rem 1rem;">تنزيل project-overrides.yaml</button>
+    </div>
 
     <div class="panel">
       <h2 style="margin-top:0;font-size:1rem;">طلب للوكيل (Cursor)</h2>
-      <p class="meta">انسخ النص الناتج والصقه في محادثة Cursor بعد فتح المشروع المطلوب. الطلبات في <code>requests\inbox.xml</code> يدوياً أو عبر السكربت.</p>
-      <label for="proj">المشروع</label>
-      <select id="proj"></select>
+      <p class="meta">انسخ النص والصقه في Cursor. بعد التنفيذ: حدّث <code>briefs\{id}.yaml</code> ثم أعد المسح.</p>
+      <label for="proj">المشروع <span id="projCount" class="meta">(__PROJECT_COUNT__)</span></label>
+      <select id="proj">
+        <option value="" disabled selected>— اختر مشروعاً —</option>
+        __PROJECT_OPTIONS__
+      </select>
       <label for="task">ماذا تريد؟</label>
       <textarea id="task" rows="4" placeholder="مثال: حدّث README وأضف قسم النشر"></textarea>
       <button type="button" id="gen">إنشاء طلب للوكيل</button>
       <pre id="out" hidden></pre>
     </div>
   </main>
+  <script type="application/json" id="portfolio-data">__PORTFOLIO_JSON__</script>
   <script>
-    const DATA = __PORTFOLIO_JSON__;
+    (function () {
+    try {
+    const DATA = JSON.parse(document.getElementById('portfolio-data').textContent);
     const generated = document.getElementById('generated');
     const stats = document.getElementById('stats');
     const rows = document.getElementById('rows');
@@ -153,19 +259,36 @@
     const task = document.getElementById('task');
     const out = document.getElementById('out');
     const gen = document.getElementById('gen');
+    const detail = document.getElementById('detail');
 
     generated.textContent = 'آخر مسح: ' + (DATA.generated || '—');
 
-    const list = DATA.projects || [];
-    const active = list.filter(p => p.lifecycle === 'active');
+    const list = (DATA.projects || []).map(p => ({ ...p }));
+    const LS_KEY = 'portfolio-commander-pending-overrides';
+    let pending = {};
+    try { pending = JSON.parse(localStorage.getItem(LS_KEY) || '{}'); } catch { pending = {}; }
+    list.forEach(p => {
+      const o = pending[p.id];
+      if (o) Object.assign(p, o);
+    });
+
+    let sortKey = 'priority';
+    let sortDir = 1;
+    let selectedId = null;
+
+    const pc = document.getElementById('projCount');
+    if (pc && !pc.textContent.trim()) pc.textContent = '(' + list.length + ')';
+    const active = list.filter(p => p.lifecycle === 'active' && p.role !== 'backup');
     const dormant = list.filter(p => p.lifecycle === 'dormant');
-    const top = [...list].sort((a,b) => b.activityScore - a.activityScore)[0];
+    const p1 = list.filter(p => p.priority === 1 && p.role !== 'backup');
+    const rev = list.filter(p => p.revenue === 'yes' && p.role !== 'backup');
 
     stats.innerHTML = [
       ['مشاريع', list.length],
       ['فعّال', active.length],
       ['سكون', dormant.length],
-      ['أعلى نشاط', top ? top.displayName : '—']
+      ['P1', p1.length],
+      ['بدخل', rev.length]
     ].map(([k,v]) => `<div class="stat"><span>${k}</span><strong>${v}</strong></div>`).join('');
 
     function fmtDate(iso) {
@@ -173,38 +296,232 @@
       try { return new Date(iso).toLocaleString('ar-JO'); } catch { return iso; }
     }
 
-    rows.innerHTML = list.map(p => {
-      const badge = p.lifecycle === 'active'
-        ? '<span class="badge badge-active">فعال</span>'
-        : '<span class="badge badge-dormant">سكون — لا تطوير</span>';
+    function esc(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+    }
+
+    function cmp(a, b, key) {
+      const va = a[key], vb = b[key];
+      if (key === 'lastModified') {
+        const ta = va ? new Date(va).getTime() : 0;
+        const tb = vb ? new Date(vb).getTime() : 0;
+        return ta - tb;
+      }
+      if (key === 'priority' || key === 'gitCommits30d' || key === 'activityScore') {
+        if (key === 'priority') {
+          const sa = (Number(va) || 0) === 0 ? 999 : Number(va);
+          const sb = (Number(vb) || 0) === 0 ? 999 : Number(vb);
+          return sa - sb;
+        }
+        return (Number(va) || 0) - (Number(vb) || 0);
+      }
+      if (key === 'revenue') {
+        const order = { yes: 0, unknown: 1, no: 2 };
+        return (order[va] ?? 1) - (order[vb] ?? 1);
+      }
+      if (key === 'lifecycle') {
+        const order = { active: 0, dormant: 1 };
+        return (order[va] ?? 1) - (order[vb] ?? 1);
+      }
+      return String(va || '').localeCompare(String(vb || ''), 'ar', { sensitivity: 'base' });
+    }
+
+    function filtered() {
+      const q = (document.getElementById('q').value || '').trim().toLowerCase();
+      const hideD = document.getElementById('hideDormant').checked;
+      const hideB = document.getElementById('hideBackup').checked;
+      const pri = document.getElementById('priFilter').value;
+      return list.filter(p => {
+        if (hideD && p.lifecycle === 'dormant') return false;
+        if (hideB && p.role === 'backup') return false;
+        if (pri === '5' && (Number(p.priority) || 99) < 5) return false;
+        if (pri && pri !== '5' && String(p.priority) !== pri) return false;
+        if (!q) return true;
+        const hay = [p.displayName, p.path, p.id, p.offer, p.next, p.current].join(' ').toLowerCase();
+        return hay.includes(q);
+      });
+    }
+
+    function priorityOptions(cur) {
+      let h = '<option value="0">—</option>';
+      for (let i = 1; i <= 5; i++) {
+        h += `<option value="${i}"${cur === i ? ' selected' : ''}>${i}</option>`;
+      }
+      return h;
+    }
+
+    function revenueOptions(cur) {
+      return [
+        ['unknown', '—'],
+        ['yes', 'نعم'],
+        ['no', 'لا']
+      ].map(([v,l]) => `<option value="${v}"${cur === v ? ' selected' : ''}>${l}</option>`).join('');
+    }
+
+    function lifecycleOptions(cur) {
+      return [
+        ['active', 'فعال'],
+        ['dormant', 'سكون']
+      ].map(([v,l]) => `<option value="${v}"${cur === v ? ' selected' : ''}>${l}</option>`).join('');
+    }
+
+    function mergePending(id, patch) {
+      pending[id] = { ...(pending[id] || {}), ...patch };
+      const p = list.find(x => x.id === id);
+      if (p) Object.assign(p, patch);
+      localStorage.setItem(LS_KEY, JSON.stringify(pending));
+      renderOverridesPanel();
+      renderTable();
+    }
+
+    function toYaml(obj) {
+      const lines = ['# أُنشئ من لوحة مشاريعنا — ادمج مع project-overrides.yaml'];
+      for (const [id, o] of Object.entries(obj)) {
+        lines.push(id + ':');
+        for (const [k, v] of Object.entries(o)) {
+          if (typeof v === 'string' && /[:#\\]/.test(v)) lines.push(`  ${k}: "${v.replace(/"/g, '\\"')}"`);
+          else lines.push(`  ${k}: ${v}`);
+        }
+        lines.push('');
+      }
+      return lines.join('\n');
+    }
+
+    function renderOverridesPanel() {
+      const panel = document.getElementById('editPanel');
+      const pre = document.getElementById('overridesYaml');
+      const keys = Object.keys(pending);
+      if (!keys.length) { panel.hidden = true; return; }
+      panel.hidden = false;
+      pre.textContent = toYaml(pending);
+    }
+
+    function renderDetail(p) {
+      if (!p) {
+        detail.innerHTML = '<h2>تقرير المشروع</h2><p class="empty">اختر صفاً لعرض المنجز والوضع والخطوة التالية والعرض التسويقي.</p>';
+        return;
+      }
       const mind = p.engineeringMind
-        ? '<code style="word-break:break-all">' + p.engineeringMind.split(/[/\\]/).pop() + '</code>'
-        : (p.isFlutter ? '<span class="meta">Dart/Flutter — بدون عقل</span>' : '—');
-      const pr = p.priority > 0 ? p.priority : '—';
-      const rev = p.revenue === 'yes' ? 'نعم' : (p.revenue === 'no' ? 'لا' : '—');
-      return `<tr>
-        <td><strong>${pr}</strong></td>
-        <td>${rev}</td>
-        <td><strong>${p.displayName}</strong><br><span class="meta">${p.path}</span></td>
-        <td>${badge}</td>
-        <td>${fmtDate(p.lastModified)}</td>
+        ? esc(String(p.engineeringMind).split(/[/\\\\]/).pop())
+        : (p.isFlutter ? 'Dart/Flutter — بلا PORTFOLIO.md' : '—');
+      const block = (title, val) =>
+        `<h3>${title}</h3><p>${val ? esc(val) : '<span class="empty">لا يوجد brief بعد — أنشئ briefs/' + esc(p.id) + '.yaml</span>'}</p>`;
+      detail.innerHTML =
+        `<h2>${esc(p.displayName)}</h2>` +
+        `<p class="meta">${esc(p.path)} · ${esc(p.id)}</p>` +
+        `<p class="meta">ثقة: ${esc(p.confidence || '—')} · brief: ${esc(p.briefUpdated || '—')}</p>` +
+        block('المنجز', p.accomplished) +
+        block('الوضع الآن', p.current) +
+        block('الخطوة التالية', p.next) +
+        block('الحاجز', p.blocker) +
+        block('العرض التسويقي', p.offer) +
+        `<h3>التسعير / القناة</h3><p>${esc(p.priceHint || '—')} · ${esc(p.gtm || '—')}</p>` +
+        `<h3>العقل الهندسي</h3><p><code>${mind}</code></p>`;
+    }
+
+    function renderTable() {
+      const items = filtered().sort((a, b) => cmp(a, b, sortKey) * sortDir);
+      document.getElementById('shownCount').textContent =
+        'يعرض ' + items.length + ' من ' + list.length;
+      document.querySelectorAll('th.sortable').forEach(th => {
+        th.classList.toggle('sorted', th.dataset.sort === sortKey);
+        const ind = th.querySelector('.sort-ind');
+        if (th.dataset.sort === sortKey) ind.textContent = sortDir > 0 ? '↑' : '↓';
+        else ind.textContent = '↕';
+      });
+      rows.innerHTML = items.map(p => {
+        const badge = p.lifecycle === 'active'
+          ? '<span class="badge badge-active">فعال</span>'
+          : '<span class="badge badge-dormant">سكون</span>';
+        const backup = p.role === 'backup'
+          ? ' <span class="badge badge-backup">نسخة احتياطية</span>' : '';
+        const mind = p.briefUpdated
+          ? '<span class="meta">' + esc(p.briefUpdated) + '</span>'
+          : (p.engineeringMind
+            ? '<code>' + esc(p.engineeringMind.split(/[/\\\\]/).pop()) + '</code>'
+            : (p.isFlutter ? '<span class="meta">Dart</span>' : '—'));
+        const rowCls = [
+          p.role === 'backup' ? 'row-backup' : '',
+          'row-click',
+          p.id === selectedId ? 'row-selected' : ''
+        ].filter(Boolean).join(' ');
+        return `<tr class="${rowCls}" data-id="${esc(p.id)}">
+        <td><select class="cell-edit pri" data-id="${esc(p.id)}">${priorityOptions(p.priority)}</select></td>
+        <td><select class="cell-edit rev" data-id="${esc(p.id)}">${revenueOptions(p.revenue)}</select></td>
+        <td><strong>${esc(p.displayName)}</strong>${backup}<br><span class="meta">${esc(p.path)}</span></td>
+        <td>${badge}<br><select class="cell-edit life" data-id="${esc(p.id)}">${lifecycleOptions(p.lifecycle)}</select></td>
+        <td data-ts="${p.lastModified || ''}">${fmtDate(p.lastModified)}</td>
         <td>${p.gitCommits30d}</td>
-        <td>${p.activityScore}</td>
         <td>${mind}</td>
       </tr>`;
-    }).join('');
+      }).join('');
+      rows.querySelectorAll('select.pri').forEach(el => {
+        el.addEventListener('change', (ev) => {
+          ev.stopPropagation();
+          mergePending(el.dataset.id, { priority: parseInt(el.value, 10) || 0 });
+        });
+        el.addEventListener('click', ev => ev.stopPropagation());
+      });
+      rows.querySelectorAll('select.rev').forEach(el => {
+        el.addEventListener('change', (ev) => {
+          ev.stopPropagation();
+          mergePending(el.dataset.id, { revenue: el.value });
+        });
+        el.addEventListener('click', ev => ev.stopPropagation());
+      });
+      rows.querySelectorAll('select.life').forEach(el => {
+        el.addEventListener('change', (ev) => {
+          ev.stopPropagation();
+          mergePending(el.dataset.id, { lifecycle: el.value });
+        });
+        el.addEventListener('click', ev => ev.stopPropagation());
+      });
+      rows.querySelectorAll('tr.row-click').forEach(tr => {
+        tr.addEventListener('click', () => {
+          selectedId = tr.dataset.id;
+          const p = list.find(x => x.id === selectedId);
+          renderTable();
+          renderDetail(p);
+          if (proj) {
+            const opt = [...proj.options].find(o => o.value === selectedId);
+            if (opt) proj.value = selectedId;
+          }
+        });
+      });
+    }
 
-    list.forEach(p => {
-      const o = document.createElement('option');
-      o.value = p.id;
-      o.textContent = p.displayName + (p.lifecycle === 'dormant' ? ' (سكون)' : '');
-      o.dataset.path = p.path;
-      o.dataset.lifecycle = p.lifecycle;
-      proj.appendChild(o);
+    document.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const k = th.dataset.sort;
+        if (sortKey === k) sortDir = -sortDir;
+        else { sortKey = k; sortDir = k === 'displayName' ? 1 : -1; }
+        renderTable();
+      });
     });
+    ['q', 'hideDormant', 'hideBackup', 'priFilter'].forEach(id => {
+      document.getElementById(id).addEventListener('input', renderTable);
+      document.getElementById(id).addEventListener('change', renderTable);
+    });
+    document.getElementById('dlOverrides').addEventListener('click', () => {
+      const blob = new Blob([toYaml(pending)], { type: 'text/yaml' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'project-overrides.yaml';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    });
+    renderOverridesPanel();
+    renderTable();
+    const firstActive = list.find(p => p.priority === 1 && p.lifecycle === 'active');
+    if (firstActive) {
+      selectedId = firstActive.id;
+      renderTable();
+      renderDetail(firstActive);
+    }
 
     gen.addEventListener('click', () => {
       const opt = proj.selectedOptions[0];
+      if (!opt || !opt.value) { alert('اختر مشروعاً من القائمة'); return; }
       const path = opt.dataset.path;
       const life = opt.dataset.lifecycle;
       const body = task.value.trim();
@@ -223,11 +540,21 @@ ${body}
 التعليمات للوكيل:
 - افتح هذا المشروع (أو استخدم سياقه).
 - نفّذ المهمة فقط إذا lifecycle=active؛ وإلا اطلب تفعيل المشروع أولاً.
-- راجع engineeringMind إن وُجد (ليس لـ Flutter/Dart).`;
+- اقرأ PORTFOLIO.md ثم briefs/{id}.yaml إن وُجد (ليس لـ Flutter/Dart).
+- بعد التنفيذ حدّث briefs/{id}.yaml (current/next/updated) ثم شغّل scan_projects.py.`;
       out.hidden = false;
       out.textContent = prompt;
       navigator.clipboard?.writeText(prompt);
     });
+    } catch (e) {
+      const err = document.getElementById('bootError');
+      if (err) {
+        err.style.display = 'block';
+        err.textContent = 'خطأ في تحميل الجدول: ' + e.message + ' — جرّب serve-dashboard.ps1';
+      }
+      console.error(e);
+    }
+    })();
   </script>
 </body>
 </html>

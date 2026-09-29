@@ -1,12 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-09-26T12:00:00.000Z",
+  "generated_at": "2026-09-29T17:56:09.220Z",
+  "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 45,
-    "canonical_capabilities": 28,
-    "multi_install_capabilities": 10,
-    "public_claim": "28 canonical capabilities (45 discovered installations/copies — not independent skills)"
+    "discovered_skill_records": 37,
+    "canonical_capabilities": 32,
+    "multi_install_capabilities": 5,
+    "public_claim": "32 canonical capabilities (37 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -14,32 +15,19 @@
       "kind": "canonical_capability",
       "title": "ai-portability-advisor",
       "description": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost analysis, recovery/durability, transition recommendations (KEEP through REJECT), human approval gates, evidence register. Use when analyzing AI/RAG/agents systems, migration decisions, greenfield bootstrap, FinOps/MLOps/reliability concerns, or vendor lock-in. Evidence-first; no cloud deploy or git push without explicit user approval.",
-      "primary_installation_id": "ai-portability-advisor::1",
+      "primary_installation_id": "ai-portability-advisor::0",
       "installations": [
         {
           "installation_id": "ai-portability-advisor::0",
-          "path": ".cursor/skills/ai-portability-advisor/SKILL.md",
-          "folder": ".cursor/skills/ai-portability-advisor",
-          "kind": "host_install",
-          "description_snippet": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost ana"
-        },
-        {
-          "installation_id": "ai-portability-advisor::1",
           "path": "ai-portability-advisor/SKILL.md",
           "folder": "ai-portability-advisor",
           "kind": "primary_tree",
-          "description_snippet": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost ana"
-        },
-        {
-          "installation_id": "ai-portability-advisor::2",
-          "path": "apca-smarthelp/.cursor/skills/ai-portability-advisor/SKILL.md",
-          "folder": "apca-smarthelp/.cursor/skills/ai-portability-advisor",
-          "kind": "vendored_copy",
-          "description_snippet": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost ana"
+          "description_snippet": "Vendor-neutral AI architecture portability, recovery, and transition advisor. Six-layer assessment, lock-in and cost ana",
+          "content_sha256": "691a3bacb91f7706471fa684d6a196164fc7484ab8f886c28dd463971a44badf"
         }
       ],
-      "installation_count": 3,
-      "ambiguity": "multi_install_ok",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "ai-portability-advisor/SKILL.md"
     },
     {
@@ -54,7 +42,8 @@
           "path": "portfolio-commander/skills/apca-marketing-site/SKILL.md",
           "folder": "portfolio-commander/skills/apca-marketing-site",
           "kind": "nested_skill",
-          "description_snippet": "APCA marketing / static web (apcasystems, apccasystems.com). Content and deploy only; not the SmartHelp RAG core. Use fo"
+          "description_snippet": "APCA marketing / static web (apcasystems, apccasystems.com). Content and deploy only; not the SmartHelp RAG core. Use fo",
+          "content_sha256": "d427462cd8d72efe6ef0cf0154fb1669c32a99b3d4fb9f7e63854bb8104f5987"
         }
       ],
       "installation_count": 1,
@@ -66,25 +55,19 @@
       "kind": "canonical_capability",
       "title": "belt-apca-smarthelp-cx",
       "description": "P1 APCA SmartHelp CX — Arabic WhatsApp agent, RAG (FastAPI), booking, handoff roadmap. Use for C:\\Belt\\APCA-SmartHelp, embeddings, /api/ask, pytest, and 90-day GTM constraints.",
-      "primary_installation_id": "belt-apca-smarthelp-cx::1",
+      "primary_installation_id": "belt-apca-smarthelp-cx::0",
       "installations": [
         {
           "installation_id": "belt-apca-smarthelp-cx::0",
-          "path": "apca-smarthelp/.cursor/skills/belt-apca-smarthelp-cx/SKILL.md",
-          "folder": "apca-smarthelp/.cursor/skills/belt-apca-smarthelp-cx",
-          "kind": "vendored_copy",
-          "description_snippet": "P1 APCA SmartHelp CX — Arabic WhatsApp agent, RAG (FastAPI), booking, handoff roadmap. Use for C:\\Belt\\APCA-SmartHelp, e"
-        },
-        {
-          "installation_id": "belt-apca-smarthelp-cx::1",
           "path": "portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md",
           "folder": "portfolio-commander/skills/belt-apca-smarthelp-cx",
           "kind": "nested_skill",
-          "description_snippet": "P1 APCA SmartHelp CX — Arabic WhatsApp agent, RAG (FastAPI), booking, handoff roadmap. Use for C:\\Belt\\APCA-SmartHelp, e"
+          "description_snippet": "P1 APCA SmartHelp CX — Arabic WhatsApp agent, RAG (FastAPI), booking, handoff roadmap. Use for C:\\Belt\\APCA-SmartHelp, e",
+          "content_sha256": "c95ecbb8e32c7773370d7029c770ab209fed1956265ceb54c656581b3edb9219"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_ok",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md"
     },
     {
@@ -99,7 +82,8 @@
           "path": "portfolio-commander/skills/belt-gateway-php/SKILL.md",
           "folder": "portfolio-commander/skills/belt-gateway-php",
           "kind": "nested_skill",
-          "description_snippet": "WhatsApp SMS gateway PHP worker — FIFO queue, MariaDB, booking conversation, BeltKnowledgeClient. Use for flutter_sms_ga"
+          "description_snippet": "WhatsApp SMS gateway PHP worker — FIFO queue, MariaDB, booking conversation, BeltKnowledgeClient. Use for flutter_sms_ga",
+          "content_sha256": "ff1c8c39b33dd46e269320a37428b30da0a0ff0c5ee9d1e73b7d629f2f814527"
         }
       ],
       "installation_count": 1,
@@ -110,7 +94,7 @@
       "canonical_id": "bitter-truth-delivery-audit",
       "kind": "canonical_capability",
       "title": "bitter-truth-delivery-audit",
-      "description": "Audit project delivery under scrutiny by preserving completed work, reconciling plans and status claims with observable evidence, distinguishing planned/scaffolded/built/tested/deployed/live capabilities, researching uncertain facts deeply, exposing the \"bitter truth,\" and proposing the smallest safe next actions. Use for project health checks, pre-demo or pre-handover reviews, executive status validation, inherited or long-running repositories, large uncommitted worktrees, contradictory documentation, claims that something is \"done,\" pressure to ship, or requests such as \"tell me what really works,\" \"do not break prior work,\" \"audit before continuing,\" and \"tell the truth even if it hurts.",
+      "description": "Audit project delivery under scrutiny by preserving completed work, reconciling plans and status claims with observable evidence, distinguishing planned/scaffolded/built/tested/deployed/live capabilities, researching uncertain facts deeply, exposing the \"bitter truth,\" and proposing the smallest safe next actions. Use for project health checks, pre-demo or pre-handover reviews, executive status validation, inherited or long-running repositories, large uncommitted worktrees, contradictory documentation, claims that something is \"done,\" pressure to ship, or requests such as \"tell me what really works,\" \"do not break prior work,\" \"audit before continuing,\" and \"tell the truth even if it hurts.\"",
       "primary_installation_id": "bitter-truth-delivery-audit::0",
       "installations": [
         {
@@ -118,7 +102,8 @@
           "path": "bitter-truth-delivery-audit/SKILL.md",
           "folder": "bitter-truth-delivery-audit",
           "kind": "primary_tree",
-          "description_snippet": "Audit project delivery under scrutiny by preserving completed work, reconciling plans and status claims with observable "
+          "description_snippet": "Audit project delivery under scrutiny by preserving completed work, reconciling plans and status claims with observable ",
+          "content_sha256": "1e579bb609621ee7f99c53fb51d68da220eb33389ac3084639c60718d13ce411"
         }
       ],
       "installation_count": 1,
@@ -130,25 +115,19 @@
       "kind": "canonical_capability",
       "title": "continuous-improving",
       "description": "Continuous Improving (CI) is an autonomous, self-driving execution and optimization OS for competitive AI hunting, competitions (Kaggle), bug bounties (Intigriti, YesWeHack), and SaaS engineering. It keeps projects running autonomously across all tracks, iterating and climbing scores without unneeded pauses, halting only at genuine human/agent decision gates.",
-      "primary_installation_id": "continuous-improving::1",
+      "primary_installation_id": "continuous-improving::0",
       "installations": [
         {
           "installation_id": "continuous-improving::0",
-          "path": ".cursor/skills/continuous-improving/SKILL.md",
-          "folder": ".cursor/skills/continuous-improving",
-          "kind": "host_install",
-          "description_snippet": "Continuous Improving (CI) is an autonomous, self-driving execution and optimization OS for competitive AI hunting, compe"
-        },
-        {
-          "installation_id": "continuous-improving::1",
           "path": "continuous-improving/SKILL.md",
           "folder": "continuous-improving",
           "kind": "primary_tree",
-          "description_snippet": "Continuous Improving (CI) is an autonomous, self-driving execution and optimization OS for competitive AI hunting, compe"
+          "description_snippet": "Continuous Improving (CI) is an autonomous, self-driving execution and optimization OS for competitive AI hunting, compe",
+          "content_sha256": "9b1e4fcf6efbbc18f1523335e4d6b88f7f4e956ce41986094d20d738e41aec87"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_ok",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "continuous-improving/SKILL.md"
     },
     {
@@ -163,7 +142,8 @@
           "path": "dev-agora-skill/SKILL.md",
           "folder": "dev-agora-skill",
           "kind": "primary_tree",
-          "description_snippet": "Use this when marketing developers themselves, building a Stack Overflow–like learning/discussion hub for skills, or vir"
+          "description_snippet": "Use this when marketing developers themselves, building a Stack Overflow–like learning/discussion hub for skills, or vir",
+          "content_sha256": "f892c51b5d0226af906ddf738cdf7836c833e0e2b490df2e53ec45c663a1872d"
         }
       ],
       "installation_count": 1,
@@ -182,12 +162,61 @@
           "path": "digital-presence-factory/SKILL.md",
           "folder": "digital-presence-factory",
           "kind": "primary_tree",
-          "description_snippet": "Reusable production DNA for digital presence sites — not one website template. From a small input (URL, name, GitHub, fo"
+          "description_snippet": "Reusable production DNA for digital presence sites — not one website template. From a small input (URL, name, GitHub, fo",
+          "content_sha256": "0270a48da8048ae4cc2906aa10cb334afb40adc3d6ae2f9e495b38c3e141b451"
         }
       ],
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "digital-presence-factory/SKILL.md"
+    },
+    {
+      "canonical_id": "ethical-bugbounty-training",
+      "kind": "canonical_capability",
+      "title": "ethical-bugbounty-training",
+      "description": "Teach authorized vulnerability research methodology, safe lab practice, scope discipline, evidence collection, and responsible disclosure. Defensive education only — not an exploitation framework. Default: no network, no live targets, STOP/GAP on authorization uncertainty.",
+      "primary_installation_id": "ethical-bugbounty-training::0",
+      "installations": [
+        {
+          "installation_id": "ethical-bugbounty-training::0",
+          "path": "tracks/bug-bounty/SKILL.md",
+          "folder": "tracks/bug-bounty",
+          "kind": "nested_skill",
+          "description_snippet": "Teach authorized vulnerability research methodology, safe lab practice, scope discipline, evidence collection, and respo",
+          "content_sha256": "c359a59abc1d0e8069d26ae2eab23ddf097271fe7b4e3e83bc7e984b1a827c3f"
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "tracks/bug-bounty/SKILL.md"
+    },
+    {
+      "canonical_id": "evidence-before-claim",
+      "kind": "canonical_capability",
+      "title": "evidence-before-claim",
+      "description": "Produce the evidence before stating that something works, and separate what was proven from what is still assumed. Use for \"هل تم فعلاً؟\"، \"تحقق قبل أن تقول تم\"، bug reports whose cause is not yet known, fixes that need a counterfactual, and any report that will be read as a guarantee. Do not use for exploratory work where nothing is being claimed yet.",
+      "primary_installation_id": "evidence-before-claim::0",
+      "installations": [
+        {
+          "installation_id": "evidence-before-claim::0",
+          "path": "docs/SKILL.md",
+          "folder": "docs",
+          "kind": "primary_tree",
+          "description_snippet": "Produce the evidence before stating that something works, and separate what was proven from what is still assumed. Use f",
+          "content_sha256": "939987d39341c92cb23b48cf97785f30b2fbbf862b41cf52bf1218dce9c47a1b"
+        },
+        {
+          "installation_id": "evidence-before-claim::1",
+          "path": "evidence-before-claim/SKILL.md",
+          "folder": "evidence-before-claim",
+          "kind": "primary_tree",
+          "description_snippet": "Produce the evidence before stating that something works, and separate what was proven from what is still assumed. Use f",
+          "content_sha256": "319a10550d17baf94fdd38c57f255d5c8156390cfcbbaf263487c6b302222da4"
+        }
+      ],
+      "installation_count": 2,
+      "ambiguity": "multi_install_divergent",
+      "executable_default": "docs/SKILL.md"
     },
     {
       "canonical_id": "factory-sales-concept",
@@ -201,7 +230,8 @@
           "path": "factory-sales-concept/SKILL.md",
           "folder": "factory-sales-concept",
           "kind": "primary_tree",
-          "description_snippet": "Builds an Arabic RTL Next.js digital-concept platform for a factory or manufacturer after inspecting their public websit"
+          "description_snippet": "Builds an Arabic RTL Next.js digital-concept platform for a factory or manufacturer after inspecting their public websit",
+          "content_sha256": "f4fa2b2a0ba1440d74dd26afb433e745bbe3491f7dde942f6e420cd5a1b454c1"
         }
       ],
       "installation_count": 1,
@@ -220,7 +250,8 @@
           "path": "portfolio-commander/skills/flutter-dart-app/SKILL.md",
           "folder": "portfolio-commander/skills/flutter-dart-app",
           "kind": "nested_skill",
-          "description_snippet": "Flutter/Dart mobile apps in portfolio. No engineering-mind SKILL.md churn per Portfolio Commander; implement UI/logic on"
+          "description_snippet": "Flutter/Dart mobile apps in portfolio. No engineering-mind SKILL.md churn per Portfolio Commander; implement UI/logic on",
+          "content_sha256": "d87ee9d01feade4a27a9b7d29b05549aed6506c9801ecc0773353dfa4dcb882f"
         }
       ],
       "installation_count": 1,
@@ -231,7 +262,7 @@
       "canonical_id": "focus-council",
       "kind": "canonical_capability",
       "title": "focus-council",
-      "description": "Structured simulated expert deliberation with independent proposals, cross-critique, neutral jury scoring, sensitivity analysis and final synthesis. Never represents simulated experts or customers as real.",
+      "description": "High-signal answer focusing through simulated expert deliberation and a neutral jury. Use when a decision, architecture, strategy, recommendation, or difficult prompt benefits from multiple domain perspectives: frame the problem, assemble relevant expert roles, generate independent candidates, cross-critique, shortlist, score with neutral evaluator personas, then synthesize one recommendation with evidence, trade-offs, confidence and a runner-up. Never present simulated experts, customers, votes, or testimonials as real.",
       "primary_installation_id": "focus-council::0",
       "installations": [
         {
@@ -239,7 +270,8 @@
           "path": "focus-council/SKILL.md",
           "folder": "focus-council",
           "kind": "primary_tree",
-          "description_snippet": "Structured simulated expert deliberation, neutral jury scoring, sensitivity analysis and final synthesis."
+          "description_snippet": "High-signal answer focusing through simulated expert deliberation and a neutral jury. Use when a decision, architecture,",
+          "content_sha256": "4237662cadcc53846997358c1803abeab23b51a0231ee4ed00b403ec6141a4eb"
         }
       ],
       "installation_count": 1,
@@ -251,39 +283,34 @@
       "kind": "canonical_capability",
       "title": "focused3-agentic-phases",
       "description": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert supervision, independent verification, and hard evidence. Use when implementing, reviewing, or sequencing production work; when the user says focused3AgenticPhases, agentic cell, THINK EXECUTE PROVE, or NextScaffold; and for OmniAgent / C:\\airealpro\\chatbase engineering. Do not use for copy edits, status questions, or dumping large unscoped code.",
-      "primary_installation_id": "focused3-agentic-phases::1",
+      "primary_installation_id": "focused3-agentic-phases::0",
       "installations": [
         {
           "installation_id": "focused3-agentic-phases::0",
-          "path": ".cursor/skills/focused3-agentic-phases/SKILL.md",
-          "folder": ".cursor/skills/focused3-agentic-phases",
-          "kind": "host_install",
-          "description_snippet": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert su"
-        },
-        {
-          "installation_id": "focused3-agentic-phases::1",
           "path": "focused3-agentic-phases/SKILL.md",
           "folder": "focused3-agentic-phases",
           "kind": "primary_tree",
-          "description_snippet": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert su"
+          "description_snippet": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert su",
+          "content_sha256": "d244c1c5ae7efeb682cff43319f444c86b3abcd4fd294d955db584f273395dfd"
         },
         {
-          "installation_id": "focused3-agentic-phases::2",
+          "installation_id": "focused3-agentic-phases::1",
           "path": "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md",
           "folder": "master-brain/skills/vendor/focused3-agentic-phases",
           "kind": "vendored_copy",
-          "description_snippet": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert su"
+          "description_snippet": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert su",
+          "content_sha256": "6ac1992a3cac9fd897220c466a9ee3e0abcdf170519af836476353491c2dfa7e"
         }
       ],
-      "installation_count": 3,
-      "ambiguity": "multi_install_ok",
+      "installation_count": 2,
+      "ambiguity": "multi_install_divergent",
       "executable_default": "focused3-agentic-phases/SKILL.md"
     },
     {
       "canonical_id": "htpaap",
       "kind": "canonical_capability",
       "title": "htpaap",
-      "description": "Extract and apply professional software-engineering judgment from exemplary open-source codebases through pinned primary evidence, bounded experiments, and verified transfer.",
+      "description": "Extract and apply professional software-engineering judgment from exemplary open-source codebases. Use when mapping a repository, planning a deep code-reading path, studying architecture/testing/performance/compatibility practices, tracing a bug fix or design decision, comparing elite engineering styles, or converting a lesson from TigerBeetle, SQLite, curl, ripgrep, xv6, or another approved source into a small verified improvement. Layer 1 maps sources and relationships; later layers require direct evidence. Never claim mastery from summaries alone.",
       "primary_installation_id": "htpaap::0",
       "installations": [
         {
@@ -291,7 +318,8 @@
           "path": "htpaap/SKILL.md",
           "folder": "htpaap",
           "kind": "primary_tree",
-          "description_snippet": "Evidence-first extraction of professional software-engineering judgment from exemplary primary sources."
+          "description_snippet": "Extract and apply professional software-engineering judgment from exemplary open-source codebases. Use when mapping a re",
+          "content_sha256": "3bd67d70432c81b5f24b030aa37c8da2fcaa5ac53f71ba1ecf38f57f71c9011b"
         }
       ],
       "installation_count": 1,
@@ -302,7 +330,7 @@
       "canonical_id": "local-ssml-voice-cost-optimizer",
       "kind": "canonical_capability",
       "title": "local-ssml-voice-cost-optimizer",
-      "description": "Arabic-first local TTS preprocessing and cost optimization using W3C SSML as local IR, preview/cache, changed-only routing and optional premium-provider adapters.",
+      "description": "Local-first Arabic text-to-speech quality and cost optimization. Use when building Arabic TTS, SSML, voice-over, Narakeet or another premium-provider workflow where preprocessing, punctuation, context, optional diacritization, segmentation, preview, caching and W3C SSML should happen locally so paid synthesis is reserved for final/high-value segments. Provider-neutral; never claim external API usage is free when it is not.",
       "primary_installation_id": "local-ssml-voice-cost-optimizer::0",
       "installations": [
         {
@@ -310,7 +338,8 @@
           "path": "local-ssml-voice-cost-optimizer/SKILL.md",
           "folder": "local-ssml-voice-cost-optimizer",
           "kind": "primary_tree",
-          "description_snippet": "Arabic-first local preprocessing, W3C SSML IR, preview/cache and selective premium-provider routing."
+          "description_snippet": "Local-first Arabic text-to-speech quality and cost optimization. Use when building Arabic TTS, SSML, voice-over, Narakee",
+          "content_sha256": "7762459f4b7daced2637429d13fd0a45668d898ed4ef3ba27032c9c98aadc71e"
         }
       ],
       "installation_count": 1,
@@ -322,39 +351,19 @@
       "kind": "canonical_capability",
       "title": "logged-in-browser",
       "description": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP origin blocks, Claude-in-Chrome MCP cookie-jar mismatch, and fills Angular/ng-select forms via Windows UI Automation ValuePattern — never via a fresh MCP/Playwright profile. Use on every request that touches a browser, Chrome, form, login, session, Playwright, CDP, Claude in Chrome, YesWeHack, Intigriti, HackerOne, or \"fill this tab\". Standing RCTC complementary skill: always in the recommendation set.",
-      "primary_installation_id": "logged-in-browser::2",
+      "primary_installation_id": "logged-in-browser::0",
       "installations": [
         {
           "installation_id": "logged-in-browser::0",
-          "path": ".agents/skills/logged-in-browser/SKILL.md",
-          "folder": ".agents/skills/logged-in-browser",
-          "kind": "host_install",
-          "description_snippet": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP ori"
-        },
-        {
-          "installation_id": "logged-in-browser::1",
-          "path": ".cursor/skills/logged-in-browser/SKILL.md",
-          "folder": ".cursor/skills/logged-in-browser",
-          "kind": "host_install",
-          "description_snippet": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP ori"
-        },
-        {
-          "installation_id": "logged-in-browser::2",
           "path": "logged-in-browser/SKILL.md",
           "folder": "logged-in-browser",
           "kind": "primary_tree",
-          "description_snippet": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP ori"
-        },
-        {
-          "installation_id": "logged-in-browser::3",
-          "path": "master-brain/skills/logged-in-browser/SKILL.md",
-          "folder": "master-brain/skills/logged-in-browser",
-          "kind": "platform_install",
-          "description_snippet": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP ori"
+          "description_snippet": "Drives the operator's already-logged-in Chrome window (same cookie jar as the visible tab). Diagnoses Playwright/CDP ori",
+          "content_sha256": "4d46b532d394bc52e29e3f17fcd1931a85ac9448285f75ed42cee20f833b0828"
         }
       ],
-      "installation_count": 4,
-      "ambiguity": "multi_install_ok",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "logged-in-browser/SKILL.md"
     },
     {
@@ -368,8 +377,9 @@
           "installation_id": "master-brain::0",
           "path": "master-brain/skills/master-brain/SKILL.md",
           "folder": "master-brain/skills/master-brain",
-          "kind": "platform_install",
-          "description_snippet": "Operate the Master Brain portfolio platform (منصة ماستر برين) from Claude Code / Claude Desktop: read a project's engine"
+          "kind": "nested_skill",
+          "description_snippet": "Operate the Master Brain portfolio platform (منصة ماستر برين) from Claude Code / Claude Desktop: read a project's engine",
+          "content_sha256": "076fc25ce179d64f586bf57dd91da005826e2b8bee29a9c17391075cdd88d302"
         }
       ],
       "installation_count": 1,
@@ -388,7 +398,8 @@
           "path": "portfolio-commander/skills/muqasa-maintenance/SKILL.md",
           "folder": "portfolio-commander/skills/muqasa-maintenance",
           "kind": "nested_skill",
-          "description_snippet": "Muqasa P4 — site up, critical fixes, backups only. No new auction/marketplace features without paying client. Use for C:"
+          "description_snippet": "Muqasa P4 — site up, critical fixes, backups only. No new auction/marketplace features without paying client. Use for C:",
+          "content_sha256": "4aef31bf6d7ad91afa4cf468dd61e269e24a9df732b772c62d9058858c6ebc93"
         }
       ],
       "installation_count": 1,
@@ -400,32 +411,27 @@
       "kind": "canonical_capability",
       "title": "portfolio-commander",
       "description": "Portfolio Commander — scan all Cursor workspace projects, maintain projects-registry.xml (active/dormant, last modified, engineering mind), and execute user requests only on active projects. Use when the user asks about project portfolio, dashboard, Mashareena, مشاريعنا, which project to work on, dormant/sleep mode, XML registry, time spent across projects, or sends a \"Portfolio Commander\" task with a project path. Always read the registry before developing across multiple repos.",
-      "primary_installation_id": "portfolio-commander::2",
+      "primary_installation_id": "portfolio-commander::1",
       "installations": [
         {
           "installation_id": "portfolio-commander::0",
-          "path": ".cursor/skills/portfolio-commander/SKILL.md",
-          "folder": ".cursor/skills/portfolio-commander",
-          "kind": "host_install",
-          "description_snippet": "Portfolio Commander — scan all Cursor workspace projects, maintain projects-registry.xml (active/dormant, last modified,"
-        },
-        {
-          "installation_id": "portfolio-commander::1",
           "path": "master-brain/skills/vendor/portfolio-commander/SKILL.md",
           "folder": "master-brain/skills/vendor/portfolio-commander",
           "kind": "vendored_copy",
-          "description_snippet": "Portfolio Commander — scan all Cursor workspace projects, maintain projects-registry.xml (active/dormant, last modified,"
+          "description_snippet": "Portfolio Commander — scan all Cursor workspace projects, maintain projects-registry.xml (active/dormant, last modified,",
+          "content_sha256": "3308e4e800f7a3093f53a97cb16c0eb29272ee6394357c3e3dc200b9768d4c25"
         },
         {
-          "installation_id": "portfolio-commander::2",
+          "installation_id": "portfolio-commander::1",
           "path": "portfolio-commander/skill/SKILL.md",
           "folder": "portfolio-commander/skill",
-          "kind": "primary_tree",
-          "description_snippet": "Portfolio Commander — scan all Cursor workspace projects, maintain projects-registry.xml (active/dormant, last modified,"
+          "kind": "nested_skill",
+          "description_snippet": "Portfolio Commander — scan all Cursor workspace projects, maintain projects-registry.xml (active/dormant, last modified,",
+          "content_sha256": "f6e0fbd9370f9ce512aec436a6a697572f3b2a88199a50b9a64292e8ea81818d"
         }
       ],
-      "installation_count": 3,
-      "ambiguity": "multi_install_ok",
+      "installation_count": 2,
+      "ambiguity": "multi_install_divergent",
       "executable_default": "portfolio-commander/skill/SKILL.md"
     },
     {
@@ -440,7 +446,8 @@
           "path": "portfolio-commander/skills/portfolio-skills-router/SKILL.md",
           "folder": "portfolio-commander/skills/portfolio-skills-router",
           "kind": "nested_skill",
-          "description_snippet": "Routes Cursor Agent Skills to the active portfolio project. Read project-skills-map.yaml, respect Portfolio Commander pr"
+          "description_snippet": "Routes Cursor Agent Skills to the active portfolio project. Read project-skills-map.yaml, respect Portfolio Commander pr",
+          "content_sha256": "0d887c2971d5c277da6339987745d2c3da9ccc4c0570b6f3655f0dc980fbcf3b"
         }
       ],
       "installation_count": 1,
@@ -452,66 +459,48 @@
       "kind": "canonical_capability",
       "title": "projects-connector",
       "description": "Connects Cursor portfolio projects without merging repos: Factories sales concepts, Belt WhatsApp, Muqasa auctions, RCTC, and continuous improving. Use when the user mixes project paths, sends a prompt in one repo meant for another, asks for Mashareena / ربط المشاريع / projectsConnector, or needs GitHub+Vercel routing across C:\\Factories, C:\\Belt, C:\\muqasa, C:\\rctc-skill.",
-      "primary_installation_id": "projects-connector::1",
+      "primary_installation_id": "projects-connector::0",
       "installations": [
         {
           "installation_id": "projects-connector::0",
-          "path": ".cursor/skills/projects-connector/SKILL.md",
-          "folder": ".cursor/skills/projects-connector",
-          "kind": "host_install",
-          "description_snippet": "Connects Cursor portfolio projects without merging repos: Factories sales concepts, Belt WhatsApp, Muqasa auctions, RCTC"
-        },
-        {
-          "installation_id": "projects-connector::1",
           "path": "projectsConnector/SKILL.md",
           "folder": "projectsConnector",
           "kind": "primary_tree",
-          "description_snippet": "Connects Cursor portfolio projects without merging repos: Factories sales concepts, Belt WhatsApp, Muqasa auctions, RCTC"
+          "description_snippet": "Connects Cursor portfolio projects without merging repos: Factories sales concepts, Belt WhatsApp, Muqasa auctions, RCTC",
+          "content_sha256": "fedbd9a0f927bd47e56845bde83025b4e060f0908e73b6330637b7374027a0ed"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_ok",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "projectsConnector/SKILL.md"
     },
     {
       "canonical_id": "rctc-method",
       "kind": "canonical_capability",
       "title": "rctc-method",
-      "description": "RCTC prompt framework (Role, Context, Task, Constraints). One clarifying question max when components missing. Use for ambiguous prompts in rctc-skill repo and paired workflows.",
-      "primary_installation_id": "rctc-method::0",
+      "description": "Structure or improve AI prompts and implementation briefs with Role, Context, Task, and Constraints. Use when a request is vague, when the user asks for a stronger prompt, or when multiple agents need one precise handoff. Do not invoke merely because a normal request can already be completed directly.",
+      "primary_installation_id": "rctc-method::1",
       "installations": [
         {
           "installation_id": "rctc-method::0",
-          "path": ".agents/skills/rctc-method/SKILL.md",
-          "folder": ".agents/skills/rctc-method",
-          "kind": "host_install",
-          "description_snippet": "RCTC prompt framework (Role, Context, Task, Constraints). One clarifying question max when components missing. Use for a"
-        },
-        {
-          "installation_id": "rctc-method::1",
-          "path": ".cursor/skills/rctc-method/SKILL.md",
-          "folder": ".cursor/skills/rctc-method",
-          "kind": "host_install",
-          "description_snippet": "RCTC prompt framework (Role, Context, Task, Constraints). One clarifying question max when components missing. Use for a"
-        },
-        {
-          "installation_id": "rctc-method::2",
           "path": "master-brain/skills/vendor/rctc-method/SKILL.md",
           "folder": "master-brain/skills/vendor/rctc-method",
           "kind": "vendored_copy",
-          "description_snippet": "RCTC is a structured prompt engineering framework — Role, Context, Task, Constraints — that transforms vague AI instruct"
+          "description_snippet": "RCTC is a structured prompt engineering framework — Role, Context, Task, Constraints — that transforms vague AI instruct",
+          "content_sha256": "cb4b9d6a9634df3a2dc673116e34324d30162a6b55145a43e1b89668316ef54a"
         },
         {
-          "installation_id": "rctc-method::3",
+          "installation_id": "rctc-method::1",
           "path": "SKILL.md",
           "folder": ".",
-          "kind": "repo_root_skill",
-          "description_snippet": "Structure or improve AI prompts and implementation briefs with Role, Context, Task, and Constraints. Use when a request "
+          "kind": "primary_tree",
+          "description_snippet": "Structure or improve AI prompts and implementation briefs with Role, Context, Task, and Constraints. Use when a request ",
+          "content_sha256": "99fe25bdeb899f81925142df6c7dc4dba6cff11717f3a5a5b17d6f3e09a46746"
         }
       ],
-      "installation_count": 4,
-      "ambiguity": "multi_install_ok",
-      "executable_default": ".agents/skills/rctc-method/SKILL.md"
+      "installation_count": 2,
+      "ambiguity": "multi_install_divergent",
+      "executable_default": "SKILL.md"
     },
     {
       "canonical_id": "safe-forward-execution",
@@ -525,12 +514,33 @@
           "path": "safe-forward-execution/SKILL.md",
           "folder": "safe-forward-execution",
           "kind": "primary_tree",
-          "description_snippet": "Continue implementation beyond planning to produce verified, in-scope progress through safe and reversible actions. Use "
+          "description_snippet": "Continue implementation beyond planning to produce verified, in-scope progress through safe and reversible actions. Use ",
+          "content_sha256": "af9cf98fea00c7120abd1d5b38bef37ad75a5c3bea8374a5d308a9e389f3ac81"
         }
       ],
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "safe-forward-execution/SKILL.md"
+    },
+    {
+      "canonical_id": "secretsinnextcss",
+      "kind": "canonical_capability",
+      "title": "secretsinnextcss",
+      "description": "Design and implement accessible, privacy-safe Easter eggs, hover secrets, riddles, and progressive-discovery moments in Next.js and CSS. Use when a product needs a hidden marketing interaction, playful developer signature, viral discovery mechanic, or skill-linked puzzle without hiding essential functionality.",
+      "primary_installation_id": "secretsinnextcss::0",
+      "installations": [
+        {
+          "installation_id": "secretsinnextcss::0",
+          "path": "secretsinnextcss/SKILL.md",
+          "folder": "secretsinnextcss",
+          "kind": "primary_tree",
+          "description_snippet": "Design and implement accessible, privacy-safe Easter eggs, hover secrets, riddles, and progressive-discovery moments in ",
+          "content_sha256": "c08db2021e5b85c200062cc981f61a7761c713844158f23f224866b2132988b4"
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "secretsinnextcss/SKILL.md"
     },
     {
       "canonical_id": "security-bounty-window",
@@ -544,7 +554,8 @@
           "path": "portfolio-commander/skills/security-bounty-window/SKILL.md",
           "folder": "portfolio-commander/skills/security-bounty-window",
           "kind": "nested_skill",
-          "description_snippet": "Bug bounty time-boxed work (P3). 4-6 hours per week, one program per cycle, report or move on. Use for security research"
+          "description_snippet": "Bug bounty time-boxed work (P3). 4-6 hours per week, one program per cycle, report or move on. Use for security research",
+          "content_sha256": "54f449df0c8dca736b173cfb49efb5d052ec67fde0621e0526232f4ebdbbe1d2"
         }
       ],
       "installation_count": 1,
@@ -563,7 +574,8 @@
           "path": "skill-factory/SKILL.md",
           "folder": "skill-factory",
           "kind": "primary_tree",
-          "description_snippet": "Use when drafting, validating, packaging, or preparing a new agent skill for GitHub — especially inside kazoya/rctc-skil"
+          "description_snippet": "Use when drafting, validating, packaging, or preparing a new agent skill for GitHub — especially inside kazoya/rctc-skil",
+          "content_sha256": "35511fef0907d5b55f974eb166d15cea8b2cdcb2f6876d000a528734d6983c42"
         }
       ],
       "installation_count": 1,
@@ -581,19 +593,21 @@
           "installation_id": "start-skill::0",
           "path": "master-brain/skills/start-skill/SKILL.md",
           "folder": "master-brain/skills/start-skill",
-          "kind": "platform_install",
-          "description_snippet": "مهارة البدء (Start Skill) — turns a scattered set of chats/sessions and side-projects into ONE tracked portfolio: a fold"
+          "kind": "nested_skill",
+          "description_snippet": "مهارة البدء (Start Skill) — turns a scattered set of chats/sessions and side-projects into ONE tracked portfolio: a fold",
+          "content_sha256": "ae3180fb8888e99c3c645736342b190974b83cfe344232d32d05a57f12c1efb5"
         },
         {
           "installation_id": "start-skill::1",
           "path": "start-skill/SKILL.md",
           "folder": "start-skill",
           "kind": "primary_tree",
-          "description_snippet": "مهارة البدء (Start Skill) — turns a scattered set of chats/sessions and side-projects into ONE tracked portfolio: a fold"
+          "description_snippet": "مهارة البدء (Start Skill) — turns a scattered set of chats/sessions and side-projects into ONE tracked portfolio: a fold",
+          "content_sha256": "0d0115b6fd86c144b371a484ed6e1cbe4a2e019b64ccc34b84224ad5d95e931a"
         }
       ],
       "installation_count": 2,
-      "ambiguity": "multi_install_ok",
+      "ambiguity": "multi_install_divergent",
       "executable_default": "start-skill/SKILL.md"
     },
     {
@@ -608,7 +622,8 @@
           "path": "update-zip-skill/SKILL.md",
           "folder": "update-zip-skill",
           "kind": "primary_tree",
-          "description_snippet": "Package measured project evidence and constraints into a reviewable ZIP for an external AI consultant, then inspect the "
+          "description_snippet": "Package measured project evidence and constraints into a reviewable ZIP for an external AI consultant, then inspect the ",
+          "content_sha256": "5d7d42edc0d804149a6a6c6a1882888303f1509c714721369275450d3f6a7557"
         }
       ],
       "installation_count": 1,
@@ -620,32 +635,26 @@
       "kind": "canonical_capability",
       "title": "web-marketing-and-personal-builder-super-skill",
       "description": "Super-skill that builds a professional Arabic/RTL (or bilingual) marketing website from minimal info about a person, company, or factory — including ops improvement and automation concepts — then ships GitHub + Vercel with near-zero handholding. Pairs with safe-forward-execution and focused3-agentic-phases. Use when the user says موقع تسويقي, تصور رقمي, مصنع, personal site, brand site, muqasa-jo style, web-marketing-and-personal-builder, or pastes only a URL / short bio.",
-      "primary_installation_id": "web-marketing-and-personal-builder-super-skill::1",
+      "primary_installation_id": "web-marketing-and-personal-builder-super-skill::0",
       "installations": [
         {
           "installation_id": "web-marketing-and-personal-builder-super-skill::0",
-          "path": ".cursor/skills/web-marketing-and-personal-builder-super-skill/SKILL.md",
-          "folder": ".cursor/skills/web-marketing-and-personal-builder-super-skill",
-          "kind": "host_install",
-          "description_snippet": "Super-skill that builds a professional Arabic/RTL (or bilingual) marketing website from minimal info about a person, com"
-        },
-        {
-          "installation_id": "web-marketing-and-personal-builder-super-skill::1",
           "path": "web_marketing_and_personal-builder-super-skill/SKILL.md",
           "folder": "web_marketing_and_personal-builder-super-skill",
           "kind": "primary_tree",
-          "description_snippet": "Super-skill that builds a professional Arabic/RTL (or bilingual) marketing website from minimal info about a person, com"
+          "description_snippet": "Super-skill that builds a professional Arabic/RTL (or bilingual) marketing website from minimal info about a person, com",
+          "content_sha256": "1a234495b55416e895745107b7db3f898bcc8657d57b5d9ea45515efa16f14df"
         }
       ],
-      "installation_count": 2,
-      "ambiguity": "multi_install_ok",
+      "installation_count": 1,
+      "ambiguity": "single",
       "executable_default": "web_marketing_and_personal-builder-super-skill/SKILL.md"
     },
     {
       "canonical_id": "wehm",
       "kind": "canonical_capability",
       "title": "wehm",
-      "description": "Teach authorization-first cybersecurity learning, safe labs, threat modeling, analysis, evidence, remediation, and responsible disclosure; uncertainty means STOP.",
+      "description": "Teach what ethical hacking means through authorization-first cybersecurity learning, safe labs, threat modeling, secure-code review, web testing, fuzzing, binary analysis, root-cause analysis, evidence, and responsible disclosure. Use when mapping a security-learning path, studying OWASP/PortSwigger/pwn.college/CodeQL/AFL++/angr/Trail of Bits/Project Zero, reviewing a lab or owned system, or turning a public research lesson into a defensive control. Default to local or deliberately vulnerable labs; uncertain authorization means STOP. Never use for credential theft, malware, persistence, stealth, destructive actions, denial of service, mass exploitation, or out-of-scope targets.",
       "primary_installation_id": "wehm::0",
       "installations": [
         {
@@ -653,12 +662,33 @@
           "path": "wehm/SKILL.md",
           "folder": "wehm",
           "kind": "primary_tree",
-          "description_snippet": "Authorization-first security learning from secure development to public root-cause analysis."
+          "description_snippet": "Teach what ethical hacking means through authorization-first cybersecurity learning, safe labs, threat modeling, secure-",
+          "content_sha256": "7199feea536c8c1a82df99159da7124f3b6391f1f71d422016661e8e7b0b1d03"
         }
       ],
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "wehm/SKILL.md"
+    },
+    {
+      "canonical_id": "whatsapp-agent-orchestrator-super-skill",
+      "kind": "canonical_capability",
+      "title": "whatsapp-agent-orchestrator-super-skill",
+      "description": "Build or extend a governed conversational AI operations layer where WhatsApp, Telegram, web chat, or another channel can invoke an AI orchestrator that selects approved tools such as email, calendar, GitHub, CRM, documents, databases, and n8n workflows. Use when the user asks for a WhatsApp AI agent, n8n AI workflow, tool-calling assistant, multi-agent operations hub, or a conversational command center. Pair with safe-forward-execution and focused3-agentic-phases.",
+      "primary_installation_id": "whatsapp-agent-orchestrator-super-skill::0",
+      "installations": [
+        {
+          "installation_id": "whatsapp-agent-orchestrator-super-skill::0",
+          "path": "whatsapp-agent-orchestrator-super-skill/SKILL.md",
+          "folder": "whatsapp-agent-orchestrator-super-skill",
+          "kind": "primary_tree",
+          "description_snippet": "Build or extend a governed conversational AI operations layer where WhatsApp, Telegram, web chat, or another channel can",
+          "content_sha256": "e6c45e4334f23f98f4bba461473c655efeee4fcdde558c9ba570d1ec0d3f841d"
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "whatsapp-agent-orchestrator-super-skill/SKILL.md"
     }
   ]
 }

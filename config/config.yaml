@@ -62,6 +62,10 @@ rctc_config:
   # How often to surface recommendations
   # Options: "low" | "medium" | "high"
   recommendation_frequency: "low"
+
+  # Always in the complementary-skills set (mention ≤1× per conversation)
+  always_recommend:
+    - logged-in-browser
   
   
   # ─────────────────────────────────────────────

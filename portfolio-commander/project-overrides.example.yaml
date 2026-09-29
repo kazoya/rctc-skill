@@ -1,0 +1,21 @@
+# مثال — انسخ إلى %USERPROFILE%\.cursor\portfolio\project-overrides.yaml
+# راجع docs/STRATEGY-FOCUS-AR.md في مجلد portfolio المحلي
+
+c-belt-apca-smarthelp:
+  priority: 1
+  revenue: "yes"
+  displayName: "P1 · APCA SmartHelp CX"
+
+c-atalkingqms:
+  priority: 2
+  revenue: "yes"
+  displayName: "P2 · Smart Branch / دور ناطق"
+
+c-muqasa:
+  priority: 4
+  revenue: "no"
+  displayName: "P4 · Muqasa — صيانة فقط"
+
+c-arc_solver_web:
+  priority: 6
+  lifecycle: dormant

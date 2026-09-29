@@ -39,12 +39,16 @@ function failures(db) {
      ORDER BY times DESC LIMIT 40`).all();
 }
 
-/** توزيع النشر على ساعات اليوم — بلا هذا لا معنى لأي توصية بأوقات الذروة. */
+/** توزيع النشر على ساعات اليوم — بلا هذا لا معنى لأي توصية بأوقات الذروة.
+ *  الساعة تُحسب بتوقيت الرياض لا بتوقيت الجهاز، كي يطابق المخطط جدول `04-schedule.json`. */
+const RIYADH_HOUR = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Riyadh', hour: '2-digit', hour12: false });
 function hourHistogram(rows) {
   const byPlatform = {};
   for (const r of rows) {
     if (!r.finished_at) continue;
-    const h = new Date(r.finished_at).getHours();
+    const d = new Date(r.finished_at);
+    if (Number.isNaN(d.getTime())) continue;
+    const h = Number(RIYADH_HOUR.format(d)) % 24;
     (byPlatform[r.platform] ??= Array(24).fill(0))[h]++;
   }
   return byPlatform;

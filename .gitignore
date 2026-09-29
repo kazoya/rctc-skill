@@ -20,3 +20,45 @@ docs/*HANDOFF*.zip
 docs/growth-packs/*.zip
 .rctc-engine/
 *.log
+
+scripts/integrity/_tmp/
+
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Local extracts / archives (source skills live as folders)
+zip/
+*.zip
+!portfolio-commander/**/*.zip
+
+# Generated / install mirrors — canonical packages stay at repo roots or tracks/
+.cursor/skills/
+.agents/skills/
+apca-smarthelp/.cursor/skills/
+master-brain/skills/logged-in-browser/
+skill-factory/out/
+dist/
+
+# Scratch XML/PNG dumps and one-off local notes
+app2.xml
+app_front.xml
+bundles.xml
+current.xml
+store.xml
+store2.xml
+store2.png
+window.xml
+window2.xml
+umniah_hotlined.png
+Umniah_Hotlined_Troubleshooting_Report.md
+README.md.local-*
+docs/_handoff/
+docs/self-integrity-2026-09-19/FIXTURE_TEST_OUTPUT.txt
+file-upload-automation.zip
+update-zip-skill.zip

@@ -48,7 +48,7 @@ async function harvestTikTok(page, handle = 'risha360legal') {
   }));
   const seen = new Set();
   const clips = items.filter(x => x.url && !seen.has(x.url) && seen.add(x.url))
-    .map(x => ({ url: 'https://www.tiktok.com' + x.url, views: null, viewsRaw: x.viewsRaw }));
+    .map(x => ({ url: x.url.startsWith('http') ? x.url : 'https://www.tiktok.com' + x.url, views: null, viewsRaw: x.viewsRaw }));
   for (const c of clips) c.views = parseCount(c.viewsRaw);
   const withViews = clips.filter(c => c.views !== null);
   return {
