@@ -1,5 +1,7 @@
 # Master Brain — ماستر برين
 
+> **Snapshot, not the live product.** This folder is the copy shipped inside `rctc-skill`. Its `package.json` is version **1.0.0**. On 2026-10-06 the owner's live platform (`C:\master-brain`) was **1.3.0**. Do not install this tree and treat it as current. The live platform is maintained outside this repository.
+
 **منصة متابعة المشاريع والعقل الهندسي الواعي** — مجلد لكل مشروع، عقل هندسي (المنجز / النتائج / الجاري / التالي / التحسينات / مقترحات منسوبة للنموذج)، تقارير بالفترات وطبيعة التقدّم (HTML → PDF، Excel، Markdown، JSON)، وقناة مباشرة مع **Claude Code** و**Claude Desktop** عبر MCP والطرفية.
 
 **Portfolio tracker & conscious engineering mind** — a folder per project, an engineering brain per project, period/progress reports, and a native MCP + CLI channel for Claude Code / Claude Desktop. **Zero npm dependencies** — runs with `node` alone (≥ 18).

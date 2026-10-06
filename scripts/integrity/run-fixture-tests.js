@@ -179,12 +179,7 @@ function case5_duplicate() {
   git(dir, 'add registry');
   git(dir, 'commit -m "reg"');
   const r = runNode(dir, path.join(dir, 'scripts', 'validate-repo.js'));
-  // duplicates are warnings — validate may PASS; check warning present
-  const blob = `${r.stdout}\n${r.stderr}`;
-  if (!blob.includes('exact_duplicate_skill_bodies')) {
-    throw new Error(`5 duplicate: expected warning exact_duplicate_skill_bodies\n${blob}`);
-  }
-  console.log('PASS 5 byte-identical duplicate detected (warning)');
+  expectFail('5 byte-identical duplicate', r, 'exact_duplicate_skill_bodies');
 }
 
 function case6_slug_mismatch() {
@@ -232,7 +227,7 @@ function case8_clean() {
   commitAll(dir, 'init');
   const gen = runNode(dir, path.join(dir, 'scripts', 'generate-canonical-registry.js'));
   expectPass('8a generate', gen);
-  git(dir, 'add registry');
+  git(dir, 'add registry skills');
   git(dir, 'commit -m "reg"');
   const r = runNode(dir, path.join(dir, 'scripts', 'validate-repo.js'));
   expectPass('8 clean repository passes', r);

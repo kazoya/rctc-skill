@@ -6,7 +6,8 @@
     "validate:repo": "node scripts/validate-repo.js",
     "registry:generate": "node scripts/generate-canonical-registry.js",
     "registry:check": "node scripts/generate-canonical-registry.js --check",
-    "test:integrity": "node scripts/integrity/run-fixture-tests.js"
+    "test:integrity": "node scripts/integrity/run-fixture-tests.js",
+    "test:examples": "node scripts/check-programmer-examples.js"
   },
   "engines": {
     "node": ">=18"

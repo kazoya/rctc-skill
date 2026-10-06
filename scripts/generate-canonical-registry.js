@@ -18,6 +18,7 @@ const { execSync } = require('child_process');
 const ROOT = path.resolve(__dirname, '..');
 const OUT_CANONICAL = path.join(ROOT, 'registry', 'canonical.json');
 const OUT_REPORT = path.join(ROOT, 'registry', 'CANONICAL_VALIDATION_REPORT.json');
+const OUT_CATALOG = path.join(ROOT, 'skills', 'CATALOG.md');
 const ALLOWLIST_PATH = path.join(ROOT, 'registry', 'TRACKED_OUTPUT_ALLOWLIST.txt');
 
 const CHECK = process.argv.includes('--check');
@@ -32,7 +33,7 @@ function gitLsFiles() {
 function readFrontmatter(filePath) {
   const abs = path.join(ROOT, filePath);
   if (!fs.existsSync(abs)) return { ok: false, error: 'missing_file' };
-  const text = fs.readFileSync(abs, 'utf8');
+  const text = fs.readFileSync(abs, 'utf8').replace(/\r\n/g, '\n');
   if (!text.startsWith('---')) return { ok: false, error: 'no_frontmatter', text };
   const end = text.indexOf('\n---', 3);
   if (end < 0) return { ok: false, error: 'unclosed_frontmatter', text };
@@ -85,12 +86,32 @@ function classifyKind(skillPath) {
 function pickPrimary(installations) {
   const rank = { primary_tree: 0, nested_skill: 1, host_install: 2, vendored_copy: 3 };
   const sorted = [...installations].sort((a, b) => {
+    if (Boolean(a.pointer) !== Boolean(b.pointer)) return a.pointer ? 1 : -1;
     const ra = rank[a.kind] ?? 9;
     const rb = rank[b.kind] ?? 9;
     if (ra !== rb) return ra - rb;
     return a.path.localeCompare(b.path);
   });
   return sorted[0];
+}
+
+function renderCatalog(registry, pointers) {
+  const lines = [
+    '# Canonical skill catalog',
+    '',
+    'One entry per capability. Edit that path. Other installations are host copies, vendor snapshots, or pointers.',
+    '',
+  ];
+  for (const cap of registry.capabilities) {
+    lines.push(`- \`${cap.canonical_id}\` → \`${cap.executable_default}\``);
+  }
+  lines.push('', '## Pointers', '', 'These files are not a second copy. They name the canonical skill.', '');
+  if (!pointers.length) lines.push('None.');
+  else {
+    for (const item of pointers) lines.push(`- \`${item.path}\` → \`${item.target}\``);
+  }
+  lines.push('');
+  return lines.join('\n');
 }
 
 function contentHash(text) {
@@ -115,6 +136,7 @@ function build() {
   const allowlist = loadAllowlist();
 
   const records = [];
+  const pointers = [];
   const warnings = [];
   const slugInconsistencies = [];
   const hashGroups = new Map(); // hash -> paths
@@ -124,7 +146,9 @@ function build() {
     const folder = path.posix.dirname(skillPath);
     const folderName = folderSlug(skillPath);
     const nameFromFm = fm.ok ? (fm.meta.name || '').trim() : '';
+    const canonicalTarget = fm.ok && fm.meta.canonical ? String(fm.meta.canonical).trim().replace(/\\/g, '/') : '';
     const canonicalId = normalizeSlug(nameFromFm || folderName);
+    if (canonicalTarget) pointers.push({ path: skillPath, target: canonicalTarget });
     const kind = classifyKind(skillPath);
     const bodyHash = contentHash(fm.text || '');
     if (!hashGroups.has(bodyHash)) hashGroups.set(bodyHash, []);
@@ -150,6 +174,7 @@ function build() {
       description: fm.ok ? fm.meta.description || '' : '',
       frontmatterOk: fm.ok,
       bodyHash,
+      canonicalTarget,
     });
   }
 
@@ -170,6 +195,7 @@ function build() {
       kind: r.kind,
       description_snippet: (r.description || '').replace(/\s+/g, ' ').slice(0, 120),
       content_sha256: r.bodyHash,
+      pointer: Boolean(r.canonicalTarget),
     }));
     // re-number after sort by path for stability
     installations.sort((a, b) => a.path.localeCompare(b.path));
@@ -304,7 +330,9 @@ function build() {
     ],
   };
 
-  return { registry, report };
+  pointers.sort((a, b) => a.path.localeCompare(b.path));
+  const catalog = renderCatalog(registry, pointers);
+  return { registry, report, catalog };
 }
 
 function stableStringify(obj) {
@@ -318,7 +346,7 @@ function stripVolatile(reg) {
 }
 
 function main() {
-  const { registry, report } = build();
+  const { registry, report, catalog } = build();
 
   if (CHECK) {
     if (!fs.existsSync(OUT_CANONICAL)) {
@@ -334,7 +362,12 @@ function main() {
       process.exit(1);
     }
     // also require report status PASS for check mode? soft: compare only canonical
-    console.log('PASS registry:check — committed canonical.json matches git-generated output');
+    if (!fs.existsSync(OUT_CATALOG) || fs.readFileSync(OUT_CATALOG, 'utf8') !== catalog) {
+      console.error('FAIL registry:check — skills/CATALOG.md differs from git-generated output');
+      console.error('Run: npm run registry:generate');
+      process.exit(1);
+    }
+    console.log('PASS registry:check — committed canonical.json and skills/CATALOG.md match git-generated output');
     process.exit(0);
   }
 
@@ -346,6 +379,8 @@ function main() {
   fs.mkdirSync(path.dirname(OUT_CANONICAL), { recursive: true });
   fs.writeFileSync(OUT_CANONICAL, stableStringify(registry));
   fs.writeFileSync(OUT_REPORT, stableStringify(report));
+  fs.mkdirSync(path.dirname(OUT_CATALOG), { recursive: true });
+  fs.writeFileSync(OUT_CATALOG, catalog);
   console.log(
     `Wrote registry/canonical.json (${registry.metrics.canonical_capabilities} capabilities, ${registry.metrics.discovered_skill_records} installations)`
   );
