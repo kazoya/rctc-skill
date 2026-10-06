@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0] — Expert packaging
+
+### Changed
+- Root README is a programmer install path: RCTC, then HTPAAP, then Focused3, then Safe Forward.
+- `docs/SKILL.md` is a pointer to `evidence-before-claim/SKILL.md` instead of a second full copy.
+- `skills/CATALOG.md` is generated with the registry and names one canonical path per capability.
+- Exact duplicate `SKILL.md` bodies fail `npm run validate:repo`. A short file with `canonical:` is the allowed alias.
+- `master-brain/` is labeled a 1.0.0 snapshot. It is not the live platform.
+
+### Added
+- `examples/programmer/` — bugfix, pull-request review, and agent-handoff briefs checked by `npm run test:examples`.
+
 ## [Unreleased] — Focus Council + Local SSML Voice Cost Optimizer
 
 ### Added

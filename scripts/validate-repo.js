@@ -246,16 +246,25 @@ function main() {
     }
   }
 
-  // E
+  // E — byte-identical bodies are an error. A pointer file is not identical:
+  // it carries `canonical: <path>` and a short body.
+  for (const sp of skillPaths) {
+    const fm = readFrontmatter(path.join(ROOT, sp));
+    if (!fm.ok || !fm.meta.canonical) continue;
+    const target = String(fm.meta.canonical).trim().replace(/\\/g, '/');
+    if (!trackedSet.has(target)) {
+      errors.push({ gate: 'E', code: 'canonical_target_missing', path: sp, target });
+    }
+  }
   for (const [hash, paths] of hashToPaths) {
     if (paths.length > 1) {
       const sorted = [...paths].sort();
-      warnings.push({
+      errors.push({
         gate: 'E',
         code: 'exact_duplicate_skill_bodies',
         paths: sorted,
         content_sha256: hash,
-        canonical_candidate: sorted.find((p) => p.split('/').length === 2) || sorted[0],
+        note: 'Replace the extra copy with a short file whose frontmatter sets canonical: to the real SKILL.md',
       });
     }
   }
@@ -286,7 +295,7 @@ function main() {
     status: errors.length ? 'FAIL' : 'PASS',
     notes: [
       'Gate C is heuristic (markdown relative links + bare sibling backticks = warnings; markdown links = hard-fail).',
-      'Duplicates (E) and slug mismatches (G) are warnings only.',
+      'Exact duplicate skill bodies (E) fail the build. Slug mismatches (G) stay warnings.',
     ],
   };
 
