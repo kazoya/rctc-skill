@@ -59,7 +59,7 @@ function pathExists(rel, tracked, trackedSet) {
 }
 
 function readFrontmatter(abs) {
-  const text = fs.readFileSync(abs, 'utf8');
+  const text = fs.readFileSync(abs, 'utf8').replace(/\r\n/g, '\n');
   if (!text.startsWith('---')) return { ok: false, error: 'missing opening ---', text };
   const end = text.indexOf('\n---', 3);
   if (end < 0) return { ok: false, error: 'missing closing ---', text };

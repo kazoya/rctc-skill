@@ -40,3 +40,4 @@ One entry per capability. Edit that path. Other installations are host copies, v
 These files are not a second copy. They name the canonical skill.
 
 - `docs/SKILL.md` → `evidence-before-claim/SKILL.md`
+- `master-brain/skills/vendor/focused3-agentic-phases/SKILL.md` → `focused3-agentic-phases/SKILL.md`

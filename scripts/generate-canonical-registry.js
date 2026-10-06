@@ -33,7 +33,7 @@ function gitLsFiles() {
 function readFrontmatter(filePath) {
   const abs = path.join(ROOT, filePath);
   if (!fs.existsSync(abs)) return { ok: false, error: 'missing_file' };
-  const text = fs.readFileSync(abs, 'utf8');
+  const text = fs.readFileSync(abs, 'utf8').replace(/\r\n/g, '\n');
   if (!text.startsWith('---')) return { ok: false, error: 'no_frontmatter', text };
   const end = text.indexOf('\n---', 3);
   if (end < 0) return { ok: false, error: 'unclosed_frontmatter', text };
