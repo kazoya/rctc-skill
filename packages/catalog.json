@@ -348,6 +348,41 @@
         "authorization_gate_for_security_windows"
       ],
       "notes": "Dogfooded on the 2026-10-08 NFL Big Data Bowl decline. Ledger holds dated public results only."
+    },
+    {
+      "id": "programmer-essentials-20",
+      "title": "Programmer essentials — 20 daily skills",
+      "audience": [
+        "developer",
+        "reviewer",
+        "designer-engineer"
+      ],
+      "skills": [
+        "design-taste-rctc",
+        "owner-credential-vault",
+        "git-worktree-flow",
+        "pr-review-surgeon",
+        "debugger-hypothesis",
+        "api-error-contracts",
+        "sql-migration-safety",
+        "test-first-slice",
+        "github-actions-min-ci",
+        "docker-compose-dev",
+        "a11y-rtl-web",
+        "web-vitals-budget",
+        "twelve-factor-config",
+        "observability-starter",
+        "refactor-characterization",
+        "typescript-boundaries",
+        "release-notes-from-git",
+        "supply-chain-pinning",
+        "incident-debug-playbook",
+        "consistent-character-video"
+      ],
+      "paths": [
+        "packs/programmer-essentials-20/README.md"
+      ],
+      "notes": "Original pack. Design dials complement Leonxlnx/taste-skill. Secrets stay in the OS store for accounts the operator owns. Browser sessions stay on logged-in-browser."
     }
   ]
 }
