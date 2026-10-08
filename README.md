@@ -55,6 +55,7 @@ It is designed to govern complex, high-fidelity AI and software projects through
 | عقل ماستر وربط الأدوار بين المشاريع | [Master Brain](master-brain/) ↔ مشروع `C:\\master` |
 | باقات مترابطة لـ Cursor/Claude/Codex (أقل توكينز) | [Skill Packages](packages/) |
 | مجتمع مبرمجين للتعلم والنقاش (StackOverflow-like + AI) | [Dev Agora Skill](dev-agora-skill/) |
+| اختيار مسابقة من مهارة مُقاسة، بلا أسرار | [Prize-hunt skill fit](prize-hunt-skill-fit/) |
 
 **[افتح العرض الكامل للمهارات، حالات الاستخدام، ووصفات الدمج →](docs/SKILLS-SHOWCASE.md)**
 

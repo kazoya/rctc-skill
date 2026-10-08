@@ -82,3 +82,9 @@ See `packages/catalog.json` (machine-readable) and below (human).
 ### 13. `ethical-security-foundations` — معنى الإيثيكال هاكينغ
 **Chain:** `rctc-method` → `wehm` → `ethical-bugbounty-training` Scope Guard → `focused3-agentic-phases`
 **Outcome:** authorization → safe learning tier → local evidence → remediation/disclosure.
+
+### 14. `prize-hunt-skill-fit` — جائزة حسب الصنف المُثبت
+**Chain:** `rctc-method` → `evidence-before-claim` → `prize-hunt-skill-fit` → `wehm` عند النافذة الأمنية → `focused3-agentic-phases`  
+**Outcome:** دفتر نتائج عامة → صنف النافذة → ادخل أو راقب أو ارفض  
+**Dogfooding:** رفض Big Data Bowl 2027 أُعيد درسه إلى Evidence Before Claim: الدرجة العامة تحتاج تاريخاً، والقمة أثناء المسابقة ليست النتيجة.  
+**Rule:** لا أسرار ولا أعلام ولا حمولات.

@@ -1,13 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-09-29T17:56:09.220Z",
+  "generated_at": "2026-10-08T09:32:02.880Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 37,
-    "canonical_capabilities": 32,
+    "discovered_skill_records": 38,
+    "canonical_capabilities": 33,
     "multi_install_capabilities": 5,
-    "public_claim": "32 canonical capabilities (37 tracked SKILL.md installations — not independent product claims)"
+    "public_claim": "33 canonical capabilities (38 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -123,7 +123,7 @@
           "folder": "continuous-improving",
           "kind": "primary_tree",
           "description_snippet": "Continuous Improving (CI) is an autonomous, self-driving execution and optimization OS for competitive AI hunting, compe",
-          "content_sha256": "9b1e4fcf6efbbc18f1523335e4d6b88f7f4e956ce41986094d20d738e41aec87"
+          "content_sha256": "7a87708dc1cf33f307b060b0455c3f3aed7562946c8f638f49ab763093f22542"
         }
       ],
       "installation_count": 1,
@@ -163,7 +163,7 @@
           "folder": "digital-presence-factory",
           "kind": "primary_tree",
           "description_snippet": "Reusable production DNA for digital presence sites — not one website template. From a small input (URL, name, GitHub, fo",
-          "content_sha256": "0270a48da8048ae4cc2906aa10cb334afb40adc3d6ae2f9e495b38c3e141b451"
+          "content_sha256": "9f43c2dd31bba5db4c87c82994b240cb4dfa184d5571d6bca71adb6473e59650"
         }
       ],
       "installation_count": 1,
@@ -203,7 +203,7 @@
           "folder": "docs",
           "kind": "primary_tree",
           "description_snippet": "Produce the evidence before stating that something works, and separate what was proven from what is still assumed. Use f",
-          "content_sha256": "939987d39341c92cb23b48cf97785f30b2fbbf862b41cf52bf1218dce9c47a1b"
+          "content_sha256": "319a10550d17baf94fdd38c57f255d5c8156390cfcbbaf263487c6b302222da4"
         },
         {
           "installation_id": "evidence-before-claim::1",
@@ -211,7 +211,7 @@
           "folder": "evidence-before-claim",
           "kind": "primary_tree",
           "description_snippet": "Produce the evidence before stating that something works, and separate what was proven from what is still assumed. Use f",
-          "content_sha256": "319a10550d17baf94fdd38c57f255d5c8156390cfcbbaf263487c6b302222da4"
+          "content_sha256": "02bd560c11b24782b6389bab0f8f9b12c5ee0329062559b020cae03dfc430d50"
         }
       ],
       "installation_count": 2,
@@ -231,7 +231,7 @@
           "folder": "factory-sales-concept",
           "kind": "primary_tree",
           "description_snippet": "Builds an Arabic RTL Next.js digital-concept platform for a factory or manufacturer after inspecting their public websit",
-          "content_sha256": "f4fa2b2a0ba1440d74dd26afb433e745bbe3491f7dde942f6e420cd5a1b454c1"
+          "content_sha256": "54d1dede7fc7fe1134069af554cb9451cdf011c06a13526226aa940f32226a15"
         }
       ],
       "installation_count": 1,
@@ -271,7 +271,7 @@
           "folder": "focus-council",
           "kind": "primary_tree",
           "description_snippet": "High-signal answer focusing through simulated expert deliberation and a neutral jury. Use when a decision, architecture,",
-          "content_sha256": "4237662cadcc53846997358c1803abeab23b51a0231ee4ed00b403ec6141a4eb"
+          "content_sha256": "49745d3aee997eef97280d30933123f7e89959a8b6bc052eed56a139f530ef00"
         }
       ],
       "installation_count": 1,
@@ -291,7 +291,7 @@
           "folder": "focused3-agentic-phases",
           "kind": "primary_tree",
           "description_snippet": "focused3AgenticPhases is a 3-phase agentic engineering OS (THINK → EXECUTE → PROVE) with specialized builders, expert su",
-          "content_sha256": "d244c1c5ae7efeb682cff43319f444c86b3abcd4fd294d955db584f273395dfd"
+          "content_sha256": "6ac1992a3cac9fd897220c466a9ee3e0abcdf170519af836476353491c2dfa7e"
         },
         {
           "installation_id": "focused3-agentic-phases::1",
@@ -303,7 +303,7 @@
         }
       ],
       "installation_count": 2,
-      "ambiguity": "multi_install_divergent",
+      "ambiguity": "multi_install_identical",
       "executable_default": "focused3-agentic-phases/SKILL.md"
     },
     {
@@ -447,12 +447,32 @@
           "folder": "portfolio-commander/skills/portfolio-skills-router",
           "kind": "nested_skill",
           "description_snippet": "Routes Cursor Agent Skills to the active portfolio project. Read project-skills-map.yaml, respect Portfolio Commander pr",
-          "content_sha256": "0d887c2971d5c277da6339987745d2c3da9ccc4c0570b6f3655f0dc980fbcf3b"
+          "content_sha256": "f01df08310184ab8b2e1935b06cbc34c9c4eb22afcc3d8005aa111ae14acef20"
         }
       ],
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "portfolio-commander/skills/portfolio-skills-router/SKILL.md"
+    },
+    {
+      "canonical_id": "prize-hunt-skill-fit",
+      "kind": "canonical_capability",
+      "title": "prize-hunt-skill-fit",
+      "description": "Choose a prize, CTF, or Kaggle window from proven skill classes and dated public scores. Use when deciding whether to enter a competition, when a cash prize looks attractive, or when ranking bounty and playground work. Refuse domain-mismatch contests, secret leakage, exploit write-ups, and rank claims without a live public score.",
+      "primary_installation_id": "prize-hunt-skill-fit::0",
+      "installations": [
+        {
+          "installation_id": "prize-hunt-skill-fit::0",
+          "path": "prize-hunt-skill-fit/SKILL.md",
+          "folder": "prize-hunt-skill-fit",
+          "kind": "primary_tree",
+          "description_snippet": "Choose a prize, CTF, or Kaggle window from proven skill classes and dated public scores. Use when deciding whether to en",
+          "content_sha256": "cd71810ade01a86233594c36e6362e49d5f6efd681e6c835345e1c2ee8a170e1"
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "prize-hunt-skill-fit/SKILL.md"
     },
     {
       "canonical_id": "projects-connector",
@@ -467,7 +487,7 @@
           "folder": "projectsConnector",
           "kind": "primary_tree",
           "description_snippet": "Connects Cursor portfolio projects without merging repos: Factories sales concepts, Belt WhatsApp, Muqasa auctions, RCTC",
-          "content_sha256": "fedbd9a0f927bd47e56845bde83025b4e060f0908e73b6330637b7374027a0ed"
+          "content_sha256": "6cd563b73709244a90f4a5c83628e256cc67b8e0efa4abc407de63efcebcded7"
         }
       ],
       "installation_count": 1,
@@ -495,7 +515,7 @@
           "folder": ".",
           "kind": "primary_tree",
           "description_snippet": "Structure or improve AI prompts and implementation briefs with Role, Context, Task, and Constraints. Use when a request ",
-          "content_sha256": "99fe25bdeb899f81925142df6c7dc4dba6cff11717f3a5a5b17d6f3e09a46746"
+          "content_sha256": "db5ad5ce50813052ab9329863bba2eb0be5de77398a59a5278d4e8efb883f2a7"
         }
       ],
       "installation_count": 2,
@@ -535,7 +555,7 @@
           "folder": "secretsinnextcss",
           "kind": "primary_tree",
           "description_snippet": "Design and implement accessible, privacy-safe Easter eggs, hover secrets, riddles, and progressive-discovery moments in ",
-          "content_sha256": "c08db2021e5b85c200062cc981f61a7761c713844158f23f224866b2132988b4"
+          "content_sha256": "4abb3af484f04ccf1a88e7dccfad13044008f57bd7b8b836c38187a3e2de975f"
         }
       ],
       "installation_count": 1,

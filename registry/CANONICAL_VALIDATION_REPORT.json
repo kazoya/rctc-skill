@@ -1,11 +1,28 @@
 {
-  "generated_at": "2026-09-29T17:56:09.220Z",
-  "tracked_skill_count": 37,
-  "canonical_capability_count": 32,
-  "installation_count": 37,
+  "generated_at": "2026-10-08T09:32:02.880Z",
+  "tracked_skill_count": 38,
+  "canonical_capability_count": 33,
+  "installation_count": 38,
   "unregistered_tracked_skills": [],
   "dead_registry_paths": [],
-  "exact_duplicate_groups": [],
+  "exact_duplicate_groups": [
+    {
+      "content_sha256": "6ac1992a3cac9fd897220c466a9ee3e0abcdf170519af836476353491c2dfa7e",
+      "paths": [
+        "focused3-agentic-phases/SKILL.md",
+        "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md"
+      ],
+      "slugs": [
+        "focused3-agentic-phases",
+        "focused3-agentic-phases"
+      ],
+      "kinds": [
+        "primary_tree",
+        "vendored_copy"
+      ],
+      "canonical_candidate": "focused3-agentic-phases/SKILL.md"
+    }
+  ],
   "slug_inconsistencies": [
     {
       "path": "SKILL.md",
@@ -51,15 +68,6 @@
       "paths": [
         "docs/SKILL.md",
         "evidence-before-claim/SKILL.md"
-      ],
-      "note": "Same canonical_id, different content hashes — not silently collapsed"
-    },
-    {
-      "type": "divergent_installations",
-      "canonical_id": "focused3-agentic-phases",
-      "paths": [
-        "focused3-agentic-phases/SKILL.md",
-        "master-brain/skills/vendor/focused3-agentic-phases/SKILL.md"
       ],
       "note": "Same canonical_id, different content hashes — not silently collapsed"
     },

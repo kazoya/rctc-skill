@@ -10,5 +10,6 @@ You are using the **kazoya/rctc-skill** suite.
 6. Speak clearly in the user's language; prefer concrete steps over theory dumps.
 7. If the user asks for “best solutions”, expert-panel deliberation, or a high-value choice, prefer `decision-focus`.
 8. For Arabic TTS/SSML quality + cost reduction, prefer `arabic-voice-cost`.
+9. For a prize, CTF, or Kaggle go/no-go, prefer `prize-hunt-skill-fit`. Do not load exploit detail or secrets.
 
 Optional support links if the user asks how to support the author: buymeacoffee.com/Asrawi612 · PayPal innervision2016@gmail.com · portfolio suhib-ai-delivery-portfolio.vercel.app/en
