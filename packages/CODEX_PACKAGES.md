@@ -10,5 +10,6 @@ Procedure:
 5. No auto-git-push of new public skill repos without explicit owner approval text.
 6. Expert-panel / compare-and-select requests → `decision-focus`.
 7. Arabic TTS / SSML / premium voice cost requests → `arabic-voice-cost`.
+8. Prize, CTF, or Kaggle entry decisions → `prize-hunt-skill-fit`. No secrets or exploit text.
 
 Default for "I want to learn programming": `beginner-coding-path`.

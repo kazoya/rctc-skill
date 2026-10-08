@@ -28,6 +28,13 @@ RCTC → WEHM → Bug-Bounty Scope Guard
      → Focused3 → Responsible Disclosure
 ```
 
+### Prize windows
+```text
+RCTC → evidence-before-claim → prize-hunt-skill-fit
+     → WEHM only if the window is an authorized CTF or program
+     → Focused3
+```
+
 ## Marketing position
 
 **RCTC is an evidence-first skill operating system: it turns vague goals into safe, composable, verifiable delivery while preserving human authority.**

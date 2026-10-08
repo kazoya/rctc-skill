@@ -28,6 +28,7 @@
 | تحويل الطلب المبهم إلى تكليف واضح | [RCTC Method](../SKILL.md) | أي مهارة تنفيذية لاحقة |
 | تركيز أفضل إجابة عبر خبراء متنوعين ثم Jury محايد | [Focus Council](../focus-council/) | Focused3 عند الانتقال من القرار إلى التنفيذ |
 | تحسين جودة TTS العربي وتقليل الاستدعاءات المدفوعة | [Local SSML Voice Cost Optimizer](../local-ssml-voice-cost-optimizer/) | Focus Council + Focused3 |
+| اختيار مسابقة حسب مهارة مُثبتة | [Prize-hunt skill fit](../prize-hunt-skill-fit/) | evidence-before-claim + WEHM |
 | تشغيل أدوات وخدمات من WhatsApp/Telegram/Web ضمن صلاحيات وموافقات واضحة | [WhatsApp Agent Orchestrator](../whatsapp-agent-orchestrator-super-skill/) | Safe Forward + Focused3 + Master Brain |
 
 ---
@@ -195,6 +196,13 @@ Continuous Improving → Update-Zip Skill
 RCTC → Focus Council → Focused3 → Safe Forward Execution
 ```
 
+### نافذة جائزة
+
+```text
+RCTC → evidence-before-claim → prize-hunt-skill-fit
+     → WEHM إذا كانت النافذة تحدياً أو برنامجاً مصرحاً
+```
+
 ### صوت عربي محلي-أولاً
 
 ```text
@@ -234,3 +242,11 @@ Curated chains that cut tokens: see [`packages/README.md`](../packages/README.md
 يرتب المسار من OpenSSF وOWASP، مروراً بمختبرات PortSwigger وpwn.college، ثم CodeQL وTrail of Bits وAFL++ وangr، وصولاً إلى Project Zero RCA. يعيد استخدام Scope Guard الحالي، وأي غموض في التفويض يعني STOP.
 
 [افتح المهارة](../wehm/)
+
+## 16. Prize-hunt skill fit
+
+**الجائزة الكبيرة لا تختار المهارة. دفتر النتائج هو الذي يختار.**
+
+تقارن نافذة المسابقة بصنف أُنجز وقِيس: اختلاف تحليل بين طبقتين، تصنيف جدولي، محاكاة، أو أمن وكلاء. ترفض مجالًا بلا قياس، وتمنع نشر الأسرار والأعلام والحمولات. سابقة Dogfooding: قرار 8 أكتوبر 2026 رفض Big Data Bowl لأن صنفه تتبع رياضي، ثم عادت قاعدة «الدرجة العامة المؤرخة» إلى Evidence Before Claim.
+
+[افتح المهارة](../prize-hunt-skill-fit/)

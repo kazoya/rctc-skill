@@ -23,6 +23,7 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `muqasa-maintenance` → `portfolio-commander/skills/muqasa-maintenance/SKILL.md`
 - `portfolio-commander` → `portfolio-commander/skill/SKILL.md`
 - `portfolio-skills-router` → `portfolio-commander/skills/portfolio-skills-router/SKILL.md`
+- `prize-hunt-skill-fit` → `prize-hunt-skill-fit/SKILL.md`
 - `projects-connector` → `projectsConnector/SKILL.md`
 - `rctc-method` → `SKILL.md`
 - `safe-forward-execution` → `safe-forward-execution/SKILL.md`

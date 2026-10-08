@@ -35,6 +35,10 @@ Use this order for code. Do not start with a marketing skill.
 
 The full map is [skills/CATALOG.md](skills/CATALOG.md). Domain stories (sites, factories, portfolio) stay in [docs/SKILLS-SHOWCASE.md](docs/SKILLS-SHOWCASE.md).
 
+## Prize windows
+
+[Prize-hunt skill fit](prize-hunt-skill-fit/SKILL.md) enters a contest only when a measured class matches a dated public score. It publishes the method, not secrets, flags, or exploit steps.
+
 ## Check the tree
 
 ```bash

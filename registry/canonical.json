@@ -1,13 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-06T09:52:37.001Z",
+  "generated_at": "2026-10-08T09:33:53.462Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 37,
-    "canonical_capabilities": 32,
+    "discovered_skill_records": 38,
+    "canonical_capabilities": 33,
     "multi_install_capabilities": 5,
-    "public_claim": "32 canonical capabilities (37 tracked SKILL.md installations — not independent product claims)"
+    "public_claim": "33 canonical capabilities (38 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -221,7 +221,7 @@
           "folder": "evidence-before-claim",
           "kind": "primary_tree",
           "description_snippet": "Produce the evidence before stating that something works, and separate what was proven from what is still assumed. Use f",
-          "content_sha256": "939987d39341c92cb23b48cf97785f30b2fbbf862b41cf52bf1218dce9c47a1b",
+          "content_sha256": "77a5fb53efe595f2749b5e1250fdd35ed0635e517522e7465768e901fc83f7e6",
           "pointer": false
         }
       ],
@@ -477,6 +477,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "portfolio-commander/skills/portfolio-skills-router/SKILL.md"
+    },
+    {
+      "canonical_id": "prize-hunt-skill-fit",
+      "kind": "canonical_capability",
+      "title": "prize-hunt-skill-fit",
+      "description": "Choose a prize, CTF, or Kaggle window from proven skill classes and dated public scores. Use when deciding whether to enter a competition, when a cash prize looks attractive, or when ranking bounty and playground work. Refuse domain-mismatch contests, secret leakage, exploit write-ups, and rank claims without a live public score.",
+      "primary_installation_id": "prize-hunt-skill-fit::0",
+      "installations": [
+        {
+          "installation_id": "prize-hunt-skill-fit::0",
+          "path": "prize-hunt-skill-fit/SKILL.md",
+          "folder": "prize-hunt-skill-fit",
+          "kind": "primary_tree",
+          "description_snippet": "Choose a prize, CTF, or Kaggle window from proven skill classes and dated public scores. Use when deciding whether to en",
+          "content_sha256": "cd71810ade01a86233594c36e6362e49d5f6efd681e6c835345e1c2ee8a170e1",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "prize-hunt-skill-fit/SKILL.md"
     },
     {
       "canonical_id": "projects-connector",

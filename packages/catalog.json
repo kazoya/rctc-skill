@@ -317,6 +317,37 @@
         "ai-portability-advisor/SKILL.md"
       ],
       "notes": "Orchestrate WhatsApp agent work with browser login skill and portfolio connectors."
+    },
+    {
+      "id": "prize-hunt-skill-fit",
+      "title": "Choose a prize window from proven classes",
+      "audience": [
+        "prize-operator",
+        "kaggle",
+        "authorized-researcher"
+      ],
+      "skills": [
+        "rctc-method",
+        "evidence-before-claim",
+        "prize-hunt-skill-fit",
+        "wehm",
+        "focused3-agentic-phases"
+      ],
+      "paths": [
+        "prize-hunt-skill-fit/SKILL.md",
+        "prize-hunt-skill-fit/EVIDENCE.md",
+        "prize-hunt-skill-fit/DOGFOODING.md",
+        "evidence-before-claim/SKILL.md",
+        "wehm/SKILL.md",
+        "focused3-agentic-phases/SKILL.md"
+      ],
+      "constraints": [
+        "no_secrets",
+        "no_exploit_writeups",
+        "public_score_required_for_rank_claims",
+        "authorization_gate_for_security_windows"
+      ],
+      "notes": "Dogfooded on the 2026-10-08 NFL Big Data Bowl decline. Ledger holds dated public results only."
     }
   ]
 }
