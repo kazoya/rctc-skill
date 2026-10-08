@@ -27,3 +27,6 @@ jobs:
 
       - name: Integrity fixture tests
         run: npm run test:integrity
+
+      - name: Programmer example briefs
+        run: npm run test:examples
