@@ -1,15 +1,36 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-08T09:33:53.462Z",
+  "generated_at": "2026-10-11T20:02:53.863Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 38,
-    "canonical_capabilities": 33,
+    "discovered_skill_records": 58,
+    "canonical_capabilities": 53,
     "multi_install_capabilities": 5,
-    "public_claim": "33 canonical capabilities (38 tracked SKILL.md installations — not independent product claims)"
+    "public_claim": "53 canonical capabilities (58 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
+    {
+      "canonical_id": "a11y-rtl-web",
+      "kind": "canonical_capability",
+      "title": "a11y-rtl-web",
+      "description": "\"Make web UI keyboard-accessible and correct in Arabic RTL. Use when building or fixing pages for Arabic users, focus order, labels, or contrast.\"",
+      "primary_installation_id": "a11y-rtl-web::0",
+      "installations": [
+        {
+          "installation_id": "a11y-rtl-web::0",
+          "path": "packs/programmer-essentials-20/a11y-rtl-web/SKILL.md",
+          "folder": "packs/programmer-essentials-20/a11y-rtl-web",
+          "kind": "nested_skill",
+          "description_snippet": "\"Make web UI keyboard-accessible and correct in Arabic RTL. Use when building or fixing pages for Arabic users, focus or",
+          "content_sha256": "831b71c69cdb71fa513b7067e532d64059d9877efd45c347b70aa5464ff6f081",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/a11y-rtl-web/SKILL.md"
+    },
     {
       "canonical_id": "ai-portability-advisor",
       "kind": "canonical_capability",
@@ -51,6 +72,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "portfolio-commander/skills/apca-marketing-site/SKILL.md"
+    },
+    {
+      "canonical_id": "api-error-contracts",
+      "kind": "canonical_capability",
+      "title": "api-error-contracts",
+      "description": "\"Design HTTP or RPC errors as a stable contract: status, machine code, and a safe message. Use when adding endpoints, fixing client error handling, or stopping leaked stack traces.\"",
+      "primary_installation_id": "api-error-contracts::0",
+      "installations": [
+        {
+          "installation_id": "api-error-contracts::0",
+          "path": "packs/programmer-essentials-20/api-error-contracts/SKILL.md",
+          "folder": "packs/programmer-essentials-20/api-error-contracts",
+          "kind": "nested_skill",
+          "description_snippet": "\"Design HTTP or RPC errors as a stable contract: status, machine code, and a safe message. Use when adding endpoints, fi",
+          "content_sha256": "97f5072cef1ecb9d4eb58d89eedd23f065c6a91233acfa22bd795f277981e60b",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/api-error-contracts/SKILL.md"
     },
     {
       "canonical_id": "belt-apca-smarthelp-cx",
@@ -116,6 +158,27 @@
       "executable_default": "bitter-truth-delivery-audit/SKILL.md"
     },
     {
+      "canonical_id": "consistent-character-video",
+      "kind": "canonical_capability",
+      "title": "consistent-character-video",
+      "description": "\"Plan a ComfyUI video series with a locked character bible and Saudi-dialect dialogue handled outside the video model. Use when the user wants recurring characters, episode scenes, Wan, or LTX workflows. Choose Wan 2.2 I2V for face stability and LTX-2.3 when length or native audio matters more.\"",
+      "primary_installation_id": "consistent-character-video::0",
+      "installations": [
+        {
+          "installation_id": "consistent-character-video::0",
+          "path": "packs/programmer-essentials-20/consistent-character-video/SKILL.md",
+          "folder": "packs/programmer-essentials-20/consistent-character-video",
+          "kind": "nested_skill",
+          "description_snippet": "\"Plan a ComfyUI video series with a locked character bible and Saudi-dialect dialogue handled outside the video model. U",
+          "content_sha256": "4d0fc6a13420e35fd97cd14eecd75c699c47fc5604102628dbf252f7bfc0b53d",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/consistent-character-video/SKILL.md"
+    },
+    {
       "canonical_id": "continuous-improving",
       "kind": "canonical_capability",
       "title": "continuous-improving",
@@ -135,6 +198,48 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "continuous-improving/SKILL.md"
+    },
+    {
+      "canonical_id": "debugger-hypothesis",
+      "kind": "canonical_capability",
+      "title": "debugger-hypothesis",
+      "description": "\"Debug by stating one hypothesis, a cheap observation, then a fix. Use when a bug, failing test, or unexpected runtime behavior needs a cause before an edit.\"",
+      "primary_installation_id": "debugger-hypothesis::0",
+      "installations": [
+        {
+          "installation_id": "debugger-hypothesis::0",
+          "path": "packs/programmer-essentials-20/debugger-hypothesis/SKILL.md",
+          "folder": "packs/programmer-essentials-20/debugger-hypothesis",
+          "kind": "nested_skill",
+          "description_snippet": "\"Debug by stating one hypothesis, a cheap observation, then a fix. Use when a bug, failing test, or unexpected runtime b",
+          "content_sha256": "8735cc3c879e8095616ad55190a45ddaa6527d48e4b2eacb44dd010249fec6bb",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/debugger-hypothesis/SKILL.md"
+    },
+    {
+      "canonical_id": "design-taste-rctc",
+      "kind": "canonical_capability",
+      "title": "design-taste-rctc",
+      "description": "\"Anti-slop UI direction for landing pages, dashboards, and redesigns. Infer the brief, set variance/motion/density dials, prefer an official design system, and run a pre-flight check. Use when the user asks for design taste, UI polish, or a less generic interface. Complements upstream Leonxlnx/taste-skill; does not replace its full rulebook.\"",
+      "primary_installation_id": "design-taste-rctc::0",
+      "installations": [
+        {
+          "installation_id": "design-taste-rctc::0",
+          "path": "packs/programmer-essentials-20/design-taste-rctc/SKILL.md",
+          "folder": "packs/programmer-essentials-20/design-taste-rctc",
+          "kind": "nested_skill",
+          "description_snippet": "\"Anti-slop UI direction for landing pages, dashboards, and redesigns. Infer the brief, set variance/motion/density dials",
+          "content_sha256": "6b7f551df7025df4c8dda3611986bdb078cf2c38633ab8494a06518804cf6041",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/design-taste-rctc/SKILL.md"
     },
     {
       "canonical_id": "dev-agora-skill",
@@ -177,6 +282,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "digital-presence-factory/SKILL.md"
+    },
+    {
+      "canonical_id": "docker-compose-dev",
+      "kind": "canonical_capability",
+      "title": "docker-compose-dev",
+      "description": "\"Run local dependencies with Docker Compose without putting the app's production secrets in the compose file. Use when a programmer needs Postgres, Redis, or a worker on localhost.\"",
+      "primary_installation_id": "docker-compose-dev::0",
+      "installations": [
+        {
+          "installation_id": "docker-compose-dev::0",
+          "path": "packs/programmer-essentials-20/docker-compose-dev/SKILL.md",
+          "folder": "packs/programmer-essentials-20/docker-compose-dev",
+          "kind": "nested_skill",
+          "description_snippet": "\"Run local dependencies with Docker Compose without putting the app's production secrets in the compose file. Use when a",
+          "content_sha256": "17e9a3395ea46893df5672c0d1933026d0f6bdebbd424dde47206b8eaea4c604",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/docker-compose-dev/SKILL.md"
     },
     {
       "canonical_id": "ethical-bugbounty-training",
@@ -323,6 +449,48 @@
       "executable_default": "focused3-agentic-phases/SKILL.md"
     },
     {
+      "canonical_id": "git-worktree-flow",
+      "kind": "canonical_capability",
+      "title": "git-worktree-flow",
+      "description": "\"Isolate feature work in a git worktree and open a small pull request. Use when the user wants parallel branches, a clean master, or a reviewable diff without mixing unrelated files.\"",
+      "primary_installation_id": "git-worktree-flow::0",
+      "installations": [
+        {
+          "installation_id": "git-worktree-flow::0",
+          "path": "packs/programmer-essentials-20/git-worktree-flow/SKILL.md",
+          "folder": "packs/programmer-essentials-20/git-worktree-flow",
+          "kind": "nested_skill",
+          "description_snippet": "\"Isolate feature work in a git worktree and open a small pull request. Use when the user wants parallel branches, a clea",
+          "content_sha256": "01e94011c1170a28768a2d83993b61d68681128f56b52bb8908dc76b5c980ee4",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/git-worktree-flow/SKILL.md"
+    },
+    {
+      "canonical_id": "github-actions-min-ci",
+      "kind": "canonical_capability",
+      "title": "github-actions-min-ci",
+      "description": "\"Add a small GitHub Actions workflow that installs dependencies, runs the repo's real check, and does not print secrets. Use when CI is missing or a workflow needs a tighter job.\"",
+      "primary_installation_id": "github-actions-min-ci::0",
+      "installations": [
+        {
+          "installation_id": "github-actions-min-ci::0",
+          "path": "packs/programmer-essentials-20/github-actions-min-ci/SKILL.md",
+          "folder": "packs/programmer-essentials-20/github-actions-min-ci",
+          "kind": "nested_skill",
+          "description_snippet": "\"Add a small GitHub Actions workflow that installs dependencies, runs the repo's real check, and does not print secrets.",
+          "content_sha256": "9011cb365c779032b0251c7729373bc13b4c01564f1ec0572e616f6899ef4065",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/github-actions-min-ci/SKILL.md"
+    },
+    {
       "canonical_id": "htpaap",
       "kind": "canonical_capability",
       "title": "htpaap",
@@ -342,6 +510,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "htpaap/SKILL.md"
+    },
+    {
+      "canonical_id": "incident-debug-playbook",
+      "kind": "canonical_capability",
+      "title": "incident-debug-playbook",
+      "description": "\"Run a short production incident loop: impact, mitigation, evidence, then a written follow-up. Use when a live service is failing and the user needs a calm sequence rather than a refactor.\"",
+      "primary_installation_id": "incident-debug-playbook::0",
+      "installations": [
+        {
+          "installation_id": "incident-debug-playbook::0",
+          "path": "packs/programmer-essentials-20/incident-debug-playbook/SKILL.md",
+          "folder": "packs/programmer-essentials-20/incident-debug-playbook",
+          "kind": "nested_skill",
+          "description_snippet": "\"Run a short production incident loop: impact, mitigation, evidence, then a written follow-up. Use when a live service i",
+          "content_sha256": "99ec87525c52817b338c7147b3beac04c05624da00a4186e7fc1042e00ae0ca8",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/incident-debug-playbook/SKILL.md"
     },
     {
       "canonical_id": "local-ssml-voice-cost-optimizer",
@@ -428,6 +617,48 @@
       "executable_default": "portfolio-commander/skills/muqasa-maintenance/SKILL.md"
     },
     {
+      "canonical_id": "observability-starter",
+      "kind": "canonical_capability",
+      "title": "observability-starter",
+      "description": "\"Add request-scoped logs with a correlation id and one health/readiness distinction. Use when a service fails in production and logs are unstructured or secrets leak into them.\"",
+      "primary_installation_id": "observability-starter::0",
+      "installations": [
+        {
+          "installation_id": "observability-starter::0",
+          "path": "packs/programmer-essentials-20/observability-starter/SKILL.md",
+          "folder": "packs/programmer-essentials-20/observability-starter",
+          "kind": "nested_skill",
+          "description_snippet": "\"Add request-scoped logs with a correlation id and one health/readiness distinction. Use when a service fails in product",
+          "content_sha256": "d949a601e423877a7a438b7902a61de69e112aac792dcb4b5f080c1159a30a13",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/observability-starter/SKILL.md"
+    },
+    {
+      "canonical_id": "owner-credential-vault",
+      "kind": "canonical_capability",
+      "title": "owner-credential-vault",
+      "description": "\"Store the operator's own automation secrets in the OS credential store (Windows Credential Manager or keyring), never in git. Use when saving API tokens, SMTP, or OAuth client secrets the operator owns so later runs can read them without printing them. Do not use to extract browser passwords, decrypt Chrome cookies, or sign into accounts the operator does not own.\"",
+      "primary_installation_id": "owner-credential-vault::0",
+      "installations": [
+        {
+          "installation_id": "owner-credential-vault::0",
+          "path": "packs/programmer-essentials-20/owner-credential-vault/SKILL.md",
+          "folder": "packs/programmer-essentials-20/owner-credential-vault",
+          "kind": "nested_skill",
+          "description_snippet": "\"Store the operator's own automation secrets in the OS credential store (Windows Credential Manager or keyring), never i",
+          "content_sha256": "4bf00b265f4d999b364fa1e427c4c93f96a198645d0daa4ac07d030d45bdeb89",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/owner-credential-vault/SKILL.md"
+    },
+    {
       "canonical_id": "portfolio-commander",
       "kind": "canonical_capability",
       "title": "portfolio-commander",
@@ -477,6 +708,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "portfolio-commander/skills/portfolio-skills-router/SKILL.md"
+    },
+    {
+      "canonical_id": "pr-review-surgeon",
+      "kind": "canonical_capability",
+      "title": "pr-review-surgeon",
+      "description": "\"Review a pull request for correctness bugs, security mistakes, and missing tests. Use when the user asks for a code review. Report findings first, ordered by severity, with file references.\"",
+      "primary_installation_id": "pr-review-surgeon::0",
+      "installations": [
+        {
+          "installation_id": "pr-review-surgeon::0",
+          "path": "packs/programmer-essentials-20/pr-review-surgeon/SKILL.md",
+          "folder": "packs/programmer-essentials-20/pr-review-surgeon",
+          "kind": "nested_skill",
+          "description_snippet": "\"Review a pull request for correctness bugs, security mistakes, and missing tests. Use when the user asks for a code rev",
+          "content_sha256": "b3319398c2b409f4e5ced5d4be7a707265ce3b039db8b347a07bbf49f7b9e5c4",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/pr-review-surgeon/SKILL.md"
     },
     {
       "canonical_id": "prize-hunt-skill-fit",
@@ -549,6 +801,48 @@
       "installation_count": 2,
       "ambiguity": "multi_install_divergent",
       "executable_default": "SKILL.md"
+    },
+    {
+      "canonical_id": "refactor-characterization",
+      "kind": "canonical_capability",
+      "title": "refactor-characterization",
+      "description": "\"Change structure without changing behavior by locking current behavior with a characterization test first. Use when the user asks to clean up, split a module, or rename internals.\"",
+      "primary_installation_id": "refactor-characterization::0",
+      "installations": [
+        {
+          "installation_id": "refactor-characterization::0",
+          "path": "packs/programmer-essentials-20/refactor-characterization/SKILL.md",
+          "folder": "packs/programmer-essentials-20/refactor-characterization",
+          "kind": "nested_skill",
+          "description_snippet": "\"Change structure without changing behavior by locking current behavior with a characterization test first. Use when the",
+          "content_sha256": "1213eae771b3eb613ce32f7667c716119069735be889715260ba93b4aad08a63",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/refactor-characterization/SKILL.md"
+    },
+    {
+      "canonical_id": "release-notes-from-git",
+      "kind": "canonical_capability",
+      "title": "release-notes-from-git",
+      "description": "\"Write release notes from merged commits and pull requests, grouped by user impact. Use when tagging a version or preparing a changelog entry.\"",
+      "primary_installation_id": "release-notes-from-git::0",
+      "installations": [
+        {
+          "installation_id": "release-notes-from-git::0",
+          "path": "packs/programmer-essentials-20/release-notes-from-git/SKILL.md",
+          "folder": "packs/programmer-essentials-20/release-notes-from-git",
+          "kind": "nested_skill",
+          "description_snippet": "\"Write release notes from merged commits and pull requests, grouped by user impact. Use when tagging a version or prepar",
+          "content_sha256": "49233f4fde0946aa7dbff5da6582c086f3b9e1cd42a8b95a72ba96bbdd1172ae",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/release-notes-from-git/SKILL.md"
     },
     {
       "canonical_id": "safe-forward-execution",
@@ -635,6 +929,27 @@
       "executable_default": "skill-factory/SKILL.md"
     },
     {
+      "canonical_id": "sql-migration-safety",
+      "kind": "canonical_capability",
+      "title": "sql-migration-safety",
+      "description": "\"Write expandable database migrations that can deploy before the new code reads them. Use when changing schema, indexes, or backfills on PostgreSQL or MySQL.\"",
+      "primary_installation_id": "sql-migration-safety::0",
+      "installations": [
+        {
+          "installation_id": "sql-migration-safety::0",
+          "path": "packs/programmer-essentials-20/sql-migration-safety/SKILL.md",
+          "folder": "packs/programmer-essentials-20/sql-migration-safety",
+          "kind": "nested_skill",
+          "description_snippet": "\"Write expandable database migrations that can deploy before the new code reads them. Use when changing schema, indexes,",
+          "content_sha256": "0ec0830bb52cefd68418f2b189b971d2814e6174ede204d73a2cd5255094d6d2",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/sql-migration-safety/SKILL.md"
+    },
+    {
       "canonical_id": "start-skill",
       "kind": "canonical_capability",
       "title": "start-skill",
@@ -663,6 +978,90 @@
       "installation_count": 2,
       "ambiguity": "multi_install_divergent",
       "executable_default": "start-skill/SKILL.md"
+    },
+    {
+      "canonical_id": "supply-chain-pinning",
+      "kind": "canonical_capability",
+      "title": "supply-chain-pinning",
+      "description": "\"Pin dependency installs to a lockfile and review new packages before adding them. Use when adding a library, bumping versions, or checking a suspicious install script.\"",
+      "primary_installation_id": "supply-chain-pinning::0",
+      "installations": [
+        {
+          "installation_id": "supply-chain-pinning::0",
+          "path": "packs/programmer-essentials-20/supply-chain-pinning/SKILL.md",
+          "folder": "packs/programmer-essentials-20/supply-chain-pinning",
+          "kind": "nested_skill",
+          "description_snippet": "\"Pin dependency installs to a lockfile and review new packages before adding them. Use when adding a library, bumping ve",
+          "content_sha256": "bf947c1bc35b946e2261615e2abd94c6fad77060dedcef06bd0716b252014505",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/supply-chain-pinning/SKILL.md"
+    },
+    {
+      "canonical_id": "test-first-slice",
+      "kind": "canonical_capability",
+      "title": "test-first-slice",
+      "description": "\"Add one failing test that names the bug or the new behavior, then the smallest code that passes it. Use when fixing a defect or adding a narrow feature with a clear oracle.\"",
+      "primary_installation_id": "test-first-slice::0",
+      "installations": [
+        {
+          "installation_id": "test-first-slice::0",
+          "path": "packs/programmer-essentials-20/test-first-slice/SKILL.md",
+          "folder": "packs/programmer-essentials-20/test-first-slice",
+          "kind": "nested_skill",
+          "description_snippet": "\"Add one failing test that names the bug or the new behavior, then the smallest code that passes it. Use when fixing a d",
+          "content_sha256": "b14928c9789def791535aa6597e3a06127e242d6f1df0d3398a87618810b6fc4",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/test-first-slice/SKILL.md"
+    },
+    {
+      "canonical_id": "twelve-factor-config",
+      "kind": "canonical_capability",
+      "title": "twelve-factor-config",
+      "description": "\"Keep configuration in the environment, with a committed example file and no production secrets in the repo. Use when adding settings, feature flags, or a new deployment target.\"",
+      "primary_installation_id": "twelve-factor-config::0",
+      "installations": [
+        {
+          "installation_id": "twelve-factor-config::0",
+          "path": "packs/programmer-essentials-20/twelve-factor-config/SKILL.md",
+          "folder": "packs/programmer-essentials-20/twelve-factor-config",
+          "kind": "nested_skill",
+          "description_snippet": "\"Keep configuration in the environment, with a committed example file and no production secrets in the repo. Use when ad",
+          "content_sha256": "4c7694271b05a930a48ab81e8a94a6cd1d169e3ff99f7ea151b17522dfa7ba4f",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/twelve-factor-config/SKILL.md"
+    },
+    {
+      "canonical_id": "typescript-boundaries",
+      "kind": "canonical_capability",
+      "title": "typescript-boundaries",
+      "description": "\"Keep TypeScript boundaries strict: validate input at the edge, use narrow types inside, avoid any and unchecked casts. Use when adding API handlers, parsing JSON, or reviewing TS errors.\"",
+      "primary_installation_id": "typescript-boundaries::0",
+      "installations": [
+        {
+          "installation_id": "typescript-boundaries::0",
+          "path": "packs/programmer-essentials-20/typescript-boundaries/SKILL.md",
+          "folder": "packs/programmer-essentials-20/typescript-boundaries",
+          "kind": "nested_skill",
+          "description_snippet": "\"Keep TypeScript boundaries strict: validate input at the edge, use narrow types inside, avoid any and unchecked casts. ",
+          "content_sha256": "7d5753e7789e99f18c51d40d43ebd593d20785ed9f5ce2267ba7ea16e8f4eca0",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/typescript-boundaries/SKILL.md"
     },
     {
       "canonical_id": "update-zip-skill",
@@ -705,6 +1104,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "web_marketing_and_personal-builder-super-skill/SKILL.md"
+    },
+    {
+      "canonical_id": "web-vitals-budget",
+      "kind": "canonical_capability",
+      "title": "web-vitals-budget",
+      "description": "\"Keep a web page inside a small performance budget: LCP, INP, and CLS. Use when a page feels slow, images are heavy, or a change might cause layout shift.\"",
+      "primary_installation_id": "web-vitals-budget::0",
+      "installations": [
+        {
+          "installation_id": "web-vitals-budget::0",
+          "path": "packs/programmer-essentials-20/web-vitals-budget/SKILL.md",
+          "folder": "packs/programmer-essentials-20/web-vitals-budget",
+          "kind": "nested_skill",
+          "description_snippet": "\"Keep a web page inside a small performance budget: LCP, INP, and CLS. Use when a page feels slow, images are heavy, or ",
+          "content_sha256": "bc26f754289965876182e55490dd25debbae176a733fedf2a52b036959f4d25c",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/programmer-essentials-20/web-vitals-budget/SKILL.md"
     },
     {
       "canonical_id": "wehm",
