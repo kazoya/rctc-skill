@@ -359,6 +359,7 @@
       ],
       "skills": [
         "design-taste-rctc",
+        "design-taste-frontend",
         "owner-credential-vault",
         "git-worktree-flow",
         "pr-review-surgeon",
@@ -380,9 +381,12 @@
         "consistent-character-video"
       ],
       "paths": [
-        "packs/programmer-essentials-20/README.md"
+        "packs/programmer-essentials-20/README.md",
+        "vendor/leonxlnx-taste-skill/design-taste-frontend/SKILL.md",
+        "vendor/leonxlnx-taste-skill/LICENSE",
+        "packs/programmer-essentials-20/design-taste-rctc/SKILL.md"
       ],
-      "notes": "Original pack. Design dials complement Leonxlnx/taste-skill. Secrets stay in the OS store for accounts the operator owns. Browser sessions stay on logged-in-browser."
+      "notes": "Original pack plus vendored Leonxlnx taste-skill (MIT, unmodified) at vendor/leonxlnx-taste-skill/design-taste-frontend/SKILL.md. design-taste-rctc sets the dials. Secrets stay in the OS store. Browser sessions stay on logged-in-browser."
     }
   ]
 }
