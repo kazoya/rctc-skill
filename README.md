@@ -103,6 +103,7 @@ The wider map is [skills/CATALOG.md](skills/CATALOG.md). Domain stories stay in 
 - Use **owner-credential-vault** for the operator's own tokens. Use **logged-in-browser** when a visible Chrome window is already signed in.
 - Use **prize-hunt-skill-fit** only when a measured contest class matches a dated public score.
 - Use **evidence-before-claim** before saying something works.
+- Use **client-auto-reply** for one inbox acknowledgment. A later message to a department address is the direction. An auto-receipt is not.
 
 ## Settings (design skills)
 

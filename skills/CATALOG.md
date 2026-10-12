@@ -9,9 +9,11 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `belt-apca-smarthelp-cx` → `portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md`
 - `belt-gateway-php` → `portfolio-commander/skills/belt-gateway-php/SKILL.md`
 - `bitter-truth-delivery-audit` → `bitter-truth-delivery-audit/SKILL.md`
+- `client-auto-reply` → `client-auto-reply/SKILL.md`
 - `consistent-character-video` → `packs/programmer-essentials-20/consistent-character-video/SKILL.md`
 - `continuous-improving` → `continuous-improving/SKILL.md`
 - `debugger-hypothesis` → `packs/programmer-essentials-20/debugger-hypothesis/SKILL.md`
+- `design-taste-frontend` → `vendor/leonxlnx-taste-skill/design-taste-frontend/SKILL.md`
 - `design-taste-rctc` → `packs/programmer-essentials-20/design-taste-rctc/SKILL.md`
 - `dev-agora-skill` → `dev-agora-skill/SKILL.md`
 - `digital-presence-factory` → `digital-presence-factory/SKILL.md`

@@ -1,0 +1,47 @@
+{
+  "org": {
+    "name_ar": "",
+    "name_en": "",
+    "email": "",
+    "website": "",
+    "postal_ar": ""
+  },
+  "routes": [
+    {
+      "intent": "employment",
+      "label_ar": "للتوظيف والتدريب",
+      "label_en": "Careers and training",
+      "email": ""
+    },
+    {
+      "intent": "partnerships",
+      "label_ar": "للشراكات والفرص",
+      "label_en": "Partnerships",
+      "email": ""
+    },
+    {
+      "intent": "support",
+      "label_ar": "لمتابعة طلب قائم",
+      "label_en": "An existing request",
+      "email": ""
+    }
+  ],
+  "replies": [
+    {
+      "id": "received-and-routed",
+      "active": true,
+      "title": "وصلنا رسالتكم، والاتجاه يُقاس بعنوان القسم",
+      "subject": "وصلنا رسالتكم",
+      "body_ar": "نشكر تواصلكم.\n\nوصلنا رسالتكم. نظرًا لعدد الرسائل لن نتمكن من الرد على كل رسالة في وقتها.\nإن رأينا فرصة تناسب الطرفين سنكتب لكم.\n\n{routes_ar}\n\n{signature_ar}",
+      "body_en": "Thank you for writing.\n\nWe received your message. Because of the volume, we cannot answer every email promptly.\nIf we see a fit for both sides, we will write to you.\n\n{routes_en}\n\n{signature_en}"
+    },
+    {
+      "id": "short-ack",
+      "active": false,
+      "title": "إقرار قصير بلا اتجاه",
+      "subject": "وصلنا رسالتكم",
+      "body_ar": "نشكر تواصلكم.\n\nوصلنا رسالتكم. سنعود إليكم إن كانت هناك فرصة تناسب الطرفين.\n\n{signature_ar}",
+      "body_en": "Thank you for writing.\n\nWe received your message. We will write back if there is a fit for both sides.\n\n{signature_en}"
+    }
+  ]
+}

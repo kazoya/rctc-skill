@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased] — client-auto-reply
+
+### Added
+- `client-auto-reply` — one bilingual inbox acknowledgment. A later message to a distinct department address is the only measure of where the sender went. An automated receipt is not interest.
+
 ## [2.0.0] — Expert packaging
 
 ### Changed
