@@ -3,7 +3,7 @@
 ## [Unreleased] — client-auto-reply
 
 ### Added
-- `client-auto-reply` — one bilingual inbox acknowledgment. A later message to a distinct department address is the only measure of where the sender went. An automated receipt is not interest.
+- `client-auto-reply` — one bilingual inbox acknowledgment, plus a log line: who wrote, when, and which department mailbox it also appeared in. That second mailbox is the classification. An automated receipt is not interest.
 
 ## [2.0.0] — Expert packaging
 

@@ -1,6 +1,6 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-12T20:32:40.563Z",
+  "generated_at": "2026-10-12T20:50:31.887Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
@@ -170,7 +170,7 @@
           "folder": "client-auto-reply",
           "kind": "primary_tree",
           "description_snippet": "Choose one professional bilingual inbox acknowledgment and measure where a sender goes by a later message to a distinct ",
-          "content_sha256": "40e4d3f9b15b8764133b0772928ed7466814535c77a5d8913350947b29d901ec",
+          "content_sha256": "2c32da7c01aa083d7f9dbac13d8b92515e4ef42d55aefb5237444a93ff1af289",
           "pointer": false
         }
       ],

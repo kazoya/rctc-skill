@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "replies.json"
+LOG = ROOT / "route-log.jsonl"
 
 
 def load() -> dict:
@@ -73,6 +74,37 @@ def activate(data: dict, reply_id: str) -> None:
     print(f"النشط الآن: {reply_id}")
 
 
+def intent_for(data: dict, mailboxes: list[str]) -> str:
+    wanted = {m.strip().lower() for m in mailboxes if m.strip()}
+    for route in data.get("routes", []):
+        email = (route.get("email") or "").strip().lower()
+        if email and email in wanted:
+            return route["intent"]
+    return ""
+
+
+def sentence(sender: str, at: str, mailboxes: list[str], intent: str) -> str:
+    boxes = " و ".join(mailboxes)
+    line = f"وصلنا من {sender} في {at} وظهر في {boxes}"
+    if intent:
+        line += f"، فالغرض تصنيف {intent}"
+    return line
+
+
+def write_log(data: dict, sender: str, at: str, mailboxes: list[str]) -> dict:
+    intent = intent_for(data, mailboxes)
+    entry = {
+        "at": at,
+        "from": sender,
+        "seen_in": mailboxes,
+        "intent": intent or None,
+        "sentence": sentence(sender, at, mailboxes, intent),
+    }
+    with LOG.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    return entry
+
+
 def main(argv: list[str]) -> int:
     data = load()
     cmd = argv[1] if len(argv) > 1 else "render"
@@ -80,10 +112,16 @@ def main(argv: list[str]) -> int:
         list_replies(data)
     elif cmd == "activate" and len(argv) == 3:
         activate(data, argv[2])
+    elif cmd == "log" and len(argv) >= 5:
+        entry = write_log(data, argv[2], argv[3], argv[4:])
+        print(entry["sentence"])
     elif cmd == "render":
         print(render(data), end="")
     else:
-        print("الاستعمال: python pick.py [list|render|activate <id>]", file=sys.stderr)
+        print(
+            "الاستعمال: python pick.py [list|render|activate <id>|log <من> <وقت> <صندوق> [صندوق...]]",
+            file=sys.stderr,
+        )
         return 1
     return 0
 
