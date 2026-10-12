@@ -8,11 +8,13 @@ Author: [Suhaib Asrawi (@kazoya)](https://github.com/kazoya). Provenance: [AUTHO
 
 Design work in this repo pairs two skills: the vendored [Taste Skill](vendor/leonxlnx-taste-skill/design-taste-frontend/SKILL.md) by [Leonxlnx](https://github.com/Leonxlnx/taste-skill) (MIT), and the RCTC adapter [design-taste-rctc](packs/programmer-essentials-20/design-taste-rctc/SKILL.md).
 
+The Arabic course that builds an agent by hand lives in its own MIT repo: [build-your-own-agent-ar](https://github.com/kazoya/build-your-own-agent-ar). This repository is the ready-skills step at the end of that path, not the course itself.
+
 ## Disclaimer
 
 This repository has no token, coin, or crypto project. Taste Skill is Leonxlnx's project. The copy under `vendor/leonxlnx-taste-skill/` keeps his copyright and MIT license. It is not a rebrand and it does not replace his repository.
 
-Disclaimer · Install · Skills · Settings · Examples · FAQ · License
+Disclaimer · Install · Skills · Settings · Examples · FAQ · License · [Arabic course](https://github.com/kazoya/build-your-own-agent-ar)
 
 ## Feedback
 
