@@ -88,3 +88,8 @@ See `packages/catalog.json` (machine-readable) and below (human).
 **Outcome:** دفتر نتائج عامة → صنف النافذة → ادخل أو راقب أو ارفض  
 **Dogfooding:** رفض Big Data Bowl 2027 أُعيد درسه إلى Evidence Before Claim: الدرجة العامة تحتاج تاريخاً، والقمة أثناء المسابقة ليست النتيجة.  
 **Rule:** لا أسرار ولا أعلام ولا حمولات.
+
+### 15. `ecc-harness` — توجيه الحاجة إلى مهارة، ثم إلى ECC عند الحاجة
+**Chain:** `rctc-method` → local skill from `ecc-harness/NEED-MAP.md` → one named skill in [affaan-m/ECC](https://github.com/affaan-m/ecc)
+**Outcome:** الحاجة لها مهارة واحدة هنا. آلية الـ harness (hooks, instincts, rules) تبقى في ECC وتُثبَّت بأمر المالك.
+**Rule:** لا نسخ لأجسام مهارات ECC. الأسرار تبقى في `owner-credential-vault`.

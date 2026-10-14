@@ -30,6 +30,7 @@
 | تحسين جودة TTS العربي وتقليل الاستدعاءات المدفوعة | [Local SSML Voice Cost Optimizer](../local-ssml-voice-cost-optimizer/) | Focus Council + Focused3 |
 | اختيار مسابقة حسب مهارة مُثبتة | [Prize-hunt skill fit](../prize-hunt-skill-fit/) | evidence-before-claim + WEHM |
 | تشغيل أدوات وخدمات من WhatsApp/Telegram/Web ضمن صلاحيات وموافقات واضحة | [WhatsApp Agent Orchestrator](../whatsapp-agent-orchestrator-super-skill/) | Safe Forward + Focused3 + Master Brain |
+| ترتيب حاجة على مهارة، وربط آليات ECC (hooks, instincts, rules) دون نسخ المستودع | [ECC Harness](../ecc-harness/) | RCTC + Safe Forward |
 
 ---
 

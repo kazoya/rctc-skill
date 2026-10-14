@@ -1,13 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-12T20:50:31.887Z",
+  "generated_at": "2026-10-14T11:19:43.796Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 60,
-    "canonical_capabilities": 55,
+    "discovered_skill_records": 61,
+    "canonical_capabilities": 56,
     "multi_install_capabilities": 5,
-    "public_claim": "55 canonical capabilities (60 tracked SKILL.md installations — not independent product claims)"
+    "public_claim": "56 canonical capabilities (61 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -345,6 +345,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "packs/programmer-essentials-20/docker-compose-dev/SKILL.md"
+    },
+    {
+      "canonical_id": "ecc-harness",
+      "kind": "canonical_capability",
+      "title": "ecc-harness",
+      "description": "Route a need to one local RCTC skill first, then to a named skill in affaan-m/ECC when the need is a harness mechanism this repo does not ship (hooks, instincts, session memory, language rules, or a domain skill absent here). Use when the user asks to add ECC, organize needs into skills, pick an agent harness, or install ecc-universal. Do not use to copy ECC skill bodies into this tree, to enable hooks without the owner running setup, or to replace rctc-method, safe-forward-execution, or owner-credential-vault.",
+      "primary_installation_id": "ecc-harness::0",
+      "installations": [
+        {
+          "installation_id": "ecc-harness::0",
+          "path": "ecc-harness/SKILL.md",
+          "folder": "ecc-harness",
+          "kind": "primary_tree",
+          "description_snippet": "Route a need to one local RCTC skill first, then to a named skill in affaan-m/ECC when the need is a harness mechanism t",
+          "content_sha256": "dfc18e73492782324316d8420e29f7c2ba65330b642325a1b560d6448a19f410",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "ecc-harness/SKILL.md"
     },
     {
       "canonical_id": "ethical-bugbounty-training",
@@ -1118,7 +1139,7 @@
           "folder": "update-zip-skill",
           "kind": "primary_tree",
           "description_snippet": "Package measured project evidence and constraints into a reviewable ZIP for an external AI consultant, then inspect the ",
-          "content_sha256": "8f92e7995616da9b3322f32a532e449d73f31c48f99ccc207896570bf40f15eb",
+          "content_sha256": "4bd40dcb7cf0735f238e5dc5a21b67ae23d530c210d21f847231682e42b43a77",
           "pointer": false
         }
       ],

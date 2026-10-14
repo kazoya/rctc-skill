@@ -387,6 +387,25 @@
         "packs/programmer-essentials-20/design-taste-rctc/SKILL.md"
       ],
       "notes": "Original pack plus vendored Leonxlnx taste-skill (MIT, unmodified) at vendor/leonxlnx-taste-skill/design-taste-frontend/SKILL.md. design-taste-rctc sets the dials. Secrets stay in the OS store. Browser sessions stay on logged-in-browser."
+    },
+    {
+      "id": "ecc-harness",
+      "title": "ECC harness router",
+      "audience": [
+        "developer",
+        "agent-operator"
+      ],
+      "skills": [
+        "rctc-method",
+        "safe-forward-execution",
+        "ecc-harness"
+      ],
+      "paths": [
+        "ecc-harness/SKILL.md",
+        "ecc-harness/NEED-MAP.md",
+        "ecc-harness/UPSTREAM.md"
+      ],
+      "notes": "Adapter for https://github.com/affaan-m/ecc (MIT, Affaan Mustafa). Local skill first. ECC skill names are pointers at commit b92f181. Do not vendor upstream skill bodies. Owner runs ecc-universal setup. Secrets stay in owner-credential-vault."
     }
   ]
 }
