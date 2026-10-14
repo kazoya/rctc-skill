@@ -95,6 +95,10 @@ Daily skills. Canonical copies live in [packs/programmer-essentials-20](packs/pr
 
 The wider map is [skills/CATALOG.md](skills/CATALOG.md). Domain stories stay in [docs/SKILLS-SHOWCASE.md](docs/SKILLS-SHOWCASE.md).
 
+### ECC harness
+
+[ecc-harness](ecc-harness/SKILL.md) routes a need to a skill already in this repo, then names one skill in [affaan-m/ECC](https://github.com/affaan-m/ecc) (MIT) when the need is hooks, instincts, session memory, or a domain skill this tree does not ship. The map is [ecc-harness/NEED-MAP.md](ecc-harness/NEED-MAP.md). Upstream skill files stay upstream. The owner runs `npx ecc-universal` setup. This repo does not.
+
 ### Which one should I use?
 
 - Start with **rctc-method** when the request is vague or needs a handoff.
@@ -103,6 +107,7 @@ The wider map is [skills/CATALOG.md](skills/CATALOG.md). Domain stories stay in 
 - Use **owner-credential-vault** for the operator's own tokens. Use **logged-in-browser** when a visible Chrome window is already signed in.
 - Use **prize-hunt-skill-fit** only when a measured contest class matches a dated public score.
 - Use **evidence-before-claim** before saying something works.
+- Use **ecc-harness** when the task is to add or organize [affaan-m/ECC](https://github.com/affaan-m/ecc). Use the local skill from its map for the actual work.
 - Use **client-auto-reply** for one inbox acknowledgment. A later message to a department address is the direction. An auto-receipt is not.
 
 ## Settings (design skills)

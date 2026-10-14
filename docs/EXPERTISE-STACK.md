@@ -35,6 +35,15 @@ RCTC → evidence-before-claim → prize-hunt-skill-fit
      → Focused3
 ```
 
+### External harness (ECC)
+
+```text
+RCTC → local skill from ecc-harness/NEED-MAP.md
+     → one affaan-m/ECC skill name, only for hooks, instincts, rules, or a missing domain skill
+```
+
+Package: `ecc-harness`. Upstream: https://github.com/affaan-m/ecc (MIT). Skill bodies stay there.
+
 ## Marketing position
 
 **RCTC is an evidence-first skill operating system: it turns vague goals into safe, composable, verifiable delivery while preserving human authority.**

@@ -11,5 +11,6 @@ Procedure:
 6. Expert-panel / compare-and-select requests → `decision-focus`.
 7. Arabic TTS / SSML / premium voice cost requests → `arabic-voice-cost`.
 8. Prize, CTF, or Kaggle entry decisions → `prize-hunt-skill-fit`. No secrets or exploit text.
+9. ECC, harness install, or sorting a need onto a skill → `ecc-harness`. One local skill, then at most one upstream ECC name. Do not ingest the ECC repo.
 
 Default for "I want to learn programming": `beginner-coding-path`.
