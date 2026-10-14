@@ -31,6 +31,7 @@
 | اختيار مسابقة حسب مهارة مُثبتة | [Prize-hunt skill fit](../prize-hunt-skill-fit/) | evidence-before-claim + WEHM |
 | تشغيل أدوات وخدمات من WhatsApp/Telegram/Web ضمن صلاحيات وموافقات واضحة | [WhatsApp Agent Orchestrator](../whatsapp-agent-orchestrator-super-skill/) | Safe Forward + Focused3 + Master Brain |
 | ترتيب حاجة على مهارة، وربط آليات ECC (hooks, instincts, rules) دون نسخ المستودع | [ECC Harness](../ecc-harness/) | RCTC + Safe Forward |
+| إرسال برومبت لجسر ChatGPT المحلي وانتظار نص أو JSON أو صورة | [ChatGPT bridge lane](../chatgpt-bridge-lane/) | evidence-before-claim |
 
 ---
 

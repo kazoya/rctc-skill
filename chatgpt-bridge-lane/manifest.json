@@ -1,0 +1,36 @@
+{
+  "id": "chatgpt-bridge-lane",
+  "name": "chatgpt-bridge-lane",
+  "version": "0.1.0",
+  "description": "Talk to the local ChatGPT file bridge, send a variable prompt, and wait until the reply is a text file, a JSON object, or an image. Do not treat a written request as a returned object.",
+  "tags": ["bridge", "chatgpt", "image", "wait", "risha"],
+  "inputs": [
+    "lane: text, json, or image",
+    "request id",
+    "prompt or question",
+    "local bridge root"
+  ],
+  "outputs": [
+    "response.md text",
+    "outbox JSON object",
+    "PNG image",
+    "explicit stopped reason when the object did not arrive"
+  ],
+  "required_capabilities": [
+    "filesystem:read-local",
+    "filesystem:write-local"
+  ],
+  "permissions": [
+    "write one request file under the bridge",
+    "read the matching reply file",
+    "run the lane sender only when that lane's script exists and its quota check allows it"
+  ],
+  "side_effect_level": "reversible",
+  "reversible": true,
+  "dependencies": [],
+  "compatible_agents": ["cursor", "claude", "grok", "codex"],
+  "verification": "node bin/wait-object.js --help && node --check bin/wait-object.js",
+  "rollback": "Delete the skill folder. Sent bridge requests stay; correct one with a new id and parent_id.",
+  "provenance": "Measured on the Risha assistant_bridge, 2026-10-14. Story lane, coordination lane, and image lane.",
+  "status": "reviewed"
+}

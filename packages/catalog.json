@@ -406,6 +406,25 @@
         "ecc-harness/UPSTREAM.md"
       ],
       "notes": "Adapter for https://github.com/affaan-m/ecc (MIT, Affaan Mustafa). Local skill first. ECC skill names are pointers at commit b92f181. Do not vendor upstream skill bodies. Owner runs ecc-universal setup. Secrets stay in owner-credential-vault."
+    },
+    {
+      "id": "chatgpt-bridge-lane",
+      "title": "ChatGPT bridge lane",
+      "audience": [
+        "developer",
+        "agent-operator"
+      ],
+      "skills": [
+        "chatgpt-bridge-lane"
+      ],
+      "paths": [
+        "chatgpt-bridge-lane/SKILL.md",
+        "chatgpt-bridge-lane/README.md",
+        "chatgpt-bridge-lane/LANES.md",
+        "chatgpt-bridge-lane/SAFETY.md",
+        "chatgpt-bridge-lane/bin/wait-object.js"
+      ],
+      "notes": "Local file bridge. One prompt, then wait for text, JSON, or an image. A request file is not a reply. The image sender stops when the weekly window is closed. No publish, purchase, or logo redraw."
     }
   ]
 }

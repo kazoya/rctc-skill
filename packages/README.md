@@ -93,3 +93,8 @@ See `packages/catalog.json` (machine-readable) and below (human).
 **Chain:** `rctc-method` → local skill from `ecc-harness/NEED-MAP.md` → one named skill in [affaan-m/ECC](https://github.com/affaan-m/ecc)
 **Outcome:** الحاجة لها مهارة واحدة هنا. آلية الـ harness (hooks, instincts, rules) تبقى في ECC وتُثبَّت بأمر المالك.
 **Rule:** لا نسخ لأجسام مهارات ECC. الأسرار تبقى في `owner-credential-vault`.
+
+### 16. `chatgpt-bridge-lane` — برومبت واحد على جسر الملفات، ثم انتظار الكائن
+**Chain:** `chatgpt-bridge-lane` → قناة واحدة (نص أو JSON أو صورة) → `bin/wait-object.js`
+**Outcome:** الرد موجود على القرص ويمر فحص القناة، أو الحالة `waiting` / إيقاف الحصة مع `available_at`.
+**Rule:** كتابة الطلب ليست ردًا. لا إعادة إرسال عند التأخير. لا نشر ولا شراء ولا إعادة رسم شعار.
