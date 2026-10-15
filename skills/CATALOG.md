@@ -9,6 +9,7 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `belt-apca-smarthelp-cx` → `portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md`
 - `belt-gateway-php` → `portfolio-commander/skills/belt-gateway-php/SKILL.md`
 - `bitter-truth-delivery-audit` → `bitter-truth-delivery-audit/SKILL.md`
+- `chatgpt-bridge-lane` → `chatgpt-bridge-lane/SKILL.md`
 - `client-auto-reply` → `client-auto-reply/SKILL.md`
 - `consistent-character-video` → `packs/programmer-essentials-20/consistent-character-video/SKILL.md`
 - `continuous-improving` → `continuous-improving/SKILL.md`

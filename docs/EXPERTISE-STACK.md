@@ -44,6 +44,15 @@ RCTC → local skill from ecc-harness/NEED-MAP.md
 
 Package: `ecc-harness`. Upstream: https://github.com/affaan-m/ecc (MIT). Skill bodies stay there.
 
+### Local file bridge
+
+```text
+chatgpt-bridge-lane → one lane (text, json, or image)
+                    → wait until the object is on disk
+```
+
+Package: `chatgpt-bridge-lane`. A request file is not a reply. The image lane stops when the weekly window is closed.
+
 ## Marketing position
 
 **RCTC is an evidence-first skill operating system: it turns vague goals into safe, composable, verifiable delivery while preserving human authority.**
