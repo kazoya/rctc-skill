@@ -1,0 +1,17 @@
+{
+  "name": "rctc-starter",
+  "description": "Minimal install set for Cursor / Claude Code / Codex. Paths come from skills/CATALOG.md.",
+  "hosts": {
+    "cursor": ".cursor/skills",
+    "claude": ".claude/skills",
+    "codex": ".codex/skills"
+  },
+  "skills": [
+    { "slug": "rctc-method", "path": "SKILL.md", "copy": "file" },
+    { "slug": "htpaap", "path": "htpaap", "copy": "dir" },
+    { "slug": "focused3-agentic-phases", "path": "focused3-agentic-phases", "copy": "dir" },
+    { "slug": "safe-forward-execution", "path": "safe-forward-execution", "copy": "dir" },
+    { "slug": "evidence-before-claim", "path": "evidence-before-claim", "copy": "dir" },
+    { "slug": "digital-presence-factory", "path": "digital-presence-factory", "copy": "dir" }
+  ]
+}
