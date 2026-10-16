@@ -67,25 +67,94 @@ const ORDER = [
   },
 ];
 
+function empty(status, reason) {
+  return {
+    local: status === 'invalid_registry' ? null : 'rctc-method',
+    external: null,
+    upstream_skill: null,
+    blocked: false,
+    status,
+    refused: null,
+    reason,
+  };
+}
+
 function enableAll(registry) {
   const copy = JSON.parse(JSON.stringify(registry));
-  for (const item of Object.values(copy.integrations)) item.enabled = true;
+  for (const item of Object.values(copy.integrations)) {
+    item.enabled = true;
+    item.available = true;
+  }
   return copy;
 }
 
 function resolveTask(text, registry) {
-  const rule = ORDER.find((item) => item.test.test(text)) || {
-    local: 'rctc-method',
-    external: null,
-  };
-  const integration = rule.external ? registry.integrations[rule.external] : null;
-  const allowed = Boolean(integration && integration.enabled && !rule.blocked);
+  if (!registry || typeof registry !== 'object' || !registry.integrations || typeof registry.integrations !== 'object' || Array.isArray(registry.integrations)) {
+    return empty('invalid_registry', 'invalid_registry');
+  }
+  const rule = ORDER.find((item) => item.test.test(String(text || '')));
+  if (!rule) return empty('unmatched', 'no_rule');
+  if (rule.blocked) {
+    return {
+      local: rule.local,
+      external: null,
+      upstream_skill: null,
+      blocked: true,
+      status: 'blocked',
+      refused: null,
+      reason: 'blocked',
+    };
+  }
+  if (!rule.external) {
+    return {
+      local: rule.local,
+      external: null,
+      upstream_skill: null,
+      blocked: false,
+      status: 'matched',
+      refused: null,
+      reason: null,
+    };
+  }
+  const integration = registry.integrations[rule.external];
+  if (!integration || integration.enabled !== true) {
+    return {
+      local: rule.local,
+      external: null,
+      upstream_skill: null,
+      blocked: false,
+      status: 'refused',
+      refused: rule.external,
+      reason: 'disabled',
+    };
+  }
+  if (integration.available === false) {
+    return {
+      local: rule.local,
+      external: null,
+      upstream_skill: null,
+      blocked: false,
+      status: 'refused',
+      refused: rule.external,
+      reason: 'unavailable',
+    };
+  }
   return {
     local: rule.local,
-    external: allowed ? rule.external : null,
-    upstream_skill: allowed ? rule.upstream_skill || null : null,
-    blocked: Boolean(rule.blocked),
+    external: rule.external,
+    upstream_skill: rule.upstream_skill || null,
+    blocked: false,
+    status: 'matched',
+    refused: null,
+    reason: null,
   };
 }
 
-module.exports = { resolveTask, enableAll };
+function callExternal(route) {
+  if (!route || route.external == null) {
+    return { called: false, tool_calls: 0, reason: route && route.reason ? route.reason : 'no_external' };
+  }
+  return { called: false, tool_calls: 0, reason: 'adapter_does_not_spawn' };
+}
+
+module.exports = { resolveTask, enableAll, callExternal };

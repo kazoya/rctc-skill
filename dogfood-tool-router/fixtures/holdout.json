@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ar-test-first",
+    "text": "اكتب اختباراً يفشل ثم أصغر تعديل يمر",
+    "gold_local": "test-first-slice",
+    "gold_blocked": false,
+    "kind": "arabic",
+    "why": "The sentence asks for a failing test and then the smallest change. That is test-first-slice, not a new external tool."
+  },
+  {
+    "id": "ar-review-diff",
+    "text": "راجع الفرق الحالي بحثاً عن خلل",
+    "gold_local": "pr-review-surgeon",
+    "gold_blocked": false,
+    "kind": "arabic",
+    "why": "A diff review for a defect stays on pr-review-surgeon."
+  },
+  {
+    "id": "ar-store-secret",
+    "text": "احفظ رمز الدخول في خزنة النظام",
+    "gold_local": "owner-credential-vault",
+    "gold_blocked": false,
+    "kind": "arabic",
+    "why": "An operator secret goes to the OS vault skill."
+  },
+  {
+    "id": "multi-release",
+    "text": "خطط للإطلاق واكتب اختباراً يفشل ثم راجع الفرق",
+    "gold_local": "focused3-agentic-phases",
+    "gold_blocked": false,
+    "kind": "multi",
+    "why": "Three verbs, one container. focused3 sequences them. The router may return only one skill."
+  },
+  {
+    "id": "multi-bridge",
+    "text": "صمم بطاقة عربية ثم أرسل البرومبت على جسر ChatGPT وانتظر الصورة",
+    "gold_local": "chatgpt-bridge-lane",
+    "gold_blocked": false,
+    "kind": "multi",
+    "why": "The finish line is one bridge send and a wait. Design is earlier, not a second tool call."
+  },
+  {
+    "id": "status-question",
+    "text": "هل اكتملت المهمة أم ما زلنا ننتظر؟",
+    "gold_local": "rctc-method",
+    "gold_blocked": false,
+    "kind": "no-external",
+    "why": "A status question needs no external tool and no implementation skill."
+  },
+  {
+    "id": "spelling-only",
+    "text": "صحح خطأ إملائياً في العنوان فقط",
+    "gold_local": "rctc-method",
+    "gold_blocked": false,
+    "kind": "no-external",
+    "why": "A title spelling fix stays on the root skill."
+  },
+  {
+    "id": "summary-only",
+    "text": "لخّص الفرق دون أن تغيّر ملفاً",
+    "gold_local": "rctc-method",
+    "gold_blocked": false,
+    "kind": "no-external",
+    "why": "Summarize without editing. No external tool."
+  },
+  {
+    "id": "ar-live-scan",
+    "text": "افحص موقع الإنتاج الحي",
+    "gold_local": "wehm",
+    "gold_blocked": true,
+    "kind": "arabic",
+    "why": "A live production check is blocked. The local skill is the ethics gate, not Strix."
+  },
+  {
+    "id": "stay-in-authority",
+    "text": "تابع التنفيذ داخل الصلاحية الممنوحة فقط",
+    "gold_local": "safe-forward-execution",
+    "gold_blocked": false,
+    "kind": "arabic",
+    "why": "Continue only inside authority already granted."
+  }
+]

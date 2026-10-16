@@ -30,6 +30,10 @@ Existing RCTC skills stay the source of truth. This router adds five optional to
 | `twentyfirst_mcp` | [21st.dev/mcp](https://21st.dev/mcp) | Confirm before any copy | A frontend component request. Skip it for backend, security, and writing. |
 | `strix` | [usestrix/strix](https://github.com/usestrix/strix) `972f509` | Apache-2.0 | Never from this router. Production and unnamed targets stay blocked. A live scan needs a written local-fixture authorization that is not in this repo. |
 
+## Failure
+
+A bad registry returns `status: invalid_registry` and names no skill and no tool. An unknown sentence returns `status: unmatched` and `rctc-method`. A rule that wants a tool which is `enabled: false` returns `reason: disabled`. The same rule with `enabled: true` and `available: false` returns `reason: unavailable`. `callExternal` does not spawn a process. In this build its `tool_calls` value is 0 even when the route names a tool.
+
 ## Disable and rollback
 
 Set every `enabled` flag to `false`. That is the committed state. Removing the `dogfood-tool-router/` directory and the `test:dogfood-router` script reverts the adapter. No user data lives here.

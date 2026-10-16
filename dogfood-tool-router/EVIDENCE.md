@@ -12,6 +12,8 @@ Format: `date | stage | command/tool | scope | result | artifact | caveats`
 | 2026-10-17 | 4 21st | none | one card spec | spec only | `docs/UI-SPEC.md` | no component copied, no upload |
 | 2026-10-17 | 5 Strix | none | production prompt | blocked, 0 findings | `docs/STRIX-GATE.md` | simulated fixture, not a scan |
 | 2026-10-17 | 6 repo tests | `npm run test:dogfood-router`, `npm run validate:repo`, `npm run registry:check` | this change | PASS, PASS (46 existing warnings), PASS | registry files | no root lint or typecheck script |
+| 2026-10-17 | 7 holdout before | `node scripts/test-dogfood-holdout.js` | 10 new tasks | FAIL `callExternal is not a function` | `scripts/test-dogfood-holdout.js` | red run, before the safe-failure change |
+| 2026-10-17 | 7 holdout after | `npm run test:dogfood-holdout` | same 10 tasks, 1000 loops | PASS, baseline 3/10, router 3/10, 0 tool invocations | `docs/phase2-log.json` | recommendation NEEDS WORK, see `docs/PHASE2-COMPARE.md` |
 
 Rollback: set all `enabled` flags in `registry.json` to false (already true of the commit), or delete `dogfood-tool-router/` and the `test:dogfood-router` script.
 

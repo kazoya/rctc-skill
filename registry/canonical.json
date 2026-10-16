@@ -1,6 +1,6 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-16T21:08:35.738Z",
+  "generated_at": "2026-10-16T21:19:44.038Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
@@ -380,7 +380,7 @@
           "folder": "dogfood-tool-router",
           "kind": "primary_tree",
           "description_snippet": "Route one task to a single local RCTC skill, then optionally to one of five disabled-by-default external tools (Addy Osm",
-          "content_sha256": "0afae73983218b63f13289858d1fb88bde0c4a41a5758a82759c7fde81a66466",
+          "content_sha256": "12b98da5e9f0207aad2c81c19593d4b5f65e02b8bd36d1764b5b6a13abf01198",
           "pointer": false
         }
       ],
