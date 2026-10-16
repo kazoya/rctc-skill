@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased] — Growth packaging + 60s path
+
+### Added
+- `scripts/install-starter.js` + `npm run install:starter` — one-command install of the six starter skills into Cursor / Claude / Codex host folders (whole directories when siblings matter).
+- `skills/STARTER.json`, `skills/INSTALL.md` — starter list and packaging rules for issue #3 (one canonical path, pointer aliases, no factory drafts).
+- `examples/60s-demo.md` and a rewritten `docs/QUICKSTART_60S.md`.
+
+### Changed
+- Root README leads with a 60-second path and points the Arabic course funnel at `npm run install:starter`.
+
 ## [Unreleased] — client-auto-reply
 
 ### Added

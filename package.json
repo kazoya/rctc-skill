@@ -7,7 +7,8 @@
     "registry:generate": "node scripts/generate-canonical-registry.js",
     "registry:check": "node scripts/generate-canonical-registry.js --check",
     "test:integrity": "node scripts/integrity/run-fixture-tests.js",
-    "test:examples": "node scripts/check-programmer-examples.js"
+    "test:examples": "node scripts/check-programmer-examples.js",
+    "install:starter": "node scripts/install-starter.js"
   },
   "engines": {
     "node": ">=18"

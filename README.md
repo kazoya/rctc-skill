@@ -8,33 +8,53 @@ Author: [Suhaib Asrawi (@kazoya)](https://github.com/kazoya). Provenance: [AUTHO
 
 Design work in this repo pairs two skills: the vendored [Taste Skill](vendor/leonxlnx-taste-skill/design-taste-frontend/SKILL.md) by [Leonxlnx](https://github.com/Leonxlnx/taste-skill) (MIT), and the RCTC adapter [design-taste-rctc](packs/programmer-essentials-20/design-taste-rctc/SKILL.md).
 
-The Arabic course that builds an agent by hand lives in its own MIT repo: [build-your-own-agent-ar](https://github.com/kazoya/build-your-own-agent-ar). This repository is the ready-skills step at the end of that path, not the course itself.
+The Arabic course that builds an agent by hand lives in its own MIT repo: [build-your-own-agent-ar](https://github.com/kazoya/build-your-own-agent-ar). Path: finish a lesson there → come here → `npm run install:starter`. This repository is the ready-skills step at the end of that path, not the course itself.
 
 ## Disclaimer
 
 This repository has no token, coin, or crypto project. Taste Skill is Leonxlnx's project. The copy under `vendor/leonxlnx-taste-skill/` keeps his copyright and MIT license. It is not a rebrand and it does not replace his repository.
 
-Disclaimer · Install · Skills · Settings · Examples · FAQ · License · [Arabic course](https://github.com/kazoya/build-your-own-agent-ar)
+Disclaimer · [60s](#60-seconds) · Install · Skills · Settings · Examples · FAQ · License · [Arabic course](https://github.com/kazoya/build-your-own-agent-ar)
 
 ## Feedback
 
 Suggestions and bug reports: open a Pull Request or Issue on [kazoya/rctc-skill](https://github.com/kazoya/rctc-skill/issues).
 
+## 60 seconds
+
+```bash
+git clone --depth 1 https://github.com/kazoya/rctc-skill.git
+cd rctc-skill
+npm run install:starter
+node digital-presence-factory/cli.js --type personal --source .
+```
+
+That installs six starter skills and runs a **plan-only** demo (no deploy). Step-by-step: [docs/QUICKSTART_60S.md](docs/QUICKSTART_60S.md) · copy-paste script: [examples/60s-demo.md](examples/60s-demo.md).
+
 ## Installing
 
-Clone the tree, then point the agent at the skill you need:
+Prefer the starter installer (copies whole skill folders so sibling files are not missing):
+
+```bash
+npm run install:starter
+# node scripts/install-starter.js --host cursor|claude|codex --target .
+```
+
+Details and packaging rules: [skills/INSTALL.md](skills/INSTALL.md). Catalog of every skill: [skills/CATALOG.md](skills/CATALOG.md).
+
+Manual path if you only need one file:
 
 ```bash
 git clone --depth 1 https://github.com/kazoya/rctc-skill.git .rctc-skill
 ```
 
-| Host | Where to copy `SKILL.md` |
+| Host | Where skills land |
 |---|---|
-| Cursor | `.cursor/skills/<install-name>/SKILL.md` |
-| Claude Code | `.claude/skills/<install-name>/SKILL.md` |
-| Codex | `.codex/skills/<install-name>/SKILL.md` |
+| Cursor | `.cursor/skills/<install-name>/` |
+| Claude Code | `.claude/skills/<install-name>/` |
+| Codex | `.codex/skills/<install-name>/` |
 
-The install name is the `name:` field in the skill frontmatter.
+The install name is the `name:` field in the skill frontmatter (and the folder name the installer uses).
 
 You can also paste a single `SKILL.md` into a ChatGPT or Codex conversation.
 
