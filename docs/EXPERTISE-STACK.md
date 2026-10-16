@@ -53,6 +53,15 @@ chatgpt-bridge-lane → one lane (text, json, or image)
 
 Package: `chatgpt-bridge-lane`. A request file is not a reply. The image lane stops when the weekly window is closed.
 
+### Optional external tools
+
+```text
+dogfood-tool-router → one local skill
+                    → at most one of agent-skills, context7, graphify, 21st, strix
+```
+
+Package: `dogfood-tool-router`. Committed flags are all false. Strix does not scan from this package.
+
 ## Marketing position
 
 **RCTC is an evidence-first skill operating system: it turns vague goals into safe, composable, verifiable delivery while preserving human authority.**

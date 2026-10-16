@@ -1,0 +1,40 @@
+{
+  "integrations": {
+    "agent_skills": {
+      "enabled": false,
+      "license": "MIT",
+      "upstream": "https://github.com/addyosmani/agent-skills",
+      "sha": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "trigger": "planning|testing|review"
+    },
+    "context7": {
+      "enabled": false,
+      "license": "MIT",
+      "upstream": "https://github.com/upstash/context7",
+      "sha": "e0041949fdb3b49b304d98715dde35be51b7c3d1",
+      "trigger": "version_specific_library_docs"
+    },
+    "graphify": {
+      "enabled": false,
+      "license": "Apache-2.0",
+      "upstream": "https://github.com/Graphify-Labs/graphify",
+      "sha": "91f4d120b630ee35c79bf3c75ccd186870a808f9",
+      "trigger": "complex_repository_impact_analysis"
+    },
+    "twentyfirst_mcp": {
+      "enabled": false,
+      "license": "confirm on 21st.dev before copying any component",
+      "upstream": "https://21st.dev/mcp",
+      "sha": null,
+      "trigger": "frontend_ui_design"
+    },
+    "strix": {
+      "enabled": false,
+      "written_authorization": false,
+      "license": "Apache-2.0",
+      "upstream": "https://github.com/usestrix/strix",
+      "sha": "972f5097c2bfaf8f1dd8b55744ab8861f0d6b6e5",
+      "trigger": "explicitly_authorized_local_or_staging_security_test"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "id": "plan-release",
+    "text": "plan the release checklist",
+    "local": "focused3-agentic-phases",
+    "external_when_enabled": "agent_skills",
+    "upstream_skill": "planning-and-task-breakdown"
+  },
+  {
+    "id": "node-fetch-docs",
+    "text": "what does the Node 22 fetch API document say",
+    "local": "evidence-before-claim",
+    "external_when_enabled": "context7",
+    "upstream_skill": null
+  },
+  {
+    "id": "map-repo",
+    "text": "map skill dependencies in this repo",
+    "local": "dogfood-tool-router",
+    "external_when_enabled": "graphify",
+    "upstream_skill": null
+  },
+  {
+    "id": "rtl-card",
+    "text": "design an RTL skills dashboard card",
+    "local": "design-taste-rctc",
+    "external_when_enabled": "twentyfirst_mcp",
+    "upstream_skill": null
+  },
+  {
+    "id": "pentest-production",
+    "text": "pentest production example.com",
+    "local": "wehm",
+    "external_when_enabled": null,
+    "blocked": true
+  },
+  {
+    "id": "readme-typo",
+    "text": "fix a typo in the readme",
+    "local": "rctc-method",
+    "external_when_enabled": null
+  },
+  {
+    "id": "failing-test",
+    "text": "write a failing test then the smallest change",
+    "local": "test-first-slice",
+    "external_when_enabled": "agent_skills",
+    "upstream_skill": "test-driven-development"
+  },
+  {
+    "id": "review-diff",
+    "text": "review this diff for bugs",
+    "local": "pr-review-surgeon",
+    "external_when_enabled": "agent_skills",
+    "upstream_skill": "code-review-and-quality"
+  },
+  {
+    "id": "chatgpt-bridge",
+    "text": "send one prompt on the chatgpt bridge and wait",
+    "local": "chatgpt-bridge-lane",
+    "external_when_enabled": null
+  },
+  {
+    "id": "store-secret",
+    "text": "store this api key in the operator vault",
+    "local": "owner-credential-vault",
+    "external_when_enabled": null
+  }
+]

@@ -13,5 +13,6 @@ Procedure:
 8. Prize, CTF, or Kaggle entry decisions → `prize-hunt-skill-fit`. No secrets or exploit text.
 9. ECC, harness install, or sorting a need onto a skill → `ecc-harness`. One local skill, then at most one upstream ECC name. Do not ingest the ECC repo.
 10. Local ChatGPT bridge, variable image prompt, or waiting for text, JSON, or an image → `chatgpt-bridge-lane`. Do not resend because the reply is late.
+11. Agent Skills, Context7, Graphify, 21st, or Strix → `dogfood-tool-router`. One local skill. External stays off until `registry.json` says otherwise.
 
 Default for "I want to learn programming": `beginner-coding-path`.

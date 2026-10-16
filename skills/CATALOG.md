@@ -19,6 +19,7 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `dev-agora-skill` → `dev-agora-skill/SKILL.md`
 - `digital-presence-factory` → `digital-presence-factory/SKILL.md`
 - `docker-compose-dev` → `packs/programmer-essentials-20/docker-compose-dev/SKILL.md`
+- `dogfood-tool-router` → `dogfood-tool-router/SKILL.md`
 - `ecc-harness` → `ecc-harness/SKILL.md`
 - `ethical-bugbounty-training` → `tracks/bug-bounty/SKILL.md`
 - `evidence-before-claim` → `evidence-before-claim/SKILL.md`

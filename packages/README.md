@@ -98,3 +98,8 @@ See `packages/catalog.json` (machine-readable) and below (human).
 **Chain:** `chatgpt-bridge-lane` → قناة واحدة (نص أو JSON أو صورة) → `bin/wait-object.js`
 **Outcome:** الرد موجود على القرص ويمر فحص القناة، أو الحالة `waiting` / إيقاف الحصة مع `available_at`.
 **Rule:** كتابة الطلب ليست ردًا. لا إعادة إرسال عند التأخير. لا نشر ولا شراء ولا إعادة رسم شعار.
+
+### 17. `dogfood-tool-router` — خمس أدوات اختيارية، كلها مطفأة
+**Chain:** مهمة واحدة → مهارة محلية واحدة → أداة خارجية واحدة فقط إذا `enabled: true`
+**Tools:** Agent Skills، Context7، Graphify، 21st MCP، Strix
+**Rule:** لا تثبيت من هذا المسار. Strix لا يمسح إنتاجاً. النسخ من 21st يحتاج رخصة مؤكدة.

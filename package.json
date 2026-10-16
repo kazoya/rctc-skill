@@ -8,6 +8,7 @@
     "registry:check": "node scripts/generate-canonical-registry.js --check",
     "test:integrity": "node scripts/integrity/run-fixture-tests.js",
     "test:examples": "node scripts/check-programmer-examples.js",
+    "test:dogfood-router": "node scripts/test-dogfood-router.js",
     "install:starter": "node scripts/install-starter.js"
   },
   "engines": {
