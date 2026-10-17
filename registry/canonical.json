@@ -1,13 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-14T19:39:49.564Z",
+  "generated_at": "2026-10-16T21:19:44.038Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 62,
-    "canonical_capabilities": 57,
+    "discovered_skill_records": 63,
+    "canonical_capabilities": 58,
     "multi_install_capabilities": 5,
-    "public_claim": "57 canonical capabilities (62 tracked SKILL.md installations — not independent product claims)"
+    "public_claim": "58 canonical capabilities (63 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -366,6 +366,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "packs/programmer-essentials-20/docker-compose-dev/SKILL.md"
+    },
+    {
+      "canonical_id": "dogfood-tool-router",
+      "kind": "canonical_capability",
+      "title": "dogfood-tool-router",
+      "description": "Route one task to a single local RCTC skill, then optionally to one of five disabled-by-default external tools (Addy Osmani agent-skills, Context7, Graphify, 21st MCP, Strix). Use when the user asks to integrate those tools, dogfood the router, or decide whether an MCP or scanner may run. Do not use it to enable a tool, install a package, scan a target, or call two tools for one task.",
+      "primary_installation_id": "dogfood-tool-router::0",
+      "installations": [
+        {
+          "installation_id": "dogfood-tool-router::0",
+          "path": "dogfood-tool-router/SKILL.md",
+          "folder": "dogfood-tool-router",
+          "kind": "primary_tree",
+          "description_snippet": "Route one task to a single local RCTC skill, then optionally to one of five disabled-by-default external tools (Addy Osm",
+          "content_sha256": "12b98da5e9f0207aad2c81c19593d4b5f65e02b8bd36d1764b5b6a13abf01198",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "dogfood-tool-router/SKILL.md"
     },
     {
       "canonical_id": "ecc-harness",
@@ -878,7 +899,7 @@
           "folder": ".",
           "kind": "primary_tree",
           "description_snippet": "Structure or improve AI prompts and implementation briefs with Role, Context, Task, and Constraints. Use when a request ",
-          "content_sha256": "d47da9d226414469e392dc919a0c2555de9d6210dcdfe2702b2a0a28bb90a247",
+          "content_sha256": "6e9a6f8b254ad8653788c996ba4cb3213bb3ba2b6bd6cb51c1b98204d416e9b1",
           "pointer": false
         }
       ],

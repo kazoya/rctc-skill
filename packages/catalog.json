@@ -425,6 +425,25 @@
         "chatgpt-bridge-lane/bin/wait-object.js"
       ],
       "notes": "Local file bridge. One prompt, then wait for text, JSON, or an image. A request file is not a reply. The image sender stops when the weekly window is closed. No publish, purchase, or logo redraw."
+    },
+    {
+      "id": "dogfood-tool-router",
+      "title": "Dogfood tool router",
+      "audience": [
+        "developer",
+        "agent-operator"
+      ],
+      "skills": [
+        "dogfood-tool-router",
+        "safe-forward-execution"
+      ],
+      "paths": [
+        "dogfood-tool-router/SKILL.md",
+        "dogfood-tool-router/registry.json",
+        "dogfood-tool-router/UPSTREAM.md",
+        "dogfood-tool-router/bin/resolve.js"
+      ],
+      "notes": "Five optional tools from the 2026-10-16 Grok kit, all disabled. One local skill per task. No install, no Strix scan, no copied 21st components. npm run test:dogfood-router."
     }
   ]
 }

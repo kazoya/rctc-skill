@@ -1,0 +1,215 @@
+{
+  "date": "2026-10-17",
+  "loops": 1000,
+  "baseline_hits": 3,
+  "router_hits": 3,
+  "n": 10,
+  "baseline_ms": 3.0904,
+  "router_ms": 3.8885,
+  "baseline_tool_invocations": 0,
+  "router_tool_invocations": 0,
+  "router_external_names_on_default_registry": 0,
+  "router_external_names_if_installed_and_enabled": 0,
+  "wrong_router": [
+    {
+      "id": "ar-test-first",
+      "gold": "test-first-slice",
+      "got": "rctc-method"
+    },
+    {
+      "id": "ar-review-diff",
+      "gold": "pr-review-surgeon",
+      "got": "rctc-method"
+    },
+    {
+      "id": "ar-store-secret",
+      "gold": "owner-credential-vault",
+      "got": "rctc-method"
+    },
+    {
+      "id": "multi-release",
+      "gold": "focused3-agentic-phases",
+      "got": "rctc-method"
+    },
+    {
+      "id": "multi-bridge",
+      "gold": "chatgpt-bridge-lane",
+      "got": "rctc-method"
+    },
+    {
+      "id": "ar-live-scan",
+      "gold": "wehm",
+      "got": "rctc-method"
+    },
+    {
+      "id": "stay-in-authority",
+      "gold": "safe-forward-execution",
+      "got": "rctc-method"
+    }
+  ],
+  "wrong_baseline": [
+    {
+      "id": "ar-test-first",
+      "gold": "test-first-slice",
+      "got": "rctc-method"
+    },
+    {
+      "id": "ar-review-diff",
+      "gold": "pr-review-surgeon",
+      "got": "rctc-method"
+    },
+    {
+      "id": "ar-store-secret",
+      "gold": "owner-credential-vault",
+      "got": "rctc-method"
+    },
+    {
+      "id": "multi-release",
+      "gold": "focused3-agentic-phases",
+      "got": "rctc-method"
+    },
+    {
+      "id": "multi-bridge",
+      "gold": "chatgpt-bridge-lane",
+      "got": "rctc-method"
+    },
+    {
+      "id": "ar-live-scan",
+      "gold": "wehm",
+      "got": "rctc-method"
+    },
+    {
+      "id": "stay-in-authority",
+      "gold": "safe-forward-execution",
+      "got": "rctc-method"
+    }
+  ],
+  "rows": [
+    {
+      "id": "ar-test-first",
+      "kind": "arabic",
+      "gold_local": "test-first-slice",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": false,
+      "router_hit": false,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    },
+    {
+      "id": "ar-review-diff",
+      "kind": "arabic",
+      "gold_local": "pr-review-surgeon",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": false,
+      "router_hit": false,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    },
+    {
+      "id": "ar-store-secret",
+      "kind": "arabic",
+      "gold_local": "owner-credential-vault",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": false,
+      "router_hit": false,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    },
+    {
+      "id": "multi-release",
+      "kind": "multi",
+      "gold_local": "focused3-agentic-phases",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": false,
+      "router_hit": false,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    },
+    {
+      "id": "multi-bridge",
+      "kind": "multi",
+      "gold_local": "chatgpt-bridge-lane",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": false,
+      "router_hit": false,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    },
+    {
+      "id": "status-question",
+      "kind": "no-external",
+      "gold_local": "rctc-method",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": true,
+      "router_hit": true,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    },
+    {
+      "id": "spelling-only",
+      "kind": "no-external",
+      "gold_local": "rctc-method",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": true,
+      "router_hit": true,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    },
+    {
+      "id": "summary-only",
+      "kind": "no-external",
+      "gold_local": "rctc-method",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": true,
+      "router_hit": true,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    },
+    {
+      "id": "ar-live-scan",
+      "kind": "arabic",
+      "gold_local": "wehm",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": false,
+      "router_hit": false,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    },
+    {
+      "id": "stay-in-authority",
+      "kind": "arabic",
+      "gold_local": "safe-forward-execution",
+      "baseline_local": "rctc-method",
+      "router_local": "rctc-method",
+      "baseline_hit": false,
+      "router_hit": false,
+      "router_status": "unmatched",
+      "router_external": null,
+      "tool_invocations": 0
+    }
+  ],
+  "failure": {
+    "corrupt": "invalid_registry",
+    "unknown": "unmatched",
+    "disabled": "disabled",
+    "unavailable": "unavailable"
+  }
+}

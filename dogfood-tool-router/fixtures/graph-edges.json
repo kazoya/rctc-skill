@@ -1,0 +1,27 @@
+[
+  {
+    "from": "SKILL.md",
+    "to": "chatgpt-bridge-lane/SKILL.md",
+    "expect": "chatgpt-bridge-lane"
+  },
+  {
+    "from": "packages/catalog.json",
+    "to": "ecc-harness/SKILL.md",
+    "expect": "ecc-harness/SKILL.md"
+  },
+  {
+    "from": "ecc-harness/SKILL.md",
+    "to": "ecc-harness/NEED-MAP.md",
+    "expect": "NEED-MAP.md"
+  },
+  {
+    "from": "skills/CATALOG.md",
+    "to": "SKILL.md",
+    "expect": "`rctc-method` → `SKILL.md`"
+  },
+  {
+    "from": "package.json",
+    "to": "scripts/validate-repo.js",
+    "expect": "scripts/validate-repo.js"
+  }
+]

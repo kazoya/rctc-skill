@@ -130,6 +130,7 @@ The wider map is [skills/CATALOG.md](skills/CATALOG.md). Domain stories stay in 
 - Use **ecc-harness** when the task is to add or organize [affaan-m/ECC](https://github.com/affaan-m/ecc). Use the local skill from its map for the actual work.
 - Use **client-auto-reply** for one inbox acknowledgment. A later message to a department address is the direction. An auto-receipt is not.
 - Use **chatgpt-bridge-lane** to send one prompt on the local ChatGPT file bridge and wait until the reply is text, JSON, or an image. A written request is not the returned object.
+- Use **dogfood-tool-router** to send one task to one local skill. Agent Skills, Context7, Graphify, 21st MCP, and Strix stay off until `dogfood-tool-router/registry.json` says otherwise.
 
 ## Settings (design skills)
 
