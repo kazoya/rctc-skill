@@ -1,13 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-16T21:19:44.038Z",
+  "generated_at": "2026-10-18T12:28:47.677Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 63,
-    "canonical_capabilities": 58,
+    "discovered_skill_records": 64,
+    "canonical_capabilities": 59,
     "multi_install_capabilities": 5,
-    "public_claim": "58 canonical capabilities (63 tracked SKILL.md installations — not independent product claims)"
+    "public_claim": "59 canonical capabilities (64 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -93,6 +93,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "packs/programmer-essentials-20/api-error-contracts/SKILL.md"
+    },
+    {
+      "canonical_id": "arabic-stage-craft",
+      "kind": "canonical_capability",
+      "title": "arabic-stage-craft",
+      "description": "\"Arabic-first page motion: Droid Arabic Kufi, AR/EN with Arabic default, Amman digital clock, pointer light, loader, reveal, hover, parallax, and 3D tilt. Use after design-taste-rctc and the vendored Taste Skill when a public page needs those behaviors. Reduced motion stays quiet. Do not invent facts while translating.\"",
+      "primary_installation_id": "arabic-stage-craft::0",
+      "installations": [
+        {
+          "installation_id": "arabic-stage-craft::0",
+          "path": "arabic-stage-craft/SKILL.md",
+          "folder": "arabic-stage-craft",
+          "kind": "primary_tree",
+          "description_snippet": "\"Arabic-first page motion: Droid Arabic Kufi, AR/EN with Arabic default, Amman digital clock, pointer light, loader, rev",
+          "content_sha256": "fef0cfca09754ed9782b30116ca7753d4905039e559033cd6fdf3253e01b009e",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "arabic-stage-craft/SKILL.md"
     },
     {
       "canonical_id": "belt-apca-smarthelp-cx",

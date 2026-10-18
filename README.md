@@ -93,6 +93,7 @@ Daily skills. Canonical copies live in [packs/programmer-essentials-20](packs/pr
 |---|---|---|
 | **design-taste-rctc** | `design-taste-rctc` | Read the brief, set variance / motion / density, prefer an official design system, run a pre-flight check. |
 | **design-taste-frontend** | `design-taste-frontend` | Vendored Taste Skill v2 by Leonxlnx. Full anti-slop frontend rulebook. MIT. |
+| **arabic-stage-craft** | `arabic-stage-craft` | Droid Arabic Kufi, Arabic-default bilingual copy, Amman clock, loader, reveal, hover, parallax, tilt, and pointer light. |
 | **owner-credential-vault** | `owner-credential-vault` | Store secrets the operator owns in the OS credential store. No browser-password extraction. |
 | **git-worktree-flow** | `git-worktree-flow` | Isolate a branch in a worktree and open a small pull request. |
 | **pr-review-surgeon** | `pr-review-surgeon` | Review for bugs, security mistakes, and missing tests. |
@@ -123,7 +124,7 @@ The wider map is [skills/CATALOG.md](skills/CATALOG.md). Domain stories stay in 
 
 - Start with **rctc-method** when the request is vague or needs a handoff.
 - Use **htpaap**, then **focused3-agentic-phases**, then **safe-forward-execution** for implementation.
-- Use **design-taste-rctc** to set direction, then **design-taste-frontend** for the full frontend rulebook.
+- Use **design-taste-rctc** to set direction, then **design-taste-frontend** for the full frontend rulebook. Use **arabic-stage-craft** when the page also needs Arabic-default motion, clock, and light.
 - Use **owner-credential-vault** for the operator's own tokens. Use **logged-in-browser** when a visible Chrome window is already signed in.
 - Use **prize-hunt-skill-fit** only when a measured contest class matches a dated public score.
 - Use **evidence-before-claim** before saying something works.

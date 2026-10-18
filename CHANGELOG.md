@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased] — Arabic stage craft
+
+### Added
+- `arabic-stage-craft` — Droid Arabic Kufi, Arabic-default English, Amman clock, loader, reveal, hover, parallax, tilt, and pointer light. It follows Taste Skill; it does not replace it.
+
 ## [Unreleased] — Growth packaging + 60s path
 
 ### Added
