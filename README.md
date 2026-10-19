@@ -146,6 +146,7 @@ Numbers are 1 to 10. Set them once per page and keep them.
 ## Examples
 
 - [Programmer examples check](scripts/check-programmer-examples.js) is what `npm run test:examples` runs.
+- [Voice receptionist](examples/voice-receptionist/README.md) is an AI phone receptionist for a small Jordanian clinic or office (Arabic + English): RCTC prompt, FAQ file, and a zero-dependency webhook that writes leads to a mock CRM. `npm run test:voice-receptionist` checks it.
 - [Portable background effect](examples/portable-background-effects/README.md) is a small UI fixture, not a product screenshot gallery.
 - [Evidence before claim](evidence-before-claim/SKILL.md) is the rule for any example you later call proof.
 
