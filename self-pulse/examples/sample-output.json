@@ -1,0 +1,212 @@
+{
+  "successCycle": {
+    "product": "self-pulse",
+    "edition": "free",
+    "generatedAt": "2026-10-22T14:10:05.007Z",
+    "disclaimer": "Operational metrics only. Not consciousness. CSAT is never manufactured.",
+    "agent": {
+      "agentId": "demo-agent",
+      "formulaVersion": "self-pulse-formulas-1.0.0",
+      "disclaimer": "Operational self-state only. Not consciousness, feelings, or subjective experience.",
+      "confidenceBefore": 0.75,
+      "lastVerifiedOutcome": {
+        "success": true,
+        "evidenceIds": [
+          "log-55",
+          "policy-ok"
+        ],
+        "policyCompliant": true,
+        "evidenceSufficient": true,
+        "at": "2026-10-22T14:10:05.006Z"
+      },
+      "evidenceSufficiency": true,
+      "policyCompliant": true,
+      "escalationRequired": false,
+      "revisionCount": 0
+    },
+    "calibration": {
+      "formulaVersion": "self-pulse-formulas-1.0.0",
+      "brier": {
+        "score": 0.0625,
+        "unknown": false,
+        "n": 1,
+        "formulaVersion": "self-pulse-formulas-1.0.0"
+      },
+      "nClosed": 1,
+      "nPending": 0,
+      "incorrectHighConfidenceCount": 0,
+      "pairs": [
+        {
+          "taskId": "ticket-100",
+          "forecast": 0.75,
+          "outcome": 1,
+          "predictedAt": "2026-10-22T14:10:05.006Z",
+          "verifiedAt": "2026-10-22T14:10:05.006Z"
+        }
+      ]
+    },
+    "functionalSatisfaction": {
+      "formulaVersion": "self-pulse-formulas-1.0.0",
+      "score": 1,
+      "label": "functional_satisfaction_computational",
+      "disclaimer": "Computational operational score only. Not a genuine emotion or subjective experience.",
+      "components": {
+        "verifiedSuccess": true,
+        "evidenceSufficient": true,
+        "policyCompliant": true,
+        "errorFree": true
+      }
+    },
+    "customer": {
+      "customerId": "cust_demo1",
+      "interactionCount": 1,
+      "verifiedResolution": {
+        "status": "resolved",
+        "at": "2026-10-22T14:10:05.006Z"
+      },
+      "escalationState": "none",
+      "csat": {
+        "score": null,
+        "reason": "satisfaction_not_inferred",
+        "note": "Only explicit customer feedback is stored; no CSAT is manufactured."
+      }
+    },
+    "memoryContinuity": {
+      "mode": "session_ephemeral",
+      "nEvents": 0,
+      "fabricatedRejected": 0,
+      "disclaimer": "Memory continuity is operational persistence, not consciousness."
+    },
+    "errors": {
+      "errorFrequency": 0,
+      "corrections": 0,
+      "verifiedFixes": 0,
+      "correctionEffectiveness": null
+    },
+    "evidence": {
+      "ok": true,
+      "evidenceSufficient": true,
+      "reason": "has_evidence_ids",
+      "score": 0.6666666666666666,
+      "evidenceIds": [
+        "log-55",
+        "policy-ok"
+      ]
+    },
+    "selfModelRevisions": {
+      "beliefs": [],
+      "revisionCount": 0
+    }
+  },
+  "failedCycle": {
+    "product": "self-pulse",
+    "edition": "free",
+    "generatedAt": "2026-10-22T14:10:05.007Z",
+    "disclaimer": "Operational metrics only. Not consciousness. CSAT is never manufactured.",
+    "agent": {
+      "agentId": "demo-agent",
+      "formulaVersion": "self-pulse-formulas-1.0.0",
+      "disclaimer": "Operational self-state only. Not consciousness, feelings, or subjective experience.",
+      "confidenceBefore": 0.9,
+      "lastVerifiedOutcome": {
+        "success": false,
+        "evidenceIds": [
+          "log-56"
+        ],
+        "policyCompliant": true,
+        "evidenceSufficient": true,
+        "at": "2026-10-22T14:10:05.007Z"
+      },
+      "evidenceSufficiency": true,
+      "policyCompliant": true,
+      "escalationRequired": false,
+      "revisionCount": 0
+    },
+    "calibration": {
+      "formulaVersion": "self-pulse-formulas-1.0.0",
+      "brier": {
+        "score": 0.43625,
+        "unknown": false,
+        "n": 2,
+        "formulaVersion": "self-pulse-formulas-1.0.0"
+      },
+      "nClosed": 2,
+      "nPending": 0,
+      "incorrectHighConfidenceCount": 1,
+      "pairs": [
+        {
+          "taskId": "ticket-100",
+          "forecast": 0.75,
+          "outcome": 1,
+          "predictedAt": "2026-10-22T14:10:05.006Z",
+          "verifiedAt": "2026-10-22T14:10:05.006Z"
+        },
+        {
+          "taskId": "ticket-101",
+          "forecast": 0.9,
+          "outcome": 0,
+          "predictedAt": "2026-10-22T14:10:05.007Z",
+          "verifiedAt": "2026-10-22T14:10:05.007Z"
+        }
+      ]
+    },
+    "functionalSatisfaction": {
+      "formulaVersion": "self-pulse-formulas-1.0.0",
+      "score": 0.5,
+      "label": "functional_satisfaction_computational",
+      "disclaimer": "Computational operational score only. Not a genuine emotion or subjective experience.",
+      "components": {
+        "verifiedSuccess": false,
+        "evidenceSufficient": true,
+        "policyCompliant": true,
+        "errorFree": false
+      }
+    },
+    "customer": {
+      "customerId": "cust_demo1",
+      "interactionCount": 2,
+      "verifiedResolution": {
+        "status": "unresolved",
+        "at": "2026-10-22T14:10:05.007Z"
+      },
+      "escalationState": "none",
+      "csat": {
+        "score": null,
+        "reason": "satisfaction_not_inferred",
+        "note": "Only explicit customer feedback is stored; no CSAT is manufactured."
+      }
+    },
+    "memoryContinuity": {
+      "mode": "session_ephemeral",
+      "nEvents": 0,
+      "fabricatedRejected": 0,
+      "disclaimer": "Memory continuity is operational persistence, not consciousness."
+    },
+    "errors": {
+      "errorFrequency": 1,
+      "corrections": 0,
+      "verifiedFixes": 0,
+      "correctionEffectiveness": 0
+    },
+    "evidence": {
+      "ok": true,
+      "evidenceSufficient": true,
+      "reason": "has_evidence_ids",
+      "score": 0.3333333333333333,
+      "evidenceIds": [
+        "log-56"
+      ]
+    },
+    "selfModelRevisions": {
+      "beliefs": [],
+      "revisionCount": 0
+    }
+  },
+  "recovery": {
+    "errorFrequency": 1,
+    "corrections": 1,
+    "verifiedFixes": 1,
+    "correctionEffectiveness": 1
+  },
+  "note": "Example JSON only. Not a consciousness claim."
+}

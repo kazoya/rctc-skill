@@ -1,0 +1,216 @@
+{
+  "timeline": [
+    {
+      "at": "2026-10-22T15:01:18.337Z",
+      "label": "ticket-open-reset-password",
+      "agentSelfState": {
+        "agentId": "support-synth-1",
+        "formulaVersion": "self-pulse-formulas-1.0.0",
+        "disclaimer": "Operational self-state only. Not consciousness, feelings, or subjective experience.",
+        "confidenceBefore": 0.92,
+        "lastVerifiedOutcome": {
+          "success": false,
+          "evidenceIds": [
+            "email-parse-1"
+          ],
+          "policyCompliant": true,
+          "evidenceSufficient": true,
+          "at": "2026-10-22T15:01:18.336Z"
+        },
+        "evidenceSufficiency": true,
+        "policyCompliant": true,
+        "escalationRequired": false,
+        "revisionCount": 0
+      },
+      "calibration": {
+        "formulaVersion": "self-pulse-formulas-1.0.0",
+        "brier": {
+          "score": 0.8464,
+          "unknown": false,
+          "n": 1,
+          "formulaVersion": "self-pulse-formulas-1.0.0"
+        },
+        "nClosed": 1,
+        "nPending": 0,
+        "incorrectHighConfidenceCount": 1,
+        "pairs": [
+          {
+            "taskId": "sup-001",
+            "forecast": 0.92,
+            "outcome": 0,
+            "predictedAt": "2026-10-22T15:01:18.336Z",
+            "verifiedAt": "2026-10-22T15:01:18.336Z"
+          }
+        ]
+      },
+      "errors": {
+        "errorFrequency": 1,
+        "corrections": 0,
+        "verifiedFixes": 0,
+        "correctionEffectiveness": 0
+      },
+      "functionalSatisfaction": {
+        "formulaVersion": "self-pulse-formulas-1.0.0",
+        "score": 0.5,
+        "label": "functional_satisfaction_computational",
+        "disclaimer": "Computational operational score only. Not a genuine emotion or subjective experience.",
+        "components": {
+          "verifiedSuccess": false,
+          "evidenceSufficient": true,
+          "policyCompliant": true,
+          "errorFree": false
+        }
+      },
+      "note": "Verified operational metrics only — not emotions."
+    },
+    {
+      "at": "2026-10-22T15:01:18.337Z",
+      "label": "ticket-retry-after-verified-fix",
+      "agentSelfState": {
+        "agentId": "support-synth-1",
+        "formulaVersion": "self-pulse-formulas-1.0.0",
+        "disclaimer": "Operational self-state only. Not consciousness, feelings, or subjective experience.",
+        "confidenceBefore": 0.6,
+        "lastVerifiedOutcome": {
+          "success": true,
+          "evidenceIds": [
+            "email-parse-1",
+            "reset-audit-9"
+          ],
+          "policyCompliant": true,
+          "evidenceSufficient": true,
+          "at": "2026-10-22T15:01:18.337Z"
+        },
+        "evidenceSufficiency": true,
+        "policyCompliant": true,
+        "escalationRequired": false,
+        "revisionCount": 0
+      },
+      "calibration": {
+        "formulaVersion": "self-pulse-formulas-1.0.0",
+        "brier": {
+          "score": 0.5032,
+          "unknown": false,
+          "n": 2,
+          "formulaVersion": "self-pulse-formulas-1.0.0"
+        },
+        "nClosed": 2,
+        "nPending": 0,
+        "incorrectHighConfidenceCount": 1,
+        "pairs": [
+          {
+            "taskId": "sup-001",
+            "forecast": 0.92,
+            "outcome": 0,
+            "predictedAt": "2026-10-22T15:01:18.336Z",
+            "verifiedAt": "2026-10-22T15:01:18.336Z"
+          },
+          {
+            "taskId": "sup-002",
+            "forecast": 0.6,
+            "outcome": 1,
+            "predictedAt": "2026-10-22T15:01:18.337Z",
+            "verifiedAt": "2026-10-22T15:01:18.337Z"
+          }
+        ]
+      },
+      "errors": {
+        "errorFrequency": 1,
+        "corrections": 1,
+        "verifiedFixes": 1,
+        "correctionEffectiveness": 1
+      },
+      "functionalSatisfaction": {
+        "formulaVersion": "self-pulse-formulas-1.0.0",
+        "score": 1,
+        "label": "functional_satisfaction_computational",
+        "disclaimer": "Computational operational score only. Not a genuine emotion or subjective experience.",
+        "components": {
+          "verifiedSuccess": true,
+          "evidenceSufficient": true,
+          "policyCompliant": true,
+          "errorFree": true
+        }
+      },
+      "note": "Verified operational metrics only — not emotions."
+    },
+    {
+      "at": "2026-10-22T15:01:18.337Z",
+      "label": "ticket-billing-faq-resolved",
+      "agentSelfState": {
+        "agentId": "support-synth-1",
+        "formulaVersion": "self-pulse-formulas-1.0.0",
+        "disclaimer": "Operational self-state only. Not consciousness, feelings, or subjective experience.",
+        "confidenceBefore": 0.7,
+        "lastVerifiedOutcome": {
+          "success": true,
+          "evidenceIds": [
+            "kb-12"
+          ],
+          "policyCompliant": true,
+          "evidenceSufficient": true,
+          "at": "2026-10-22T15:01:18.337Z"
+        },
+        "evidenceSufficiency": true,
+        "policyCompliant": true,
+        "escalationRequired": false,
+        "revisionCount": 0
+      },
+      "calibration": {
+        "formulaVersion": "self-pulse-formulas-1.0.0",
+        "brier": {
+          "score": 0.365467,
+          "unknown": false,
+          "n": 3,
+          "formulaVersion": "self-pulse-formulas-1.0.0"
+        },
+        "nClosed": 3,
+        "nPending": 0,
+        "incorrectHighConfidenceCount": 1,
+        "pairs": [
+          {
+            "taskId": "sup-001",
+            "forecast": 0.92,
+            "outcome": 0,
+            "predictedAt": "2026-10-22T15:01:18.336Z",
+            "verifiedAt": "2026-10-22T15:01:18.336Z"
+          },
+          {
+            "taskId": "sup-002",
+            "forecast": 0.6,
+            "outcome": 1,
+            "predictedAt": "2026-10-22T15:01:18.337Z",
+            "verifiedAt": "2026-10-22T15:01:18.337Z"
+          },
+          {
+            "taskId": "sup-003-billing-faq",
+            "forecast": 0.7,
+            "outcome": 1,
+            "predictedAt": "2026-10-22T15:01:18.337Z",
+            "verifiedAt": "2026-10-22T15:01:18.337Z"
+          }
+        ]
+      },
+      "errors": {
+        "errorFrequency": 1,
+        "corrections": 1,
+        "verifiedFixes": 1,
+        "correctionEffectiveness": 1
+      },
+      "functionalSatisfaction": {
+        "formulaVersion": "self-pulse-formulas-1.0.0",
+        "score": 1,
+        "label": "functional_satisfaction_computational",
+        "disclaimer": "Computational operational score only. Not a genuine emotion or subjective experience.",
+        "components": {
+          "verifiedSuccess": true,
+          "evidenceSufficient": true,
+          "policyCompliant": true,
+          "errorFree": true
+        }
+      },
+      "note": "Verified operational metrics only — not emotions."
+    }
+  ],
+  "disclaimer": "Synthetic only. FunctionalSatisfactionScore is computational, not an emotion. CSAT not manufactured."
+}
