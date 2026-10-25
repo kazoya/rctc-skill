@@ -49,6 +49,7 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `safe-forward-execution` → `safe-forward-execution/SKILL.md`
 - `secretsinnextcss` → `secretsinnextcss/SKILL.md`
 - `security-bounty-window` → `portfolio-commander/skills/security-bounty-window/SKILL.md`
+- `self-pulse` → `self-pulse/SKILL.md`
 - `skill-factory` → `skill-factory/SKILL.md`
 - `sql-migration-safety` → `packs/programmer-essentials-20/sql-migration-safety/SKILL.md`
 - `start-skill` → `start-skill/SKILL.md`
