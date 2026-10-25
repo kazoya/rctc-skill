@@ -16,6 +16,7 @@ One row per need. The local skill is the default. The ECC name is the upstream s
 | Turn a repeated lesson into a skill | `skill-factory` | `skill-stocktake` |
 | Install or retarget the harness | `ecc-harness` | `configure-ecc` |
 | Frontend taste and anti-slop | `design-taste-rctc` then vendored `design-taste-frontend` | `frontend-design-direction` |
+| Arabic motion, clock, theme light, and AR/EN | `arabic-stage-craft` | none |
 | Operator-owned secrets | `owner-credential-vault` | none |
 | Signed-in browser window | `logged-in-browser` | `browser-qa` |
 | Flutter or Dart app | `flutter-dart-app` | `dart-flutter-patterns` |

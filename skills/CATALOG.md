@@ -6,6 +6,7 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `ai-portability-advisor` → `ai-portability-advisor/SKILL.md`
 - `apca-marketing-site` → `portfolio-commander/skills/apca-marketing-site/SKILL.md`
 - `api-error-contracts` → `packs/programmer-essentials-20/api-error-contracts/SKILL.md`
+- `arabic-stage-craft` → `arabic-stage-craft/SKILL.md`
 - `belt-apca-smarthelp-cx` → `portfolio-commander/skills/belt-apca-smarthelp-cx/SKILL.md`
 - `belt-gateway-php` → `portfolio-commander/skills/belt-gateway-php/SKILL.md`
 - `bitter-truth-delivery-audit` → `bitter-truth-delivery-audit/SKILL.md`
@@ -48,6 +49,7 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `safe-forward-execution` → `safe-forward-execution/SKILL.md`
 - `secretsinnextcss` → `secretsinnextcss/SKILL.md`
 - `security-bounty-window` → `portfolio-commander/skills/security-bounty-window/SKILL.md`
+- `self-pulse` → `self-pulse/SKILL.md`
 - `skill-factory` → `skill-factory/SKILL.md`
 - `sql-migration-safety` → `packs/programmer-essentials-20/sql-migration-safety/SKILL.md`
 - `start-skill` → `start-skill/SKILL.md`

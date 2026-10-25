@@ -1,5 +1,16 @@
 # Changelog
 
+## [Unreleased] — Voice receptionist example
+
+### Added
+- `examples/voice-receptionist/` — AI phone receptionist for a small office or clinic in Jordan (Arabic + English). RCTC system prompt, sample knowledge file, sample call transcript, and a zero-dependency Node webhook that validates the post-call payload and writes an idempotent lead to a local JSON/CSV mock CRM. Hosted (Twilio → Retell or similar) and local-first (Ollama gateway) architectures.
+- `npm run test:voice-receptionist` (9 checks). `npm run test:examples` now runs it too, so CI covers it.
+
+## [Unreleased] — Arabic stage craft
+
+### Added
+- `arabic-stage-craft` — Droid Arabic Kufi, Arabic-default English, Amman clock, loader, reveal, hover, parallax, tilt, and pointer light. It follows Taste Skill; it does not replace it.
+
 ## [Unreleased] — Growth packaging + 60s path
 
 ### Added
