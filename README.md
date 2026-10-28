@@ -14,9 +14,11 @@ The Arabic course that builds an agent by hand lives in its own MIT repo: [build
 
 This repository has no token, coin, or crypto project. Taste Skill is Leonxlnx's project. The copy under `vendor/leonxlnx-taste-skill/` keeps his copyright and MIT license. It is not a rebrand and it does not replace his repository.
 
-Disclaimer · [60s](#60-seconds) · Install · Skills · Settings · Examples · FAQ · License · [Arabic course](https://github.com/kazoya/build-your-own-agent-ar)
+Disclaimer · [60s](#60-seconds) · Install · Skills · Settings · Examples · FAQ · License · [Arabic course](https://github.com/kazoya/build-your-own-agent-ar) · [Roadmap](ROADMAP.md)
 
 ## Feedback
+
+What is shipped, what is next, and small tasks to start with: [ROADMAP.md](ROADMAP.md) · [good first issues](docs/good-first-issues.md).
 
 Suggestions and bug reports: open a Pull Request or Issue on [kazoya/rctc-skill](https://github.com/kazoya/rctc-skill/issues).
 
