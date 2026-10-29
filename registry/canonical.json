@@ -1,13 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-25T11:28:44.631Z",
+  "generated_at": "2026-10-29T23:05:56.791Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 65,
-    "canonical_capabilities": 60,
+    "discovered_skill_records": 66,
+    "canonical_capabilities": 61,
     "multi_install_capabilities": 5,
-    "public_claim": "60 canonical capabilities (65 tracked SKILL.md installations — not independent product claims)"
+    "public_claim": "61 canonical capabilities (66 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -1053,6 +1053,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "self-pulse/SKILL.md"
+    },
+    {
+      "canonical_id": "shadowwalk-qa",
+      "kind": "canonical_capability",
+      "title": "shadowwalk-qa",
+      "description": "Evidence-driven autonomous user-journey QA for authorized web apps. Explore roles, routes, authentication, API/database consistency, edge cases, accessibility, and regression tests using disposable accounts and safe browser automation; produce reproducible findings and a remediation loop.",
+      "primary_installation_id": "shadowwalk-qa::0",
+      "installations": [
+        {
+          "installation_id": "shadowwalk-qa::0",
+          "path": "shadowwalk-qa/SKILL.md",
+          "folder": "shadowwalk-qa",
+          "kind": "primary_tree",
+          "description_snippet": "Evidence-driven autonomous user-journey QA for authorized web apps. Explore roles, routes, authentication, API/database ",
+          "content_sha256": "2dc2da50605f59aae9d587bec7915aba74448b07c8fe2782995e9f09616af410",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "shadowwalk-qa/SKILL.md"
     },
     {
       "canonical_id": "skill-factory",
