@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-26",
-  "count": 45,
+  "generated_at": "2026-11-09",
+  "count": 50,
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "skills": [
     {
@@ -317,6 +317,41 @@
       "description": "Teach authorization-first cybersecurity learning, safe labs, threat modeling, analysis, evidence, remediation, and responsible disclosure; uncertainty means STOP.",
       "path": "wehm/SKILL.md",
       "folder": "wehm"
+    },
+    {
+      "id": "master-skills-factory",
+      "name": "master-skills-factory",
+      "description": "Portland–Pozzolanic sector-configurable trade desk: catalog→validate→pricing guards→quotation→local store→WhatsApp preview→inbound guard→verified outcome. Synthetic demos; WhatsApp send NOT_IMPLEMENTED.",
+      "path": "master-skills-factory/SKILL.md",
+      "folder": "master-skills-factory"
+    },
+    {
+      "id": "sector-catalog-config",
+      "name": "sector-catalog-config",
+      "description": "Configure sector product catalogs, aliases, destinations, and market reference books for master-skills-factory.",
+      "path": "master-skills-factory/skills/sector-catalog-config/SKILL.md",
+      "folder": "master-skills-factory/skills/sector-catalog-config"
+    },
+    {
+      "id": "inquiry-validate-quote",
+      "name": "inquiry-validate-quote",
+      "description": "Parse inquiries, validate completeness, apply pricing guardrails, emit incomplete RFQ or approved quotation.",
+      "path": "master-skills-factory/skills/inquiry-validate-quote/SKILL.md",
+      "folder": "master-skills-factory/skills/inquiry-validate-quote"
+    },
+    {
+      "id": "guarded-messaging-preview",
+      "name": "guarded-messaging-preview",
+      "description": "WhatsApp deep-link preview and guarded inbound auto-reply; never invents sell prices; send NOT_IMPLEMENTED.",
+      "path": "master-skills-factory/skills/guarded-messaging-preview/SKILL.md",
+      "folder": "master-skills-factory/skills/guarded-messaging-preview"
+    },
+    {
+      "id": "verified-trade-outcome",
+      "name": "verified-trade-outcome",
+      "description": "Verify trade-desk outcomes; CSAT stays unknown without explicit feedback.",
+      "path": "master-skills-factory/skills/verified-trade-outcome/SKILL.md",
+      "folder": "master-skills-factory/skills/verified-trade-outcome"
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "name": "@rctc/master-skills-factory",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portable Portland–Pozzolanic trade-desk workflow skills. Synthetic demos only. No live messaging.",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node scripts/run-cross-industry-demo.js",
+    "evidence": "node scripts/run-cross-industry-demo.js --write-evidence"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
