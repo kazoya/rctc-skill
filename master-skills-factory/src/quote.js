@@ -1,5 +1,7 @@
 'use strict';
 
+const { formatMinor } = require('./money');
+
 /**
  * Quotation document modes:
  * - INCOMPLETE_RFQ: no grand total
@@ -23,6 +25,7 @@ function buildAssessment({ parsed, validation, pricing, availability, issue = fa
 
   let snapshot = null;
   let total = null;
+  let totalMinor = null;
   if (readyToIssue) {
     const lines = parsed.lines.map((line, i) => ({
       productId: line.productId,
@@ -30,18 +33,28 @@ function buildAssessment({ parsed, validation, pricing, availability, issue = fa
       quantity: line.quantity,
       unit: line.unit,
       unitPrice: pricing.prices[i].unitPrice,
-      lineTotal: pricing.prices[i].lineTotal
+      unitPriceMinor: pricing.prices[i].unitPriceMinor,
+      lineTotal: pricing.prices[i].lineTotal,
+      lineTotalMinor: pricing.prices[i].lineTotalMinor,
+      money: pricing.prices[i].money
     }));
-    total = lines.reduce((acc, l) => acc + Number(l.lineTotal || 0), 0).toFixed(3);
+    totalMinor = lines.reduce((acc, l) => acc + BigInt(l.lineTotalMinor || '0'), 0n);
+    const scale = 3;
+    total = formatMinor(totalMinor, scale);
     snapshot = {
       version: 1,
       issuedAt: new Date().toISOString(),
-      currency: 'JOD',
+      currency: pricing.currency || 'JOD',
+      scale,
+      taxBps: pricing.taxBps || 0,
+      discountBps: pricing.discountBps || 0,
+      deliveryMinor: pricing.deliveryMinor || '0',
       destination: parsed.destination,
       lines,
       total,
+      totalMinor: totalMinor.toString(),
       approvedBy: [...new Set(pricing.prices.map((p) => p.approvedBy).filter(Boolean))],
-      freight: 'EXCLUDED',
+      freight: 'EXCLUDED_UNLESS_IN_DELIVERY',
       customs: 'EXCLUDED'
     };
   }
@@ -56,6 +69,7 @@ function buildAssessment({ parsed, validation, pricing, availability, issue = fa
     prices: pricing.prices,
     availability: availabilityRows,
     total: readyToIssue ? total : null,
+    totalMinor: readyToIssue ? totalMinor.toString() : null,
     draftTotal: null,
     readyForMerchantReview: validation.readyForMerchantReview,
     readyToIssue,
@@ -64,7 +78,8 @@ function buildAssessment({ parsed, validation, pricing, availability, issue = fa
     modelUsed: false,
     marketUsedAsTodaysPrice: false,
     snapshot,
-    evidence_class: readyToIssue ? 'synthetic_approved_quote' : 'incomplete_rfq'
+    evidence_class: readyToIssue ? 'synthetic_approved_quote' : 'incomplete_rfq',
+    administrativeOnly: !!parsed.administrativeOnly
   };
 }
 
@@ -88,11 +103,16 @@ function renderQuoteText(assessment, company) {
     `${company?.name || 'Demo Co'} — ${title}`,
     `Sector: ${assessment.sectorId}`,
     `Destination: ${assessment.destination || 'n/a'}`,
+    assessment.administrativeOnly ? 'ADMINISTRATIVE WORKFLOW ONLY — no clinical/Rx decisions.' : null,
     lines,
-    assessment.total ? `TOTAL: ${assessment.total}` : 'TOTAL: absent (not an approved sell quote)',
+    assessment.total
+      ? `TOTAL: ${assessment.total} (minor=${assessment.totalMinor})`
+      : 'TOTAL: absent (not an approved sell quote)',
     missing ? `Gaps:\n${missing}` : 'Gaps: none listed',
-    'Freight/customs excluded. Market reference is never today\'s sell price.'
-  ].join('\n');
+    'Taxes/discounts/delivery are explicit when present. Market reference is never today\'s sell price.'
+  ]
+    .filter(Boolean)
+    .join('\n');
 }
 
 module.exports = { buildAssessment, renderQuoteText };

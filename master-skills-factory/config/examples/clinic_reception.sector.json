@@ -1,0 +1,40 @@
+{
+  "id": "clinic_reception_cfg",
+  "businessIdentity": { "name": "Config Clinic Desk", "locale": "ar-JO" },
+  "sectorType": "clinic_reception",
+  "administrativeOnly": true,
+  "clinicalDecisionsEnabled": false,
+  "catalog": {
+    "requireDestination": false,
+    "destinations": [],
+    "products": [
+      {
+        "id": "gp_visit",
+        "label": "GP visit booking",
+        "aliases": ["كشف", "gp", "موعد كشف"],
+        "complete": true,
+        "requiredAttrs": [],
+        "attrHints": []
+      }
+    ]
+  },
+  "customFields": [{ "id": "preferred_slot", "required": false }],
+  "units": {
+    "quantityPatterns": [
+      { "re": "(\\d+(?:[.,]\\d+)?)\\s*(موعد|جلسه|جلسة|visits?)", "unit": "visit", "flags": "i" }
+    ]
+  },
+  "pricing": {
+    "currency": "JOD",
+    "taxBps": 0,
+    "discountBps": 0,
+    "deliveryMinor": 0,
+    "priceBook": [{ "productId": "gp_visit", "marketMin": "20.000", "marketMax": "35.000" }]
+  },
+  "inventory": { "mode": "none" },
+  "approvals": { "requireExplicitIssueActor": true, "marketIsNotSellPrice": true },
+  "messaging": { "channels": ["whatsapp_preview"], "sendImplemented": false },
+  "aiKnowledgeSources": ["admin_faq_synthetic"],
+  "escalation": { "onIncompleteRfq": "receptionist", "onClinicalContent": "reject" },
+  "dashboard": { "roles": ["receptionist"], "permissions": ["read_own_tenant"] }
+}

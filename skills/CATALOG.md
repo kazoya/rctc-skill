@@ -35,6 +35,11 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `local-ssml-voice-cost-optimizer` → `local-ssml-voice-cost-optimizer/SKILL.md`
 - `logged-in-browser` → `logged-in-browser/SKILL.md`
 - `master-brain` → `master-brain/skills/master-brain/SKILL.md`
+- `master-skills-factory` → `master-skills-factory/SKILL.md`
+- `sector-catalog-config` → `master-skills-factory/skills/sector-catalog-config/SKILL.md`
+- `inquiry-validate-quote` → `master-skills-factory/skills/inquiry-validate-quote/SKILL.md`
+- `guarded-messaging-preview` → `master-skills-factory/skills/guarded-messaging-preview/SKILL.md`
+- `verified-trade-outcome` → `master-skills-factory/skills/verified-trade-outcome/SKILL.md`
 - `muqasa-maintenance` → `portfolio-commander/skills/muqasa-maintenance/SKILL.md`
 - `observability-starter` → `packs/programmer-essentials-20/observability-starter/SKILL.md`
 - `owner-credential-vault` → `packs/programmer-essentials-20/owner-credential-vault/SKILL.md`

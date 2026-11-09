@@ -6,6 +6,9 @@ module.exports = {
   wholesale_produce: {
     label: 'Wholesale produce (synthetic)',
     companyName: 'Demo Produce Desk',
+    currency: 'JOD',
+    taxBps: 0,
+    discountBps: 0,
     requireDestination: true,
     destinations: [
       { match: 'عمان', label: 'Amman' },
@@ -81,6 +84,8 @@ module.exports = {
   clinic_reception: {
     label: 'Clinic reception (synthetic)',
     companyName: 'Demo Clinic Desk',
+    administrativeOnly: true,
+    currency: 'JOD',
     requireDestination: false,
     products: [
       {
@@ -107,6 +112,8 @@ module.exports = {
   pharmacy_inquiries: {
     label: 'Pharmacy inquiries (synthetic)',
     companyName: 'Demo Pharmacy Desk',
+    administrativeOnly: true,
+    currency: 'JOD',
     requireDestination: false,
     products: [
       {

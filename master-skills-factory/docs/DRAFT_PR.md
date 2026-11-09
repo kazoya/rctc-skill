@@ -1,25 +1,28 @@
 # Draft Pull Request (not opened)
 
 **Branch:** `feat/pozzolan-master-skills-factory`  
-**Commit:** `9bcbfbc`  
-**Remote action:** blocked until owner authorizes push
+**Base:** `master`  
+**Remote action:** blocked until owner authorizes push + draft PR
 
 ## Title
-feat: add Portland–Pozzolanic master-skills-factory trade desk pack
+feat: Portland–Pozzolanic master-skills-factory (Phase 1–2)
 
 ## Summary
-- Portable sector trade-desk workflow extracted from Saqr & Rakan `pozzolan-trade-prime` patterns (read-only).
-- Working Node package with synthetic catalogs for produce, electronics, clinic, pharmacy, CCTV, services.
-- WhatsApp labeled `PREVIEW_ONLY` / send `NOT_IMPLEMENTED`.
-- Registry + evidence + publication handoff included.
+- Portable sector trade-desk skills extracted from Saqr patterns (synthetic catalogs only).
+- Phase 2: minor-unit money, tenant/idempotency, sector JSON config switch, 6-sector acceptance matrix, skill manifests, capability gap map.
+- WhatsApp labeled PREVIEW_ONLY / send NOT_IMPLEMENTED.
+- Clinic/pharmacy administrative-only with clinical content rejection.
 
 ## Test plan
-- [x] `cd master-skills-factory && npm test` (8/8)
+- [x] `cd master-skills-factory && npm test` (27/27)
+- [x] `npm run validate:skills`
+- [x] `npm run scan:secrets`
 - [x] `npm run evidence`
-- [ ] Owner secret scan before push
-- [ ] Open PR only after owner approval
+- [ ] Owner secret/IP review before push
+- [ ] `git push -u origin feat/pozzolan-master-skills-factory` (owner auth)
+- [ ] `gh pr create --draft ...` (owner auth)
 
 ## Security notes
 - No live WhatsApp digits from Saqr.
 - No customer price books.
-- Local JSON store only; cross-tenant read fails closed in tests.
+- Local JSON store explicitly not production-ready.

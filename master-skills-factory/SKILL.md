@@ -10,6 +10,7 @@ description: >
 
 # Master Skills Factory (Portland–Pozzolanic)
 
+**Version:** 0.2.0 (Phase 2 hardening)  
 **North star:** Configure the business sector. Compose the skills. Verify the workflow. Never fake the result.
 
 **Law:** REUSE → COMPOSE → EXTEND → CREATE.
