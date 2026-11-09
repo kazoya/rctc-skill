@@ -8,7 +8,7 @@
 | Branch | `feat/pozzolan-master-skills-factory` |
 | Base | `origin/master` |
 | Prior commits | `9bcbfbc`, `a925819` |
-| Phase-2 | Local changes pending commit (this review) |
+| Phase-2 commit | `e954570` |
 | Push / PR | **NOT EXECUTED** — awaiting explicit owner authorization |
 | Merge / tag / deploy | Forbidden in this phase |
 
