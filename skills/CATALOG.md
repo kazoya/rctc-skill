@@ -30,16 +30,14 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `focused3-agentic-phases` → `focused3-agentic-phases/SKILL.md`
 - `git-worktree-flow` → `packs/programmer-essentials-20/git-worktree-flow/SKILL.md`
 - `github-actions-min-ci` → `packs/programmer-essentials-20/github-actions-min-ci/SKILL.md`
+- `guarded-messaging-preview` → `master-skills-factory/skills/guarded-messaging-preview/SKILL.md`
 - `htpaap` → `htpaap/SKILL.md`
 - `incident-debug-playbook` → `packs/programmer-essentials-20/incident-debug-playbook/SKILL.md`
+- `inquiry-validate-quote` → `master-skills-factory/skills/inquiry-validate-quote/SKILL.md`
 - `local-ssml-voice-cost-optimizer` → `local-ssml-voice-cost-optimizer/SKILL.md`
 - `logged-in-browser` → `logged-in-browser/SKILL.md`
 - `master-brain` → `master-brain/skills/master-brain/SKILL.md`
 - `master-skills-factory` → `master-skills-factory/SKILL.md`
-- `sector-catalog-config` → `master-skills-factory/skills/sector-catalog-config/SKILL.md`
-- `inquiry-validate-quote` → `master-skills-factory/skills/inquiry-validate-quote/SKILL.md`
-- `guarded-messaging-preview` → `master-skills-factory/skills/guarded-messaging-preview/SKILL.md`
-- `verified-trade-outcome` → `master-skills-factory/skills/verified-trade-outcome/SKILL.md`
 - `muqasa-maintenance` → `portfolio-commander/skills/muqasa-maintenance/SKILL.md`
 - `observability-starter` → `packs/programmer-essentials-20/observability-starter/SKILL.md`
 - `owner-credential-vault` → `packs/programmer-essentials-20/owner-credential-vault/SKILL.md`
@@ -53,6 +51,7 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `release-notes-from-git` → `packs/programmer-essentials-20/release-notes-from-git/SKILL.md`
 - `safe-forward-execution` → `safe-forward-execution/SKILL.md`
 - `secretsinnextcss` → `secretsinnextcss/SKILL.md`
+- `sector-catalog-config` → `master-skills-factory/skills/sector-catalog-config/SKILL.md`
 - `security-bounty-window` → `portfolio-commander/skills/security-bounty-window/SKILL.md`
 - `self-pulse` → `self-pulse/SKILL.md`
 - `shadowwalk-qa` → `shadowwalk-qa/SKILL.md`
@@ -64,6 +63,7 @@ One entry per capability. Edit that path. Other installations are host copies, v
 - `twelve-factor-config` → `packs/programmer-essentials-20/twelve-factor-config/SKILL.md`
 - `typescript-boundaries` → `packs/programmer-essentials-20/typescript-boundaries/SKILL.md`
 - `update-zip-skill` → `update-zip-skill/SKILL.md`
+- `verified-trade-outcome` → `master-skills-factory/skills/verified-trade-outcome/SKILL.md`
 - `web-marketing-and-personal-builder-super-skill` → `web_marketing_and_personal-builder-super-skill/SKILL.md`
 - `web-vitals-budget` → `packs/programmer-essentials-20/web-vitals-budget/SKILL.md`
 - `wehm` → `wehm/SKILL.md`
