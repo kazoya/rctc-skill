@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-11-09T10:01:15.399Z",
+  "results": [
+    {
+      "note": "produce — market reference only",
+      "sectorId": "wholesale_produce",
+      "mode": "INCOMPLETE_RFQ",
+      "total": null,
+      "codes": [],
+      "whatsapp": "NOT_IMPLEMENTED_FOR_SEND",
+      "sent": false,
+      "inbound": "ask_clarification"
+    },
+    {
+      "note": "electronics",
+      "sectorId": "electronic_components",
+      "mode": "INCOMPLETE_RFQ",
+      "total": null,
+      "codes": [],
+      "whatsapp": "NOT_IMPLEMENTED_FOR_SEND",
+      "sent": false,
+      "inbound": "ask_clarification"
+    },
+    {
+      "note": "clinic",
+      "sectorId": "clinic_reception",
+      "mode": "INCOMPLETE_RFQ",
+      "total": null,
+      "codes": [],
+      "whatsapp": "NOT_IMPLEMENTED_FOR_SEND",
+      "sent": false,
+      "inbound": "ask_clarification"
+    },
+    {
+      "note": "pharmacy",
+      "sectorId": "pharmacy_inquiries",
+      "mode": "INCOMPLETE_RFQ",
+      "total": null,
+      "codes": [],
+      "whatsapp": "NOT_IMPLEMENTED_FOR_SEND",
+      "sent": false,
+      "inbound": "ask_clarification"
+    },
+    {
+      "note": "cctv",
+      "sectorId": "cctv_installation",
+      "mode": "INCOMPLETE_RFQ",
+      "total": null,
+      "codes": [],
+      "whatsapp": "NOT_IMPLEMENTED_FOR_SEND",
+      "sent": false,
+      "inbound": "ask_clarification"
+    },
+    {
+      "note": "services",
+      "sectorId": "general_business_services",
+      "mode": "APPROVED_QUOTATION",
+      "total": "225.000",
+      "codes": [],
+      "whatsapp": "NOT_IMPLEMENTED_FOR_SEND",
+      "sent": false,
+      "inbound": "ack_approved_quote_reference"
+    }
+  ]
+}

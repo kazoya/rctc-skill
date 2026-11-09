@@ -1,13 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-29T23:05:56.791Z",
+  "generated_at": "2026-11-09T21:07:28.798Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 66,
-    "canonical_capabilities": 61,
+    "discovered_skill_records": 71,
+    "canonical_capabilities": 66,
     "multi_install_capabilities": 5,
-    "public_claim": "61 canonical capabilities (66 tracked SKILL.md installations — not independent product claims)"
+    "public_claim": "66 canonical capabilities (71 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -617,6 +617,27 @@
       "executable_default": "packs/programmer-essentials-20/github-actions-min-ci/SKILL.md"
     },
     {
+      "canonical_id": "guarded-messaging-preview",
+      "kind": "canonical_capability",
+      "title": "guarded-messaging-preview",
+      "description": "Build WhatsApp deep-link previews and guarded inbound auto-replies that never invent sell prices. Local messaging adapter refuses send. Compose later with Belt/APCA-SmartHelp under owner authorization. Live send remains NOT_IMPLEMENTED.",
+      "primary_installation_id": "guarded-messaging-preview::0",
+      "installations": [
+        {
+          "installation_id": "guarded-messaging-preview::0",
+          "path": "master-skills-factory/skills/guarded-messaging-preview/SKILL.md",
+          "folder": "master-skills-factory/skills/guarded-messaging-preview",
+          "kind": "nested_skill",
+          "description_snippet": "Build WhatsApp deep-link previews and guarded inbound auto-replies that never invent sell prices. Local messaging adapte",
+          "content_sha256": "7fa61c2f05a6011dcfb578711fade2df80c3527e28990d8f144adab9686d28bb",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "master-skills-factory/skills/guarded-messaging-preview/SKILL.md"
+    },
+    {
       "canonical_id": "htpaap",
       "kind": "canonical_capability",
       "title": "htpaap",
@@ -657,6 +678,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "packs/programmer-essentials-20/incident-debug-playbook/SKILL.md"
+    },
+    {
+      "canonical_id": "inquiry-validate-quote",
+      "kind": "canonical_capability",
+      "title": "inquiry-validate-quote",
+      "description": "Parse customer free-text choices, validate completeness, apply pricing guardrails with integer minor-unit money, and emit INCOMPLETE_RFQ or APPROVED_QUOTATION. Rejects prompt/price injection. Use for trade-desk quotation logic without claiming live messaging.",
+      "primary_installation_id": "inquiry-validate-quote::0",
+      "installations": [
+        {
+          "installation_id": "inquiry-validate-quote::0",
+          "path": "master-skills-factory/skills/inquiry-validate-quote/SKILL.md",
+          "folder": "master-skills-factory/skills/inquiry-validate-quote",
+          "kind": "nested_skill",
+          "description_snippet": "Parse customer free-text choices, validate completeness, apply pricing guardrails with integer minor-unit money, and emi",
+          "content_sha256": "d8c02f95d28fc83429d2c983ebf9f46a8fdfb9f29fdac1c4a337bf5199056272",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "master-skills-factory/skills/inquiry-validate-quote/SKILL.md"
     },
     {
       "canonical_id": "local-ssml-voice-cost-optimizer",
@@ -720,6 +762,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "master-brain/skills/master-brain/SKILL.md"
+    },
+    {
+      "canonical_id": "master-skills-factory",
+      "kind": "canonical_capability",
+      "title": "master-skills-factory",
+      "description": "Portland–Pozzolanic master skills factory for sector-configurable trade desks. Compose catalog → parse → validate → pricing guards → quotation → local store → WhatsApp preview → inbound guard → verified outcome. Use when extracting reusable business workflows from Saqr/Rakan-style desks or porting across industries. Never claim live WhatsApp send or production gateway readiness without evidence.",
+      "primary_installation_id": "master-skills-factory::0",
+      "installations": [
+        {
+          "installation_id": "master-skills-factory::0",
+          "path": "master-skills-factory/SKILL.md",
+          "folder": "master-skills-factory",
+          "kind": "primary_tree",
+          "description_snippet": "Portland–Pozzolanic master skills factory for sector-configurable trade desks. Compose catalog → parse → validate → pric",
+          "content_sha256": "e978ee413dffb9b8863050f27f36f6a00bd8feb24280a29d6fcc3d5f488411ac",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "master-skills-factory/SKILL.md"
     },
     {
       "canonical_id": "muqasa-maintenance",
@@ -920,7 +983,7 @@
           "folder": ".",
           "kind": "primary_tree",
           "description_snippet": "Structure or improve AI prompts and implementation briefs with Role, Context, Task, and Constraints. Use when a request ",
-          "content_sha256": "6e9a6f8b254ad8653788c996ba4cb3213bb3ba2b6bd6cb51c1b98204d416e9b1",
+          "content_sha256": "afe99722dcf3d2cf25149b36caf93bb5243bfa3853ee5fb86d4cd800f87f90e7",
           "pointer": false
         }
       ],
@@ -1011,6 +1074,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "secretsinnextcss/SKILL.md"
+    },
+    {
+      "canonical_id": "sector-catalog-config",
+      "kind": "canonical_capability",
+      "title": "sector-catalog-config",
+      "description": "Configure a sector product catalog, aliases, destinations, units, and market reference book for master-skills-factory. Use before parsing inquiries or when switching industries via JSON sector config. Do not enable clinical decisions.",
+      "primary_installation_id": "sector-catalog-config::0",
+      "installations": [
+        {
+          "installation_id": "sector-catalog-config::0",
+          "path": "master-skills-factory/skills/sector-catalog-config/SKILL.md",
+          "folder": "master-skills-factory/skills/sector-catalog-config",
+          "kind": "nested_skill",
+          "description_snippet": "Configure a sector product catalog, aliases, destinations, units, and market reference book for master-skills-factory. U",
+          "content_sha256": "de0e2fbe893335a73a06dbf6a1186676ba9e9276c6444ee0f2d0db8d06a473db",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "master-skills-factory/skills/sector-catalog-config/SKILL.md"
     },
     {
       "canonical_id": "security-bounty-window",
@@ -1251,6 +1335,27 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "update-zip-skill/SKILL.md"
+    },
+    {
+      "canonical_id": "verified-trade-outcome",
+      "kind": "canonical_capability",
+      "title": "verified-trade-outcome",
+      "description": "Record verified outcomes after a desk assessment. CSAT stays unknown without explicit feedback. Enforces tenant isolation and idempotent case persistence for synthetic local stores. Use with evidence-before-claim.",
+      "primary_installation_id": "verified-trade-outcome::0",
+      "installations": [
+        {
+          "installation_id": "verified-trade-outcome::0",
+          "path": "master-skills-factory/skills/verified-trade-outcome/SKILL.md",
+          "folder": "master-skills-factory/skills/verified-trade-outcome",
+          "kind": "nested_skill",
+          "description_snippet": "Record verified outcomes after a desk assessment. CSAT stays unknown without explicit feedback. Enforces tenant isolatio",
+          "content_sha256": "68291309a94d89bd634ec281bd90f607246dcdccadcfb9920d47bf734d15ef3f",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "master-skills-factory/skills/verified-trade-outcome/SKILL.md"
     },
     {
       "canonical_id": "web-marketing-and-personal-builder-super-skill",

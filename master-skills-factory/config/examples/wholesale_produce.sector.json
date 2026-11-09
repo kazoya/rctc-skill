@@ -1,0 +1,40 @@
+{
+  "id": "wholesale_produce_cfg",
+  "businessIdentity": { "name": "Config Produce Desk", "locale": "ar-JO" },
+  "sectorType": "wholesale_produce",
+  "administrativeOnly": false,
+  "clinicalDecisionsEnabled": false,
+  "catalog": {
+    "requireDestination": true,
+    "destinations": [{ "match": "عمان", "label": "Amman" }],
+    "products": [
+      {
+        "id": "cucumber",
+        "label": "Cucumber",
+        "aliases": ["خيار", "cucumber"],
+        "complete": true,
+        "requiredAttrs": [],
+        "attrHints": []
+      }
+    ]
+  },
+  "customFields": [{ "id": "incoterm", "required": false }],
+  "units": {
+    "quantityPatterns": [
+      { "re": "(\\d+(?:[.,]\\d+)?)\\s*(طن|اطنان|tonnes?)", "unit": "tonne", "flags": "i" }
+    ]
+  },
+  "pricing": {
+    "currency": "JOD",
+    "taxBps": 0,
+    "discountBps": 0,
+    "deliveryMinor": 0,
+    "priceBook": [{ "productId": "cucumber", "marketMin": "0.250", "marketMax": "0.450" }]
+  },
+  "inventory": { "mode": "manual_availability" },
+  "approvals": { "requireExplicitIssueActor": true, "marketIsNotSellPrice": true },
+  "messaging": { "channels": ["whatsapp_preview"], "sendImplemented": false },
+  "aiKnowledgeSources": ["synthetic_catalog_only"],
+  "escalation": { "onIncompleteRfq": "human_merchant", "onPriceInjection": "refuse" },
+  "dashboard": { "roles": ["merchant"], "permissions": ["read_own_tenant"] }
+}

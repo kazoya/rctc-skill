@@ -57,6 +57,7 @@ Do not turn every request into an interview. If the task is already actionable, 
 | Run repeated measured improvement | `continuous-improving` |
 | Send one ChatGPT-bridge prompt and wait for text, JSON, or an image | `chatgpt-bridge-lane` |
 | Choose at most one optional external tool, or keep all five off | `dogfood-tool-router` |
+| Sector trade desk (catalog→quote→preview→verify) | `master-skills-factory` |
 
 Recommend a companion only when it materially helps the current request. If it is available and the user asks for execution, use it rather than merely advertising it.
 
