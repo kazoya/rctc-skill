@@ -1,6 +1,6 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-10-29T23:05:56.791Z",
+  "generated_at": "2026-11-11T09:53:09.559Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
