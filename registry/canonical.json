@@ -1,13 +1,13 @@
 {
   "schema": "rctc.canonical-registry.v1",
-  "generated_at": "2026-11-11T09:53:09.559Z",
+  "generated_at": "2026-11-11T09:54:46.962Z",
   "generated_from": "git ls-files",
   "composition_law": "Reuse -> Compose -> Extend -> Generate New",
   "metrics": {
-    "discovered_skill_records": 66,
-    "canonical_capabilities": 61,
+    "discovered_skill_records": 77,
+    "canonical_capabilities": 72,
     "multi_install_capabilities": 5,
-    "public_claim": "61 canonical capabilities (66 tracked SKILL.md installations — not independent product claims)"
+    "public_claim": "72 canonical capabilities (77 tracked SKILL.md installations — not independent product claims)"
   },
   "capabilities": [
     {
@@ -114,6 +114,69 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "arabic-stage-craft/SKILL.md"
+    },
+    {
+      "canonical_id": "awesome-lists-finder",
+      "kind": "canonical_capability",
+      "title": "awesome-lists-finder",
+      "description": "Navigate the sindresorhus/awesome meta-lists to find curated resource lists for a topic. Use when the user needs discovery of existing curated GitHub lists before inventing a new catalog.",
+      "primary_installation_id": "awesome-lists-finder::0",
+      "installations": [
+        {
+          "installation_id": "awesome-lists-finder::0",
+          "path": "packs/oss-free-stack-2026-11/awesome-lists-finder/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/awesome-lists-finder",
+          "kind": "nested_skill",
+          "description_snippet": "Navigate the sindresorhus/awesome meta-lists to find curated resource lists for a topic. Use when the user needs discove",
+          "content_sha256": "191c0be4526e1f861d4561d779d37555fe03420fb6e79964bc3a1f3acd49501f",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/awesome-lists-finder/SKILL.md"
+    },
+    {
+      "canonical_id": "awesome-llm-apps-lab",
+      "kind": "canonical_capability",
+      "title": "awesome-llm-apps-lab",
+      "description": "Study ready open-source AI agent and RAG example apps from awesome-llm-apps. Use when learning patterns for agents, RAG, or when the user wants cloneable Apache-2.0 examples before building a custom agent.",
+      "primary_installation_id": "awesome-llm-apps-lab::0",
+      "installations": [
+        {
+          "installation_id": "awesome-llm-apps-lab::0",
+          "path": "packs/oss-free-stack-2026-11/awesome-llm-apps-lab/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/awesome-llm-apps-lab",
+          "kind": "nested_skill",
+          "description_snippet": "Study ready open-source AI agent and RAG example apps from awesome-llm-apps. Use when learning patterns for agents, RAG,",
+          "content_sha256": "184362f2e79d0b92bc6164770f912782d7ddc2a907a5a1e8a177c41026eb1a99",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/awesome-llm-apps-lab/SKILL.md"
+    },
+    {
+      "canonical_id": "awesome-mcp-servers-router",
+      "kind": "canonical_capability",
+      "title": "awesome-mcp-servers-router",
+      "description": "Choose MCP servers from the curated awesome-mcp-servers list for browsers, databases, APIs, and tools. Use when wiring Cursor, Claude Code, or Codex to external systems via MCP, or when the user asks which MCP to add.",
+      "primary_installation_id": "awesome-mcp-servers-router::0",
+      "installations": [
+        {
+          "installation_id": "awesome-mcp-servers-router::0",
+          "path": "packs/oss-free-stack-2026-11/awesome-mcp-servers-router/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/awesome-mcp-servers-router",
+          "kind": "nested_skill",
+          "description_snippet": "Choose MCP servers from the curated awesome-mcp-servers list for browsers, databases, APIs, and tools. Use when wiring C",
+          "content_sha256": "01dda6992311fc337461005dc564c84076b06e67a4ebbbf7bdd078d252997668",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/awesome-mcp-servers-router/SKILL.md"
     },
     {
       "canonical_id": "belt-apca-smarthelp-cx",
@@ -575,6 +638,27 @@
       "executable_default": "focused3-agentic-phases/SKILL.md"
     },
     {
+      "canonical_id": "free-for-dev-picker",
+      "kind": "canonical_capability",
+      "title": "free-for-dev-picker",
+      "description": "Pick lasting free-tier developer services from free-for-dev instead of paid trials. Use when choosing hosting, CI, email, databases, or SaaS with a permanent free plan, or when the user wants to avoid subscription cost.",
+      "primary_installation_id": "free-for-dev-picker::0",
+      "installations": [
+        {
+          "installation_id": "free-for-dev-picker::0",
+          "path": "packs/oss-free-stack-2026-11/free-for-dev-picker/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/free-for-dev-picker",
+          "kind": "nested_skill",
+          "description_snippet": "Pick lasting free-tier developer services from free-for-dev instead of paid trials. Use when choosing hosting, CI, email",
+          "content_sha256": "2834847487e675c40de3ce7d5f64e9b130590f83ac924df6e1fe19b2e9ea5abc",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/free-for-dev-picker/SKILL.md"
+    },
+    {
       "canonical_id": "git-worktree-flow",
       "kind": "canonical_capability",
       "title": "git-worktree-flow",
@@ -657,6 +741,48 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "packs/programmer-essentials-20/incident-debug-playbook/SKILL.md"
+    },
+    {
+      "canonical_id": "langflow-flow-sketch",
+      "kind": "canonical_capability",
+      "title": "langflow-flow-sketch",
+      "description": "Sketch AI agent and RAG workflows in a drag-and-drop style inspired by Langflow, then decide whether to install. Use when designing agent pipelines, RAG graphs, or MCP-exposed flows before writing production code.",
+      "primary_installation_id": "langflow-flow-sketch::0",
+      "installations": [
+        {
+          "installation_id": "langflow-flow-sketch::0",
+          "path": "packs/oss-free-stack-2026-11/langflow-flow-sketch/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/langflow-flow-sketch",
+          "kind": "nested_skill",
+          "description_snippet": "Sketch AI agent and RAG workflows in a drag-and-drop style inspired by Langflow, then decide whether to install. Use whe",
+          "content_sha256": "52f867b29827c442211d4ee7e9658937802e4d57a696427ac9f0979b27e46a44",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/langflow-flow-sketch/SKILL.md"
+    },
+    {
+      "canonical_id": "lawful-web-research-fetch",
+      "kind": "canonical_capability",
+      "title": "lawful-web-research-fetch",
+      "description": "Plan lawful public-page research fetches for Maps SaaS and media R&D. Mentions Scrapling only as an open-source candidate to evaluate after approval. Use for public business pages, docs, and pricing pages. Never for CAPTCHA/Cloudflare bypass, login walls, or unauthorized scraping.",
+      "primary_installation_id": "lawful-web-research-fetch::0",
+      "installations": [
+        {
+          "installation_id": "lawful-web-research-fetch::0",
+          "path": "packs/oss-free-stack-2026-11/lawful-web-research-fetch/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/lawful-web-research-fetch",
+          "kind": "nested_skill",
+          "description_snippet": "Plan lawful public-page research fetches for Maps SaaS and media R&D. Mentions Scrapling only as an open-source candidat",
+          "content_sha256": "2f37cbac10c03b2d283767a0a8fa5cdc124a07cf26a0713602e50d08c099918f",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/lawful-web-research-fetch/SKILL.md"
     },
     {
       "canonical_id": "local-ssml-voice-cost-optimizer",
@@ -762,6 +888,90 @@
       "installation_count": 1,
       "ambiguity": "single",
       "executable_default": "packs/programmer-essentials-20/observability-starter/SKILL.md"
+    },
+    {
+      "canonical_id": "ollama-local-gate",
+      "kind": "canonical_capability",
+      "title": "ollama-local-gate",
+      "description": "Evaluate and gate local LLM runs with Ollama without silent model downloads. Use when the user wants Llama, Mistral, DeepSeek, or other local models with no API fee, or asks to install Ollama.",
+      "primary_installation_id": "ollama-local-gate::0",
+      "installations": [
+        {
+          "installation_id": "ollama-local-gate::0",
+          "path": "packs/oss-free-stack-2026-11/ollama-local-gate/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/ollama-local-gate",
+          "kind": "nested_skill",
+          "description_snippet": "Evaluate and gate local LLM runs with Ollama without silent model downloads. Use when the user wants Llama, Mistral, Dee",
+          "content_sha256": "db936c258aa805feac271033c78659705107ba921633be0a8741bc5fc51c847b",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/ollama-local-gate/SKILL.md"
+    },
+    {
+      "canonical_id": "open-design-assistant",
+      "kind": "canonical_capability",
+      "title": "open-design-assistant",
+      "description": "Use the open-design workflow pattern to turn a coding agent into an AI design assistant for marketing and Maps pages. Use when the user wants Claude-Design-like help from open source, design systems, or agent-driven UI mockups without a paid design seat.",
+      "primary_installation_id": "open-design-assistant::0",
+      "installations": [
+        {
+          "installation_id": "open-design-assistant::0",
+          "path": "packs/oss-free-stack-2026-11/open-design-assistant/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/open-design-assistant",
+          "kind": "nested_skill",
+          "description_snippet": "Use the open-design workflow pattern to turn a coding agent into an AI design assistant for marketing and Maps pages. Us",
+          "content_sha256": "a45bf40cbd966a05c2e4152079dd4ba8fcce1f5974058b7c942a37482eed9baf",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/open-design-assistant/SKILL.md"
+    },
+    {
+      "canonical_id": "openhands-agent-gate",
+      "kind": "canonical_capability",
+      "title": "openhands-agent-gate",
+      "description": "Decide when an autonomous coding agent like OpenHands is worth running versus staying in Cursor. Use when the user asks for OpenHands, All-Hands-AI, or a self-hosted agent that writes code, runs tests, and fixes bugs.",
+      "primary_installation_id": "openhands-agent-gate::0",
+      "installations": [
+        {
+          "installation_id": "openhands-agent-gate::0",
+          "path": "packs/oss-free-stack-2026-11/openhands-agent-gate/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/openhands-agent-gate",
+          "kind": "nested_skill",
+          "description_snippet": "Decide when an autonomous coding agent like OpenHands is worth running versus staying in Cursor. Use when the user asks ",
+          "content_sha256": "e08309fa122ef72898a902d74151dc576cd94b11fe4289d1daa297f9b5c9f4f1",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/openhands-agent-gate/SKILL.md"
+    },
+    {
+      "canonical_id": "oss-free-stack-router",
+      "kind": "canonical_capability",
+      "title": "oss-free-stack-router",
+      "description": "Route free open-source catalogs and agent tools from the Nov 2026 OSS Free Stack pack. Use when the user asks which free GitHub tool, MCP list, public API list, Ollama, Langflow, OpenHands, Open Design, or free-for-dev entry fits a portfolio task, or how these relate to existing RCTC skills.",
+      "primary_installation_id": "oss-free-stack-router::0",
+      "installations": [
+        {
+          "installation_id": "oss-free-stack-router::0",
+          "path": "packs/oss-free-stack-2026-11/oss-free-stack-router/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/oss-free-stack-router",
+          "kind": "nested_skill",
+          "description_snippet": "Route free open-source catalogs and agent tools from the Nov 2026 OSS Free Stack pack. Use when the user asks which free",
+          "content_sha256": "b566090b96d566eef2ce80a899e98d72f32e494939de6af9662c9daa1e27c5a3",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/oss-free-stack-router/SKILL.md"
     },
     {
       "canonical_id": "owner-credential-vault",
@@ -899,6 +1109,27 @@
       "executable_default": "projectsConnector/SKILL.md"
     },
     {
+      "canonical_id": "public-apis-catalog",
+      "kind": "canonical_capability",
+      "title": "public-apis-catalog",
+      "description": "Find free public HTTP APIs from the community catalog for weather, finance, images, and other categories. Use when the user wants a free data source instead of a paid API, or asks for public-apis GitHub list. Do not call paid endpoints.",
+      "primary_installation_id": "public-apis-catalog::0",
+      "installations": [
+        {
+          "installation_id": "public-apis-catalog::0",
+          "path": "packs/oss-free-stack-2026-11/public-apis-catalog/SKILL.md",
+          "folder": "packs/oss-free-stack-2026-11/public-apis-catalog",
+          "kind": "nested_skill",
+          "description_snippet": "Find free public HTTP APIs from the community catalog for weather, finance, images, and other categories. Use when the u",
+          "content_sha256": "94a59cee20c8235ce084f029c464e7561ac65204a8c4524dd9741516e632014a",
+          "pointer": false
+        }
+      ],
+      "installation_count": 1,
+      "ambiguity": "single",
+      "executable_default": "packs/oss-free-stack-2026-11/public-apis-catalog/SKILL.md"
+    },
+    {
       "canonical_id": "rctc-method",
       "kind": "canonical_capability",
       "title": "rctc-method",
@@ -920,7 +1151,7 @@
           "folder": ".",
           "kind": "primary_tree",
           "description_snippet": "Structure or improve AI prompts and implementation briefs with Role, Context, Task, and Constraints. Use when a request ",
-          "content_sha256": "6e9a6f8b254ad8653788c996ba4cb3213bb3ba2b6bd6cb51c1b98204d416e9b1",
+          "content_sha256": "647d6106a64ead43e001384cbf27138d2f8abba83086ca44c5afc0fe76568586",
           "pointer": false
         }
       ],
